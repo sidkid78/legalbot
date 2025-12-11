@@ -1,4 +1,4 @@
-import { db } from "@/lib/database/sqlite-manager";
+import { db } from "@/lib/database/json-db-manager";
 import { NextResponse } from "next/server";
 
 // app/api/stats/route.ts

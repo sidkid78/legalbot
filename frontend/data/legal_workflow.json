@@ -1,0 +1,2016 @@
+{
+  "users": [],
+  "sessions": [],
+  "legal_queries": [
+    {
+      "id": "d8a4eb04-34d9-47f8-91ea-80dd4fb43b38",
+      "user_id": "default-user",
+      "content": "\"My spouse and I are getting divorced in Texas. We have two children, ages 8 and 14. We signed a prenuptial agreement that states my business, which I started before the marriage, remains my separate property.\n\nDuring our 15-year marriage, my spouse worked as the unpaid office manager for my business, allowing it to grow significantly. We also bought our house 10 years ago using money from my business's bank account.\n\nNow, my spouse wants to move to Oklahoma (where their family lives) with both children and is claiming half the value of my business, the entire house, and alimony.\n\nWhat are my rights regarding custody, the business, and the house?\"",
+      "domain": "family_law",
+      "jurisdiction": "state",
+      "urgency": "high",
+      "priority": 3,
+      "requires_research": true,
+      "client_info": {
+        "name": "shaun koehne",
+        "matterNumber": "M-1761856265081"
+      },
+      "related_cases": [],
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "task_id": null,
+      "status": "completed",
+      "error_message": null,
+      "created_at": "2025-10-30T20:35:51.799Z",
+      "updated_at": "2025-10-30T20:35:51.799Z",
+      "timestamp": "2025-10-30T20:35:59.926Z"
+    },
+    {
+      "id": "fed6f300-5cc6-49b9-accf-280ff3973491",
+      "user_id": "default-user",
+      "content": "\"My spouse and I are getting divorced in Texas. We have two children, ages 8 and 14. We signed a prenuptial agreement that states my business, which I started before the marriage, remains my separate property.\n\nDuring our 15-year marriage, my spouse worked as the unpaid office manager for my business, allowing it to grow significantly. We also bought our house 10 years ago using money from my business's bank account.\n\nNow, my spouse wants to move to Oklahoma (where their family lives) with both children and is claiming half the value of my business, the entire house, and alimony.\n\nWhat are my rights regarding custody, the business, and the house?\"",
+      "domain": "family_law",
+      "jurisdiction": "state",
+      "urgency": "high",
+      "priority": 3,
+      "requires_research": true,
+      "client_info": {
+        "name": "shaun koehne",
+        "matterNumber": "M-1761856265081"
+      },
+      "related_cases": [],
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "task_id": null,
+      "status": "completed",
+      "error_message": null,
+      "created_at": "2025-10-30T20:52:47.453Z",
+      "updated_at": "2025-10-30T20:52:47.453Z",
+      "timestamp": "2025-10-30T20:52:55.264Z"
+    },
+    {
+      "id": "4b831a50-95fb-42be-aae0-c92dc370c4d1",
+      "user_id": "default-user",
+      "content": "\"My spouse and I are getting divorced in Texas. We have two children, ages 8 and 14. We signed a prenuptial agreement that states my business, which I started before the marriage, remains my separate property.\n\nDuring our 15-year marriage, my spouse worked as the unpaid office manager for my business, allowing it to grow significantly. We also bought our house 10 years ago using money from my business's bank account.\n\nNow, my spouse wants to move to Oklahoma (where their family lives) with both children and is claiming half the value of my business, the entire house, and alimony.\n\nWhat are my rights regarding custody, the business, and the house?\"",
+      "domain": "family_law",
+      "jurisdiction": "state",
+      "urgency": "medium",
+      "priority": 3,
+      "requires_research": true,
+      "client_info": {
+        "name": "shaun koehne",
+        "matterNumber": "M-1761856265081"
+      },
+      "related_cases": [],
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "task_id": null,
+      "status": "completed",
+      "error_message": null,
+      "created_at": "2025-10-31T00:44:26.368Z",
+      "updated_at": "2025-10-31T00:44:26.368Z",
+      "timestamp": "2025-10-31T00:44:48.143Z"
+    },
+    {
+      "id": "5ba55cb8-76cb-488b-a672-6c9bab58b180",
+      "user_id": "default-user",
+      "content": "\"My spouse and I are getting divorced in Texas. We have two children, ages 8 and 14. We signed a prenuptial agreement that states my business, which I started before the marriage, remains my separate property.\n\nDuring our 15-year marriage, my spouse worked as the unpaid office manager for my business, allowing it to grow significantly. We also bought our house 10 years ago using money from my business's bank account.\n\nNow, my spouse wants to move to Oklahoma (where their family lives) with both children and is claiming half the value of my business, the entire house, and alimony.\n\nWhat are my rights regarding custody, the business, and the house?\"",
+      "domain": "family_law",
+      "jurisdiction": "state",
+      "urgency": "high",
+      "priority": 3,
+      "requires_research": true,
+      "client_info": {
+        "name": "Test Client",
+        "matterNumber": "M-1761872432182"
+      },
+      "related_cases": [],
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "task_id": null,
+      "status": "completed",
+      "error_message": null,
+      "created_at": "2025-10-31T01:00:44.906Z",
+      "updated_at": "2025-10-31T01:00:44.906Z",
+      "timestamp": "2025-10-31T01:00:52.126Z"
+    },
+    {
+      "id": "92c412ff-89eb-4188-9f96-51524ce7247f",
+      "user_id": "default-user",
+      "content": "\"My spouse and I are getting divorced in Texas. We have two children, ages 8 and 14. We signed a prenuptial agreement that states my business, which I started before the marriage, remains my separate property.\n\nDuring our 15-year marriage, my spouse worked as the unpaid office manager for my business, allowing it to grow significantly. We also bought our house 10 years ago using money from my business's bank account.\n\nNow, my spouse wants to move to Oklahoma (where their family lives) with both children and is claiming half the value of my business, the entire house, and alimony.\n\nWhat are my rights regarding custody, the business, and the house?\"",
+      "domain": "family_law",
+      "jurisdiction": "state",
+      "urgency": "high",
+      "priority": 3,
+      "requires_research": true,
+      "client_info": {
+        "name": "Test Client",
+        "matterNumber": "M-1761874551318"
+      },
+      "related_cases": [],
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "task_id": null,
+      "status": "completed",
+      "error_message": null,
+      "created_at": "2025-10-31T01:36:19.227Z",
+      "updated_at": "2025-10-31T01:36:19.227Z",
+      "timestamp": "2025-10-31T01:36:22.969Z"
+    },
+    {
+      "id": "1b1a1ec3-69a5-4c69-8c46-fb616b2f6ff7",
+      "user_id": "default-user",
+      "content": "\"My spouse and I are getting divorced in Texas. We have two children, ages 8 and 14. We signed a prenuptial agreement that states my business, which I started before the marriage, remains my separate property.\n\nDuring our 15-year marriage, my spouse worked as the unpaid office manager for my business, allowing it to grow significantly. We also bought our house 10 years ago using money from my business's bank account.\n\nNow, my spouse wants to move to Oklahoma (where their family lives) with both children and is claiming half the value of my business, the entire house, and alimony.\n\nWhat are my rights regarding custody, the business, and the house?\"",
+      "domain": "family_law",
+      "jurisdiction": "state",
+      "urgency": "high",
+      "priority": 3,
+      "requires_research": true,
+      "client_info": {
+        "name": "Test Client",
+        "matterNumber": "M-1761874968532"
+      },
+      "related_cases": [],
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "task_id": null,
+      "status": "completed",
+      "error_message": null,
+      "created_at": "2025-10-31T01:42:59.762Z",
+      "updated_at": "2025-10-31T01:42:59.762Z",
+      "timestamp": "2025-10-31T01:43:12.067Z"
+    },
+    {
+      "id": "fc685fd3-03d5-48c9-8ca5-522fd4339508",
+      "user_id": "default-user",
+      "content": "my friend and her husband are getting a divorce and he has become a terror. hes drunk everyday and has caused harm. hes pulled a gun on her and so on. shes trying to file a restraining order and remove him from the property. the child protective service lady said shes going to file to the judge a restraining order to have him removed. well we found out today the judge denied the restraining order. this is in bell county texas. why would the judge do that, beings she feels her life is in danger and the kids?",
+      "domain": "family_law",
+      "jurisdiction": "state",
+      "urgency": "emergency",
+      "priority": 3,
+      "requires_research": true,
+      "client_info": {
+        "name": "Test Client",
+        "matterNumber": "M-1762321853240"
+      },
+      "related_cases": [],
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "task_id": null,
+      "status": "completed",
+      "error_message": null,
+      "created_at": "2025-11-05T05:51:08.244Z",
+      "updated_at": "2025-11-05T05:51:08.244Z",
+      "timestamp": "2025-11-05T05:51:17.142Z"
+    },
+    {
+      "id": "de4ff97b-f0c4-4448-979f-1015d96df77f",
+      "user_id": "default-user",
+      "content": "my friend and her husband are getting a divorce and he has become a terror. hes drunk everyday and has caused harm. hes pulled a gun on her and so on. shes trying to file a restraining order and remove him from the property. the lady from the district attorneys office said shes going to file to the judge a restraining order to have him removed. well we found out today the judge denied the restraining order. this is in bell county texas. why would the judge do that, beings she feels her life is in danger and the kids? she has police records, he even went to jail for shootiing the gun off in the back yard. she has recordings. \nthe lady from the D.A. did make him sign a paper saying he would vacate the premises by friday and had certain days alotted to get his stuff, but that still puts him currently in the house and her in fear.",
+      "domain": "family_law",
+      "jurisdiction": "state",
+      "urgency": "emergency",
+      "priority": 3,
+      "requires_research": true,
+      "client_info": {
+        "name": "Test Client",
+        "matterNumber": "M-1762321853240"
+      },
+      "related_cases": [],
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "task_id": null,
+      "status": "completed",
+      "error_message": null,
+      "created_at": "2025-11-05T06:34:09.828Z",
+      "updated_at": "2025-11-05T06:34:09.828Z",
+      "timestamp": "2025-11-05T06:34:18.369Z"
+    },
+    {
+      "id": "0870e65d-dadd-42e5-8b2b-b278a922ac4b",
+      "user_id": "default-user",
+      "content": "\"I was shopping at a grocery store in California last week. It had been raining, and as I walked into the produce section, I slipped on a puddle of water and fell hard, breaking my wrist.\n\nAn employee helped me up and told me, 'Sorry, our roof has been leaking in that spot for weeks.'\n\nI'm a freelance graphic designer and I work from home. My doctor says I can't use my mouse or keyboard for at least 6 weeks, which means I've already had to turn down two major projects, and I can't pay my medical bills.\n\nThe store's insurance adjuster called and offered me $5,000, but that barely covers my emergency room visit. They said I should have been watching where I was going. Do I have a case for more?\"",
+      "domain": "litigation",
+      "jurisdiction": "state",
+      "urgency": "high",
+      "priority": 3,
+      "requires_research": true,
+      "client_info": {
+        "name": "Test Client",
+        "matterNumber": "M-1762326623276"
+      },
+      "related_cases": [],
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "task_id": null,
+      "status": "completed",
+      "error_message": null,
+      "created_at": "2025-11-05T07:14:39.356Z",
+      "updated_at": "2025-11-05T07:14:39.356Z",
+      "timestamp": "2025-11-05T07:14:49.205Z"
+    },
+    {
+      "id": "aa713e37-c192-4daa-9a2c-d48661184624",
+      "user_id": "default-user",
+      "content": "does PR Pylant : Dob: 02/05/1978 have an arrest warrent",
+      "domain": "litigation",
+      "jurisdiction": "state",
+      "urgency": "medium",
+      "priority": 3,
+      "requires_research": true,
+      "client_info": {
+        "name": "Test Client",
+        "matterNumber": "M-1762983489875"
+      },
+      "related_cases": [],
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "task_id": null,
+      "status": "completed",
+      "error_message": null,
+      "created_at": "2025-11-12T21:39:51.875Z",
+      "updated_at": "2025-11-12T21:39:51.875Z",
+      "timestamp": "2025-11-12T21:39:53.607Z"
+    },
+    {
+      "id": "91274560-c792-4024-afa0-dd769f38e0b8",
+      "user_id": "default-user",
+      "content": "our company name is HOMEase | AI. aka Homease solutions, inc. registered in texas LLC.\nheres more info on our company.\nHOMEase | AI is a technology-driven lead generation platform designed to connect homeowners with qualified contractors for aging-in-place (AIP) home modifications. The platform is strategically positioned to capitalize on the rapidly expanding \"AgeTech\" market by addressing a critical gap between homeowner needs and contractor access. A foundational strategic pivot from a full-service provider to a pure-play lead generation model underpins the business, prioritizing speed-to-market, capital efficiency, and immediate revenue realization.\nThe platform's core innovation is its proprietary Augmented Reality (AR) assessment tool. This technology allows homeowners to perform simple scans of their homes, which are then analyzed by Google Gemini to identify accessibility hazards and recommend modifications. A separate AI service, Fal.ai, generates \"after\" visualizations, providing users with a clear understanding of potential improvements. This process yields high-intent, pre-qualified leads with detailed project scopes, offering significantly higher value and conversion potential for contractors compared to general home service platforms.\nThe market opportunity is substantial, with the home modification market projected to reach $161 billion by 2030, fueled by powerful demographic trends, including over 10,000 Americans turning 65 daily and an overwhelming preference (75-87%) among seniors to age in their own homes. The platform's go-to-market strategy involves a phased geographic rollout, beginning with Texas and Florida, and a significant opportunity to partner with federal grant programs, most notably the U.S. Department of Housing and Urban Development's (HUD) Older Adults Home Modification Program (OAHMP).\nTechnologically, HOMEase | AI is built on a serverless, event-driven architecture hosted entirely on the Google Cloud Platform (GCP). The stack includes a Next.js 15 application deployed on Google Cloud Run, a suite of backend services using Google Cloud Functions, and a data layer managed by Firebase, ensuring scalability, security, and operational efficiency.\n\n\nnow theres a chinese company called GSNT Co. ltd with a app called homease ai home designer and room planner. what legal problems could we have or might see.",
+      "domain": "ip_law",
+      "jurisdiction": "federal",
+      "urgency": "high",
+      "priority": 3,
+      "requires_research": true,
+      "client_info": {
+        "name": "Test Client",
+        "matterNumber": "M-1765421783387"
+      },
+      "related_cases": [],
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "task_id": null,
+      "status": "completed",
+      "error_message": null,
+      "created_at": "2025-12-11T03:02:15.027Z",
+      "updated_at": "2025-12-11T03:02:15.027Z",
+      "timestamp": "2025-12-11T03:02:31.331Z"
+    }
+  ],
+  "legal_responses": [
+    {
+      "id": "6038910d-8f14-42bf-9c27-fa71bf63e03f",
+      "queryId": "d8a4eb04-34d9-47f8-91ea-80dd4fb43b38",
+      "content": "",
+      "riskLevel": "minimal",
+      "jurisdictionAnalysis": {
+        "type": "state",
+        "keyRequirements": [
+          "State bar membership",
+          "Pro Hac Vice (if applicable)",
+          "State-specific procedural rules"
+        ],
+        "filingDeadlines": {
+          "answer": "Varies by state (e.g., 20-30 days)",
+          "appeal": "Varies (e.g., 30-60 days)",
+          "motion_response": "Varies"
+        },
+        "specialConsiderations": [
+          "Local counsel rules",
+          "Varying discovery limits",
+          "State constitutional issues"
+        ]
+      },
+      "citations": [],
+      "recommendations": [
+        {
+          "priority": "MODERATE",
+          "action": "Client Support Coordination",
+          "timeline": "Within 5 days",
+          "details": "Coordinate with family services, counselors, or mediators as appropriate."
+        }
+      ],
+      "nextSteps": [
+        {
+          "step": "MODERATE Priority: Client Support Coordination",
+          "deadline": "Within 5 days",
+          "assignee": "Legal Team",
+          "relatedRecommendation": "Client Support Coordination",
+          "actionItems": [
+            "Review all relevant documentation",
+            "Consult with appropriate team members",
+            "Schedule follow-up meeting to review progress"
+          ]
+        }
+      ],
+      "processingTime": 7.999,
+      "tokenCount": 506,
+      "modelUsed": "gemini-2.5-flash",
+      "billingInfo": {
+        "aiProcessingHours": 0.1,
+        "hourlyRate": 350,
+        "aiTimeCharge": 35,
+        "tokenCount": 506,
+        "estimatedTokenCost": 0.0051,
+        "totalEstimatedCharge": 35.01,
+        "domain": "family_law",
+        "timeTrackedSeconds": 8
+      },
+      "confidentialityNotice": "**CONFIDENTIAL AND PRIVILEGED LEGAL COMMUNICATION**\n\n**Attorney Work Product**\n\nThis communication is protected by the attorney-client privilege and/or work product doctrine. It is intended solely for the use of shaun koehne regarding matter M-1761856265081. Any unauthorized review, use, disclosure, dissemination, or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately and destroy all copies.",
+      "legalDisclaimer": "**LEGAL DISCLAIMER**\n\nThis analysis pertains specifically to the laws of the state jurisdiction as understood on 2025-10-30. Laws and regulations are subject to change. This communication provides legal analysis based on the information provided and AI processing; it does not constitute definitive legal advice for any specific situation and does not create an attorney-client relationship unless one already exists via separate agreement. Consult qualified legal counsel licensed in the relevant jurisdiction(s) for advice tailored to specific circumstances.",
+      "taskId": "LT-1761856551916-1",
+      "createdAt": "2025-10-30T20:35:59.925Z"
+    },
+    {
+      "id": "b2518fc8-65b9-41a3-b10d-556abd2372e7",
+      "queryId": "fed6f300-5cc6-49b9-accf-280ff3973491",
+      "content": "I couldn't find specific case law for your exact queries. This could mean the search terms were too narrow or the database doesn't have highly specific matches for those phrases. Let's try broadening the search to find relevant precedents for your situation in Texas.\n\nI will now search for cases related to:\n*   Child custody and relocation in Texas.\n*   Separate property businesses and community effort in Texas, especially with a prenuptial agreement.\n*   Commingling of separate property funds for a house purchased during marriage in Texas.",
+      "riskLevel": "minimal",
+      "jurisdictionAnalysis": {
+        "type": "state",
+        "keyRequirements": [
+          "State bar membership",
+          "Pro Hac Vice (if applicable)",
+          "State-specific procedural rules"
+        ],
+        "filingDeadlines": {
+          "answer": "Varies by state (e.g., 20-30 days)",
+          "appeal": "Varies (e.g., 30-60 days)",
+          "motion_response": "Varies"
+        },
+        "specialConsiderations": [
+          "Local counsel rules",
+          "Varying discovery limits",
+          "State constitutional issues"
+        ]
+      },
+      "citations": [],
+      "recommendations": [
+        {
+          "priority": "MODERATE",
+          "action": "Client Support Coordination",
+          "timeline": "Within 5 days",
+          "details": "Coordinate with family services, counselors, or mediators as appropriate."
+        }
+      ],
+      "nextSteps": [
+        {
+          "step": "MODERATE Priority: Client Support Coordination",
+          "deadline": "Within 5 days",
+          "assignee": "Legal Team",
+          "relatedRecommendation": "Client Support Coordination",
+          "actionItems": [
+            "Review all relevant documentation",
+            "Consult with appropriate team members",
+            "Schedule follow-up meeting to review progress"
+          ]
+        }
+      ],
+      "processingTime": 7.682,
+      "tokenCount": 1291,
+      "modelUsed": "gemini-2.5-flash",
+      "billingInfo": {
+        "aiProcessingHours": 0.1,
+        "hourlyRate": 350,
+        "aiTimeCharge": 35,
+        "tokenCount": 1291,
+        "estimatedTokenCost": 0.0129,
+        "totalEstimatedCharge": 35.01,
+        "domain": "family_law",
+        "timeTrackedSeconds": 7.68
+      },
+      "confidentialityNotice": "**CONFIDENTIAL AND PRIVILEGED LEGAL COMMUNICATION**\n\n**Attorney Work Product**\n\nThis communication is protected by the attorney-client privilege and/or work product doctrine. It is intended solely for the use of shaun koehne regarding matter M-1761856265081. Any unauthorized review, use, disclosure, dissemination, or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately and destroy all copies.",
+      "legalDisclaimer": "**LEGAL DISCLAIMER**\n\nThis analysis pertains specifically to the laws of the state jurisdiction as understood on 2025-10-30. Laws and regulations are subject to change. This communication provides legal analysis based on the information provided and AI processing; it does not constitute definitive legal advice for any specific situation and does not create an attorney-client relationship unless one already exists via separate agreement. Consult qualified legal counsel licensed in the relevant jurisdiction(s) for advice tailored to specific circumstances.",
+      "taskId": "LT-1761857567568-1",
+      "createdAt": "2025-10-30T20:52:55.264Z"
+    },
+    {
+      "id": "fc30ac49-f2fe-4afe-8866-7161c0e3e864",
+      "queryId": "4b831a50-95fb-42be-aae0-c92dc370c4d1",
+      "content": "It's important to understand that divorce laws in Texas can be complex, and the outcome of your specific situation will depend on many factors, including the precise wording of your prenuptial agreement, the evidence presented in court, and the discretion of the judge. You should consult with a qualified Texas family law attorney to discuss the specifics of your case.\n\nHere's a general overview of your rights and potential considerations regarding custody, your business, and your house in Texas:\n\n### Child Custody and Relocation to Oklahoma\n\nIn Texas, all decisions regarding children, including custody and relocation, are made based on the \"best interest of the child.\"\n\n1.  **Best Interest Standard:** The court will consider various factors to determine if moving the children to Oklahoma is in their best interest. These factors can include the children's wishes (especially the 14-year-old), their emotional and physical needs, their ties to their current community, schools, and friends, and your ability to maintain a relationship with them if they move.\n2.  **Parental Rights and Responsibilities:** Texas courts typically aim for parents to have a continuing relationship with their children. If your spouse is allowed to move, the court will establish a possession and access schedule that outlines when each parent has the children, including holidays and summers, and how transportation will be handled.\n3.  **Mediation:** Courts often encourage mediation to help parents reach an agreement on custody and relocation. If an agreement cannot be reached, the court will make the decision.\n\n### Your Business (Separate Property vs. Community Property)\n\nYour prenuptial agreement stating your business remains your separate property is a significant factor. In Texas, separate property is generally not divisible in a divorce. However, there are nuances:\n\n1.  **Prenuptial Agreement Validity:** The court will first determine if your prenuptial agreement is valid and enforceable. Assuming it is, your business, as it existed before the marriage, is likely your separate property.\n2.  **Community Property Interest/Reimbursement:**\n    *   **Unpaid Labor:** Your spouse's unpaid work as an office manager for 15 years, which allowed the business to grow significantly, could give rise to a claim for **reimbursement** to the community estate. The community estate (which includes the value of your spouse's labor during the marriage) may be entitled to be reimbursed for the value of the time, toil, and effort expended by your spouse for the benefit of your separate property business, beyond what was reasonably necessary to manage and preserve the separate property, and for which the community did not receive adequate compensation. The measure of reimbursement is typically the value of the benefit to the separate estate, not the value of the time, toil, and effort expended.\n    *   **Enhancement of Separate Property:** While the business itself may remain separate property, any increase in its value during the marriage due to community efforts (like your spouse's unpaid labor) could be subject to a reimbursement claim.\n\n### The House (Separate Property Funds for Community Asset)\n\nThe house was bought during your 15-year marriage, which generally makes it community property. However, the fact that it was purchased with money from your business's bank account (which you claim is separate property) introduces a **reimbursement** claim.\n\n1.  **Community Property Presumption:** In Texas, property acquired during marriage is presumed to be community property.\n2.  **Reimbursement Claim:** If you can clearly trace the",
+      "riskLevel": "minimal",
+      "jurisdictionAnalysis": {
+        "type": "state",
+        "keyRequirements": [
+          "State bar membership",
+          "Pro Hac Vice (if applicable)",
+          "State-specific procedural rules"
+        ],
+        "filingDeadlines": {
+          "answer": "Varies by state (e.g., 20-30 days)",
+          "appeal": "Varies (e.g., 30-60 days)",
+          "motion_response": "Varies"
+        },
+        "specialConsiderations": [
+          "Local counsel rules",
+          "Varying discovery limits",
+          "State constitutional issues"
+        ]
+      },
+      "citations": [],
+      "recommendations": [
+        {
+          "priority": "MODERATE",
+          "action": "Client Support Coordination",
+          "timeline": "Within 5 days",
+          "details": "Coordinate with family services, counselors, or mediators as appropriate."
+        }
+      ],
+      "nextSteps": [
+        {
+          "step": "MODERATE Priority: Client Support Coordination",
+          "deadline": "Within 5 days",
+          "assignee": "Legal Team",
+          "relatedRecommendation": "Client Support Coordination",
+          "actionItems": [
+            "Review all relevant documentation",
+            "Consult with appropriate team members",
+            "Schedule follow-up meeting to review progress"
+          ]
+        }
+      ],
+      "processingTime": 21.666,
+      "tokenCount": 2821,
+      "modelUsed": "gemini-2.5-flash",
+      "billingInfo": {
+        "aiProcessingHours": 0.1,
+        "hourlyRate": 350,
+        "aiTimeCharge": 35,
+        "tokenCount": 2821,
+        "estimatedTokenCost": 0.0282,
+        "totalEstimatedCharge": 35.03,
+        "domain": "family_law",
+        "timeTrackedSeconds": 21.67
+      },
+      "confidentialityNotice": "**CONFIDENTIAL AND PRIVILEGED LEGAL COMMUNICATION**\n\n**Attorney Work Product**\n\nThis communication is protected by the attorney-client privilege and/or work product doctrine. It is intended solely for the use of shaun koehne regarding matter M-1761856265081. Any unauthorized review, use, disclosure, dissemination, or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately and destroy all copies.",
+      "legalDisclaimer": "**LEGAL DISCLAIMER**\n\nThis analysis pertains specifically to the laws of the state jurisdiction as understood on 2025-10-31. Laws and regulations are subject to change. This communication provides legal analysis based on the information provided and AI processing; it does not constitute definitive legal advice for any specific situation and does not create an attorney-client relationship unless one already exists via separate agreement. Consult qualified legal counsel licensed in the relevant jurisdiction(s) for advice tailored to specific circumstances.",
+      "taskId": "LT-1761871466466-1",
+      "createdAt": "2025-10-31T00:44:48.143Z"
+    },
+    {
+      "id": "c4f070f8-9eca-46a2-a5d0-11f535f3f89e",
+      "queryId": "5ba55cb8-76cb-488b-a672-6c9bab58b180",
+      "content": "Regarding your divorce in Texas, let's break down your rights concerning custody, your business, and the house.\n\n**Child Custody and Relocation:**\n\nTexas courts prioritize the best interest of the child when making custody decisions, including relocation. While your spouse wants to move to Oklahoma, a court will consider several factors before allowing it, such as the reasons for the move, the child's wishes (especially the 14-year-old), the impact on the children's relationship with you, and the educational and social opportunities in both locations.\n\nSince my initial search for \"Texas child relocation divorce custody\" did not yield specific case law, I will broaden my search to find relevant precedents regarding child relocation in Texas divorces.\n\n",
+      "riskLevel": "minimal",
+      "jurisdictionAnalysis": {
+        "type": "state",
+        "keyRequirements": [
+          "State bar membership",
+          "Pro Hac Vice (if applicable)",
+          "State-specific procedural rules"
+        ],
+        "filingDeadlines": {
+          "answer": "Varies by state (e.g., 20-30 days)",
+          "appeal": "Varies (e.g., 30-60 days)",
+          "motion_response": "Varies"
+        },
+        "specialConsiderations": [
+          "Local counsel rules",
+          "Varying discovery limits",
+          "State constitutional issues"
+        ]
+      },
+      "citations": [],
+      "recommendations": [
+        {
+          "priority": "MODERATE",
+          "action": "Client Support Coordination",
+          "timeline": "Within 5 days",
+          "details": "Coordinate with family services, counselors, or mediators as appropriate."
+        }
+      ],
+      "nextSteps": [
+        {
+          "step": "MODERATE Priority: Client Support Coordination",
+          "deadline": "Within 5 days",
+          "assignee": "Legal Team",
+          "relatedRecommendation": "Client Support Coordination",
+          "actionItems": [
+            "Review all relevant documentation",
+            "Consult with appropriate team members",
+            "Schedule follow-up meeting to review progress"
+          ]
+        }
+      ],
+      "processingTime": 7.099,
+      "tokenCount": 1148,
+      "modelUsed": "gemini-2.5-flash",
+      "billingInfo": {
+        "aiProcessingHours": 0.1,
+        "hourlyRate": 350,
+        "aiTimeCharge": 35,
+        "tokenCount": 1148,
+        "estimatedTokenCost": 0.0115,
+        "totalEstimatedCharge": 35.01,
+        "domain": "family_law",
+        "timeTrackedSeconds": 7.1
+      },
+      "confidentialityNotice": "**CONFIDENTIAL AND PRIVILEGED LEGAL COMMUNICATION**\n\n**Attorney Work Product**\n\nThis communication is protected by the attorney-client privilege and/or work product doctrine. It is intended solely for the use of Test Client regarding matter M-1761872432182. Any unauthorized review, use, disclosure, dissemination, or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately and destroy all copies.",
+      "legalDisclaimer": "**LEGAL DISCLAIMER**\n\nThis analysis pertains specifically to the laws of the state jurisdiction as understood on 2025-10-31. Laws and regulations are subject to change. This communication provides legal analysis based on the information provided and AI processing; it does not constitute definitive legal advice for any specific situation and does not create an attorney-client relationship unless one already exists via separate agreement. Consult qualified legal counsel licensed in the relevant jurisdiction(s) for advice tailored to specific circumstances.",
+      "taskId": "LT-1761872445011-1",
+      "createdAt": "2025-10-31T01:00:52.125Z"
+    },
+    {
+      "id": "82f1ef77-2840-42fe-8836-4e34337b4097",
+      "queryId": "92c412ff-89eb-4188-9f96-51524ce7247f",
+      "content": "",
+      "riskLevel": "minimal",
+      "jurisdictionAnalysis": {
+        "type": "state",
+        "keyRequirements": [
+          "State bar membership",
+          "Pro Hac Vice (if applicable)",
+          "State-specific procedural rules"
+        ],
+        "filingDeadlines": {
+          "answer": "Varies by state (e.g., 20-30 days)",
+          "appeal": "Varies (e.g., 30-60 days)",
+          "motion_response": "Varies"
+        },
+        "specialConsiderations": [
+          "Local counsel rules",
+          "Varying discovery limits",
+          "State constitutional issues"
+        ]
+      },
+      "citations": [],
+      "recommendations": [
+        {
+          "priority": "MODERATE",
+          "action": "Client Support Coordination",
+          "timeline": "Within 5 days",
+          "details": "Coordinate with family services, counselors, or mediators as appropriate."
+        }
+      ],
+      "nextSteps": [
+        {
+          "step": "MODERATE Priority: Client Support Coordination",
+          "deadline": "Within 5 days",
+          "assignee": "Legal Team",
+          "relatedRecommendation": "Client Support Coordination",
+          "actionItems": [
+            "Review all relevant documentation",
+            "Consult with appropriate team members",
+            "Schedule follow-up meeting to review progress"
+          ]
+        }
+      ],
+      "processingTime": 3.637,
+      "tokenCount": 681,
+      "modelUsed": "gemini-2.5-flash",
+      "billingInfo": {
+        "aiProcessingHours": 0.1,
+        "hourlyRate": 350,
+        "aiTimeCharge": 35,
+        "tokenCount": 681,
+        "estimatedTokenCost": 0.0068,
+        "totalEstimatedCharge": 35.01,
+        "domain": "family_law",
+        "timeTrackedSeconds": 3.64
+      },
+      "confidentialityNotice": "**CONFIDENTIAL AND PRIVILEGED LEGAL COMMUNICATION**\n\n**Attorney Work Product**\n\nThis communication is protected by the attorney-client privilege and/or work product doctrine. It is intended solely for the use of Test Client regarding matter M-1761874551318. Any unauthorized review, use, disclosure, dissemination, or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately and destroy all copies.",
+      "legalDisclaimer": "**LEGAL DISCLAIMER**\n\nThis analysis pertains specifically to the laws of the state jurisdiction as understood on 2025-10-31. Laws and regulations are subject to change. This communication provides legal analysis based on the information provided and AI processing; it does not constitute definitive legal advice for any specific situation and does not create an attorney-client relationship unless one already exists via separate agreement. Consult qualified legal counsel licensed in the relevant jurisdiction(s) for advice tailored to specific circumstances.",
+      "taskId": "LT-1761874579322-1",
+      "createdAt": "2025-10-31T01:36:22.968Z"
+    },
+    {
+      "id": "33f70700-607b-418c-882a-ad5fa6955f2f",
+      "queryId": "1b1a1ec3-69a5-4c69-8c46-fb616b2f6ff7",
+      "content": "Here's an overview of your rights and considerations in a Texas divorce, addressing custody, your business, and the house:\n\n### Child Custody and Relocation\n\nIn Texas, when one parent wants to move with the children, especially out of state, the court's primary concern is always the \"best interest of the child.\" While your spouse wants to move to Oklahoma, this is not automatically granted. The court will consider several factors, including:\n\n*   **Reasons for the move:** The court will evaluate why your spouse wants to move and whether it's in good faith.\n*   **Impact on the children:** The court will assess how the move would affect the children's emotional and physical well-being, their education, and their relationships with both parents.\n*   **Maintaining a relationship with the non-relocating parent:** The court will consider how your relationship with your children would be maintained if they move to Oklahoma. This often involves detailed visitation schedules and allocation of travel expenses.\n*   **Children's wishes:** For your 14-year-old, their wishes may be considered by the court, though the court is not bound by them. The 8-year-old's wishes typically carry less weight.\n*   **Stability:** The court will look at the stability of the children's current environment compared to the proposed new one.\n\nThe cases found in the search, such as *In the Interest of J.L.R., a Child v. the State of Texas*, highlight that child relocation is a frequently litigated issue in Texas, and outcomes are highly fact-specific, focusing on the child's best interest. You will have the right to present your arguments against the relocation and propose alternative custody arrangements that keep the children in Texas or provide for a robust visitation schedule if relocation is permitted.\n\n### Your Business\n\nYour prenuptial agreement stating your business is your separate property is a strong defense against your spouse claiming half its value. In Texas, separate property is generally not subject to division in a divorce.\n\nHowever, your spouse's claim for half the value of the business, despite the prenup, likely stems from the concept of **reimbursement**. Texas law allows for a claim of reimbursement to the community estate when one spouse's separate property (your business) has been enhanced or benefited by the time, talent, and effort of either spouse beyond what was reasonably necessary for the preservation and maintenance of the separate property, and for which the community did not receive adequate compensation.\n\nSince your spouse worked for 15 years as an unpaid office manager, they could argue that their efforts significantly contributed to the business's growth, and the community estate should be reimbursed for the value of their uncompensated labor. The court would determine the fair value of that labor, not necessarily half the business itself.\n\n",
+      "riskLevel": "minimal",
+      "jurisdictionAnalysis": {
+        "type": "state",
+        "keyRequirements": [
+          "State bar membership",
+          "Pro Hac Vice (if applicable)",
+          "State-specific procedural rules"
+        ],
+        "filingDeadlines": {
+          "answer": "Varies by state (e.g., 20-30 days)",
+          "appeal": "Varies (e.g., 30-60 days)",
+          "motion_response": "Varies"
+        },
+        "specialConsiderations": [
+          "Local counsel rules",
+          "Varying discovery limits",
+          "State constitutional issues"
+        ]
+      },
+      "citations": [],
+      "recommendations": [
+        {
+          "priority": "MODERATE",
+          "action": "Client Support Coordination",
+          "timeline": "Within 5 days",
+          "details": "Coordinate with family services, counselors, or mediators as appropriate."
+        }
+      ],
+      "nextSteps": [
+        {
+          "step": "MODERATE Priority: Client Support Coordination",
+          "deadline": "Within 5 days",
+          "assignee": "Legal Team",
+          "relatedRecommendation": "Client Support Coordination",
+          "actionItems": [
+            "Review all relevant documentation",
+            "Consult with appropriate team members",
+            "Schedule follow-up meeting to review progress"
+          ]
+        }
+      ],
+      "processingTime": 12.192,
+      "tokenCount": 5874,
+      "modelUsed": "gemini-2.5-flash",
+      "billingInfo": {
+        "aiProcessingHours": 0.1,
+        "hourlyRate": 350,
+        "aiTimeCharge": 35,
+        "tokenCount": 5874,
+        "estimatedTokenCost": 0.0587,
+        "totalEstimatedCharge": 35.06,
+        "domain": "family_law",
+        "timeTrackedSeconds": 12.19
+      },
+      "confidentialityNotice": "**CONFIDENTIAL AND PRIVILEGED LEGAL COMMUNICATION**\n\n**Attorney Work Product**\n\nThis communication is protected by the attorney-client privilege and/or work product doctrine. It is intended solely for the use of Test Client regarding matter M-1761874968532. Any unauthorized review, use, disclosure, dissemination, or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately and destroy all copies.",
+      "legalDisclaimer": "**LEGAL DISCLAIMER**\n\nThis analysis pertains specifically to the laws of the state jurisdiction as understood on 2025-10-31. Laws and regulations are subject to change. This communication provides legal analysis based on the information provided and AI processing; it does not constitute definitive legal advice for any specific situation and does not create an attorney-client relationship unless one already exists via separate agreement. Consult qualified legal counsel licensed in the relevant jurisdiction(s) for advice tailored to specific circumstances.",
+      "taskId": "LT-1761874979861-1",
+      "createdAt": "2025-10-31T01:43:12.066Z"
+    },
+    {
+      "id": "13019ff9-ecc7-4875-ae0c-ae3b87671731",
+      "queryId": "fc685fd3-03d5-48c9-8ca5-522fd4339508",
+      "content": "While I cannot provide specific legal advice or predict a judge's reasoning in a particular case, I can offer general information about protective orders in Texas and common reasons for their denial.\n\nIn Texas, a protective order is a civil court order designed to protect victims of family violence. To obtain a protective order, the applicant generally must prove to the court that family violence has occurred and is likely to occur again in the future. Family violence is defined as an act against a family member that is intended to cause physical harm, injury, assault, or sexual assault, or a threat that places the family member in fear of any of these.\n\nHere are some general reasons why a judge might deny a protective order, even with CPS involvement:\n\n*   **Insufficient Evidence:** Even if a person feels their life is in danger, the judge requires sufficient legal evidence to grant a protective order. Hearsay or general statements of fear, without specific details, dates, and corroborating evidence (such as police reports, medical records, photos of injuries, witness testimonies, or detailed accounts of specific incidents), might not meet the legal standard of proof. The judge must be convinced that family violence has occurred and is likely to occur again.\n*   **Credibility Issues:** The judge might have found issues with the credibility of the testimony presented, or conflicting evidence might have been introduced.\n*   **Lack of Imminent Danger:** While the situation described is very serious, the judge might not have been convinced that there was an *imminent* threat of future family violence based on the evidence presented at the hearing.\n*   **Procedural Issues:** There could have been procedural errors in the filing of the application or during the hearing itself.\n*   **Temporary vs. Permanent Orders:** Sometimes, a judge might deny a permanent protective order but grant a temporary restraining order or other temporary orders to address immediate safety concerns while further evidence is gathered or other legal proceedings (like the divorce) move forward. It's possible the CPS recommendation was for a temporary measure that the judge did not see as warranting a full protective order at that specific hearing.\n*   **CPS Role:** While CPS involvement and their recommendation are significant, the judge ultimately makes an independent decision based on the evidence presented in court regarding the protective order. The CPS worker's recommendation is one piece of evidence, but the judge must weigh all evidence according to legal standards.\n*   **Ex Parte vs. Noticed Hearing:** If this was an *ex parte* hearing (meaning the husband was not present), the standards for granting a temporary protective order are often lower. However, for a final protective order, the husband would have had the right to be present and present his own evidence and arguments. The denial could have occurred at a final hearing where both sides were heard.\n\nGiven the serious nature of the allegations (drunk everyday, harm, pulling a gun), it is crucial for your friend to consult with an attorney specializing in family law and protective orders in Texas. An attorney can review the specific details of the case, understand what evidence was presented, and advise on next steps, such as appealing the decision or filing a new application with stronger evidence. They can also ensure that all necessary safety measures are being pursued through the divorce proceedings.",
+      "riskLevel": "moderate",
+      "jurisdictionAnalysis": {
+        "type": "state",
+        "keyRequirements": [
+          "State bar membership",
+          "Pro Hac Vice (if applicable)",
+          "State-specific procedural rules"
+        ],
+        "filingDeadlines": {
+          "answer": "Varies by state (e.g., 20-30 days)",
+          "appeal": "Varies (e.g., 30-60 days)",
+          "motion_response": "Varies"
+        },
+        "specialConsiderations": [
+          "Local counsel rules",
+          "Varying discovery limits",
+          "State constitutional issues"
+        ]
+      },
+      "citations": [],
+      "recommendations": [
+        {
+          "priority": "MODERATE",
+          "action": "Detailed Factual Investigation",
+          "timeline": "Within 3-5 days",
+          "details": "Gather all relevant documents and witness information."
+        },
+        {
+          "priority": "MODERATE",
+          "action": "Client Support Coordination",
+          "timeline": "Within 5 days",
+          "details": "Coordinate with family services, counselors, or mediators as appropriate."
+        }
+      ],
+      "nextSteps": [
+        {
+          "step": "MODERATE Priority: Detailed Factual Investigation",
+          "deadline": "Within 3-5 days",
+          "assignee": "Legal Team",
+          "relatedRecommendation": "Detailed Factual Investigation",
+          "actionItems": [
+            "Review all relevant documentation",
+            "Consult with appropriate team members",
+            "Schedule follow-up meeting to review progress"
+          ]
+        },
+        {
+          "step": "MODERATE Priority: Client Support Coordination",
+          "deadline": "Within 5 days",
+          "assignee": "Legal Team",
+          "relatedRecommendation": "Client Support Coordination",
+          "actionItems": [
+            "Review all relevant documentation",
+            "Consult with appropriate team members",
+            "Schedule follow-up meeting to review progress"
+          ]
+        }
+      ],
+      "processingTime": 8.7,
+      "tokenCount": 5486,
+      "modelUsed": "gemini-2.5-flash",
+      "billingInfo": {
+        "aiProcessingHours": 0.1,
+        "hourlyRate": 350,
+        "aiTimeCharge": 35,
+        "tokenCount": 5486,
+        "estimatedTokenCost": 0.0549,
+        "totalEstimatedCharge": 35.05,
+        "domain": "family_law",
+        "timeTrackedSeconds": 8.7
+      },
+      "confidentialityNotice": "**CONFIDENTIAL AND PRIVILEGED LEGAL COMMUNICATION**\n\n**Attorney Work Product**\n\nThis communication is protected by the attorney-client privilege and/or work product doctrine. It is intended solely for the use of Test Client regarding matter M-1762321853240. Any unauthorized review, use, disclosure, dissemination, or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately and destroy all copies.",
+      "legalDisclaimer": "**LEGAL DISCLAIMER**\n\nThis analysis pertains specifically to the laws of the state jurisdiction as understood on 2025-11-05. Laws and regulations are subject to change. This communication provides legal analysis based on the information provided and AI processing; it does not constitute definitive legal advice for any specific situation and does not create an attorney-client relationship unless one already exists via separate agreement. Consult qualified legal counsel licensed in the relevant jurisdiction(s) for advice tailored to specific circumstances.",
+      "taskId": "LT-1762321868421-1",
+      "createdAt": "2025-11-05T05:51:17.140Z"
+    },
+    {
+      "id": "d9075245-72b5-41e0-b812-9c71ec0cae05",
+      "queryId": "de4ff97b-f0c4-4448-979f-1015d96df77f",
+      "content": "The search results provided are primarily related to cases involving the Texas Department of Family and Protective Services, which are generally child welfare cases and not directly on point with the denial of a protective order in a domestic violence situation between spouses. Therefore, these specific cases do not explain why the judge denied the restraining order in your friend's situation.\n\nIn Texas, a \"restraining order\" in the context of domestic violence is typically referred to as a Protective Order. A judge's decision to deny a Protective Order, even with evidence of abuse, can be influenced by several factors. While I cannot provide legal advice or explain a specific judge's reasoning without knowing all the details of the hearing, here are some general reasons why a judge might deny a Protective Order in Texas:\n\n*   **Insufficient Evidence (in the judge's view):** Even with police reports, recordings, and prior arrests, the judge might have determined that the evidence presented at the hearing did not meet the legal standard required for issuing a Protective Order. In Texas, the applicant must prove that family violence has occurred and is likely to occur in the future. The judge might have found the evidence presented to be insufficient to establish the \"likely to occur in the future\" element, or perhaps found issues with the admissibility or credibility of the evidence.\n*   **Procedural Issues:** There could have been procedural errors in the way the application was filed or presented to the court.\n*   **Lack of Imminent Threat (in the judge's view):** While your friend clearly feels her life is in danger, the judge might have determined that, at the time of the hearing, there was not an *imminent* threat of family violence as defined by the law, especially if the husband was already ordered to vacate the premises by a certain date. The judge might have viewed the agreement for him to vacate as a sufficient interim measure.\n*   **Alternative Remedies:** The judge might have believed that other legal remedies were more appropriate or sufficient, such as the agreement for the husband to vacate the premises.\n*   **Credibility Determinations:** Judges make credibility determinations about witnesses and the evidence presented. It's possible the judge did not find the testimony or evidence as compelling as your friend and the DA's office did.\n*   **Specific Legal Requirements Not Met:** Protective Orders have specific legal requirements that must be met. If any of these were not fully satisfied in the application or during the hearing, the judge could deny the order.\n\nIt is crucial for your friend to consult with her attorney or the District Attorney's office that is assisting her to understand the specific reasons for the denial and discuss the next steps. They can review the court's order and the transcript of the hearing to determine the exact basis for the judge's decision and advise on options, such as appealing the decision or seeking other forms of relief.\n\nThe fact that the DA's office secured an agreement for him to vacate the premises by Friday is a positive step, as it provides a timeline for his removal. However, your friend's fear while he is still in the house is completely understandable. She should continue to prioritize her safety and the safety of her children during this time.",
+      "riskLevel": "moderate",
+      "jurisdictionAnalysis": {
+        "type": "state",
+        "keyRequirements": [
+          "State bar membership",
+          "Pro Hac Vice (if applicable)",
+          "State-specific procedural rules"
+        ],
+        "filingDeadlines": {
+          "answer": "Varies by state (e.g., 20-30 days)",
+          "appeal": "Varies (e.g., 30-60 days)",
+          "motion_response": "Varies"
+        },
+        "specialConsiderations": [
+          "Local counsel rules",
+          "Varying discovery limits",
+          "State constitutional issues"
+        ]
+      },
+      "citations": [],
+      "recommendations": [
+        {
+          "priority": "MODERATE",
+          "action": "Detailed Factual Investigation",
+          "timeline": "Within 3-5 days",
+          "details": "Gather all relevant documents and witness information."
+        },
+        {
+          "priority": "MODERATE",
+          "action": "Client Support Coordination",
+          "timeline": "Within 5 days",
+          "details": "Coordinate with family services, counselors, or mediators as appropriate."
+        }
+      ],
+      "nextSteps": [
+        {
+          "step": "MODERATE Priority: Detailed Factual Investigation",
+          "deadline": "Within 3-5 days",
+          "assignee": "Legal Team",
+          "relatedRecommendation": "Detailed Factual Investigation",
+          "actionItems": [
+            "Review all relevant documentation",
+            "Consult with appropriate team members",
+            "Schedule follow-up meeting to review progress"
+          ]
+        },
+        {
+          "step": "MODERATE Priority: Client Support Coordination",
+          "deadline": "Within 5 days",
+          "assignee": "Legal Team",
+          "relatedRecommendation": "Client Support Coordination",
+          "actionItems": [
+            "Review all relevant documentation",
+            "Consult with appropriate team members",
+            "Schedule follow-up meeting to review progress"
+          ]
+        }
+      ],
+      "processingTime": 8.525,
+      "tokenCount": 5457,
+      "modelUsed": "gemini-2.5-flash",
+      "billingInfo": {
+        "aiProcessingHours": 0.1,
+        "hourlyRate": 350,
+        "aiTimeCharge": 35,
+        "tokenCount": 5457,
+        "estimatedTokenCost": 0.0546,
+        "totalEstimatedCharge": 35.05,
+        "domain": "family_law",
+        "timeTrackedSeconds": 8.53
+      },
+      "confidentialityNotice": "**CONFIDENTIAL AND PRIVILEGED LEGAL COMMUNICATION**\n\n**Attorney Work Product**\n\nThis communication is protected by the attorney-client privilege and/or work product doctrine. It is intended solely for the use of Test Client regarding matter M-1762321853240. Any unauthorized review, use, disclosure, dissemination, or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately and destroy all copies.",
+      "legalDisclaimer": "**LEGAL DISCLAIMER**\n\nThis analysis pertains specifically to the laws of the state jurisdiction as understood on 2025-11-05. Laws and regulations are subject to change. This communication provides legal analysis based on the information provided and AI processing; it does not constitute definitive legal advice for any specific situation and does not create an attorney-client relationship unless one already exists via separate agreement. Consult qualified legal counsel licensed in the relevant jurisdiction(s) for advice tailored to specific circumstances.",
+      "taskId": "LT-1762324449831-1",
+      "createdAt": "2025-11-05T06:34:18.366Z"
+    },
+    {
+      "id": "5a121886-234f-4960-b135-8688b119962c",
+      "queryId": "0870e65d-dadd-42e5-8b2b-b278a922ac4b",
+      "content": "You likely have a strong case for more than the $5,000 offered by the store's insurance adjuster. Here's why, based on California premises liability law:\n\n**Key Legal Principles (Premises Liability in California):**\n\n*   **Duty of Care:** Property owners (like grocery stores) in California owe a duty to exercise reasonable care to keep their premises safe for visitors. This includes a duty to inspect the premises, discover any dangerous conditions, and either repair them or give adequate warning of their presence.\n*   **Negligence:** To prove negligence in a slip and fall case, you generally need to show:\n    1.  The property owner knew or should have known about the dangerous condition.\n    2.  The property owner failed to repair the condition or warn of it.\n    3.  This failure caused your injury.\n*   **Known Dangerous Condition:** Your statement that an employee told you, \"Sorry, our roof has been leaking in that spot for weeks,\" is crucial evidence. This directly demonstrates that the grocery store had **actual knowledge** of the dangerous condition (the leaking roof and resulting puddle) for an extended period. This significantly strengthens your claim, as it negates their argument that you \"should have been watching where you were going.\" They had a duty to address the leak or at least place prominent warnings and barriers.\n*   **Causation and Damages:** You clearly suffered a broken wrist as a direct result of the fall. Furthermore, your inability to work as a freelance graphic designer for at least six weeks, leading to lost income and mounting medical bills, constitutes significant damages. California law allows for recovery of economic damages (medical bills, lost wages) and non-economic damages (pain and suffering, emotional distress).\n\n**Relevant Case Law (Illustrative, not exhaustive):**\n\nWhile the search results provided many cases from various jurisdictions, the following California case highlights the importance of a property owner's knowledge of a dangerous condition:\n\n*   **Peralta v. Vons Cos., 235 Cal. Rptr. 3d 212, 24 Cal. App. 5th 1030 (Cal. Ct. App. 2018):** This case, while ultimately affirming summary judgment for Vons due to a lack of evidence regarding *when* the dangerous condition arose and Vons' knowledge, underscores the general principles of premises liability in California. The court discussed the plaintiff's burden to show that the property owner had actual or constructive knowledge of the dangerous condition. In your situation, the employee's statement provides direct evidence of actual knowledge, which is a key differentiator.\n\n**Why $5,000 is likely insufficient:**\n\nThe $5,000 offered by the insurance adjuster appears to be a lowball offer, especially considering:\n\n*   **Medical Bills:** Emergency room visits for a broken wrist, follow-up appointments, potential physical therapy, and imaging can easily exceed $5,000.\n*   **Lost Income:** As a freelance graphic designer, your inability to work for six weeks represents a substantial loss of income. You should meticulously document all lost projects and potential earnings.\n*   **Pain and Suffering:** A broken wrist is a significant injury that causes considerable pain, discomfort, and disruption to daily life. California law allows for compensation for these non-economic damages.\n\n**Next Steps:**\n\n1.  **Do not accept the $5,000 offer.**\n2.  **Gather Evidence:**\n    *   Medical records and bills related to your wrist injury.\n    *   Documentation of your income as a freelance graphic designer (e.g., tax returns, invoices for past projects, contracts for projects you had to turn down).\n    *   Any communication with the grocery store or its employees, especially the employee's statement about the leaking roof.\n    *   If you took photos of the puddle or the area, those would be valuable.\n3.  **Consult with a Personal Injury Attorney:** Given the clear evidence of the store's prior knowledge of the dangerous condition and your significant damages, a California personal injury attorney specializing in premises liability cases can:\n    *   Properly evaluate the full extent of your damages.\n    *   Negotiate with the insurance company on your behalf.\n    *   File a lawsuit if a fair settlement cannot be reached.\n    *   Advise you on the specific legal strategies based on the latest California case law.\n\nBased on the information provided, you have a strong basis to pursue a claim for substantially more than the initial offer. The store's prior knowledge of the leaking roof is a critical piece of evidence in your favor.",
+      "riskLevel": "low",
+      "jurisdictionAnalysis": {
+        "type": "state",
+        "keyRequirements": [
+          "State bar membership",
+          "Pro Hac Vice (if applicable)",
+          "State-specific procedural rules"
+        ],
+        "filingDeadlines": {
+          "answer": "Varies by state (e.g., 20-30 days)",
+          "appeal": "Varies (e.g., 30-60 days)",
+          "motion_response": "Varies"
+        },
+        "specialConsiderations": [
+          "Local counsel rules",
+          "Varying discovery limits",
+          "State constitutional issues"
+        ]
+      },
+      "citations": [],
+      "recommendations": [
+        {
+          "priority": "HIGH",
+          "action": "Implement Litigation Hold",
+          "timeline": "Immediate",
+          "details": "Issue formal litigation hold notice to relevant parties."
+        }
+      ],
+      "nextSteps": [
+        {
+          "step": "HIGH Priority: Implement Litigation Hold",
+          "deadline": "Immediate",
+          "assignee": "Lead Counsel",
+          "relatedRecommendation": "Implement Litigation Hold",
+          "actionItems": [
+            "Draft and issue hold notice",
+            "Identify custodians of relevant data",
+            "Confirm receipt and compliance"
+          ]
+        }
+      ],
+      "processingTime": 9.7,
+      "tokenCount": 10429,
+      "modelUsed": "gemini-2.5-flash",
+      "billingInfo": {
+        "aiProcessingHours": 0.1,
+        "hourlyRate": 450,
+        "aiTimeCharge": 45,
+        "tokenCount": 10429,
+        "estimatedTokenCost": 0.1043,
+        "totalEstimatedCharge": 45.1,
+        "domain": "litigation",
+        "timeTrackedSeconds": 9.7
+      },
+      "confidentialityNotice": "**CONFIDENTIAL AND PRIVILEGED LEGAL COMMUNICATION**\n\n**Attorney Work Product**\n\nThis communication is protected by the attorney-client privilege and/or work product doctrine. It is intended solely for the use of Test Client regarding matter M-1762326623276. Any unauthorized review, use, disclosure, dissemination, or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately and destroy all copies.",
+      "legalDisclaimer": "**LEGAL DISCLAIMER**\n\nThis analysis pertains specifically to the laws of the state jurisdiction as understood on 2025-11-05. Laws and regulations are subject to change. This communication provides legal analysis based on the information provided and AI processing; it does not constitute definitive legal advice for any specific situation and does not create an attorney-client relationship unless one already exists via separate agreement. Consult qualified legal counsel licensed in the relevant jurisdiction(s) for advice tailored to specific circumstances.",
+      "taskId": "LT-1762326879481-1",
+      "createdAt": "2025-11-05T07:14:49.203Z",
+      "functionCalls": [
+        {
+          "name": "search_case_law",
+          "args": {
+            "limit": 3,
+            "query": "slip and fall store negligence known dangerous condition",
+            "jurisdiction": "california"
+          },
+          "result": {
+            "success": true,
+            "data": [
+              {
+                "caseName": "Naval Store Suppliers, Inc. v. Croft",
+                "citation": "816 S.E.2d 301",
+                "court": "Court of Appeals of Georgia",
+                "dateFiled": "2018-05-14",
+                "url": "https://www.courtlistener.com/opinion/7478559/naval-store-suppliers-inc-v-croft/",
+                "snippet": "Mercier, Judge. Carolyn Croft and her husband Terrell Croft sued Naval Store Suppliers, Inc., d/b/a Southern Builders Supply and TLC Millwork, Inc., (hereinafter \"Defendants\"), alleging that due to the Defendants' negligence Carolyn Croft (\"Croft\") slipped and fell on ice at TLC Millwork. The Defen"
+              },
+              {
+                "caseName": "BRANDY T. OLIVER v. WINN-DIXIE STORE, INC.",
+                "citation": "No citation available",
+                "court": "District Court of Appeal of Florida",
+                "dateFiled": "2020-02-19",
+                "url": "https://www.courtlistener.com/opinion/4728105/brandy-t-oliver-v-winn-dixie-store-inc/",
+                "snippet": "DISTRICT COURT OF APPEAL OF THE STATE OF FLORIDA FOURTH DISTRICT BRANDY T. OLIVER, Appellant, v. WINN-DIXIE STORES, INC.,"
+              },
+              {
+                "caseName": "Nielsen v. Wal-Mart Store 2171",
+                "citation": "429 N.J. Super. 251, 57 A.3d 1121, 2013 WL 132467, 2013 N.J. Super. LEXIS 3",
+                "court": "New Jersey Superior Court Appellate Division",
+                "dateFiled": "2013-01-11",
+                "url": "https://www.courtlistener.com/opinion/7404650/nielsen-v-wal-mart-store-2171/",
+                "snippet": "The opinion of the court was delivered by FISHER, P.J.A.D. In this appeal, defendant Walmart Store # 2171—the owner of a unit in a multi-unit commercial condominium developed by defendant Nassau Shopping Center Condominium Association (the developer)—argues it had no duty to warn its independent co"
+              },
+              {
+                "caseName": "Adamchick v. Cracker Barrel Old Country Store, Inc.",
+                "citation": "637 S.E.2d 44, 281 Ga. App. 677, 2006 Fulton County D. Rep. 3058, 2006 Ga. App. LEXIS 1141",
+                "court": "Court of Appeals of Georgia",
+                "dateFiled": "2006-09-06",
+                "url": "https://www.courtlistener.com/opinion/1392251/adamchick-v-cracker-barrel-old-country-store-inc/",
+                "snippet": "637 S.E.2d 44 (2006) ADAMCHICK et al. v. CRACKER BARREL OLD COUNTRY STORE, INC. No. A06A1103. Court of Appeals of Georgia. September 6, 2006. Reconsideration Denied September 27, 2006. *45 Bradley Survant, W. Carl Reynolds, Katherine McArthur, Reynolds & McArthur, Macon, for Appellant. Henry Scott,"
+              },
+              {
+                "caseName": "Harris v. Brookshires Grocery Store",
+                "citation": "786 So. 2d 937, 2001 La. App. LEXIS 916, 2001 WL 488015",
+                "court": "Louisiana Court of Appeal",
+                "dateFiled": "2001-05-09",
+                "url": "https://www.courtlistener.com/opinion/7800612/harris-v-brookshires-grocery-store/",
+                "snippet": "|, STEWART, J. The plaintiff, Leola Harris, appeals the finding of the trial court that there was insufficient evidence to establish that the defendant, Brookshires Grocery Stores (“Brookshires”), had breached any duty to the plaintiff in the exercise of reasonable care to keep its aisles free of a"
+              },
+              {
+                "caseName": "Contreras v. WALGREENS DRUG STORE NO. 3837",
+                "citation": "149 P.3d 761, 214 Ariz. 137, 495 Ariz. Adv. Rep. 26, 2006 Ariz. App. LEXIS 164",
+                "court": "Court of Appeals of Arizona",
+                "dateFiled": "2006-12-27",
+                "url": "https://www.courtlistener.com/opinion/2564284/contreras-v-walgreens-drug-store-no-3837/",
+                "snippet": "149 P.3d 761 (2006) David CONTRERAS, Sr., Plaintiff/Appellant, v. WALGREENS DRUG STORE # 3837, an Arizona corporation Defendant/Appellee. No. 2 CA-CV 2006-0147. Court of Appeals of Arizona, Division 2, Department B. December 27, 2006. Vernon E. Peltz, Tucson, for Plaintiff. Campbell, Yost, Clare &"
+              },
+              {
+                "caseName": "Goodman v. Staples the Office Super-Store, LLC",
+                "citation": "644 F.3d 817, 79 Fed. R. Serv. 3d 532, 2011 U.S. App. LEXIS 8979, 2011 WL 1651246",
+                "court": "Court of Appeals for the Ninth Circuit",
+                "dateFiled": "2011-05-03",
+                "url": "https://www.courtlistener.com/opinion/215938/goodman-v-staples-the-office-super-store-llc/",
+                "snippet": "Opinion by Judge SILVERMAN; Concurrence by Judge TASHIMA. OPINION SILVERMAN, Circuit Judge: Federal Rule of Civil Procedure 26(a)(2) requires a party to timely disclose a written report of a witness “if the witness is one retained or specially employed to provide expert testimony in the case.... ”"
+              },
+              {
+                "caseName": "Tezozomoc Alcantar v. Dolgencorp, LLC",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Tennessee",
+                "dateFiled": "2024-09-06",
+                "url": "https://www.courtlistener.com/opinion/10106636/tezozomoc-alcantar-v-dolgencorp-llc/",
+                "snippet": "09/06/2024 IN THE COURT OF APPEALS OF TENNESSEE AT NASHVILLE February 7, 2024 Session TEZOZOMOC ALCANTAR v. DOLGENCORP,"
+              },
+              {
+                "caseName": "Bill's Dollar Store, Inc. v. Bean",
+                "citation": "77 S.W.3d 367, 2002 Tex. App. LEXIS 2540, 2002 WL 534129",
+                "court": "Court of Appeals of Texas",
+                "dateFiled": "2002-04-11",
+                "url": "https://www.courtlistener.com/opinion/2007778/bills-dollar-store-inc-v-bean/",
+                "snippet": "MAJORITY OPINION LESLIE BROCK YATES, Justice. Appellant, Bill’s Dollar Store, contests jury findings of negligence .and gross negligence in a premises liability action arising out of a slip and fall at appellant’s store. Appellant contends the wet floor warning given to appellee was adequate as a m"
+              },
+              {
+                "caseName": "Shirley Lunsford v. K-VA-T Food Stores, Inc.",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Tennessee",
+                "dateFiled": "2020-03-31",
+                "url": "https://www.courtlistener.com/opinion/4740645/shirley-lunsford-v-k-va-t-food-stores-inc/",
+                "snippet": "03/31/2020 IN THE COURT OF APPEALS OF TENNESSEE AT KNOXVILLE Assigned on Briefs January 2, 2020 SHIRLEY LUNSFORD v. K-VA-T FOOD S"
+              },
+              {
+                "caseName": "Welch v. Ohio Dept. of Rehab. & Corr.",
+                "citation": "2025 Ohio 2514",
+                "court": "Ohio Court of Claims",
+                "dateFiled": "2025-06-25",
+                "url": "https://www.courtlistener.com/opinion/10635117/welch-v-ohio-dept-of-rehab-corr/",
+                "snippet": "[Cite as Welch v. Ohio Dept. of Rehab. & Corr., 2025-Ohio-2514.] IN THE COURT OF CLAIMS OF OHIO DAVID F. WELCH Case No. 2023-00655JD Plaintiff Judge Lisa L. Sadler"
+              },
+              {
+                "caseName": "Laney v. Ohio State Univ. Wexner Med. Ctr.",
+                "citation": "2024 Ohio 1486",
+                "court": "Ohio Court of Claims",
+                "dateFiled": "2024-03-27",
+                "url": "https://www.courtlistener.com/opinion/9498942/laney-v-ohio-state-univ-wexner-med-ctr/",
+                "snippet": "[Cite as Laney v. Ohio State Univ. Wexner Med. Ctr., 2024-Ohio-1486.] IN THE COURT OF CLAIMS OF OHIO MICHAEL P. LANEY, et al. Case No. 2023-00180JD Plaintiffs Judge Lisa L. Sadler"
+              },
+              {
+                "caseName": "Madras v. Applebee's Neighborhood Grill & Bar",
+                "citation": "2025 Ohio 169",
+                "court": "Ohio Court of Appeals",
+                "dateFiled": "2025-01-23",
+                "url": "https://www.courtlistener.com/opinion/10319950/madras-v-applebees-neighborhood-grill-bar/",
+                "snippet": "[Cite as Madras v. Applebee's Neighborhood Grill & Bar, 2025-Ohio-169.] COURT OF APPEALS OF OHIO EIGHTH APPELLATE DISTRICT COUNTY OF CUYAHOGA DANEEN MADARAS, :"
+              },
+              {
+                "caseName": "David Contreras, Sr. v. Walgreens Drug Store 3837",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Arizona",
+                "dateFiled": "2006-12-27",
+                "url": "https://www.courtlistener.com/opinion/2688910/david-contreras-sr-v-walgreens-drug-store-3837/",
+                "snippet": "FILED BY CLERK IN THE COURT OF APPEALS DEC 27 2006 STATE OF ARIZONA"
+              },
+              {
+                "caseName": "Robert L. Trentham v. Mid-America Apartments, LP",
+                "citation": "No citation available",
+                "court": "Tennessee Supreme Court",
+                "dateFiled": "2025-01-08",
+                "url": "https://www.courtlistener.com/opinion/10310100/robert-l-trentham-v-mid-america-apartments-lp/",
+                "snippet": "01/08/2025 IN THE SUPREME COURT OF TENNESSEE AT NASHVILLE December 6, 2023 Session Heard at Martin1 ROBERT L. TRENTHAM"
+              },
+              {
+                "caseName": "Leah Keirsey v. K-VA-T Food Stores Inc.",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Tennessee",
+                "dateFiled": "2019-03-20",
+                "url": "https://www.courtlistener.com/opinion/4601601/leah-keirsey-v-k-va-t-food-stores-inc/",
+                "snippet": "03/20/2019 IN THE COURT OF APPEALS OF TENNESSEE AT KNOXVILLE February 21, 2019 Session LEAH KEIRSEY V. K-VA-T FOOD STORES"
+              },
+              {
+                "caseName": "Kristin Lee v. K & N Management, Inc. D/B/A Rudy's Country Store and Bar-B-Q",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Texas",
+                "dateFiled": "2015-12-11",
+                "url": "https://www.courtlistener.com/opinion/4285705/kristin-lee-v-k-n-management-inc-dba-rudys-country-store-and/",
+                "snippet": "TEXAS COURT OF APPEALS, THIRD DISTRICT, AT AUSTIN NO. 03-15-00243-CV Kristin Lee, Appellant v. K & N Management, Inc. d/b/a Rudy’s Country Store and"
+              },
+              {
+                "caseName": "Liggins v. Giant Eagle McCutcheon & Stelzer",
+                "citation": "2019 Ohio 1250",
+                "court": "Ohio Court of Appeals",
+                "dateFiled": "2019-04-04",
+                "url": "https://www.courtlistener.com/opinion/4607019/liggins-v-giant-eagle-mccutcheon-stelzer/",
+                "snippet": "[Cite as Liggins v. Giant Eagle McCutchen & Stelzer, 2019-Ohio-1250.] IN THE COURT OF APPEALS OF OHIO TENTH APPELLATE DISTRICT LaDonna Liggins et al., : Plaintiffs-Appellants,"
+              },
+              {
+                "caseName": "Leitha C. Perkins and Robert L. Perkins v. Big Lots Store, Inc.",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Tennessee",
+                "dateFiled": "2009-05-20",
+                "url": "https://www.courtlistener.com/opinion/1051083/leitha-c-perkins-and-robert-l-perkins-v-big-lots-s/",
+                "snippet": "IN THE COURT OF APPEALS OF TENNESSEE AT JACKSON September 16, 2008 Session LEITHA C. PERKINS and ROBERT L. PERKINS v. BIG LOTS STORES, INC."
+              },
+              {
+                "caseName": "Bryant v. Indus. Power Sys., Inc.",
+                "citation": "2018 Ohio 1741",
+                "court": "Ohio Court of Appeals",
+                "dateFiled": "2018-05-04",
+                "url": "https://www.courtlistener.com/opinion/4495615/bryant-v-indus-power-sys-inc/",
+                "snippet": "[Cite as Bryant v. Indus. Power Sys., Inc., 2018-Ohio-1741.] IN THE COURT OF APPEALS OF OHIO SIXTH APPELLATE DISTRICT LUCAS COUNTY Ian Bryant"
+              }
+            ],
+            "searchQuery": "slip and fall store negligence known dangerous condition",
+            "totalResults": 4739
+          }
+        },
+        {
+          "name": "search_case_law",
+          "args": {
+            "limit": 3,
+            "jurisdiction": "california",
+            "query": "premises liability store wet floor prior knowledge california"
+          },
+          "result": {
+            "success": true,
+            "data": [
+              {
+                "caseName": "In Re Silica Products Liability Litigation",
+                "citation": "398 F. Supp. 2d 563, 2005 U.S. Dist. LEXIS 14581, 2005 WL 1593936",
+                "court": "District Court, S.D. Texas",
+                "dateFiled": "2005-06-30",
+                "url": "https://www.courtlistener.com/opinion/2432281/in-re-silica-products-liability-litigation/",
+                "snippet": "398 F.Supp.2d 563 (2005) In re SILICA PRODUCTS LIABILITY LITIGATION. No. MDL 1553. United States District Court, S.D. Texas, Corpus Christi Division. June 30, 2005. *564 *565 *566 John R. Fabry, Liaison Counsel, for all plaintiffs. Darrell Lee Barger, Liaiso"
+              },
+              {
+                "caseName": "Peralta v. Vons Cos.",
+                "citation": "235 Cal. Rptr. 3d 212, 24 Cal. App. 5th 1030",
+                "court": "California Court of Appeal, 5th District",
+                "dateFiled": "2018-05-30",
+                "url": "https://www.courtlistener.com/opinion/6239745/peralta-v-vons-cos/",
+                "snippet": "JOHNSON, J. *214*1032This appeal arises from a slip and fall accident at a Vons grocery store. Rose and Raul Peralta1 (collectively, Peraltas) argue the trial court improperly entered summary judgment for The Vons Companies,"
+              },
+              {
+                "caseName": "Peralta v. Vons Companies",
+                "citation": "No citation available",
+                "court": "California Court of Appeal",
+                "dateFiled": "2018-06-26",
+                "url": "https://www.courtlistener.com/opinion/4511428/peralta-v-vons-companies/",
+                "snippet": "Filed 5/30/18; Certified for publication 6/26/18 (order attached) IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA SECOND APPELLATE DISTRICT DIVISION ONE ROSE PERALTA et al., B282130 Plaintiffs and"
+              },
+              {
+                "caseName": "City of San Antonio v. Drana Burch",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Texas",
+                "dateFiled": "2024-10-03",
+                "url": "https://www.courtlistener.com/opinion/10132045/city-of-san-antonio-v-drana-burch/",
+                "snippet": "REVERSE and RENDER and Opinion Filed October 3, 2024. S In The Court of Appeals Fifth District of Texas at Dallas No. 05-24-00078-CV"
+              },
+              {
+                "caseName": "Gless v. Dritley Properties",
+                "citation": "No citation available",
+                "court": "Nebraska Court of Appeals",
+                "dateFiled": "2017-11-28",
+                "url": "https://www.courtlistener.com/opinion/4446635/gless-v-dritley-properties/",
+                "snippet": "IN THE NEBRASKA COURT OF APPEALS MEMORANDUM OPINION AND JUDGMENT ON APPEAL (Memorandum Web Opinion) GLESS V. DRITLEY PROPERTIES NOTICE: THIS OPINION IS NOT DESIGNATED FOR PERMANENT PUBLICATION AND"
+              },
+              {
+                "caseName": "Robert L. Trentham v. Mid-America Apartments, LP",
+                "citation": "No citation available",
+                "court": "Tennessee Supreme Court",
+                "dateFiled": "2025-01-08",
+                "url": "https://www.courtlistener.com/opinion/10310100/robert-l-trentham-v-mid-america-apartments-lp/",
+                "snippet": "01/08/2025 IN THE SUPREME COURT OF TENNESSEE AT NASHVILLE December 6, 2023 Session Heard at Martin1 ROBERT L. TRENTHAM"
+              },
+              {
+                "caseName": "Rosas v. Buddies Food Store",
+                "citation": "518 S.W.2d 534, 18 Tex. Sup. Ct. J. 163, 1975 Tex. LEXIS 200",
+                "court": "Texas Supreme Court",
+                "dateFiled": "1975-01-08",
+                "url": "https://www.courtlistener.com/opinion/1714991/rosas-v-buddies-food-store/",
+                "snippet": "STEAKLEY, Justice. On a rainy afternoon, Isias Rosas entered Buddies Food Store, slipped on a wet floor and fell. Rosas sued Buddies to recover for the personal injuries he sus*536tained. Buddies’ motion for a Summary Judgment was granted by the trial court and this has been affirmed by the Court o"
+              },
+              {
+                "caseName": "City of Houston v. Marion Crawford",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Texas",
+                "dateFiled": "2018-10-09",
+                "url": "https://www.courtlistener.com/opinion/4542773/city-of-houston-v-marion-crawford/",
+                "snippet": "Opinion issued October 9, 2018 In The Court of Appeals For The First District of Texas ————————————"
+              },
+              {
+                "caseName": "Anthony Barlow v. Buc-Ee's Ltd. D/B/A Buc-Ee's, and Buc-Ee's",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Texas",
+                "dateFiled": "2021-02-11",
+                "url": "https://www.courtlistener.com/opinion/4856434/anthony-barlow-v-buc-ees-ltd-dba-buc-ees-and-buc-ees/",
+                "snippet": "Opinion issued February 11, 2021 In The Court of Appeals For The First District of Texas ———————————— NO."
+              },
+              {
+                "caseName": "Bilesky v. Shopko Stores Operating Co., LLC",
+                "citation": "2014 MT 300, 377 Mont. 58, 338 P.3d 76, 2014 Mont. LEXIS 684",
+                "court": "Montana Supreme Court",
+                "dateFiled": "2014-11-14",
+                "url": "https://www.courtlistener.com/opinion/2752208/bilesky-v-shopko-stores-operating-co-llc/",
+                "snippet": "JUSTICE McKINNON, dissenting. ¶35 I am not as confident as the Court in concluding that Shopko’s statements were unequivocal and constituted a deliberate waiver, expressly conceding certain facts. As discussed below, the statements originally were made by Bilesky’s counsel, not Shopko’s counsel, in"
+              },
+              {
+                "caseName": "City of Gainesville v. Suzanne Sharp",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Texas",
+                "dateFiled": "2022-10-20",
+                "url": "https://www.courtlistener.com/opinion/8405204/city-of-gainesville-v-suzanne-sharp/",
+                "snippet": "In the Court of Appeals Second Appellate District of Texas at Fort Worth ___________________________ No. 02-22-00061-CV ___________________________ CITY OF GAINESVILLE, Appellant V. SUZANNE SHARP, Appellee"
+              },
+              {
+                "caseName": "Lamar University v. Deborah Hanington",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Texas",
+                "dateFiled": "2023-03-23",
+                "url": "https://www.courtlistener.com/opinion/9386448/lamar-university-v-deborah-hanington/",
+                "snippet": "In The Court of Appeals Ninth District of Texas at Beaumont ________________ NO. 09-21-00288-CV ______________"
+              },
+              {
+                "caseName": "Harris County v. Cynthia McFarland",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Texas",
+                "dateFiled": "2025-01-09",
+                "url": "https://www.courtlistener.com/opinion/10311976/harris-county-v-cynthia-mcfarland/",
+                "snippet": "Opinion issued January 9, 2025 In The Court of Appeals For The First District of Texas ————————————"
+              },
+              {
+                "caseName": "Farrar v. SABINE MANAGEMENT CORP.",
+                "citation": "362 S.W.3d 694, 2011 WL 3524204",
+                "court": "Court of Appeals of Texas",
+                "dateFiled": "2011-10-31",
+                "url": "https://www.courtlistener.com/opinion/2545286/farrar-v-sabine-management-corp/",
+                "snippet": "MICHAEL MASSENGALE, Justice, dissenting. As a matter of law, the natural accumulation of ice or mud does not create an unreasonable risk of harm. See, e.g., Scott & White Mem’l Hosp. v. Fair, 310 S.W.3d 411, 419 (Tex.2010); M.O. Dental Lab v. Rape, 139 S.W.3d 671, 676 (Tex.2004) (per curiam); Johns"
+              },
+              {
+                "caseName": "Thomas Farrar v. Sabine Management Corporation A//K/A Sabine Properties Management, Inc. Northwest Building, Ltd",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Texas",
+                "dateFiled": "2011-08-11",
+                "url": "https://www.courtlistener.com/opinion/3127152/thomas-farrar-v-sabine-management-corporation-aka-/",
+                "snippet": "Dissenting opinion issued August 11, 2011 In The Court of Appeals For The First District of Texas<"
+              },
+              {
+                "caseName": "Wilson v. Wal-Mart Stores, Inc.",
+                "citation": "85 Cal. Rptr. 2d 4, 72 Cal. App. 4th 382",
+                "court": "California Court of Appeal",
+                "dateFiled": "1999-05-20",
+                "url": "https://www.courtlistener.com/opinion/2293407/wilson-v-wal-mart-stores-inc/",
+                "snippet": "85 Cal.Rptr.2d 4 (1999) 72 Cal.App.4th 382 Robin WILSON, Plaintiff and Respondent, v. WAL-MART STORES, INC., Defendant and Appellant. Robin Wilson, Plaintiff and Appellant, v. Wal-Mart Stores, Inc., Defendant and Respondent. Nos. C027518, C027765. Court of Appeal, Third District. April 22, 1999. As"
+              },
+              {
+                "caseName": "Tonya Gayle Harkins v. Wal-Mart Stores Texas, LLC, D/B/A Wal-Mart Stores Texas 2007, LLC, Wal-Mart Super Center, and Wal-Mart",
+                "citation": "No citation available",
+                "court": "Court of Appeals of Texas",
+                "dateFiled": "2022-08-18",
+                "url": "https://www.courtlistener.com/opinion/7858479/tonya-gayle-harkins-v-wal-mart-stores-texas-llc-dba-wal-mart-stores/",
+                "snippet": "In the Court of Appeals Second Appellate District of Texas at Fort Worth ___________________________ No. 02-21-00201-CV ___________________________"
+              },
+              {
+                "caseName": "People v. Ghobrial",
+                "citation": "234 Cal. Rptr. 3d 669, 420 P.3d 179, 5 Cal. 5th 250",
+                "court": "California Supreme Court",
+                "dateFiled": "2018-06-21",
+                "url": "https://www.courtlistener.com/opinion/4509571/people-v-ghobrial/",
+                "snippet": "KRUGER, J. *679 *256 A jury found defendant John Samuel Ghobrial guilty of the first degree murder of Juan Delgado, a 12-year-old boy, and found true the special circumstance that the murder was"
+              },
+              {
+                "caseName": "Beebe v. Wonderful Pistachios etc.",
+                "citation": "No citation available",
+                "court": "California Court of Appeal",
+                "dateFiled": "2023-06-06",
+                "url": "https://www.courtlistener.com/opinion/9404503/beebe-v-wonderful-pistachios-etc/",
+                "snippet": "Filed 6/6/23 CERTIFIED FOR PUBLICATION IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA FIFTH APPELLATE DISTRICT DALE BEEBE, F083502 Plaintif"
+              },
+              {
+                "caseName": "Brookshire Grocery Co. v. Taylor",
+                "citation": "102 S.W.3d 816, 2003 Tex. App. LEXIS 2774, 2003 WL 728750",
+                "court": "Court of Appeals of Texas",
+                "dateFiled": "2003-04-01",
+                "url": "https://www.courtlistener.com/opinion/1370844/brookshire-grocery-co-v-taylor/",
+                "snippet": "102 S.W.3d 816 (2003) BROOKSHIRE GROCERY COMPANY, d/b/a Brookshire's Food Stores, Appellant, v. Mary Frances TAYLOR, Appellee. No. 06-02-00122-CV. Court of Appeals of Texas, Texarkana. Submitted January 15, 2003. Decided April 1, 2003. *818 Troy A. Hornsby, Miller, James, Miller & Hornsby, LLP, Tex"
+              }
+            ],
+            "searchQuery": "premises liability store wet floor prior knowledge california",
+            "totalResults": 278
+          }
+        }
+      ],
+      "caseLawResults": [
+        {
+          "caseName": "Naval Store Suppliers, Inc. v. Croft",
+          "citation": "816 S.E.2d 301",
+          "court": "Court of Appeals of Georgia",
+          "dateFiled": "2018-05-14",
+          "url": "https://www.courtlistener.com/opinion/7478559/naval-store-suppliers-inc-v-croft/",
+          "snippet": "Mercier, Judge. Carolyn Croft and her husband Terrell Croft sued Naval Store Suppliers, Inc., d/b/a Southern Builders Supply and TLC Millwork, Inc., (hereinafter \"Defendants\"), alleging that due to the Defendants' negligence Carolyn Croft (\"Croft\") slipped and fell on ice at TLC Millwork. The Defen"
+        },
+        {
+          "caseName": "BRANDY T. OLIVER v. WINN-DIXIE STORE, INC.",
+          "citation": "No citation available",
+          "court": "District Court of Appeal of Florida",
+          "dateFiled": "2020-02-19",
+          "url": "https://www.courtlistener.com/opinion/4728105/brandy-t-oliver-v-winn-dixie-store-inc/",
+          "snippet": "DISTRICT COURT OF APPEAL OF THE STATE OF FLORIDA FOURTH DISTRICT BRANDY T. OLIVER, Appellant, v. WINN-DIXIE STORES, INC.,"
+        },
+        {
+          "caseName": "Nielsen v. Wal-Mart Store 2171",
+          "citation": "429 N.J. Super. 251, 57 A.3d 1121, 2013 WL 132467, 2013 N.J. Super. LEXIS 3",
+          "court": "New Jersey Superior Court Appellate Division",
+          "dateFiled": "2013-01-11",
+          "url": "https://www.courtlistener.com/opinion/7404650/nielsen-v-wal-mart-store-2171/",
+          "snippet": "The opinion of the court was delivered by FISHER, P.J.A.D. In this appeal, defendant Walmart Store # 2171—the owner of a unit in a multi-unit commercial condominium developed by defendant Nassau Shopping Center Condominium Association (the developer)—argues it had no duty to warn its independent co"
+        },
+        {
+          "caseName": "Adamchick v. Cracker Barrel Old Country Store, Inc.",
+          "citation": "637 S.E.2d 44, 281 Ga. App. 677, 2006 Fulton County D. Rep. 3058, 2006 Ga. App. LEXIS 1141",
+          "court": "Court of Appeals of Georgia",
+          "dateFiled": "2006-09-06",
+          "url": "https://www.courtlistener.com/opinion/1392251/adamchick-v-cracker-barrel-old-country-store-inc/",
+          "snippet": "637 S.E.2d 44 (2006) ADAMCHICK et al. v. CRACKER BARREL OLD COUNTRY STORE, INC. No. A06A1103. Court of Appeals of Georgia. September 6, 2006. Reconsideration Denied September 27, 2006. *45 Bradley Survant, W. Carl Reynolds, Katherine McArthur, Reynolds & McArthur, Macon, for Appellant. Henry Scott,"
+        },
+        {
+          "caseName": "Harris v. Brookshires Grocery Store",
+          "citation": "786 So. 2d 937, 2001 La. App. LEXIS 916, 2001 WL 488015",
+          "court": "Louisiana Court of Appeal",
+          "dateFiled": "2001-05-09",
+          "url": "https://www.courtlistener.com/opinion/7800612/harris-v-brookshires-grocery-store/",
+          "snippet": "|, STEWART, J. The plaintiff, Leola Harris, appeals the finding of the trial court that there was insufficient evidence to establish that the defendant, Brookshires Grocery Stores (“Brookshires”), had breached any duty to the plaintiff in the exercise of reasonable care to keep its aisles free of a"
+        },
+        {
+          "caseName": "Contreras v. WALGREENS DRUG STORE NO. 3837",
+          "citation": "149 P.3d 761, 214 Ariz. 137, 495 Ariz. Adv. Rep. 26, 2006 Ariz. App. LEXIS 164",
+          "court": "Court of Appeals of Arizona",
+          "dateFiled": "2006-12-27",
+          "url": "https://www.courtlistener.com/opinion/2564284/contreras-v-walgreens-drug-store-no-3837/",
+          "snippet": "149 P.3d 761 (2006) David CONTRERAS, Sr., Plaintiff/Appellant, v. WALGREENS DRUG STORE # 3837, an Arizona corporation Defendant/Appellee. No. 2 CA-CV 2006-0147. Court of Appeals of Arizona, Division 2, Department B. December 27, 2006. Vernon E. Peltz, Tucson, for Plaintiff. Campbell, Yost, Clare &"
+        },
+        {
+          "caseName": "Goodman v. Staples the Office Super-Store, LLC",
+          "citation": "644 F.3d 817, 79 Fed. R. Serv. 3d 532, 2011 U.S. App. LEXIS 8979, 2011 WL 1651246",
+          "court": "Court of Appeals for the Ninth Circuit",
+          "dateFiled": "2011-05-03",
+          "url": "https://www.courtlistener.com/opinion/215938/goodman-v-staples-the-office-super-store-llc/",
+          "snippet": "Opinion by Judge SILVERMAN; Concurrence by Judge TASHIMA. OPINION SILVERMAN, Circuit Judge: Federal Rule of Civil Procedure 26(a)(2) requires a party to timely disclose a written report of a witness “if the witness is one retained or specially employed to provide expert testimony in the case.... ”"
+        },
+        {
+          "caseName": "Tezozomoc Alcantar v. Dolgencorp, LLC",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Tennessee",
+          "dateFiled": "2024-09-06",
+          "url": "https://www.courtlistener.com/opinion/10106636/tezozomoc-alcantar-v-dolgencorp-llc/",
+          "snippet": "09/06/2024 IN THE COURT OF APPEALS OF TENNESSEE AT NASHVILLE February 7, 2024 Session TEZOZOMOC ALCANTAR v. DOLGENCORP,"
+        },
+        {
+          "caseName": "Bill's Dollar Store, Inc. v. Bean",
+          "citation": "77 S.W.3d 367, 2002 Tex. App. LEXIS 2540, 2002 WL 534129",
+          "court": "Court of Appeals of Texas",
+          "dateFiled": "2002-04-11",
+          "url": "https://www.courtlistener.com/opinion/2007778/bills-dollar-store-inc-v-bean/",
+          "snippet": "MAJORITY OPINION LESLIE BROCK YATES, Justice. Appellant, Bill’s Dollar Store, contests jury findings of negligence .and gross negligence in a premises liability action arising out of a slip and fall at appellant’s store. Appellant contends the wet floor warning given to appellee was adequate as a m"
+        },
+        {
+          "caseName": "Shirley Lunsford v. K-VA-T Food Stores, Inc.",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Tennessee",
+          "dateFiled": "2020-03-31",
+          "url": "https://www.courtlistener.com/opinion/4740645/shirley-lunsford-v-k-va-t-food-stores-inc/",
+          "snippet": "03/31/2020 IN THE COURT OF APPEALS OF TENNESSEE AT KNOXVILLE Assigned on Briefs January 2, 2020 SHIRLEY LUNSFORD v. K-VA-T FOOD S"
+        },
+        {
+          "caseName": "Welch v. Ohio Dept. of Rehab. & Corr.",
+          "citation": "2025 Ohio 2514",
+          "court": "Ohio Court of Claims",
+          "dateFiled": "2025-06-25",
+          "url": "https://www.courtlistener.com/opinion/10635117/welch-v-ohio-dept-of-rehab-corr/",
+          "snippet": "[Cite as Welch v. Ohio Dept. of Rehab. & Corr., 2025-Ohio-2514.] IN THE COURT OF CLAIMS OF OHIO DAVID F. WELCH Case No. 2023-00655JD Plaintiff Judge Lisa L. Sadler"
+        },
+        {
+          "caseName": "Laney v. Ohio State Univ. Wexner Med. Ctr.",
+          "citation": "2024 Ohio 1486",
+          "court": "Ohio Court of Claims",
+          "dateFiled": "2024-03-27",
+          "url": "https://www.courtlistener.com/opinion/9498942/laney-v-ohio-state-univ-wexner-med-ctr/",
+          "snippet": "[Cite as Laney v. Ohio State Univ. Wexner Med. Ctr., 2024-Ohio-1486.] IN THE COURT OF CLAIMS OF OHIO MICHAEL P. LANEY, et al. Case No. 2023-00180JD Plaintiffs Judge Lisa L. Sadler"
+        },
+        {
+          "caseName": "Madras v. Applebee's Neighborhood Grill & Bar",
+          "citation": "2025 Ohio 169",
+          "court": "Ohio Court of Appeals",
+          "dateFiled": "2025-01-23",
+          "url": "https://www.courtlistener.com/opinion/10319950/madras-v-applebees-neighborhood-grill-bar/",
+          "snippet": "[Cite as Madras v. Applebee's Neighborhood Grill & Bar, 2025-Ohio-169.] COURT OF APPEALS OF OHIO EIGHTH APPELLATE DISTRICT COUNTY OF CUYAHOGA DANEEN MADARAS, :"
+        },
+        {
+          "caseName": "David Contreras, Sr. v. Walgreens Drug Store 3837",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Arizona",
+          "dateFiled": "2006-12-27",
+          "url": "https://www.courtlistener.com/opinion/2688910/david-contreras-sr-v-walgreens-drug-store-3837/",
+          "snippet": "FILED BY CLERK IN THE COURT OF APPEALS DEC 27 2006 STATE OF ARIZONA"
+        },
+        {
+          "caseName": "Robert L. Trentham v. Mid-America Apartments, LP",
+          "citation": "No citation available",
+          "court": "Tennessee Supreme Court",
+          "dateFiled": "2025-01-08",
+          "url": "https://www.courtlistener.com/opinion/10310100/robert-l-trentham-v-mid-america-apartments-lp/",
+          "snippet": "01/08/2025 IN THE SUPREME COURT OF TENNESSEE AT NASHVILLE December 6, 2023 Session Heard at Martin1 ROBERT L. TRENTHAM"
+        },
+        {
+          "caseName": "Leah Keirsey v. K-VA-T Food Stores Inc.",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Tennessee",
+          "dateFiled": "2019-03-20",
+          "url": "https://www.courtlistener.com/opinion/4601601/leah-keirsey-v-k-va-t-food-stores-inc/",
+          "snippet": "03/20/2019 IN THE COURT OF APPEALS OF TENNESSEE AT KNOXVILLE February 21, 2019 Session LEAH KEIRSEY V. K-VA-T FOOD STORES"
+        },
+        {
+          "caseName": "Kristin Lee v. K & N Management, Inc. D/B/A Rudy's Country Store and Bar-B-Q",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Texas",
+          "dateFiled": "2015-12-11",
+          "url": "https://www.courtlistener.com/opinion/4285705/kristin-lee-v-k-n-management-inc-dba-rudys-country-store-and/",
+          "snippet": "TEXAS COURT OF APPEALS, THIRD DISTRICT, AT AUSTIN NO. 03-15-00243-CV Kristin Lee, Appellant v. K & N Management, Inc. d/b/a Rudy’s Country Store and"
+        },
+        {
+          "caseName": "Liggins v. Giant Eagle McCutcheon & Stelzer",
+          "citation": "2019 Ohio 1250",
+          "court": "Ohio Court of Appeals",
+          "dateFiled": "2019-04-04",
+          "url": "https://www.courtlistener.com/opinion/4607019/liggins-v-giant-eagle-mccutcheon-stelzer/",
+          "snippet": "[Cite as Liggins v. Giant Eagle McCutchen & Stelzer, 2019-Ohio-1250.] IN THE COURT OF APPEALS OF OHIO TENTH APPELLATE DISTRICT LaDonna Liggins et al., : Plaintiffs-Appellants,"
+        },
+        {
+          "caseName": "Leitha C. Perkins and Robert L. Perkins v. Big Lots Store, Inc.",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Tennessee",
+          "dateFiled": "2009-05-20",
+          "url": "https://www.courtlistener.com/opinion/1051083/leitha-c-perkins-and-robert-l-perkins-v-big-lots-s/",
+          "snippet": "IN THE COURT OF APPEALS OF TENNESSEE AT JACKSON September 16, 2008 Session LEITHA C. PERKINS and ROBERT L. PERKINS v. BIG LOTS STORES, INC."
+        },
+        {
+          "caseName": "Bryant v. Indus. Power Sys., Inc.",
+          "citation": "2018 Ohio 1741",
+          "court": "Ohio Court of Appeals",
+          "dateFiled": "2018-05-04",
+          "url": "https://www.courtlistener.com/opinion/4495615/bryant-v-indus-power-sys-inc/",
+          "snippet": "[Cite as Bryant v. Indus. Power Sys., Inc., 2018-Ohio-1741.] IN THE COURT OF APPEALS OF OHIO SIXTH APPELLATE DISTRICT LUCAS COUNTY Ian Bryant"
+        },
+        {
+          "caseName": "In Re Silica Products Liability Litigation",
+          "citation": "398 F. Supp. 2d 563, 2005 U.S. Dist. LEXIS 14581, 2005 WL 1593936",
+          "court": "District Court, S.D. Texas",
+          "dateFiled": "2005-06-30",
+          "url": "https://www.courtlistener.com/opinion/2432281/in-re-silica-products-liability-litigation/",
+          "snippet": "398 F.Supp.2d 563 (2005) In re SILICA PRODUCTS LIABILITY LITIGATION. No. MDL 1553. United States District Court, S.D. Texas, Corpus Christi Division. June 30, 2005. *564 *565 *566 John R. Fabry, Liaison Counsel, for all plaintiffs. Darrell Lee Barger, Liaiso"
+        },
+        {
+          "caseName": "Peralta v. Vons Cos.",
+          "citation": "235 Cal. Rptr. 3d 212, 24 Cal. App. 5th 1030",
+          "court": "California Court of Appeal, 5th District",
+          "dateFiled": "2018-05-30",
+          "url": "https://www.courtlistener.com/opinion/6239745/peralta-v-vons-cos/",
+          "snippet": "JOHNSON, J. *214*1032This appeal arises from a slip and fall accident at a Vons grocery store. Rose and Raul Peralta1 (collectively, Peraltas) argue the trial court improperly entered summary judgment for The Vons Companies,"
+        },
+        {
+          "caseName": "Peralta v. Vons Companies",
+          "citation": "No citation available",
+          "court": "California Court of Appeal",
+          "dateFiled": "2018-06-26",
+          "url": "https://www.courtlistener.com/opinion/4511428/peralta-v-vons-companies/",
+          "snippet": "Filed 5/30/18; Certified for publication 6/26/18 (order attached) IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA SECOND APPELLATE DISTRICT DIVISION ONE ROSE PERALTA et al., B282130 Plaintiffs and"
+        },
+        {
+          "caseName": "City of San Antonio v. Drana Burch",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Texas",
+          "dateFiled": "2024-10-03",
+          "url": "https://www.courtlistener.com/opinion/10132045/city-of-san-antonio-v-drana-burch/",
+          "snippet": "REVERSE and RENDER and Opinion Filed October 3, 2024. S In The Court of Appeals Fifth District of Texas at Dallas No. 05-24-00078-CV"
+        },
+        {
+          "caseName": "Gless v. Dritley Properties",
+          "citation": "No citation available",
+          "court": "Nebraska Court of Appeals",
+          "dateFiled": "2017-11-28",
+          "url": "https://www.courtlistener.com/opinion/4446635/gless-v-dritley-properties/",
+          "snippet": "IN THE NEBRASKA COURT OF APPEALS MEMORANDUM OPINION AND JUDGMENT ON APPEAL (Memorandum Web Opinion) GLESS V. DRITLEY PROPERTIES NOTICE: THIS OPINION IS NOT DESIGNATED FOR PERMANENT PUBLICATION AND"
+        },
+        {
+          "caseName": "Robert L. Trentham v. Mid-America Apartments, LP",
+          "citation": "No citation available",
+          "court": "Tennessee Supreme Court",
+          "dateFiled": "2025-01-08",
+          "url": "https://www.courtlistener.com/opinion/10310100/robert-l-trentham-v-mid-america-apartments-lp/",
+          "snippet": "01/08/2025 IN THE SUPREME COURT OF TENNESSEE AT NASHVILLE December 6, 2023 Session Heard at Martin1 ROBERT L. TRENTHAM"
+        },
+        {
+          "caseName": "Rosas v. Buddies Food Store",
+          "citation": "518 S.W.2d 534, 18 Tex. Sup. Ct. J. 163, 1975 Tex. LEXIS 200",
+          "court": "Texas Supreme Court",
+          "dateFiled": "1975-01-08",
+          "url": "https://www.courtlistener.com/opinion/1714991/rosas-v-buddies-food-store/",
+          "snippet": "STEAKLEY, Justice. On a rainy afternoon, Isias Rosas entered Buddies Food Store, slipped on a wet floor and fell. Rosas sued Buddies to recover for the personal injuries he sus*536tained. Buddies’ motion for a Summary Judgment was granted by the trial court and this has been affirmed by the Court o"
+        },
+        {
+          "caseName": "City of Houston v. Marion Crawford",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Texas",
+          "dateFiled": "2018-10-09",
+          "url": "https://www.courtlistener.com/opinion/4542773/city-of-houston-v-marion-crawford/",
+          "snippet": "Opinion issued October 9, 2018 In The Court of Appeals For The First District of Texas ————————————"
+        },
+        {
+          "caseName": "Anthony Barlow v. Buc-Ee's Ltd. D/B/A Buc-Ee's, and Buc-Ee's",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Texas",
+          "dateFiled": "2021-02-11",
+          "url": "https://www.courtlistener.com/opinion/4856434/anthony-barlow-v-buc-ees-ltd-dba-buc-ees-and-buc-ees/",
+          "snippet": "Opinion issued February 11, 2021 In The Court of Appeals For The First District of Texas ———————————— NO."
+        },
+        {
+          "caseName": "Bilesky v. Shopko Stores Operating Co., LLC",
+          "citation": "2014 MT 300, 377 Mont. 58, 338 P.3d 76, 2014 Mont. LEXIS 684",
+          "court": "Montana Supreme Court",
+          "dateFiled": "2014-11-14",
+          "url": "https://www.courtlistener.com/opinion/2752208/bilesky-v-shopko-stores-operating-co-llc/",
+          "snippet": "JUSTICE McKINNON, dissenting. ¶35 I am not as confident as the Court in concluding that Shopko’s statements were unequivocal and constituted a deliberate waiver, expressly conceding certain facts. As discussed below, the statements originally were made by Bilesky’s counsel, not Shopko’s counsel, in"
+        },
+        {
+          "caseName": "City of Gainesville v. Suzanne Sharp",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Texas",
+          "dateFiled": "2022-10-20",
+          "url": "https://www.courtlistener.com/opinion/8405204/city-of-gainesville-v-suzanne-sharp/",
+          "snippet": "In the Court of Appeals Second Appellate District of Texas at Fort Worth ___________________________ No. 02-22-00061-CV ___________________________ CITY OF GAINESVILLE, Appellant V. SUZANNE SHARP, Appellee"
+        },
+        {
+          "caseName": "Lamar University v. Deborah Hanington",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Texas",
+          "dateFiled": "2023-03-23",
+          "url": "https://www.courtlistener.com/opinion/9386448/lamar-university-v-deborah-hanington/",
+          "snippet": "In The Court of Appeals Ninth District of Texas at Beaumont ________________ NO. 09-21-00288-CV ______________"
+        },
+        {
+          "caseName": "Harris County v. Cynthia McFarland",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Texas",
+          "dateFiled": "2025-01-09",
+          "url": "https://www.courtlistener.com/opinion/10311976/harris-county-v-cynthia-mcfarland/",
+          "snippet": "Opinion issued January 9, 2025 In The Court of Appeals For The First District of Texas ————————————"
+        },
+        {
+          "caseName": "Farrar v. SABINE MANAGEMENT CORP.",
+          "citation": "362 S.W.3d 694, 2011 WL 3524204",
+          "court": "Court of Appeals of Texas",
+          "dateFiled": "2011-10-31",
+          "url": "https://www.courtlistener.com/opinion/2545286/farrar-v-sabine-management-corp/",
+          "snippet": "MICHAEL MASSENGALE, Justice, dissenting. As a matter of law, the natural accumulation of ice or mud does not create an unreasonable risk of harm. See, e.g., Scott & White Mem’l Hosp. v. Fair, 310 S.W.3d 411, 419 (Tex.2010); M.O. Dental Lab v. Rape, 139 S.W.3d 671, 676 (Tex.2004) (per curiam); Johns"
+        },
+        {
+          "caseName": "Thomas Farrar v. Sabine Management Corporation A//K/A Sabine Properties Management, Inc. Northwest Building, Ltd",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Texas",
+          "dateFiled": "2011-08-11",
+          "url": "https://www.courtlistener.com/opinion/3127152/thomas-farrar-v-sabine-management-corporation-aka-/",
+          "snippet": "Dissenting opinion issued August 11, 2011 In The Court of Appeals For The First District of Texas<"
+        },
+        {
+          "caseName": "Wilson v. Wal-Mart Stores, Inc.",
+          "citation": "85 Cal. Rptr. 2d 4, 72 Cal. App. 4th 382",
+          "court": "California Court of Appeal",
+          "dateFiled": "1999-05-20",
+          "url": "https://www.courtlistener.com/opinion/2293407/wilson-v-wal-mart-stores-inc/",
+          "snippet": "85 Cal.Rptr.2d 4 (1999) 72 Cal.App.4th 382 Robin WILSON, Plaintiff and Respondent, v. WAL-MART STORES, INC., Defendant and Appellant. Robin Wilson, Plaintiff and Appellant, v. Wal-Mart Stores, Inc., Defendant and Respondent. Nos. C027518, C027765. Court of Appeal, Third District. April 22, 1999. As"
+        },
+        {
+          "caseName": "Tonya Gayle Harkins v. Wal-Mart Stores Texas, LLC, D/B/A Wal-Mart Stores Texas 2007, LLC, Wal-Mart Super Center, and Wal-Mart",
+          "citation": "No citation available",
+          "court": "Court of Appeals of Texas",
+          "dateFiled": "2022-08-18",
+          "url": "https://www.courtlistener.com/opinion/7858479/tonya-gayle-harkins-v-wal-mart-stores-texas-llc-dba-wal-mart-stores/",
+          "snippet": "In the Court of Appeals Second Appellate District of Texas at Fort Worth ___________________________ No. 02-21-00201-CV ___________________________"
+        },
+        {
+          "caseName": "People v. Ghobrial",
+          "citation": "234 Cal. Rptr. 3d 669, 420 P.3d 179, 5 Cal. 5th 250",
+          "court": "California Supreme Court",
+          "dateFiled": "2018-06-21",
+          "url": "https://www.courtlistener.com/opinion/4509571/people-v-ghobrial/",
+          "snippet": "KRUGER, J. *679 *256 A jury found defendant John Samuel Ghobrial guilty of the first degree murder of Juan Delgado, a 12-year-old boy, and found true the special circumstance that the murder was"
+        },
+        {
+          "caseName": "Beebe v. Wonderful Pistachios etc.",
+          "citation": "No citation available",
+          "court": "California Court of Appeal",
+          "dateFiled": "2023-06-06",
+          "url": "https://www.courtlistener.com/opinion/9404503/beebe-v-wonderful-pistachios-etc/",
+          "snippet": "Filed 6/6/23 CERTIFIED FOR PUBLICATION IN THE COURT OF APPEAL OF THE STATE OF CALIFORNIA FIFTH APPELLATE DISTRICT DALE BEEBE, F083502 Plaintif"
+        },
+        {
+          "caseName": "Brookshire Grocery Co. v. Taylor",
+          "citation": "102 S.W.3d 816, 2003 Tex. App. LEXIS 2774, 2003 WL 728750",
+          "court": "Court of Appeals of Texas",
+          "dateFiled": "2003-04-01",
+          "url": "https://www.courtlistener.com/opinion/1370844/brookshire-grocery-co-v-taylor/",
+          "snippet": "102 S.W.3d 816 (2003) BROOKSHIRE GROCERY COMPANY, d/b/a Brookshire's Food Stores, Appellant, v. Mary Frances TAYLOR, Appellee. No. 06-02-00122-CV. Court of Appeals of Texas, Texarkana. Submitted January 15, 2003. Decided April 1, 2003. *818 Troy A. Hornsby, Miller, James, Miller & Hornsby, LLP, Tex"
+        }
+      ]
+    },
+    {
+      "id": "ef92a86f-5a60-472f-a302-e0500407f30a",
+      "queryId": "aa713e37-c192-4daa-9a2c-d48661184624",
+      "content": "I cannot search for arrest warrants or personal information. My capabilities are limited to searching legal case law.",
+      "riskLevel": "minimal",
+      "jurisdictionAnalysis": {
+        "type": "state",
+        "keyRequirements": [
+          "State bar membership",
+          "Pro Hac Vice (if applicable)",
+          "State-specific procedural rules"
+        ],
+        "filingDeadlines": {
+          "answer": "Varies by state (e.g., 20-30 days)",
+          "appeal": "Varies (e.g., 30-60 days)",
+          "motion_response": "Varies"
+        },
+        "specialConsiderations": [
+          "Local counsel rules",
+          "Varying discovery limits",
+          "State constitutional issues"
+        ]
+      },
+      "citations": [],
+      "recommendations": [
+        {
+          "priority": "HIGH",
+          "action": "Implement Litigation Hold",
+          "timeline": "Immediate",
+          "details": "Issue formal litigation hold notice to relevant parties."
+        }
+      ],
+      "nextSteps": [
+        {
+          "step": "HIGH Priority: Implement Litigation Hold",
+          "deadline": "Immediate",
+          "assignee": "Lead Counsel",
+          "relatedRecommendation": "Implement Litigation Hold",
+          "actionItems": [
+            "Draft and issue hold notice",
+            "Identify custodians of relevant data",
+            "Confirm receipt and compliance"
+          ]
+        }
+      ],
+      "processingTime": 1.575,
+      "tokenCount": 525,
+      "modelUsed": "gemini-2.5-flash",
+      "billingInfo": {
+        "aiProcessingHours": 0.1,
+        "hourlyRate": 450,
+        "aiTimeCharge": 45,
+        "tokenCount": 525,
+        "estimatedTokenCost": 0.0053,
+        "totalEstimatedCharge": 45.01,
+        "domain": "litigation",
+        "timeTrackedSeconds": 1.57
+      },
+      "confidentialityNotice": "**CONFIDENTIAL AND PRIVILEGED LEGAL COMMUNICATION**\n\n**Attorney Work Product**\n\nThis communication is protected by the attorney-client privilege and/or work product doctrine. It is intended solely for the use of Test Client regarding matter M-1762983489875. Any unauthorized review, use, disclosure, dissemination, or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately and destroy all copies.",
+      "legalDisclaimer": "**LEGAL DISCLAIMER**\n\nThis analysis pertains specifically to the laws of the state jurisdiction as understood on 2025-11-12. Laws and regulations are subject to change. This communication provides legal analysis based on the information provided and AI processing; it does not constitute definitive legal advice for any specific situation and does not create an attorney-client relationship unless one already exists via separate agreement. Consult qualified legal counsel licensed in the relevant jurisdiction(s) for advice tailored to specific circumstances.",
+      "taskId": "LT-1762983592016-1",
+      "createdAt": "2025-11-12T21:39:53.604Z"
+    },
+    {
+      "id": "7bf33bcd-1f9d-4bff-a2eb-f0a29075a1cd",
+      "queryId": "91274560-c792-4024-afa0-dd769f38e0b8",
+      "content": "HOMEase | AI (Homease Solutions, Inc.) could face significant legal challenges due to the Chinese company GSNT Co. Ltd.'s app, \"homease ai home designer and room planner.\" The primary legal concern is **trademark infringement**, specifically the \"likelihood of confusion\" among consumers.\n\nHere's a breakdown of the potential legal problems and factors a court would consider:\n\n### 1. Trademark Infringement: Likelihood of Confusion\n\nTo prove trademark infringement, HOMEase | AI would generally need to show that it owns a valid trademark and that GSNT Co. Ltd.'s use of a similar mark is likely to cause confusion among consumers regarding the source or affiliation of the goods or services. Courts typically assess several factors to determine the likelihood of confusion, often referred to as the \"DuPont factors\" or similar tests depending on the circuit. Key factors include:\n\n*   **Similarity of the Marks:**\n    *   **HOMEase | AI** (and \"Homease Solutions, Inc.\") vs. **\"homease ai home designer and room planner\"**.\n    *   The core element \"HOMEase AI\" is virtually identical in both names. The addition of \"home designer and room planner\" by GSNT Co. Ltd. describes their specific app function but doesn't sufficiently differentiate the primary brand identifier. The visual and phonetic similarity is very high.\n\n*   **Similarity of the Goods/Services:**\n    *   HOMEase | AI offers a lead generation platform for \"aging-in-place\" home modifications, utilizing AR/AI for home assessments and \"after\" visualizations.\n    *   GSNT Co. Ltd.'s app is a \"home designer and room planner\" using AI.\n    *   Both companies operate in the broad \"AgeTech\" and home improvement/design market, leveraging AI for home-related services. While HOMEase | AI focuses on lead generation for modifications and GSNT on design/planning, these services are closely related and target similar homeowners. A consumer could easily believe they are offered by the same or affiliated entities.\n\n*   **Similarity of Marketing Channels:**\n    *   Both are technology-driven companies likely to market their services and apps online, through app stores (e.g., Google Play, Apple App Store), and potentially through digital advertising. This overlap in marketing channels increases the likelihood of consumer confusion.\n\n*   **Strength of HOMEase | AI's Mark:**\n    *   The term \"HOMEase | AI\" combines a descriptive element (\"Home\" for home-related services) with a functional description (\"AI\" for artificial intelligence). While not inherently strong, the combination, especially if it has acquired distinctiveness through use and marketing, can be protectable. The registration of \"Homease Solutions, Inc.\" as an LLC in Texas is a good start, but federal trademark registration with the USPTO for \"HOMEase | AI\" for relevant software and services would provide stronger protection.\n\n*   **Degree of Care Likely to be Exercised by Consumers:**\n    *   Homeowners seeking home modification services or design apps might exercise a moderate degree of care. However, the initial impression and search results could still lead to confusion, especially given the near-identical core names.\n\n*   **Evidence of Actual Confusion:**\n    *   If HOMEase | AI has already encountered instances where customers or partners have confused the two entities, this would be strong evidence of infringement.\n\n*   **GSNT Co. Ltd.'s Intent:**\n    *   If GSNT Co. Ltd. was aware of HOMEase | AI's existence and chose a similar name, it could indicate an intent to trade on HOMEase | AI's goodwill, which would weigh heavily in favor of infringement. Even without explicit intent, if confusion is likely, infringement can still be found.\n\n### 2. Specific Legal Problems HOMEase | AI Might Encounter:\n\n*   **Loss of Brand Identity and Goodwill:** Consumers might struggle to distinguish between the two companies, diluting HOMEase | AI's unique brand identity and potentially eroding the goodwill it builds.\n*   **Diversion of Customers/Leads:** Potential homeowners looking for HOMEase | AI's services might mistakenly find and use GSNT Co. Ltd.'s app, or vice-versa, leading to lost business opportunities for HOMEase | AI.\n*   **Reputational Damage:** If GSNT Co. Ltd.'s app has quality issues, security flaws, or negative user experiences, these could be mistakenly attributed to HOMEase |",
+      "riskLevel": "low",
+      "jurisdictionAnalysis": {
+        "type": "federal",
+        "keyRequirements": [
+          "Federal court admission",
+          "ECF/PACER registration",
+          "Adherence to FRCP & Local Rules"
+        ],
+        "filingDeadlines": {
+          "answer": "21 days",
+          "appeal": "30 days (most cases)",
+          "motion_response": "14 days"
+        },
+        "specialConsiderations": [
+          "Potential MDL proceedings",
+          "Specific judge's rules",
+          "Circuit court precedent"
+        ]
+      },
+      "citations": [],
+      "recommendations": [],
+      "nextSteps": [
+        {
+          "step": "Review Federal Rules and Local Procedures",
+          "deadline": "Ongoing",
+          "assignee": "Legal Team",
+          "relatedRecommendation": "Jurisdictional Compliance",
+          "actionItems": [
+            "Confirm FRCP applicability",
+            "Check specific district/judge local rules",
+            "Verify ECF filing requirements"
+          ]
+        }
+      ],
+      "processingTime": 16.203,
+      "tokenCount": 8331,
+      "modelUsed": "gemini-2.5-flash",
+      "billingInfo": {
+        "aiProcessingHours": 0.1,
+        "hourlyRate": 525,
+        "aiTimeCharge": 52.5,
+        "tokenCount": 8331,
+        "estimatedTokenCost": 0.0833,
+        "totalEstimatedCharge": 52.58,
+        "domain": "ip_law",
+        "timeTrackedSeconds": 16.2
+      },
+      "confidentialityNotice": "**CONFIDENTIAL AND PRIVILEGED LEGAL COMMUNICATION**\n\n**Attorney Work Product**\n\nThis communication is protected by the attorney-client privilege and/or work product doctrine. It is intended solely for the use of Test Client regarding matter M-1765421783387. Any unauthorized review, use, disclosure, dissemination, or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately and destroy all copies.",
+      "legalDisclaimer": "**LEGAL DISCLAIMER**\n\nThis analysis pertains specifically to the laws of the federal jurisdiction as understood on 2025-12-11. Laws and regulations are subject to change. This communication provides legal analysis based on the information provided and AI processing; it does not constitute definitive legal advice for any specific situation and does not create an attorney-client relationship unless one already exists via separate agreement. Consult qualified legal counsel licensed in the relevant jurisdiction(s) for advice tailored to specific circumstances.",
+      "taskId": "LT-1765422135116-1",
+      "createdAt": "2025-12-11T03:02:31.329Z",
+      "functionCalls": [
+        {
+          "name": "search_case_law",
+          "args": {
+            "jurisdiction": "federal",
+            "query": "trademark infringement likelihood of confusion software app",
+            "limit": 3
+          },
+          "result": {
+            "success": true,
+            "data": [
+              {
+                "caseName": "ePlus Inc. v. Lawson Software, Inc.",
+                "citation": "946 F. Supp. 2d 503, 2013 WL 4829321, 2013 U.S. Dist. LEXIS 129615",
+                "court": "District Court, E.D. Virginia",
+                "dateFiled": "2013-09-10",
+                "url": "https://www.courtlistener.com/opinion/8725424/eplus-inc-v-lawson-software-inc/",
+                "snippet": "MEMORANDUM OPINION ROBERT E. PAYNE, Senior District Judge. This matter is before the Court on DEFENDANT LAWSON SOFTWARE, *505INC.’S MOTION FOR A STAY PENDING APPEAL (Docket No. 1090). For the reasons set forth below, the motion will be denied. BACKGROUND ePlus Inc. (“ePlus”) filed this action again"
+              },
+              {
+                "caseName": "Visual Dynamics, LLC v. Chaos Software Ltd.",
+                "citation": "309 F. Supp. 3d 609",
+                "court": "District Court, S.D. New York",
+                "dateFiled": "2018-02-12",
+                "url": "https://www.courtlistener.com/opinion/7330082/visual-dynamics-llc-v-chaos-software-ltd/",
+                "snippet": "TIMOTHY L. BROOKS, UNITED STATES DISTRICT JUDGE Currently before the Court are: • Defendants/Counter-Plaintiffs Chaos Software Ltd.'s and Chaos Group, LLC's (collectively, \"Chaos\") Motion for Summary Judgment against Plaintiff/Counter-Defendant Visual Dynamics, LLC's (\"Visual Dynamics\") Claims (Doc"
+              },
+              {
+                "caseName": "M2 Software Inc. v. Viacom Inc.",
+                "citation": "223 F. App'x 653",
+                "court": "Court of Appeals for the Ninth Circuit",
+                "dateFiled": "2007-02-28",
+                "url": "https://www.courtlistener.com/opinion/8629115/m2-software-inc-v-viacom-inc/",
+                "snippet": "MEMORANDUM ** M2 Software, Inc., appeals the entry of summary judgment and a limited permanent injunction with regard to its reverse confusion trademark infringement claim against Viacom, Inc., Viacom International, Inc., and MTV Networks Company (Viacom). We remand only for clarification of the pe"
+              },
+              {
+                "caseName": "M2 Software Inc. v. Viacom Inc.",
+                "citation": "30 F. App'x 710",
+                "court": "Court of Appeals for the Ninth Circuit",
+                "dateFiled": "2002-01-30",
+                "url": "https://www.courtlistener.com/opinion/7214867/m2-software-inc-v-viacom-inc/",
+                "snippet": "MEMORANDUM * M2 Software appeals the district court’s grant of summary judgment in favor of Viacom. Because the facts are known to the parties, we will not recite them in detail except as necessary. We have jurisdiction pursuant to 28 U.S.C. § 1291, and we reverse. To prevail on its claim of tradem"
+              },
+              {
+                "caseName": "M2 Software Inc. v. M2 Communications, L.L.C.",
+                "citation": "149 F. App'x 612",
+                "court": "Court of Appeals for the Ninth Circuit",
+                "dateFiled": "2005-09-12",
+                "url": "https://www.courtlistener.com/opinion/8465466/m2-software-inc-v-m2-communications-llc/",
+                "snippet": "MEMORANDUM * Plaintiff M2 Software appeals the district court’s grant of summary judgment to defendant M2 Communications on all of M2 Software’s claims under state and federal trademark and unfair competition law. The district court held that there is no likelihood of confusion between M2 Communica"
+              },
+              {
+                "caseName": "Board of Regents of the University of Wisconsin System v. Phoenix International Software, Inc.",
+                "citation": "653 F.3d 448, 99 U.S.P.Q. 2d (BNA) 1571, 2011 U.S. App. LEXIS 16133, 2011 WL 3436879",
+                "court": "Court of Appeals for the Seventh Circuit",
+                "dateFiled": "2011-08-05",
+                "url": "https://www.courtlistener.com/opinion/8441029/board-of-regents-of-the-university-of-wisconsin-system-v-phoenix/",
+                "snippet": "WOOD, Circuit Judge. This case presents complex questions about the law of trademark and the law of sovereign immunity, as the latter applies to a state university. The contending parties are Phoenix International Software, Inc., a small software developer, and the Board of Regents of the Universit"
+              },
+              {
+                "caseName": "M2 Software, Inc. v. Madacy Entertainment",
+                "citation": "421 F.3d 1073",
+                "court": "Court of Appeals for the Ninth Circuit",
+                "dateFiled": "2005-08-31",
+                "url": "https://www.courtlistener.com/opinion/3033584/m2-software-inc-v-madacy-entertainment/",
+                "snippet": "PREGERSON, Circuit Judge. I. OVERVIEW Plaintiff-Appellant M2 Software, Inc. (“M2 Software”) is the owner of M2, a federally registered trademark that is used in conjunction with business management and interactive media application goods and services for the film and music industry. D"
+              },
+              {
+                "caseName": "Island Software & Computer Service, Inc. v. Microsoft Corp.",
+                "citation": "413 F.3d 257, 67 Fed. R. Serv. 719, 75 U.S.P.Q. 2d (BNA) 1290, 2005 U.S. App. LEXIS 12766, 2005 WL 1514234",
+                "court": "Court of Appeals for the Second Circuit",
+                "dateFiled": "2005-06-28",
+                "url": "https://www.courtlistener.com/opinion/8438919/island-software-computer-service-inc-v-microsoft-corp/",
+                "snippet": "CALABRESI, Circuit Judge. This appeal involves, primarily, the proof needed for finding, at the summary judgment stage, that copyright infringement was “willful.” In the absence of evidence conclusively demonstrating actual, rather than constructive, knowledge of infringement, we conclude that summ"
+              },
+              {
+                "caseName": "M2 Software, Inc. v. Madacy Entertainment",
+                "citation": "421 F.3d 1073, 76 U.S.P.Q. 2d (BNA) 1161, 2005 U.S. App. LEXIS 18837",
+                "court": "Court of Appeals for the Ninth Circuit",
+                "dateFiled": "2005-08-31",
+                "url": "https://www.courtlistener.com/opinion/791756/m2-software-inc-v-madacy-entertainment/",
+                "snippet": "421 F.3d 1073 M2 SOFTWARE, INC., A DELAWARE CORPORATION, Plaintiff-Appellant,v.MADACY ENTERTAINMENT, A CORPORATION e/s/a Madacy Entertainment Group, Inc.; Handleman Company, a corporation; SFX Entertainment, a corporation, Defendants-Appellees. No. 03-55957. United States Court of Appeal"
+              },
+              {
+                "caseName": "Association for Molecular Pathology v. United States Patent & Trademark Office",
+                "citation": "689 F.3d 1303, 103 U.S.P.Q. 2d (BNA) 1681, 2012 U.S. App. LEXIS 17679, 2012 WL 3518509",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2012-08-16",
+                "url": "https://www.courtlistener.com/opinion/806779/association-for-molecular-pathology-v-united-states-patent-trademark/",
+                "snippet": "United States Court of Appeals for the Federal Circuit __________________________ THE ASSOCIATION FOR MOLECULAR PATHOLOGY, THE AMERICAN COLLEGE OF MEDICAL GENETICS, THE AMERICAN SOCIETY FOR CLINICAL PATHOLOGY, THE COLLEGE OF AMERICAN PATHOLOGISTS, HAIG KAZAZIAN, MD, ARU"
+              },
+              {
+                "caseName": "Frontrange Solutions USA, Inc. v. Newroad Software, Inc.",
+                "citation": "505 F. Supp. 2d 821, 2007 U.S. Dist. LEXIS 64786, 2007 WL 2471466",
+                "court": "District Court, D. Colorado",
+                "dateFiled": "2007-08-31",
+                "url": "https://www.courtlistener.com/opinion/1949830/frontrange-solutions-usa-inc-v-newroad-software-inc/",
+                "snippet": "505 F.Supp.2d 821 (2007) FRONTRANGE SOLUTIONS USA, INC., Plaintiff, v. NEWROAD SOFTWARE, INC., et al., Defendants. Civil Action No. 04-cv-01969-WDM-MJW. United States District Court, D. Colorado. August 31, 2007. *822 *823 *824 James Wesley Kinnear, Holme,"
+              },
+              {
+                "caseName": "Island Software And Computer Service, Inc. v. Microsoft Corporation",
+                "citation": "413 F.3d 257",
+                "court": "Court of Appeals for the Second Circuit",
+                "dateFiled": "2005-06-28",
+                "url": "https://www.courtlistener.com/opinion/790804/island-software-and-computer-service-inc-v-microsoft-corporation/",
+                "snippet": "413 F.3d 257 ISLAND SOFTWARE AND COMPUTER SERVICE, INC., Plaintiff-Counter-Defendant-Appellant,Michael BRUNNER, Counter-Defendant-Appellant,v.MICROSOFT CORPORATION, Defendant-Counter-Claimant-Appellee.Docket No. 04-0744-CV. United States Court of Appeals, Second Circuit. Argued: October"
+              },
+              {
+                "caseName": "Association for Molecular Pathology v. United States Patent & Trademark Office",
+                "citation": "702 F. Supp. 2d 181, 2010 WL 1233416",
+                "court": "District Court, S.D. New York",
+                "dateFiled": "2010-04-05",
+                "url": "https://www.courtlistener.com/opinion/2252138/association-for-molecular-pathology-v-united-states-patent-trademark/",
+                "snippet": "702 F.Supp.2d 181 (2010) ASSOCIATION FOR MOLECULAR PATHOLOGY, et al., Plaintiffs, v. UNITED STATES PATENT AND TRADEMARK OFFICE, et al., Defendants. No. 09 Civ. 4515. United States District Court, S.D. New York. March 29, 2010. As Amended April 5, 2010. *183 American Civil Liberties Union Foundation"
+              },
+              {
+                "caseName": "Escamilla v. M2 Technology, Inc.",
+                "citation": "657 F. App'x 318",
+                "court": "Court of Appeals for the Fifth Circuit",
+                "dateFiled": "2016-11-11",
+                "url": "https://www.courtlistener.com/opinion/8697226/escamilla-v-m2-technology-inc/",
+                "snippet": "PER CURIAM: * The Report and Recommendation of United States Magistrate Judge Bush both ably and thoroughly explains the procedural background of this case, the plethora of motions, and the parties’ many appeals, this being their third time before this court. In this long series of lawsuits, Appell"
+              },
+              {
+                "caseName": "Blue Planet Software, Inc. v. Games International, LLC",
+                "citation": "334 F. Supp. 2d 425, 7 A.L.R. Fed. 2d 675, 2004 U.S. Dist. LEXIS 18562, 2004 WL 2039653",
+                "court": "District Court, S.D. New York",
+                "dateFiled": "2004-09-07",
+                "url": "https://www.courtlistener.com/opinion/2520642/blue-planet-software-inc-v-games-international-llc/",
+                "snippet": "334 F.Supp.2d 425 (2004) BLUE PLANET SOFTWARE, INC. and Alexey L. Pajitnov, Plaintiffs, v. GAMES INTERNATIONAL, LLC and Elorg Company, LLC Defendants. No. 03 CIV.8904 SHS. United States District Court, S.D. New York. September 7, 2004. *426 *427 John J. Kirby, Jr., Latham & Watkins, New Yo"
+              },
+              {
+                "caseName": "Microsoft Corp. v. Software Wholesale Club, Inc.",
+                "citation": "129 F. Supp. 2d 995, 2000 U.S. Dist. LEXIS 20276, 2000 WL 33128592",
+                "court": "District Court, S.D. Texas",
+                "dateFiled": "2000-12-15",
+                "url": "https://www.courtlistener.com/opinion/2471520/microsoft-corp-v-software-wholesale-club-inc/",
+                "snippet": "129 F.Supp.2d 995 (2000) MICROSOFT CORPORATION, Plaintiff, v. SOFTWARE WHOLESALE CLUB, INC. and Glenn Young, Defendants. No. Civ.A. H-99-2310. United States District Court, S.D. Texas, Houston Division. December 15, 2000. *996 *997 *998 Elizann Carroll, Str"
+              },
+              {
+                "caseName": "Checkpoint Systems, Inc. v. Check Point Software Technologies, Inc.",
+                "citation": "269 F.3d 270, 60 U.S.P.Q. 2d (BNA) 1609, 187 A.L.R. Fed. 585, 2001 U.S. App. LEXIS 22524, 2001 WL 1250096",
+                "court": "Court of Appeals for the Third Circuit",
+                "dateFiled": "2001-10-19",
+                "url": "https://www.courtlistener.com/opinion/775328/checkpoint-systems-inc-v-check-point-software-technologies-inc/",
+                "snippet": "OPINION OF THE COURT SCIRICA, Circuit Judge. In this Lanham Act case, plaintiff Checkpoint Systems, Inc. alleges Check Point Software Technologies, Inc. infringed on its trademark and engaged in unfair competition in violation of 15 U.S.C. §§ 1114, 1125(a). Finding no likelihood of co"
+              },
+              {
+                "caseName": "United States Golf Ass'n v. Arroyo Software Corp.",
+                "citation": "81 Cal. Rptr. 2d 708, 69 Cal. App. 4th 607, 99 Daily Journal DAR 903, 49 U.S.P.Q. 2d (BNA) 1979, 99 Cal. Daily Op. Serv. 765, 1999 Cal. App. LEXIS 58",
+                "court": "California Court of Appeal",
+                "dateFiled": "1999-01-26",
+                "url": "https://www.courtlistener.com/opinion/2297871/united-states-golf-assn-v-arroyo-software-corp/",
+                "snippet": "81 Cal.Rptr.2d 708 (1999) 69 Cal.App.4th 607 UNITED STATES GOLF ASSOCIATION, Plaintiff and Appellant, v. ARROYO SOFTWARE CORPORATION, Defendant and Appellant. No. A077629. Court of Appeal, First District, Division Four. January 26, 1999. Rehearing Denied February 19, 1999. Review Denied April 28, 1"
+              },
+              {
+                "caseName": "Brown Bag Software v. Symantec Corp.",
+                "citation": "960 F.2d 1465, 1992 WL 67204",
+                "court": "Court of Appeals for the Ninth Circuit",
+                "dateFiled": "1992-04-07",
+                "url": "https://www.courtlistener.com/opinion/9006578/brown-bag-software-v-symantec-corp/",
+                "snippet": "TANG, Circuit Judge: Brown Bag Software (“Brown Bag”) sued Symantec Corp. (“Symantec”) and John L. Friend for infringement of Brown Bag’s registered copyright in a computer program for outlining. The district court entered a protective order restricting the access of Brown Bag’s in-house counsel to"
+              },
+              {
+                "caseName": "Engineering Dynamics, Inc. v. Structural Software, Inc.",
+                "citation": "785 F. Supp. 576, 21 U.S.P.Q. 2d (BNA) 1524, 1991 U.S. Dist. LEXIS 13843, 1991 WL 321092",
+                "court": "District Court, E.D. Louisiana",
+                "dateFiled": "1991-08-29",
+                "url": "https://www.courtlistener.com/opinion/2144424/engineering-dynamics-inc-v-structural-software-inc/",
+                "snippet": "785 F.Supp. 576 (1991) ENGINEERING DYNAMICS, INC. v. STRUCTURAL SOFTWARE, INC. and S. Rao Guntur. Civ. A. No. 89-1655. United States District Court, E.D. Louisiana. August 29, 1991. *577 *578 *579 Harry Simms Hardin, III, Thomas K. Potter, III, Jones, Walke"
+              }
+            ],
+            "searchQuery": "trademark infringement likelihood of confusion software app",
+            "totalResults": 691
+          }
+        }
+      ],
+      "caseLawResults": [
+        {
+          "caseName": "ePlus Inc. v. Lawson Software, Inc.",
+          "citation": "946 F. Supp. 2d 503, 2013 WL 4829321, 2013 U.S. Dist. LEXIS 129615",
+          "court": "District Court, E.D. Virginia",
+          "dateFiled": "2013-09-10",
+          "url": "https://www.courtlistener.com/opinion/8725424/eplus-inc-v-lawson-software-inc/",
+          "snippet": "MEMORANDUM OPINION ROBERT E. PAYNE, Senior District Judge. This matter is before the Court on DEFENDANT LAWSON SOFTWARE, *505INC.’S MOTION FOR A STAY PENDING APPEAL (Docket No. 1090). For the reasons set forth below, the motion will be denied. BACKGROUND ePlus Inc. (“ePlus”) filed this action again"
+        },
+        {
+          "caseName": "Visual Dynamics, LLC v. Chaos Software Ltd.",
+          "citation": "309 F. Supp. 3d 609",
+          "court": "District Court, S.D. New York",
+          "dateFiled": "2018-02-12",
+          "url": "https://www.courtlistener.com/opinion/7330082/visual-dynamics-llc-v-chaos-software-ltd/",
+          "snippet": "TIMOTHY L. BROOKS, UNITED STATES DISTRICT JUDGE Currently before the Court are: • Defendants/Counter-Plaintiffs Chaos Software Ltd.'s and Chaos Group, LLC's (collectively, \"Chaos\") Motion for Summary Judgment against Plaintiff/Counter-Defendant Visual Dynamics, LLC's (\"Visual Dynamics\") Claims (Doc"
+        },
+        {
+          "caseName": "M2 Software Inc. v. Viacom Inc.",
+          "citation": "223 F. App'x 653",
+          "court": "Court of Appeals for the Ninth Circuit",
+          "dateFiled": "2007-02-28",
+          "url": "https://www.courtlistener.com/opinion/8629115/m2-software-inc-v-viacom-inc/",
+          "snippet": "MEMORANDUM ** M2 Software, Inc., appeals the entry of summary judgment and a limited permanent injunction with regard to its reverse confusion trademark infringement claim against Viacom, Inc., Viacom International, Inc., and MTV Networks Company (Viacom). We remand only for clarification of the pe"
+        },
+        {
+          "caseName": "M2 Software Inc. v. Viacom Inc.",
+          "citation": "30 F. App'x 710",
+          "court": "Court of Appeals for the Ninth Circuit",
+          "dateFiled": "2002-01-30",
+          "url": "https://www.courtlistener.com/opinion/7214867/m2-software-inc-v-viacom-inc/",
+          "snippet": "MEMORANDUM * M2 Software appeals the district court’s grant of summary judgment in favor of Viacom. Because the facts are known to the parties, we will not recite them in detail except as necessary. We have jurisdiction pursuant to 28 U.S.C. § 1291, and we reverse. To prevail on its claim of tradem"
+        },
+        {
+          "caseName": "M2 Software Inc. v. M2 Communications, L.L.C.",
+          "citation": "149 F. App'x 612",
+          "court": "Court of Appeals for the Ninth Circuit",
+          "dateFiled": "2005-09-12",
+          "url": "https://www.courtlistener.com/opinion/8465466/m2-software-inc-v-m2-communications-llc/",
+          "snippet": "MEMORANDUM * Plaintiff M2 Software appeals the district court’s grant of summary judgment to defendant M2 Communications on all of M2 Software’s claims under state and federal trademark and unfair competition law. The district court held that there is no likelihood of confusion between M2 Communica"
+        },
+        {
+          "caseName": "Board of Regents of the University of Wisconsin System v. Phoenix International Software, Inc.",
+          "citation": "653 F.3d 448, 99 U.S.P.Q. 2d (BNA) 1571, 2011 U.S. App. LEXIS 16133, 2011 WL 3436879",
+          "court": "Court of Appeals for the Seventh Circuit",
+          "dateFiled": "2011-08-05",
+          "url": "https://www.courtlistener.com/opinion/8441029/board-of-regents-of-the-university-of-wisconsin-system-v-phoenix/",
+          "snippet": "WOOD, Circuit Judge. This case presents complex questions about the law of trademark and the law of sovereign immunity, as the latter applies to a state university. The contending parties are Phoenix International Software, Inc., a small software developer, and the Board of Regents of the Universit"
+        },
+        {
+          "caseName": "M2 Software, Inc. v. Madacy Entertainment",
+          "citation": "421 F.3d 1073",
+          "court": "Court of Appeals for the Ninth Circuit",
+          "dateFiled": "2005-08-31",
+          "url": "https://www.courtlistener.com/opinion/3033584/m2-software-inc-v-madacy-entertainment/",
+          "snippet": "PREGERSON, Circuit Judge. I. OVERVIEW Plaintiff-Appellant M2 Software, Inc. (“M2 Software”) is the owner of M2, a federally registered trademark that is used in conjunction with business management and interactive media application goods and services for the film and music industry. D"
+        },
+        {
+          "caseName": "Island Software & Computer Service, Inc. v. Microsoft Corp.",
+          "citation": "413 F.3d 257, 67 Fed. R. Serv. 719, 75 U.S.P.Q. 2d (BNA) 1290, 2005 U.S. App. LEXIS 12766, 2005 WL 1514234",
+          "court": "Court of Appeals for the Second Circuit",
+          "dateFiled": "2005-06-28",
+          "url": "https://www.courtlistener.com/opinion/8438919/island-software-computer-service-inc-v-microsoft-corp/",
+          "snippet": "CALABRESI, Circuit Judge. This appeal involves, primarily, the proof needed for finding, at the summary judgment stage, that copyright infringement was “willful.” In the absence of evidence conclusively demonstrating actual, rather than constructive, knowledge of infringement, we conclude that summ"
+        },
+        {
+          "caseName": "M2 Software, Inc. v. Madacy Entertainment",
+          "citation": "421 F.3d 1073, 76 U.S.P.Q. 2d (BNA) 1161, 2005 U.S. App. LEXIS 18837",
+          "court": "Court of Appeals for the Ninth Circuit",
+          "dateFiled": "2005-08-31",
+          "url": "https://www.courtlistener.com/opinion/791756/m2-software-inc-v-madacy-entertainment/",
+          "snippet": "421 F.3d 1073 M2 SOFTWARE, INC., A DELAWARE CORPORATION, Plaintiff-Appellant,v.MADACY ENTERTAINMENT, A CORPORATION e/s/a Madacy Entertainment Group, Inc.; Handleman Company, a corporation; SFX Entertainment, a corporation, Defendants-Appellees. No. 03-55957. United States Court of Appeal"
+        },
+        {
+          "caseName": "Association for Molecular Pathology v. United States Patent & Trademark Office",
+          "citation": "689 F.3d 1303, 103 U.S.P.Q. 2d (BNA) 1681, 2012 U.S. App. LEXIS 17679, 2012 WL 3518509",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2012-08-16",
+          "url": "https://www.courtlistener.com/opinion/806779/association-for-molecular-pathology-v-united-states-patent-trademark/",
+          "snippet": "United States Court of Appeals for the Federal Circuit __________________________ THE ASSOCIATION FOR MOLECULAR PATHOLOGY, THE AMERICAN COLLEGE OF MEDICAL GENETICS, THE AMERICAN SOCIETY FOR CLINICAL PATHOLOGY, THE COLLEGE OF AMERICAN PATHOLOGISTS, HAIG KAZAZIAN, MD, ARU"
+        },
+        {
+          "caseName": "Frontrange Solutions USA, Inc. v. Newroad Software, Inc.",
+          "citation": "505 F. Supp. 2d 821, 2007 U.S. Dist. LEXIS 64786, 2007 WL 2471466",
+          "court": "District Court, D. Colorado",
+          "dateFiled": "2007-08-31",
+          "url": "https://www.courtlistener.com/opinion/1949830/frontrange-solutions-usa-inc-v-newroad-software-inc/",
+          "snippet": "505 F.Supp.2d 821 (2007) FRONTRANGE SOLUTIONS USA, INC., Plaintiff, v. NEWROAD SOFTWARE, INC., et al., Defendants. Civil Action No. 04-cv-01969-WDM-MJW. United States District Court, D. Colorado. August 31, 2007. *822 *823 *824 James Wesley Kinnear, Holme,"
+        },
+        {
+          "caseName": "Island Software And Computer Service, Inc. v. Microsoft Corporation",
+          "citation": "413 F.3d 257",
+          "court": "Court of Appeals for the Second Circuit",
+          "dateFiled": "2005-06-28",
+          "url": "https://www.courtlistener.com/opinion/790804/island-software-and-computer-service-inc-v-microsoft-corporation/",
+          "snippet": "413 F.3d 257 ISLAND SOFTWARE AND COMPUTER SERVICE, INC., Plaintiff-Counter-Defendant-Appellant,Michael BRUNNER, Counter-Defendant-Appellant,v.MICROSOFT CORPORATION, Defendant-Counter-Claimant-Appellee.Docket No. 04-0744-CV. United States Court of Appeals, Second Circuit. Argued: October"
+        },
+        {
+          "caseName": "Association for Molecular Pathology v. United States Patent & Trademark Office",
+          "citation": "702 F. Supp. 2d 181, 2010 WL 1233416",
+          "court": "District Court, S.D. New York",
+          "dateFiled": "2010-04-05",
+          "url": "https://www.courtlistener.com/opinion/2252138/association-for-molecular-pathology-v-united-states-patent-trademark/",
+          "snippet": "702 F.Supp.2d 181 (2010) ASSOCIATION FOR MOLECULAR PATHOLOGY, et al., Plaintiffs, v. UNITED STATES PATENT AND TRADEMARK OFFICE, et al., Defendants. No. 09 Civ. 4515. United States District Court, S.D. New York. March 29, 2010. As Amended April 5, 2010. *183 American Civil Liberties Union Foundation"
+        },
+        {
+          "caseName": "Escamilla v. M2 Technology, Inc.",
+          "citation": "657 F. App'x 318",
+          "court": "Court of Appeals for the Fifth Circuit",
+          "dateFiled": "2016-11-11",
+          "url": "https://www.courtlistener.com/opinion/8697226/escamilla-v-m2-technology-inc/",
+          "snippet": "PER CURIAM: * The Report and Recommendation of United States Magistrate Judge Bush both ably and thoroughly explains the procedural background of this case, the plethora of motions, and the parties’ many appeals, this being their third time before this court. In this long series of lawsuits, Appell"
+        },
+        {
+          "caseName": "Blue Planet Software, Inc. v. Games International, LLC",
+          "citation": "334 F. Supp. 2d 425, 7 A.L.R. Fed. 2d 675, 2004 U.S. Dist. LEXIS 18562, 2004 WL 2039653",
+          "court": "District Court, S.D. New York",
+          "dateFiled": "2004-09-07",
+          "url": "https://www.courtlistener.com/opinion/2520642/blue-planet-software-inc-v-games-international-llc/",
+          "snippet": "334 F.Supp.2d 425 (2004) BLUE PLANET SOFTWARE, INC. and Alexey L. Pajitnov, Plaintiffs, v. GAMES INTERNATIONAL, LLC and Elorg Company, LLC Defendants. No. 03 CIV.8904 SHS. United States District Court, S.D. New York. September 7, 2004. *426 *427 John J. Kirby, Jr., Latham & Watkins, New Yo"
+        },
+        {
+          "caseName": "Microsoft Corp. v. Software Wholesale Club, Inc.",
+          "citation": "129 F. Supp. 2d 995, 2000 U.S. Dist. LEXIS 20276, 2000 WL 33128592",
+          "court": "District Court, S.D. Texas",
+          "dateFiled": "2000-12-15",
+          "url": "https://www.courtlistener.com/opinion/2471520/microsoft-corp-v-software-wholesale-club-inc/",
+          "snippet": "129 F.Supp.2d 995 (2000) MICROSOFT CORPORATION, Plaintiff, v. SOFTWARE WHOLESALE CLUB, INC. and Glenn Young, Defendants. No. Civ.A. H-99-2310. United States District Court, S.D. Texas, Houston Division. December 15, 2000. *996 *997 *998 Elizann Carroll, Str"
+        },
+        {
+          "caseName": "Checkpoint Systems, Inc. v. Check Point Software Technologies, Inc.",
+          "citation": "269 F.3d 270, 60 U.S.P.Q. 2d (BNA) 1609, 187 A.L.R. Fed. 585, 2001 U.S. App. LEXIS 22524, 2001 WL 1250096",
+          "court": "Court of Appeals for the Third Circuit",
+          "dateFiled": "2001-10-19",
+          "url": "https://www.courtlistener.com/opinion/775328/checkpoint-systems-inc-v-check-point-software-technologies-inc/",
+          "snippet": "OPINION OF THE COURT SCIRICA, Circuit Judge. In this Lanham Act case, plaintiff Checkpoint Systems, Inc. alleges Check Point Software Technologies, Inc. infringed on its trademark and engaged in unfair competition in violation of 15 U.S.C. §§ 1114, 1125(a). Finding no likelihood of co"
+        },
+        {
+          "caseName": "United States Golf Ass'n v. Arroyo Software Corp.",
+          "citation": "81 Cal. Rptr. 2d 708, 69 Cal. App. 4th 607, 99 Daily Journal DAR 903, 49 U.S.P.Q. 2d (BNA) 1979, 99 Cal. Daily Op. Serv. 765, 1999 Cal. App. LEXIS 58",
+          "court": "California Court of Appeal",
+          "dateFiled": "1999-01-26",
+          "url": "https://www.courtlistener.com/opinion/2297871/united-states-golf-assn-v-arroyo-software-corp/",
+          "snippet": "81 Cal.Rptr.2d 708 (1999) 69 Cal.App.4th 607 UNITED STATES GOLF ASSOCIATION, Plaintiff and Appellant, v. ARROYO SOFTWARE CORPORATION, Defendant and Appellant. No. A077629. Court of Appeal, First District, Division Four. January 26, 1999. Rehearing Denied February 19, 1999. Review Denied April 28, 1"
+        },
+        {
+          "caseName": "Brown Bag Software v. Symantec Corp.",
+          "citation": "960 F.2d 1465, 1992 WL 67204",
+          "court": "Court of Appeals for the Ninth Circuit",
+          "dateFiled": "1992-04-07",
+          "url": "https://www.courtlistener.com/opinion/9006578/brown-bag-software-v-symantec-corp/",
+          "snippet": "TANG, Circuit Judge: Brown Bag Software (“Brown Bag”) sued Symantec Corp. (“Symantec”) and John L. Friend for infringement of Brown Bag’s registered copyright in a computer program for outlining. The district court entered a protective order restricting the access of Brown Bag’s in-house counsel to"
+        },
+        {
+          "caseName": "Engineering Dynamics, Inc. v. Structural Software, Inc.",
+          "citation": "785 F. Supp. 576, 21 U.S.P.Q. 2d (BNA) 1524, 1991 U.S. Dist. LEXIS 13843, 1991 WL 321092",
+          "court": "District Court, E.D. Louisiana",
+          "dateFiled": "1991-08-29",
+          "url": "https://www.courtlistener.com/opinion/2144424/engineering-dynamics-inc-v-structural-software-inc/",
+          "snippet": "785 F.Supp. 576 (1991) ENGINEERING DYNAMICS, INC. v. STRUCTURAL SOFTWARE, INC. and S. Rao Guntur. Civ. A. No. 89-1655. United States District Court, E.D. Louisiana. August 29, 1991. *577 *578 *579 Harry Simms Hardin, III, Thomas K. Potter, III, Jones, Walke"
+        }
+      ]
+    }
+  ]
+}

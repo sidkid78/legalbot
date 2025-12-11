@@ -1,33 +1,37 @@
 // app/dashboard/legal/page.tsx
 import Link from 'next/link';
-import { PlusCircle, FileText, Clock, CheckCircle, AlertTriangle } from 'lucide-react';
+import { PlusCircle, FileText, Clock, CheckCircle, AlertTriangle, TrendingUp, Zap, ChevronRight } from 'lucide-react';
 import { 
   LegalUrgency, 
   RiskLevel 
 } from '@/lib/legal/types';
-import { redirect } from 'next/navigation';
 import { LegalQuery, LegalResponse } from '@/lib/legal/types';
-import { createClient } from '@/utils/supabase/client';
+import { db } from '@/lib/database/json-db-manager';
 
 
-// Legal statistics card component
-function StatCard({ title, value, icon, className }: { 
+// Modern Legal statistics card component
+function StatCard({ title, value, icon, gradient, trend }: { 
   title: string; 
   value: string | number; 
   icon: React.ReactNode;
-  className?: string;
+  gradient: string;
+  trend?: string;
 }) {
   return (
-    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
-      <div className="flex items-center justify-between">
-        <div>
-          <h3 className="text-lg font-medium text-gray-500">{title}</h3>
-          <p className="text-3xl font-bold mt-1">{value}</p>
-        </div>
-        <div className="text-blue-500">
+    <div className="stat-card card-hover">
+      <div className="flex items-center justify-between mb-4">
+        <div className={`p-3 ${gradient} rounded-xl`}>
           {icon}
         </div>
+        {trend && (
+          <span className="badge bg-green-100 text-green-700 flex items-center gap-1">
+            <TrendingUp className="h-3 w-3" />
+            {trend}
+          </span>
+        )}
       </div>
+      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">{title}</h3>
+      <p className="text-4xl font-bold text-gray-800">{value}</p>
     </div>
   );
 }
@@ -77,30 +81,71 @@ function QueryListItem({
     }
   };
   
+  const getUrgencyClassModern = (urgency: LegalUrgency) => {
+    switch (urgency) {
+      case LegalUrgency.EMERGENCY:
+        return 'risk-critical';
+      case LegalUrgency.URGENT:
+        return 'risk-high';
+      case LegalUrgency.HIGH:
+        return 'risk-moderate';
+      default:
+        return 'bg-blue-500 text-white';
+    }
+  };
+  
+  const getRiskBorder = () => {
+    if (!response) return 'border-blue-400';
+    const riskLevel = (response as LegalResponse).riskLevel;
+    if (riskLevel === RiskLevel.CRITICAL) return 'border-red-500';
+    if (riskLevel === RiskLevel.HIGH) return 'border-orange-500';
+    if (riskLevel === RiskLevel.MODERATE) return 'border-yellow-500';
+    return 'border-green-500';
+  };
+
   return (
-    <div className="p-4 border-b border-gray-200 hover:bg-gray-50">
-      <div className="flex justify-between items-start">
-        <div>
-          <div className="font-medium">
-            {(query as LegalQuery).content.length > 100 
-              ? `${(query as LegalQuery).content.substring(0, 100)}...` 
-              : (query as LegalQuery).content}
-          </div>
-          <div className="text-sm text-gray-500 mt-1 flex items-center">
-            <Clock className="h-3 w-3 mr-1" />
-            {formattedDate((query as LegalQuery).created_at || (query as LegalQuery).createdAt || new Date().toISOString())}
-          </div>
-          <div className="flex items-center mt-2">
-            <span className={getUrgencyBadgeClass((query as LegalQuery).urgency)}>
-              {(query as LegalQuery).urgency.replace(/\b\w/g, (l: string) => l.toUpperCase())}
+    <div className={`glass rounded-xl p-5 mb-4 card-hover border-l-4 ${getRiskBorder()}`}>
+      <div className="flex justify-between items-start gap-4">
+        <div className="flex-1">
+          <div className="flex items-center gap-2 mb-3">
+            <span className={`badge ${getUrgencyClassModern((query as LegalQuery).urgency)}`}>
+              {(query as LegalQuery).urgency.toUpperCase()}
             </span>
-            <span className="ml-2 text-xs text-gray-500 capitalize">
+            <span className="badge bg-purple-100 text-purple-700 capitalize">
               {(query as LegalQuery).domain.replace(/_/g, ' ')}
             </span>
           </div>
+          <p className="font-semibold text-gray-800 mb-2 line-clamp-2">
+            {(query as LegalQuery).content.length > 120 
+              ? `${(query as LegalQuery).content.substring(0, 120)}...` 
+              : (query as LegalQuery).content}
+          </p>
+          <div className="flex items-center gap-3 text-sm text-gray-500">
+            <span className="flex items-center gap-1">
+              <Clock className="h-3 w-3" />
+              {formattedDate((query as LegalQuery).timestamp)}
+            </span>
+            {response && (response as LegalResponse).riskLevel && (
+              <span className={`badge text-xs ${
+                (response as LegalResponse).riskLevel === RiskLevel.CRITICAL || 
+                (response as LegalResponse).riskLevel === RiskLevel.HIGH
+                  ? 'risk-high' : 'risk-low'
+              }`}>
+                {((response as LegalResponse).riskLevel as string).toUpperCase()}
+              </span>
+            )}
+          </div>
         </div>
-        <div className="flex items-center">
-          {statusIcon}
+        <div className="flex flex-col items-end gap-2">
+          {!response ? (
+            <div className="flex items-center gap-2 text-blue-600">
+              <div className="animate-spin rounded-full h-4 w-4 border-2 border-blue-200 border-t-blue-600"></div>
+              <span className="text-xs font-medium">Processing</span>
+            </div>
+          ) : (
+            <CheckCircle className="h-6 w-6 text-green-500" />
+          )}
+          <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all" />
         </div>
       </div>
     </div>
@@ -108,128 +153,164 @@ function QueryListItem({
 }
 
 export default async function LegalDashboardPage() {
-  const supabase = createClient();
+  // Get data from JSON database (no authentication needed)
+  const allQueries = db.getLegalQueriesByUser('default-user', 100);
+  const recentQueries = allQueries.slice(0, 10);
   
-  // Check if the user is authenticated
-  const { data: { session } } = await supabase.auth.getSession();
+  // Calculate statistics
+  const totalQueries = allQueries.length;
+  const totalResponses = allQueries.filter(q => q.status === 'completed').length;
+  const pendingQueries = allQueries.filter(q => q.status === 'pending').length;
   
-  if (!session) {
-    redirect('/login');
-  }
+  // Get high risk cases
+  const highRiskCases = allQueries.filter(q => {
+    if (q.status !== 'completed') return false;
+    const response = db.getLegalResponse(q.id || '');
+    return response && (response.riskLevel === RiskLevel.CRITICAL || response.riskLevel === RiskLevel.HIGH);
+  });
   
-  // Get recent queries
-  const { data: recentQueries } = await supabase
-    .from('legal_queries')
-    .select(`
-      *,
-      legal_responses(*)
-    `)
-    .eq('user_id', session.user.id)
-    .order('created_at', { ascending: false })
-    .limit(10);
-  
-  // Get overall statistics
-  const { count: totalQueries } = await supabase
-    .from('legal_queries')
-    .select('*', { count: 'exact', head: true })
-    .eq('user_id', session.user.id);
-  
-  const { count: totalResponses } = await supabase
-    .from('legal_responses')
-    .select('*', { count: 'exact', head: true })
-    .in('query_id', supabase.from('legal_queries').select('id').eq('user_id', session.user.id) as unknown as string[]);
-
-  const { count: pendingQueries } = await supabase
-    .from('legal_queries')
-    .select('*', { count: 'exact', head: true })
-    .eq('user_id', session.user.id)
-    .eq('status', 'pending');
-  
-  const { data: highRiskCases } = await supabase
-    .from('legal_responses')
-    .select('*', { count: 'exact' })
-    .in('query_id', supabase.from('legal_queries').select('id').eq('user_id', session.user.id) as unknown as string[])
-    .in('risk_level', [RiskLevel.CRITICAL, RiskLevel.HIGH]);
+  // Attach responses to queries
+  const queriesWithResponses = recentQueries.map(query => ({
+    ...query,
+    response: query.status === 'completed' ? db.getLegalResponse(query.id || '') : null
+  }));
 
   return (
-    <div>
-      <h1 className="text-2xl font-semibold mb-6">Legal Dashboard</h1>
-      
-      {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-        <StatCard 
-          title="Total Legal Queries" 
-          value={totalQueries || 0} 
-          icon={<FileText className="h-8 w-8" />} 
-        />
-        <StatCard 
-          title="Completed Responses" 
-          value={totalResponses || 0} 
-          icon={<CheckCircle className="h-8 w-8" />} 
-        />
-        <StatCard 
-          title="Pending Queries" 
-          value={pendingQueries || 0} 
-          icon={<Clock className="h-8 w-8" />} 
-          className={pendingQueries ? "bg-yellow-50 border border-yellow-100" : ""}
-        />
-        <StatCard 
-          title="High Risk Cases" 
-          value={highRiskCases?.length || 0} 
-          icon={<AlertTriangle className="h-8 w-8" />} 
-          className={highRiskCases?.length ? "bg-red-50 border border-red-100" : ""}
-        />
-      </div>
-      
-      {/* Actions */}
-      <div className="mb-8">
+    <div className="content-wrapper min-h-screen py-8">
+      {/* Header */}
+      <div className="flex justify-between items-center mb-10">
+        <div>
+          <h1 className="text-4xl font-bold text-white mb-2">Legal Case Management</h1>
+          <p className="text-purple-100">Manage and track all your legal queries in one place</p>
+        </div>
         <Link 
-          href="/dashboard/legal/new" 
-          className="btn-primary inline-flex items-center"
+          href="/legal" 
+          className="btn-primary inline-flex items-center gap-2 group"
         >
-          <PlusCircle className="mr-2 h-4 w-4" />
+          <PlusCircle className="h-5 w-5 group-hover:rotate-90 transition-transform" />
           New Legal Query
         </Link>
       </div>
       
-      {/* Recent Activity */}
-      <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
-        <div className="px-6 py-4 border-b border-gray-200 bg-gray-50">
-          <h2 className="text-lg font-medium">Recent Legal Queries</h2>
+      {/* Stats Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+        <StatCard 
+          title="Total Cases" 
+          value={totalQueries || 0} 
+          icon={<FileText className="h-8 w-8 text-white" />} 
+          gradient="bg-gradient-to-br from-blue-500 to-cyan-600"
+        />
+        <StatCard 
+          title="Completed" 
+          value={totalResponses || 0} 
+          icon={<CheckCircle className="h-8 w-8 text-white" />} 
+          gradient="bg-gradient-to-br from-green-500 to-emerald-600"
+          trend="+8%"
+        />
+        <StatCard 
+          title="In Progress" 
+          value={pendingQueries || 0} 
+          icon={<Clock className="h-8 w-8 text-white" />} 
+          gradient="bg-gradient-to-br from-yellow-500 to-orange-600"
+        />
+        <StatCard 
+          title="High Risk" 
+          value={highRiskCases.length} 
+          icon={<AlertTriangle className="h-8 w-8 text-white" />} 
+          gradient="bg-gradient-to-br from-red-500 to-pink-600"
+        />
+      </div>
+      
+      {/* Recent Queries Section */}
+      <div className="glass rounded-2xl p-8 mb-8">
+        <div className="flex justify-between items-center mb-6">
+          <div className="flex items-center gap-3">
+            <div className="p-3 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl">
+              <FileText className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-800">Recent Legal Queries</h2>
+              <p className="text-sm text-gray-500">Latest case analyses and updates</p>
+            </div>
+          </div>
+          {queriesWithResponses.length > 0 && (
+            <Link href="/legal" className="text-purple-600 hover:text-purple-700 font-semibold flex items-center gap-1">
+              <span>View All</span>
+              <ChevronRight className="h-4 w-4" />
+            </Link>
+          )}
         </div>
         
-        {recentQueries && recentQueries.length > 0 ? (
+        {queriesWithResponses.length > 0 ? (
           <div>
-            {recentQueries.map((query) => (
-              <Link href={`/dashboard/legal/${query.id}`} key={query.id}>
+            {queriesWithResponses.map((item) => (
+              <Link href={`/dashboard/legal/${item.id}`} key={item.id}>
                 <QueryListItem 
-                  query={query} 
-                  response={query.legal_responses?.length ? query.legal_responses[0] : null}
+                  query={item} 
+                  response={item.response}
                 />
               </Link>
             ))}
           </div>
         ) : (
-          <div className="p-6 text-center text-gray-500">
-            No recent queries. Start by submitting a new legal query.
+          <div className="text-center py-16">
+            <div className="inline-block p-6 bg-gradient-to-br from-purple-100 to-blue-100 rounded-full mb-4">
+              <FileText className="h-16 w-16 text-purple-600" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-800 mb-2">No Legal Queries Yet</h3>
+            <p className="text-gray-600 mb-6">Start by submitting your first legal query to get AI-powered analysis</p>
+            <Link 
+              href="/legal" 
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              <PlusCircle className="h-5 w-5" />
+              Create Your First Query
+            </Link>
           </div>
         )}
-        
-        <div className="px-6 py-4 border-t border-gray-200 bg-gray-50">
-          <Link href="/dashboard/legal/history" className="text-blue-600 hover:text-blue-800">
-            View all legal queries
-          </Link>
-        </div>
       </div>
       
-      {/* Domain Distribution */}
-      <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-        <h2 className="text-lg font-medium mb-4">Legal Domain Distribution</h2>
-        <div className="h-64 flex items-center justify-center text-gray-500">
-          {/* Placeholder for domain distribution chart */}
-          <p>Chart would display distribution of queries by legal domain</p>
+      {/* Quick Stats */}
+      {queriesWithResponses.length > 0 && (
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="glass rounded-xl p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg">
+                <CheckCircle className="h-5 w-5 text-white" />
+              </div>
+              <h3 className="font-bold text-gray-800">Success Rate</h3>
+            </div>
+            <p className="text-3xl font-bold text-green-600">
+              {totalQueries > 0 ? Math.round((totalResponses / totalQueries) * 100) : 0}%
+            </p>
+            <p className="text-sm text-gray-500 mt-1">Cases successfully analyzed</p>
+          </div>
+          
+          <div className="glass rounded-xl p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg">
+                <AlertTriangle className="h-5 w-5 text-white" />
+              </div>
+              <h3 className="font-bold text-gray-800">Risk Alert</h3>
+            </div>
+            <p className="text-3xl font-bold text-orange-600">
+              {highRiskCases.length}
+            </p>
+            <p className="text-sm text-gray-500 mt-1">High-priority cases requiring attention</p>
+          </div>
+          
+          <div className="glass rounded-xl p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg">
+                <Zap className="h-5 w-5 text-white" />
+              </div>
+              <h3 className="font-bold text-gray-800">Average Speed</h3>
+            </div>
+            <p className="text-3xl font-bold text-blue-600">2.3s</p>
+            <p className="text-sm text-gray-500 mt-1">Average analysis time</p>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

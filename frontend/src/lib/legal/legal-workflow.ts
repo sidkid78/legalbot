@@ -15,7 +15,7 @@ import {
   LegalRecommendation,
   LegalNextStep,
 } from './types';
-import { getLegalGoogleGenAIClient } from './google-genai-client';
+import { LegalGoogleGenAIClient } from './google-genai-client';
 import { getLegalHeuristics } from './heuristics';
 
 export class LegalWorkflowService {
@@ -197,7 +197,7 @@ export class LegalWorkflowService {
       });
       
       console.log(`[Task ${taskId}] Querying Google Gemini for legal analysis`);
-      const googleGenAIClient = getLegalGoogleGenAIClient();
+      const googleGenAIClient = new LegalGoogleGenAIClient(process.env.GEMINI_API_KEY);
       const googleGenAIResult = await googleGenAIClient.processLegalQuery(task.query);
       
       // Extract information and generate outputs
@@ -261,7 +261,9 @@ export class LegalWorkflowService {
         confidentialityNotice,
         legalDisclaimer,
         taskId,
-        createdAt: new Date().toISOString()
+        createdAt: new Date().toISOString(),
+        functionCalls: googleGenAIResult.functionCalls,
+        caseLawResults: googleGenAIResult.caseLawResults
       };
       
       return response;

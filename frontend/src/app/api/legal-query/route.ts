@@ -1,8 +1,6 @@
 // app/api/legal-query/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { db } from '@/lib/database/sqlite-manager';
-import { getBackendLegalClient } from '@/lib/legal/backend-client';
-import { cookies } from 'next/headers';
+import { db } from '@/lib/database/json-db-manager';
 import { 
   LegalQuery, 
   LegalDomain, 
@@ -10,37 +8,8 @@ import {
   LegalUrgency 
 } from '@/lib/legal/types';
 
-// Helper function to get current user
-async function getCurrentUser() {
-  const cookieStore = await cookies();
-  const sessionId = cookieStore.get('session_id')?.value;
-  
-  if (!sessionId) {
-    return null;
-  }
-  
-  const session = db.getSession(sessionId);
-  if (!session) {
-    return null;
-  }
-  
-  return db.getUserById(session.user_id);
-}
-
 export async function POST(req: NextRequest) {
   try {
-    // Check authentication
-    const user = await getCurrentUser();
-    
-    if (!user) {
-      const response = await NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      );
-      console.log('Unauthorized:', response);
-      return response;
-    }
-
     const data = await req.json();
     
     // Validate the query
@@ -101,43 +70,14 @@ export async function POST(req: NextRequest) {
       timestamp: new Date().toISOString(),
       maxTokens: data.maxTokens || 2048,
       temperature: data.temperature || 0.3,
-      userId: user.id
+      userId: 'default-user' // No authentication needed
     };
     
     // Save query to database
     const queryId = db.createLegalQuery(query);
     query.id = queryId;
     
-    // Use backend client for processing (if backend is available)
-    const useBackend = process.env.USE_BACKEND === 'true';
-    
-    if (useBackend) {
-      // Process with Python backend
-      try {
-        const backendClient = getBackendLegalClient();
-        const backendResponse = await backendClient.processLegalQuery(query);
-        
-        // Save the response to database
-        db.createLegalResponse(backendResponse);
-        
-        // Update query status
-        db.updateLegalQueryStatus(queryId, 'completed');
-        
-        return NextResponse.json({
-          success: true,
-          message: 'Legal query processed successfully',
-          queryId,
-          response: backendResponse
-        });
-      } catch (backendError) {
-        console.error('Backend processing failed:', backendError);
-        
-        // Fall back to local processing
-        console.log('Falling back to local processing...');
-      }
-    }
-    
-    // Local processing with Google GenAI (fallback or primary)
+    // Process with Google GenAI (no backend needed)
     try {
       const { getLegalWorkflowService } = await import('@/lib/legal/legal-workflow');
       const workflowService = getLegalWorkflowService();
@@ -193,25 +133,15 @@ export async function POST(req: NextRequest) {
 
 export async function GET(req: NextRequest) {
   try {
-    // Check authentication
-    const user = await getCurrentUser();
-    
-    if (!user) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      );
-    }
-    
-    // Get queries for the user
+    // Get queries (no authentication needed)
     const { searchParams } = new URL(req.url);
     const limit = parseInt(searchParams.get('limit') || '10');
     
-    const queries = db.getLegalQueriesByUser(user.id, limit);
+    const queries = db.getLegalQueriesByUser('default-user', limit);
     
     // Get responses for completed queries
     const queriesWithResponses = queries.map(query => {
-      const response = query.status === 'completed' ? db.getLegalResponse(query.id) : null;
+      const response = query.status === 'completed' ? db.getLegalResponse(query.id || '') : null;
       return {
         ...query,
         response

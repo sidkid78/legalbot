@@ -19,6 +19,28 @@ interface LegalQuery {
   maxTokens: number;
 }
 
+interface CaseLawResult {
+  caseName: string;
+  citation: string;
+  court: string;
+  dateFiled: string;
+  url: string;
+  snippet?: string;
+  relevanceScore?: number;
+}
+
+interface FunctionCall {
+  name: string;
+  args: Record<string, string | number | boolean>;
+  result?: {
+    success: boolean;
+    data?: CaseLawResult[];
+    searchQuery?: string;
+    totalResults?: number;
+    error?: string;
+  };
+}
+
 interface AnalysisResult {
   content: string;
   model: string;
@@ -32,6 +54,8 @@ interface AnalysisResult {
     jurisdiction: number;
     urgency: number;
   };
+  functionCalls?: FunctionCall[];
+  caseLawResults?: CaseLawResult[];
 }
 
 export default function SimpleLegalPage() {
@@ -92,7 +116,7 @@ export default function SimpleLegalPage() {
       };
       
       // Now process the full legal query with the detected parameters
-      const res = await fetch('/api/legal-test', {
+      const res = await fetch('/api/legal-query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -106,15 +130,20 @@ export default function SimpleLegalPage() {
         throw new Error(data.error || 'Failed to process query');
       }
       
+      // Extract response content from the legal workflow response
+      const responseContent = data.response?.content || data.content || 'No analysis available';
+      
       setResponse({
-        content: data.content,
-        model: data.model,
-        processingTime: data.processingTime,
-        tokenCount: data.tokenCount,
+        content: responseContent,
+        model: data.response?.modelUsed || 'gemini-2.5-flash',
+        processingTime: data.response?.processingTime || 0,
+        tokenCount: data.response?.tokenCount || 0,
         detectedDomain: analysisData.domain,
         detectedJurisdiction: analysisData.jurisdiction,
         detectedUrgency: analysisData.urgency,
-        confidence: analysisData.confidence
+        confidence: analysisData.confidence,
+        functionCalls: data.response?.functionCalls,
+        caseLawResults: data.response?.caseLawResults
       });
     } catch (err) {
       console.error('Error:', err);
@@ -126,13 +155,21 @@ export default function SimpleLegalPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">
-            ⚖️ Smart Legal AI (Gemini Powered)
-          </h1>
-          <p className="text-gray-600 mb-8">
+    <div className="content-wrapper min-h-screen py-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="glass rounded-2xl p-8 mb-8">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-3 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl">
+              <span className="text-3xl">⚖️</span>
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold text-gray-800">
+                Smart Legal AI
+              </h1>
+              <p className="text-purple-600 font-medium">Powered by Google Gemini</p>
+            </div>
+          </div>
+          <p className="text-gray-600 mb-8 text-lg">
             🧠 Just describe your legal situation - Gemini will automatically detect the domain, jurisdiction, and urgency level
           </p>
           
@@ -204,7 +241,7 @@ Try more examples:
             <button
               type="submit"
               disabled={loading || analyzing}
-              className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-4 px-6 rounded-md transition-colors duration-200 text-lg"
+              className="btn-primary w-full py-4 px-6 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {analyzing ? '🧠 Analyzing Query...' : 
                loading ? '⚖️ Generating Legal Analysis...' : 
@@ -227,14 +264,22 @@ Try more examples:
           </form>
 
           {response && (
-            <div className="mt-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                📋 Smart Legal Analysis
-              </h2>
+            <div className="mt-8 glass rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
+                  <span className="text-3xl">📋</span>
+                </div>
+                <h2 className="text-2xl font-bold text-gray-800">
+                  Smart Legal Analysis
+                </h2>
+              </div>
               
               {/* Detection Results */}
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-6 mb-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-4">🧠 AI Detection Results</h3>
+              <div className="bg-gradient-to-r from-purple-50 to-blue-50 border-2 border-purple-200 rounded-xl p-6 mb-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-4 flex items-center gap-2">
+                  <span>🧠</span>
+                  AI Detection Results
+                </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="bg-white rounded-md p-4 border border-blue-100">
                     <div className="text-sm font-medium text-gray-600">Legal Domain</div>
@@ -274,8 +319,92 @@ Try more examples:
                 </div>
               </div>
               
+              {/* Function Calls & Case Law Results */}
+              {response.functionCalls && response.functionCalls.length > 0 && (
+                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-xl p-6 mb-6">
+                  <h3 className="text-lg font-semibold text-blue-900 mb-4 flex items-center gap-2">
+                    <span>🔍</span>
+                    AI Research Activity
+                  </h3>
+                  <p className="text-sm text-blue-700 mb-4">Gemini used these tools to research your query</p>
+                  
+                  {response.functionCalls.map((fc, idx) => (
+                    <div key={idx} className="bg-white rounded-xl p-5 mb-4 border border-blue-300 shadow-sm">
+                      <div className="flex items-start gap-3 mb-4">
+                        <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
+                          {idx + 1}
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-base font-bold text-gray-800 mb-1">
+                            🔍 {fc.name.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
+                          </h4>
+                          {fc.result?.success && (
+                            <p className="text-sm text-green-600 font-medium">
+                              ✓ Found {fc.result.totalResults?.toLocaleString()} results
+                            </p>
+                          )}
+                          {fc.result?.error && (
+                            <p className="text-sm text-red-600 font-medium">✗ {fc.result.error}</p>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Search Parameters */}
+                      <div className="bg-gray-50 rounded-lg p-3 mb-4">
+                        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Search Parameters</p>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+                          {Object.entries(fc.args).map(([key, value]) => (
+                            <div key={key}>
+                              <span className="text-xs text-gray-500">{key.replace(/_/g, ' ')}:</span>
+                              <p className="font-medium text-gray-700">{String(value)}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Case Law Results */}
+                      {fc.result?.data && fc.result.data.length > 0 && (
+                        <div>
+                          <p className="text-sm font-semibold text-gray-700 mb-3">
+                            📑 Cases Found ({fc.result.data.length})
+                          </p>
+                          <div className="space-y-2">
+                            {fc.result.data.map((caseLaw, caseIdx) => (
+                              <a
+                                key={caseIdx}
+                                href={caseLaw.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block bg-white rounded-lg p-3 hover:shadow-md transition-shadow border border-gray-200 hover:border-blue-300"
+                              >
+                                <div className="flex items-start justify-between mb-1">
+                                  <h5 className="font-bold text-gray-800 text-sm">{caseLaw.caseName}</h5>
+                                  {caseLaw.relevanceScore && (
+                                    <span className="badge bg-purple-100 text-purple-700 text-xs ml-2">
+                                      Score: {caseLaw.relevanceScore.toFixed(1)}
+                                    </span>
+                                  )}
+                                </div>
+                                <div className="flex flex-wrap gap-2 text-xs text-gray-600 mb-2">
+                                  <span>📋 {caseLaw.citation}</span>
+                                  <span>🏛️ {caseLaw.court}</span>
+                                  <span>📅 {new Date(caseLaw.dateFiled).toLocaleDateString()}</span>
+                                </div>
+                                {caseLaw.snippet && (
+                                  <p className="text-xs text-gray-600 line-clamp-2">{caseLaw.snippet}</p>
+                                )}
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+              
               {/* Analysis Content */}
-              <div className="bg-white border border-gray-200 rounded-lg p-6 mb-4">
+              <div className="bg-white border-2 border-gray-200 rounded-xl p-6 mb-4">
                 <div className="prose prose-gray max-w-none prose-headings:text-gray-900 prose-h1:text-xl prose-h2:text-lg prose-h3:text-base prose-p:text-gray-700 prose-li:text-gray-700 prose-strong:text-gray-900">
                   <ReactMarkdown 
                     remarkPlugins={[remarkGfm]}
@@ -298,23 +427,23 @@ Try more examples:
               </div>
               
               {/* Metadata */}
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+              <div className="bg-gradient-to-r from-gray-50 to-purple-50 border border-purple-200 rounded-xl p-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                  <div>
-                    <span className="font-medium text-gray-600">Model:</span>
-                    <div className="text-gray-800">{response.model}</div>
+                  <div className="stat-card text-center">
+                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">Model</span>
+                    <div className="text-lg font-bold text-gray-800">{response.model}</div>
                   </div>
-                  <div>
-                    <span className="font-medium text-gray-600">Processing Time:</span>
-                    <div className="text-gray-800">{response.processingTime.toFixed(2)}s</div>
+                  <div className="stat-card text-center">
+                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">Processing Time</span>
+                    <div className="text-lg font-bold text-green-600">{response.processingTime.toFixed(2)}s</div>
                   </div>
-                  <div>
-                    <span className="font-medium text-gray-600">Tokens Used:</span>
-                    <div className="text-gray-800">{response.tokenCount.toLocaleString()}</div>
+                  <div className="stat-card text-center">
+                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">Tokens Used</span>
+                    <div className="text-lg font-bold text-blue-600">{response.tokenCount.toLocaleString()}</div>
                   </div>
-                  <div>
-                    <span className="font-medium text-gray-600">Analysis Type:</span>
-                    <div className="text-gray-800">Smart Detection</div>
+                  <div className="stat-card text-center">
+                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1">Analysis Type</span>
+                    <div className="text-lg font-bold text-purple-600">Smart AI</div>
                   </div>
                 </div>
               </div>

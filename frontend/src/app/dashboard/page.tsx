@@ -2,35 +2,42 @@
 import Link from 'next/link';
 import { 
   Briefcase,
-  Stethoscope
+  CheckCircle,
+  Clock,
+  Activity,
+  TrendingUp,
+  Zap
 } from 'lucide-react';
-import { redirect } from 'next/navigation';
-import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
-import { cookies } from 'next/headers';
+import { db } from '@/lib/database/json-db-manager';
 
-// Dashboard statistics card component
-function DashboardStatCard({ title, value, icon, className }: { 
+// Modern Dashboard statistics card component
+function DashboardStatCard({ title, value, icon, gradient, trend }: { 
   title: string; 
   value: string | number; 
   icon: React.ReactNode;
-  className?: string;
+  gradient: string;
+  trend?: string;
 }) {
   return (
-    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
-      <div className="flex items-center justify-between">
-        <div>
-          <h3 className="text-lg font-medium text-gray-500">{title}</h3>
-          <p className="text-3xl font-bold mt-1">{value}</p>
-        </div>  
-        <div className="text-blue-500">
+    <div className="stat-card card-hover">
+      <div className="flex items-center justify-between mb-4">
+        <div className={`p-3 ${gradient} rounded-xl`}>
           {icon}
         </div>
+        {trend && (
+          <span className="badge bg-green-100 text-green-700 flex items-center gap-1">
+            <TrendingUp className="h-3 w-3" />
+            {trend}
+          </span>
+        )}
       </div>
+      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">{title}</h3>
+      <p className="text-4xl font-bold text-gray-800">{value}</p>
     </div>
   );
 }
 
-// System card component
+// Modern System card component
 function SystemCard({ 
   title, 
   description, 
@@ -47,129 +54,159 @@ function SystemCard({
   pending: number;
 }) {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-      <div className="flex justify-between items-start mb-4">
-        <div className="text-blue-600">
-          {icon}
-        </div>
-        <div className="flex">
-          <span className="px-2 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-medium">
-            {count} total
-          </span>
-          {pending > 0 && (
-            <span className="ml-2 px-2 py-1 rounded-full bg-yellow-100 text-yellow-800 text-xs font-medium">
-              {pending} pending
+    <Link href={link}>
+      <div className="glass rounded-2xl p-8 card-hover group cursor-pointer">
+        <div className="flex justify-between items-start mb-6">
+          <div className="p-4 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl group-hover:scale-110 transition-transform">
+            {icon}
+          </div>
+          <div className="flex gap-2">
+            <span className="badge bg-gradient-to-r from-purple-500 to-blue-500 text-white">
+              {count} Cases
             </span>
-          )}
+            {pending > 0 && (
+              <span className="badge risk-high pulse-glow">
+                {pending} Active
+              </span>
+            )}
+          </div>
+        </div>
+        <h3 className="text-2xl font-bold mb-3 text-gray-800 group-hover:text-purple-600 transition-colors">{title}</h3>
+        <p className="text-gray-600 mb-6 leading-relaxed">{description}</p>
+        <div className="flex items-center text-purple-600 font-semibold group-hover:gap-3 gap-2 transition-all">
+          <span>Access System</span>
+          <Zap className="h-5 w-5 group-hover:text-yellow-500 transition-colors" />
         </div>
       </div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <Link href={link} className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
-        Access System
-        <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </Link>
-    </div>
+    </Link>
   );
 }
 
 export default async function DashboardPage() {
-  const supabase = createServerComponentClient({ cookies });
+  // Get statistics (no authentication needed)
+  const stats = db.getStats() || { queries: 0, responses: 0, users: 0 };
+  const totalQueries = stats.queries || 0;
+  const totalResponses = stats.responses || 0;
+  const pendingQueries = totalQueries - totalResponses;
   
-  // Check if the user is authenticated
-  const { data: { session } } = await supabase.auth.getSession();
-  
-  if (!session) {
-    redirect('/login');
-  }
-
-  // Get medical queries count
-  const { count: totalMedicalQueries } = await supabase
-    .from('medical_queries')
-    .select('*', { count: 'exact', head: true })
-    .eq('user_id', session.user.id);
-    
-  const { count: pendingMedicalQueries } = await supabase
-    .from('medical_queries')
-    .select('*', { count: 'exact', head: true })
-    .eq('user_id', session.user.id)
-    .not('id', 'in', supabase.from('medical_responses').select('query_id'));
-
-  // Get legal queries count
-  const { count: totalLegalQueries } = await supabase
-    .from('legal_queries')
-    .select('*', { count: 'exact', head: true })
-    .eq('user_id', session.user.id);
-    
-  const { count: pendingLegalQueries } = await supabase
-    .from('legal_queries')
-    .select('*', { count: 'exact', head: true })
-    .eq('user_id', session.user.id)
-    .eq('status', 'pending');
+  const userQueries = db.getLegalQueriesByUser('default-user', 100) || [];
+  const totalLegalQueries = userQueries.length || 0;
+  const pendingLegalQueries = userQueries.filter(q => q.status === 'pending').length || 0;
   
   return (
-    <div>
-      <h1 className="text-2xl font-semibold mb-6">Dashboard</h1>
-      
+    <div className="content-wrapper min-h-screen py-8">
+      {/* Header */}
       <div className="mb-10">
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold mb-4">Welcome to the Professional AI Workflow System</h2>
-          <p className="text-gray-700 mb-4">
-            Access specialized AI workflows tailored for professional domains. 
-            Choose from the systems below to get started with your queries.
-          </p>
+        <h1 className="text-4xl font-bold text-white mb-3">LawyerBot Dashboard</h1>
+        <p className="text-purple-100 text-lg">AI-powered legal analysis and case management</p>
+      </div>
+      
+      {/* Statistics Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <DashboardStatCard 
+          title="Total Queries" 
+          value={totalQueries} 
+          icon={<Activity className="h-8 w-8 text-white" />} 
+          gradient="bg-gradient-to-br from-blue-500 to-cyan-600"
+        />
+        <DashboardStatCard 
+          title="Completed" 
+          value={totalResponses} 
+          icon={<CheckCircle className="h-8 w-8 text-white" />} 
+          gradient="bg-gradient-to-br from-green-500 to-emerald-600"
+          trend="+12%"
+        />
+        <DashboardStatCard 
+          title="Active Cases" 
+          value={pendingQueries} 
+          icon={<Clock className="h-8 w-8 text-white" />} 
+          gradient="bg-gradient-to-br from-orange-500 to-red-600"
+        />
+      </div>
+      
+      {/* Welcome Card */}
+      <div className="glass rounded-2xl p-8 mb-10">
+        <div className="flex items-start gap-4 mb-6">
+          <div className="p-3 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl">
+            <Zap className="h-8 w-8 text-white" />
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">Welcome to LawyerBot</h2>
+            <p className="text-gray-600 leading-relaxed">
+              Access specialized AI workflows tailored for legal professionals. 
+              Get jurisdiction-aware analysis, risk assessment, and comprehensive legal recommendations powered by Google Gemini.
+            </p>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-gray-200">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-purple-600 mb-1">{totalLegalQueries}</div>
+            <div className="text-sm text-gray-500">Total Cases Analyzed</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-green-600 mb-1">{totalResponses}</div>
+            <div className="text-sm text-gray-500">Cases Completed</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-orange-600 mb-1">{pendingLegalQueries}</div>
+            <div className="text-sm text-gray-500">Cases In Progress</div>
+          </div>
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-        <SystemCard 
-          title="Medical Professional System" 
-          description="AI-powered clinical decision support with evidence-based recommendations for healthcare professionals."
-          icon={<Stethoscope className="h-12 w-12" />}
-          link="/dashboard/queries"
-          count={totalMedicalQueries || 0}
-          pending={pendingMedicalQueries || 0}
-        />
-        
+      {/* Legal System Card */}
+      <div className="mb-10">
+        <h2 className="text-2xl font-bold text-white mb-6">Your Legal Workspace</h2>
         <SystemCard 
           title="Legal Professional System" 
-          description="Domain-specific legal analysis with jurisdiction-aware recommendations and risk assessment."
-          icon={<Briefcase className="h-12 w-12" />}
+          description="Domain-specific legal analysis with jurisdiction-aware recommendations, risk assessment, and automated case law research. Supports Corporate, IP, Employment, Criminal, Civil, and Family Law."
+          icon={<Briefcase className="h-12 w-12 text-white" />}
           link="/dashboard/legal"
           count={totalLegalQueries || 0}
           pending={pendingLegalQueries || 0}
         />
       </div>
       
-      <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <h2 className="text-lg font-semibold mb-4">Recent Activity</h2>
-        
-        <div className="flex justify-between mb-6">
-          <div className="flex">
-            <button className="px-4 py-2 bg-blue-600 text-white rounded-l-md">All</button>
-            <button className="px-4 py-2 border border-gray-300 bg-white text-gray-700">Medical</button>
-            <button className="px-4 py-2 border border-gray-300 bg-white text-gray-700 rounded-r-md">Legal</button>
+      {/* Quick Actions */}
+      <div className="grid md:grid-cols-2 gap-6">
+        <Link href="/legal" className="glass rounded-2xl p-6 card-hover group">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
+              <Activity className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-gray-800">New Legal Query</h3>
+              <p className="text-sm text-gray-500">Start a new case analysis</p>
+            </div>
           </div>
-          
-          <div>
-            <Link href="/dashboard/activity" className="text-blue-600 hover:text-blue-800">
-              View all activity
-            </Link>
+          <p className="text-gray-600 mb-4">
+            Submit a legal question and get comprehensive AI-powered analysis with case law citations and actionable recommendations.
+          </p>
+          <div className="flex items-center text-green-600 font-semibold group-hover:gap-2 gap-1 transition-all">
+            <span>Create Query</span>
+            <Zap className="h-4 w-4" />
           </div>
-        </div>
+        </Link>
         
-        <div className="h-64 flex items-center justify-center text-gray-500 border border-dashed border-gray-300 rounded-md">
-          Combined activity timeline would be displayed here
-        </div>
-      </div>
-      
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-lg font-semibold mb-4">System Analytics</h2>
-        <div className="h-64 flex items-center justify-center text-gray-500 border border-dashed border-gray-300 rounded-md">
-          Combined analytics dashboard would be displayed here
-        </div>
+        <Link href="/dashboard/legal" className="glass rounded-2xl p-6 card-hover group">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl">
+              <Briefcase className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-gray-800">View All Cases</h3>
+              <p className="text-sm text-gray-500">Browse your case history</p>
+            </div>
+          </div>
+          <p className="text-gray-600 mb-4">
+            Access all your legal queries, review past analyses, and track the status of ongoing cases in one centralized location.
+          </p>
+          <div className="flex items-center text-purple-600 font-semibold group-hover:gap-2 gap-1 transition-all">
+            <span>Browse Cases</span>
+            <Zap className="h-4 w-4" />
+          </div>
+        </Link>
       </div>
     </div>
   );

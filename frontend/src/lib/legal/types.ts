@@ -67,43 +67,77 @@ export enum LegalDomain {
     temperature?: number;
     userId?: string;
     taskId?: string;
+    status?: LegalQueryStatus;
+    errorMessage?: string;
   }
   
-  export interface LegalResponse {
-    id: string;
-    queryId: string;
-    content: string;
-    riskLevel: RiskLevel;
-    jurisdictionAnalysis: {
-      type: string;
-      keyRequirements: string[];
-      filingDeadlines: Record<string, string>;
-      specialConsiderations: string[];
-      [key: string]: string[] | Record<string, string> | string | number | boolean;
-    };
-    citations: LegalCitation[];
-    recommendations: LegalRecommendation[];
-    nextSteps: LegalNextStep[];
-    processingTime: number;
-    tokenCount: number;
-    modelUsed: string;
-    billingInfo: {
-      aiProcessingHours?: number;
-      hourlyRate?: number;
-      aiTimeCharge?: number;
-      tokenCount?: number;
-      estimatedTokenCost?: number;
-      totalEstimatedCharge?: number;
-      domain?: string;
-      timeTrackedSeconds?: number;
-      billable?: boolean;
-      [key: string]: string | number | boolean | undefined;
-    };
-    confidentialityNotice: string;
-    legalDisclaimer: string;
-    taskId?: string;
-    createdAt: string;
+  export enum LegalQueryStatus {
+    PENDING = "pending",
+    PROCESSING = "processing",
+    COMPLETED = "completed",
+    ERROR = "error",
+    CANCELLED = "cancelled",
   }
+
+export interface CaseLawResult {
+  caseName: string;
+  citation: string;
+  court: string;
+  dateFiled: string;
+  url: string;
+  snippet?: string;
+  relevanceScore?: number;
+}
+
+export interface FunctionCall {
+  name: string;
+  args: Record<string, string | number | boolean | undefined>;
+  result?: {
+    success: boolean;
+    data?: CaseLawResult[];
+    searchQuery?: string;
+    totalResults?: number;
+    error?: string;
+  };
+}
+
+export interface LegalResponse {
+  id: string;
+  queryId: string;
+  content: string;
+  riskLevel: RiskLevel;
+  jurisdictionAnalysis: {
+    type: string;
+    keyRequirements: string[];
+    filingDeadlines: Record<string, string>;
+    specialConsiderations: string[];
+    [key: string]: string[] | Record<string, string> | string | number | boolean;
+  };
+  citations: LegalCitation[];
+  recommendations: LegalRecommendation[];
+  nextSteps: LegalNextStep[];
+  processingTime: number;
+  tokenCount: number;
+  modelUsed: string;
+  billingInfo: {
+    aiProcessingHours?: number;
+    hourlyRate?: number;
+    aiTimeCharge?: number;
+    tokenCount?: number;
+    estimatedTokenCost?: number;
+    totalEstimatedCharge?: number;
+    domain?: string;
+    timeTrackedSeconds?: number;
+    billable?: boolean;
+    [key: string]: string | number | boolean | undefined;
+  };
+  confidentialityNotice: string;
+  legalDisclaimer: string;
+  taskId?: string;
+  createdAt: string;
+  functionCalls?: FunctionCall[];
+  caseLawResults?: CaseLawResult[];
+}
   
   export interface LegalCitation {
     type: string;

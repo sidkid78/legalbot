@@ -1,6 +1,6 @@
 // app/api/auth/login/route.ts
 import { NextRequest, NextResponse } from 'next/server';
-import { db } from '@/lib/database/sqlite-manager';
+import { db } from '@/lib/database/json-db-manager';
 import { cookies } from 'next/headers';
 
 export async function POST(req: NextRequest) {
@@ -26,7 +26,8 @@ export async function POST(req: NextRequest) {
     const session = db.createSession(user.id, 24); // 24 hours
     
     // Set session cookie
-    cookies().set('session_id', session.id, {
+    const cookieStore = await cookies();
+    cookieStore.set('session_id', session.id, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
