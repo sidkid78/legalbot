@@ -59,7 +59,8 @@ export async function POST(req: NextRequest) {
       jurisdiction: data.jurisdiction,
       urgency: data.urgency,
       priority: data.priority || 3,
-      requiresResearch: data.requiresResearch || true,
+      // `|| true` here made the flag impossible to switch off
+      requiresResearch: data.requiresResearch ?? true,
       clientInfo: data.clientInfo || {
         name: 'Confidential Client',
         matterNumber: `M-${Date.now()}`

@@ -1,637 +1,546 @@
+// app/dashboard/legal/[id]/page.tsx — the memorandum
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { 
-  Clock, 
-  AlertTriangle, 
-  CheckCircle, 
-  ChevronLeft, 
-  User, 
-  Briefcase,
-  MapPin,
-  AlertCircle
-} from 'lucide-react';
-import { 
+import { Suspense } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import {
   RiskLevel,
   LegalNextStep,
   LegalRecommendation,
-  LegalCitation
+  LegalCitation,
+  LegalQuery,
+  LegalResponse,
 } from '@/lib/legal/types';
-import { Suspense } from 'react';
-import { LegalQuery, LegalResponse } from '@/lib/legal/types';
 import { db } from '@/lib/database/json-db-manager';
+import { Mark, riskTone, formatDate, titleCase } from '@/components/press';
 
+/* ------------------------------------------------------------------ */
 
-// Loading component
-function LegalDetailSkeleton() {
+function MemorandumSkeleton() {
   return (
-    <div className="animate-pulse">
-      <div className="h-8 bg-gray-200 rounded w-1/3 mb-6"></div>
-      
-      <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-        <div className="h-6 bg-gray-200 rounded w-1/4 mb-4"></div>
-        <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
-        <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
-        <div className="h-4 bg-gray-200 rounded w-3/4 mb-6"></div>
-        
-        <div className="grid grid-cols-2 gap-4 mb-4">
-          <div>
-            <div className="h-4 bg-gray-200 rounded w-1/3 mb-2"></div>
-            <div className="h-6 bg-gray-200 rounded w-1/2"></div>
-          </div>
-          <div>
-            <div className="h-4 bg-gray-200 rounded w-1/3 mb-2"></div>
-            <div className="h-6 bg-gray-200 rounded w-1/2"></div>
-          </div>
-        </div>
+    <div className="measure animate-pulse pt-12 pb-4">
+      <div className="h-3 w-32 bg-rule" />
+      <div className="mt-6 h-14 w-2/3 bg-rule" />
+      <div className="mt-10 h-px w-full bg-rule" />
+      <div className="mt-10 space-y-3">
+        <div className="h-4 w-full bg-rule" />
+        <div className="h-4 w-full bg-rule" />
+        <div className="h-4 w-3/4 bg-rule" />
       </div>
-      
-      <div className="h-8 bg-gray-200 rounded w-1/4 mb-6"></div>
-      
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <div className="h-6 bg-gray-200 rounded w-1/4 mb-4"></div>
-        <div className="space-y-2">
-          <div className="h-4 bg-gray-200 rounded w-full"></div>
-          <div className="h-4 bg-gray-200 rounded w-full"></div>
-          <div className="h-4 bg-gray-200 rounded w-full"></div>
-          <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-        </div>
+      <div className="mt-12 grid gap-px bg-rule sm:grid-cols-4">
+        {[0, 1, 2, 3].map((i) => (
+          <div key={i} className="h-24 bg-paper" />
+        ))}
       </div>
     </div>
   );
 }
 
-function QueryDetailView({ id }: { id: string }) {
-  // This is an async component
-  async function getDetails() {
-    const query = db.getLegalQuery(id);
-    const response = db.getLegalResponse(id);
-    if (!query || !response) {
-      notFound();
-    }
-    return { query, response };
-  }
-    
-  
-  
+/** A labelled particular in the caption block. */
+function Particular({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
-    <Suspense fallback={<LegalDetailSkeleton />}>
-      <DetailContent getDetails={getDetails} />
-    </Suspense>
+    <div className="bg-sheet px-5 py-5">
+      <p className="label">{label}</p>
+      <p className="mt-2 font-display text-lg leading-tight text-ink">
+        {children}
+      </p>
+    </div>
   );
 }
 
-// This component will use the results of the async function
-async function DetailContent({ getDetails }: { getDetails: () => Promise<{ query: LegalQuery, response: LegalResponse }> }) {
-  const { query, response } = await getDetails();
-  
-  // Format dates
-  const formattedDate = (dateStr: string) => {
-    return new Date(dateStr).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric'
-    });
-  };
-  
-  // Determine status
-  const status = !response 
-    ? 'processing' 
-    : (response.riskLevel as RiskLevel) === RiskLevel.CRITICAL || (response.riskLevel as RiskLevel) === RiskLevel.HIGH
-      ? 'warning'
-      : 'completed';
+function riskCounsel(risk: RiskLevel | string) {
+  switch (risk) {
+    case RiskLevel.CRITICAL:
+      return 'Immediate attention is required.';
+    case RiskLevel.HIGH:
+      return 'Prompt action is required.';
+    case RiskLevel.MODERATE:
+      return 'Timely review is advised.';
+    default:
+      return 'Standard processing is sufficient.';
+  }
+}
 
-  // Format client info
-  const clientInfo = query.clientInfo || { name: 'Confidential Client', matterNumber: 'N/A' };
-  
-  // Format related cases
+/* ------------------------------------------------------------------ */
+
+async function Memorandum({ id }: { id: string }) {
+  const query: LegalQuery | null | undefined = db.getLegalQuery(id);
+  if (!query) notFound();
+
+  const response: LegalResponse | null | undefined = db.getLegalResponse(id);
+
+  const clientInfo = query.clientInfo || {
+    name: 'Confidential Client',
+    matterNumber: 'N/A',
+  };
   const relatedCases = query.relatedCases || [];
-
-  // Get risk badge class
-  const riskBadgeClass = (risk: RiskLevel) => {
-    return `badge ${
-      risk === RiskLevel.CRITICAL ? 'risk-critical' :
-      risk === RiskLevel.HIGH ? 'risk-high' :
-      risk === RiskLevel.MODERATE ? 'risk-moderate' :
-      'bg-white text-gray-700'
-    }`;
-  };
+  const tone = riskTone(response?.riskLevel);
 
   return (
-    <div className="content-wrapper min-h-screen py-8">
-      {/* Header with Back Button */}
-      <div className="flex items-center justify-between mb-8">
+    <div className="measure pb-4">
+      {/* ── Caption ─────────────────────────────────────────── */}
+      <header className="rise rise-1 pt-12 pb-8 lg:pt-16">
         <div>
-          <Link href="/dashboard/legal" className="inline-flex items-center text-white hover:text-purple-200 transition-colors mb-3">
-            <ChevronLeft className="mr-1 h-5 w-5" />
-            <span className="font-medium">Back to Legal Queries</span>
+          <Link
+            href="/dashboard/legal"
+            className="link-draw label inline-flex items-center gap-2 hover:text-accent"
+          >
+            <span aria-hidden="true">&larr;</span> Back to the docket
           </Link>
-          <h1 className="text-3xl font-bold text-white">Legal Query Analysis</h1>
         </div>
-        <div className="flex items-center gap-2">
-          <span className={riskBadgeClass(response.riskLevel as RiskLevel)}>
-            {response.riskLevel.replace(/\b\w/g, (l: string) => l.toUpperCase())} Priority
-          </span>
-        </div>
-      </div>
-      
-      {/* Query Card with Modern Design */}
-      <div className="glass rounded-2xl p-8 mb-6 card-hover">
-        <div className="flex items-center gap-3 mb-6">
-          <div className="p-3 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl">
-            <Briefcase className="h-6 w-6 text-white" />
-          </div>
+
+        <div className="mt-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 className="text-xl font-bold text-gray-800">Legal Query</h2>
-            <p className="text-sm text-gray-500">Submitted {formattedDate(query.timestamp)}</p>
+            <p className="section-mark">Memorandum of advice</p>
+            <h1 className="mt-4 font-display text-[clamp(2.2rem,5.5vw,3.5rem)] leading-[1.02] text-ink">
+              {clientInfo.name}
+            </h1>
+          </div>
+          <div className="flex flex-wrap items-center gap-3">
+            {response && (
+              <Mark tone={tone}>{String(response.riskLevel)} exposure</Mark>
+            )}
+            <span className="docket text-ink-faint">
+              {clientInfo.matterNumber}
+            </span>
           </div>
         </div>
-        
-        <div className="bg-gradient-to-r from-gray-50 to-purple-50 rounded-xl p-6 mb-6">
-          <p className="text-gray-800 leading-relaxed whitespace-pre-line text-lg">{query.content}</p>
+
+        <div
+          className="rule-in mt-8 h-0.5 w-full bg-ink"
+          style={{ animationDelay: '0.3s' }}
+        />
+      </header>
+
+      {/* ── Statement of facts ──────────────────────────────── */}
+      <section className="rise rise-2">
+        <p className="section-mark mb-5">Statement of facts</p>
+        <blockquote className="border-l-2 border-accent py-1 pl-6">
+          <p className="max-w-3xl text-xl leading-relaxed whitespace-pre-line text-ink">
+            {query.content}
+          </p>
+        </blockquote>
+        <p className="docket mt-5 pl-6 text-ink-faint">
+          Filed {formatDate(query.timestamp)}
+        </p>
+      </section>
+
+      {/* ── Particulars ─────────────────────────────────────── */}
+      <section className="rise rise-3 mt-12">
+        <p className="section-mark mb-5">Particulars</p>
+        <div className="grid grid-cols-2 gap-px border border-rule bg-rule sm:grid-cols-4">
+          <Particular label="Domain">{titleCase(query.domain)}</Particular>
+          <Particular label="Jurisdiction">
+            {titleCase(query.jurisdiction)}
+          </Particular>
+          <Particular label="Urgency">{titleCase(query.urgency)}</Particular>
+          <Particular label="Priority">
+            {query.priority} of 5
+          </Particular>
         </div>
-        
-        {/* Info Grid with Icons */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-          <div className="stat-card">
-            <div className="flex items-center gap-2 mb-2">
-              <Briefcase className="h-5 w-5 text-purple-500" />
-              <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Domain</span>
-            </div>
-            <p className="text-lg font-bold text-gray-800 capitalize">{query.domain.replace(/_/g, ' ')}</p>
-          </div>
-          
-          <div className="stat-card">
-            <div className="flex items-center gap-2 mb-2">
-              <MapPin className="h-5 w-5 text-blue-500" />
-              <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Jurisdiction</span>
-            </div>
-            <p className="text-lg font-bold text-gray-800 capitalize">{query.jurisdiction}</p>
-          </div>
-          
-          <div className="stat-card">
-            <div className="flex items-center gap-2 mb-2">
-              <User className="h-5 w-5 text-green-500" />
-              <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Client</span>
-            </div>
-            <p className="text-lg font-bold text-gray-800">{clientInfo.name}</p>
-          </div>
-          
-          <div className="stat-card">
-            <div className="flex items-center gap-2 mb-2">
-              {status === 'processing' ? (
-                <Clock className="h-5 w-5 text-blue-500 pulse-glow" />
-              ) : status === 'warning' ? (
-                <AlertTriangle className="h-5 w-5 text-orange-500" />
-              ) : (
-                <CheckCircle className="h-5 w-5 text-green-500" />
-              )}
-              <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Status</span>
-            </div>
-            <p className="text-lg font-bold text-gray-800 capitalize">{status}</p>
-          </div>
-        </div>
-        
-        {/* Additional Info */}
-        {(clientInfo.matterNumber || query.deadline || relatedCases.length > 0) && (
-          <div className="bg-gray-50 rounded-xl p-4 mb-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {clientInfo.matterNumber && (
-                <div>
-                  <span className="text-xs text-gray-500 uppercase tracking-wide">Matter Number</span>
-                  <p className="font-semibold text-gray-700 mt-1">{clientInfo.matterNumber}</p>
-                </div>
-              )}
-              
-              {query.deadline && (
-                <div>
-                  <span className="text-xs text-gray-500 uppercase tracking-wide">Deadline</span>
-                  <div className="flex items-center mt-1">
-                    <AlertCircle className="h-4 w-4 text-red-500 mr-2" />
-                    <p className="font-semibold text-gray-700">{formattedDate(query.deadline)}</p>
-                  </div>
-                </div>
-              )}
-            </div>
-            
+
+        {(query.deadline || relatedCases.length > 0) && (
+          <div className="mt-6 grid gap-8 border-t border-rule pt-6 sm:grid-cols-2">
+            {query.deadline && (
+              <div>
+                <p className="label">Deadline</p>
+                <p className="mt-2 font-display text-lg text-accent">
+                  {formatDate(query.deadline)}
+                </p>
+              </div>
+            )}
             {relatedCases.length > 0 && (
-              <div className="mt-4">
-                <span className="text-xs text-gray-500 uppercase tracking-wide">Related Cases</span>
-                <div className="mt-2 space-y-1">
+              <div>
+                <p className="label">Related matters</p>
+                <ul className="mt-2 flex flex-col gap-1">
                   {relatedCases.map((caseTitle: string, idx: number) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-700">
-                      <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                    <li key={idx} className="text-[0.95rem] italic text-ink">
+                      <span className="mr-2 not-italic text-accent">§</span>
                       {caseTitle}
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             )}
           </div>
         )}
-        
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2">
-          {query.requiresResearch && (
-            <span className="badge bg-blue-500 text-white">
-              📚 Requires Research
-            </span>
-          )}
-          {query.billable && (
-            <span className="badge bg-green-500 text-white">
-              💰 Billable
-            </span>
-          )}
-          {!query.billable && (
-            <span className="badge bg-gray-400 text-white">
-              Non-Billable
-            </span>
-          )}
-          <span className="badge bg-purple-500 text-white">
-            Priority {query.priority}
-          </span>
+
+        <div className="mt-6 flex flex-wrap gap-2">
+          {query.requiresResearch && <Mark>Research required</Mark>}
+          <Mark tone={query.billable ? 'risk-low' : 'risk-none'}>
+            {query.billable ? 'Billable' : 'Non-billable'}
+          </Mark>
         </div>
-      </div>
-      
-      {/* Response section */}
+      </section>
+
+      {/* ── Disposition ─────────────────────────────────────── */}
       {!response ? (
-        // Processing state with modern loader
-        <div className="glass rounded-2xl p-12">
-          <div className="flex flex-col items-center justify-center py-8">
-            <div className="relative">
-              <div className="animate-spin rounded-full h-16 w-16 border-4 border-purple-200"></div>
-              <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-purple-600 absolute top-0 left-0"></div>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-800 mt-6">Processing Legal Query</h3>
-            <p className="text-gray-500 mt-2 text-center max-w-md">
-              Our AI is analyzing your case with Google Gemini. This may take a moment...
+        <section className="rise rise-4 mt-16">
+          <div className="sheet flex flex-col items-center px-6 py-24 text-center">
+            <span className="spin-seal h-10 w-10 rounded-full border border-rule border-t-accent" />
+            <h2 className="mt-8 font-display text-3xl text-ink">
+              Under consideration
+            </h2>
+            <p className="mt-3 max-w-md text-[0.95rem] leading-relaxed text-ink-faint">
+              The matter is being read, authority gathered and exposure graded.
+              This page will hold the memorandum when it is settled.
             </p>
           </div>
-        </div>
+        </section>
       ) : (
-        // Response content
         <>
-          {/* Risk Level Banner */}
-          <div className={`rounded-2xl p-6 mb-6 ${
-            response.riskLevel === RiskLevel.CRITICAL ? 'risk-critical' :
-            response.riskLevel === RiskLevel.HIGH ? 'risk-high' :
-            response.riskLevel === RiskLevel.MODERATE ? 'risk-moderate' :
-            response.riskLevel === RiskLevel.LOW ? 'risk-low' :
-            'risk-minimal'
-          }`}>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <AlertTriangle className="h-10 w-10" />
+          {/* Risk band */}
+          <section className={`rise rise-4 mt-16 ${tone}`}>
+            <div className="border-y-2 border-current py-8">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
                 <div>
-                  <h3 className="text-2xl font-bold">Risk Assessment: {response.riskLevel.toUpperCase()}</h3>
-                  <p className="opacity-90 mt-1">This case requires {
-                    response.riskLevel === RiskLevel.CRITICAL ? 'immediate attention' :
-                    response.riskLevel === RiskLevel.HIGH ? 'prompt action' :
-                    response.riskLevel === RiskLevel.MODERATE ? 'timely review' :
-                    'standard processing'
-                  }</p>
+                  <p className="label" style={{ color: 'currentColor' }}>
+                    Assessed exposure
+                  </p>
+                  <h2 className="mt-3 font-display text-[clamp(2.2rem,6vw,3.5rem)] leading-none text-current">
+                    {String(response.riskLevel).toUpperCase()}
+                  </h2>
+                  <p className="mt-4 text-lg text-ink-soft">
+                    {riskCounsel(response.riskLevel)}
+                  </p>
                 </div>
-              </div>
-              <div className="text-right">
-                <p className="text-sm opacity-90">Processing Time</p>
-                <p className="text-2xl font-bold">{response.processingTime.toFixed(2)}s</p>
+                <div className="text-left sm:text-right">
+                  <p className="label">Drafting time</p>
+                  <p className="numeral mt-2 text-4xl text-ink">
+                    {response.processingTime.toFixed(2)}s
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          
-          {/* Function Calls & Case Law Results */}
-          {(response.functionCalls && response.functionCalls.length > 0) && (
-            <div className="glass rounded-2xl p-8 mb-6 card-hover">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl">
-                  <Briefcase className="h-6 w-6 text-white" />
-                </div>
+          </section>
+
+          {/* Table of authorities */}
+          {response.functionCalls && response.functionCalls.length > 0 && (
+            <section className="mt-16">
+              <div className="mb-6 flex items-baseline justify-between border-b border-rule pb-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-800">AI Research Activity</h3>
-                  <p className="text-sm text-gray-500">Gemini used these tools to research your query</p>
+                  <p className="section-mark">Table of authorities</p>
+                  <h2 className="mt-3 font-display text-2xl text-ink">
+                    Research undertaken
+                  </h2>
                 </div>
+                <span className="label">
+                  {response.functionCalls.length} search
+                  {response.functionCalls.length === 1 ? '' : 'es'}
+                </span>
               </div>
 
-              {/* Function Calls */}
-              {response.functionCalls.map((fc, idx) => (
-                <div key={idx} className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 mb-4 border border-blue-200">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold flex-shrink-0">
-                        {idx + 1}
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-bold text-gray-800">🔍 {fc.name.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h4>
-                        {fc.result?.success && (
-                          <p className="text-sm text-green-600 font-medium">✓ Found {fc.result.totalResults?.toLocaleString()} results</p>
-                        )}
-                        {fc.result?.error && (
-                          <p className="text-sm text-red-600 font-medium">✗ {fc.result.error}</p>
-                        )}
-                      </div>
+              <div className="flex flex-col gap-8">
+                {response.functionCalls.map((fc, idx) => (
+                  <div key={idx} className="sheet p-6 sm:p-7">
+                    <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-rule pb-4">
+                      <h3 className="flex items-baseline gap-3 font-display text-xl text-ink">
+                        <span className="docket text-accent">
+                          {String(idx + 1).padStart(2, '0')}
+                        </span>
+                        {titleCase(fc.name)}
+                      </h3>
+                      {fc.result?.success && (
+                        <span className="label text-verdigris">
+                          {fc.result.totalResults?.toLocaleString()} results
+                        </span>
+                      )}
+                      {fc.result?.error && (
+                        <span className="label text-accent">
+                          {fc.result.error}
+                        </span>
+                      )}
                     </div>
-                  </div>
 
-                  {/* Search Parameters */}
-                  <div className="bg-white/50 rounded-lg p-4 mb-4">
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Search Parameters</p>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    <dl className="mt-5 flex flex-wrap gap-x-10 gap-y-4">
                       {Object.entries(fc.args).map(([key, value]) => (
                         <div key={key}>
-                          <span className="text-xs text-gray-500">{key.replace(/_/g, ' ')}:</span>
-                          <p className="font-medium text-gray-700">{String(value)}</p>
+                          <dt className="label">{key.replace(/_/g, ' ')}</dt>
+                          <dd className="docket mt-1.5 text-ink">
+                            {String(value)}
+                          </dd>
                         </div>
                       ))}
-                    </div>
-                  </div>
+                    </dl>
 
-                  {/* Case Law Results */}
-                  {fc.result?.data && fc.result.data.length > 0 && (
-                    <div>
-                      <p className="text-sm font-semibold text-gray-700 mb-3">📑 Cases Found ({fc.result.data.length})</p>
-                      <div className="space-y-3">
-                        {fc.result.data.map((caseLaw, caseIdx) => (
-                          <a
-                            key={caseIdx}
-                            href={caseLaw.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block bg-white rounded-lg p-4 hover:shadow-lg transition-shadow border border-gray-200 hover:border-blue-300"
-                          >
-                            <div className="flex items-start justify-between mb-2">
-                              <h5 className="font-bold text-gray-800 text-sm">{caseLaw.caseName}</h5>
-                              {caseLaw.relevanceScore && (
-                                <span className="badge bg-purple-100 text-purple-700 text-xs">
-                                  Score: {caseLaw.relevanceScore.toFixed(1)}
-                                </span>
-                              )}
-                            </div>
-                            <div className="flex flex-wrap gap-3 text-xs text-gray-600 mb-2">
-                              <span className="flex items-center gap-1">
-                                <Briefcase className="h-3 w-3" />
-                                {caseLaw.citation}
-                              </span>
-                              <span className="flex items-center gap-1">
-                                <MapPin className="h-3 w-3" />
-                                {caseLaw.court}
-                              </span>
-                              <span className="flex items-center gap-1">
-                                <Clock className="h-3 w-3" />
-                                {new Date(caseLaw.dateFiled).toLocaleDateString()}
-                              </span>
-                            </div>
-                            {caseLaw.snippet && (
-                              <p className="text-xs text-gray-600 line-clamp-2">{caseLaw.snippet}</p>
-                            )}
-                          </a>
-                        ))}
+                    {fc.result?.data && fc.result.data.length > 0 && (
+                      <div className="mt-7">
+                        <p className="label border-t border-rule pt-5">
+                          Cases returned · {fc.result.data.length}
+                        </p>
+                        <ol className="mt-4 flex flex-col gap-px bg-rule">
+                          {fc.result.data.map((caseLaw, caseIdx) => (
+                            <li key={caseIdx}>
+                              <a
+                                href={caseLaw.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group block bg-sheet px-4 py-4 transition-colors hover:bg-inset"
+                              >
+                                <div className="flex items-baseline justify-between gap-4">
+                                  <h4 className="font-display text-[1.05rem] italic leading-snug text-ink transition-colors group-hover:text-accent">
+                                    {caseLaw.caseName}
+                                  </h4>
+                                  {caseLaw.relevanceScore && (
+                                    <span className="docket shrink-0 text-ink-faint">
+                                      {caseLaw.relevanceScore.toFixed(1)}
+                                    </span>
+                                  )}
+                                </div>
+                                <p className="docket mt-2 text-ink-soft">
+                                  {caseLaw.citation} · {caseLaw.court} ·{' '}
+                                  {new Date(
+                                    caseLaw.dateFiled
+                                  ).toLocaleDateString()}
+                                </p>
+                                {caseLaw.snippet && (
+                                  <p className="mt-2 line-clamp-2 text-[0.9rem] leading-relaxed text-ink-faint">
+                                    {caseLaw.snippet}
+                                  </p>
+                                )}
+                              </a>
+                            </li>
+                          ))}
+                        </ol>
                       </div>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
           )}
 
-          {/* Key Metrics */}
-          <div className="glass rounded-2xl p-8 mb-6 card-hover">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Analysis Overview</h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {/* Findings */}
+          <section className="mt-16">
+            <p className="section-mark mb-6">Findings</p>
+            <div className="grid gap-px border border-rule bg-rule md:grid-cols-3">
               {/* Jurisdiction */}
-              <div className="stat-card">
-                <div className="flex items-center gap-2 mb-3">
-                  <MapPin className="h-6 w-6 text-purple-500" />
-                  <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Jurisdiction</span>
-                </div>
-                <p className="text-xl font-bold text-gray-800 mb-2">{response.jurisdictionAnalysis.type}</p>
-                <div className="space-y-1">
-                  {response.jurisdictionAnalysis.keyRequirements?.slice(0, 2).map((req: string, idx: number) => (
-                    <div key={idx} className="flex items-start text-sm text-gray-600">
-                      <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 mt-1.5"></span>
-                      <span>{req}</span>
-                    </div>
-                  ))}
-                  {response.jurisdictionAnalysis.keyRequirements?.length > 2 && (
-                    <p className="text-xs text-purple-600 font-medium ml-3.5">
-                      +{response.jurisdictionAnalysis.keyRequirements.length - 2} more requirements
-                    </p>
-                  )}
-                </div>
+              <div className="bg-sheet p-6">
+                <p className="label">Governing forum</p>
+                <p className="mt-3 font-display text-2xl text-ink">
+                  {titleCase(response.jurisdictionAnalysis?.type)}
+                </p>
+                <ul className="mt-4 flex flex-col gap-2 border-t border-rule pt-4">
+                  {response.jurisdictionAnalysis?.keyRequirements
+                    ?.slice(0, 3)
+                    .map((req: string, idx: number) => (
+                      <li
+                        key={idx}
+                        className="text-[0.9rem] leading-snug text-ink-soft"
+                      >
+                        <span className="mr-2 text-accent">§</span>
+                        {req}
+                      </li>
+                    ))}
+                </ul>
+                {(response.jurisdictionAnalysis?.keyRequirements?.length || 0) >
+                  3 && (
+                  <p className="label mt-3">
+                    +
+                    {(response.jurisdictionAnalysis?.keyRequirements?.length ||
+                      0) - 3}{' '}
+                    further requirements
+                  </p>
+                )}
               </div>
-              
+
               {/* Citations */}
-              <div className="stat-card">
-                <div className="flex items-center gap-2 mb-3">
-                  <Briefcase className="h-6 w-6 text-blue-500" />
-                  <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Legal Citations</span>
-                </div>
-                <p className="text-xl font-bold text-gray-800 mb-2">{response.citations.length} Citations</p>
-                <div className="space-y-1">
-                  {response.citations.slice(0, 2).map((citation: LegalCitation, idx: number) => (
-                    <div key={idx} className="text-sm text-gray-600 truncate">
-                      <span className="font-medium">•</span> {citation.citation}
-                    </div>
-                  ))}
-                  {response.citations.length > 2 && (
-                    <p className="text-xs text-blue-600 font-medium">
-                      +{response.citations.length - 2} more citations
-                    </p>
-                  )}
-                </div>
-              </div>
-              
-              {/* Billing */}
-              <div className="stat-card">
-                <div className="flex items-center gap-2 mb-3">
-                  <CheckCircle className="h-6 w-6 text-green-500" />
-                  <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Billing</span>
-                </div>
-                {response.billingInfo.billable === false ? (
-                  <div>
-                    <p className="text-xl font-bold text-gray-800">Non-Billable</p>
-                    <p className="text-sm text-gray-500 mt-1">No charges applied</p>
-                  </div>
+              <div className="bg-sheet p-6">
+                <p className="label">Authority cited</p>
+                <p className="numeral mt-3 text-4xl text-ink">
+                  {response.citations.length}
+                </p>
+                {response.citations.length > 0 ? (
+                  <>
+                    <ul className="mt-4 flex flex-col gap-2 border-t border-rule pt-4">
+                      {response.citations
+                        .slice(0, 3)
+                        .map((citation: LegalCitation, idx: number) => (
+                          <li key={idx} className="docket truncate text-ink-soft">
+                            {citation.citation}
+                          </li>
+                        ))}
+                    </ul>
+                    {response.citations.length > 3 && (
+                      <p className="label mt-3">
+                        +{response.citations.length - 3} more
+                      </p>
+                    )}
+                  </>
                 ) : (
-                  <div>
-                    <p className="text-3xl font-bold text-green-600">
-                      ${response.billingInfo.totalEstimatedCharge?.toFixed(2)}
+                  <p className="mt-4 border-t border-rule pt-4 text-[0.9rem] text-ink-faint">
+                    No authority was returned for this matter.
+                  </p>
+                )}
+              </div>
+
+              {/* Billing */}
+              <div className="bg-sheet p-6">
+                <p className="label">Billing</p>
+                {response.billingInfo?.billable === false ? (
+                  <>
+                    <p className="mt-3 font-display text-2xl text-ink">
+                      Non-billable
                     </p>
-                    <p className="text-sm text-gray-600 mt-1">
-                      {response.billingInfo.aiProcessingHours} hrs × ${response.billingInfo.hourlyRate}/hr
+                    <p className="mt-4 border-t border-rule pt-4 text-[0.9rem] text-ink-faint">
+                      No charges applied to this matter.
                     </p>
-                  </div>
+                  </>
+                ) : (
+                  <>
+                    <p className="numeral mt-3 text-4xl text-verdigris">
+                      ${response.billingInfo?.totalEstimatedCharge?.toFixed(2)}
+                    </p>
+                    <p className="docket mt-4 border-t border-rule pt-4 text-ink-soft">
+                      {response.billingInfo?.aiProcessingHours} hrs × $
+                      {response.billingInfo?.hourlyRate}/hr
+                    </p>
+                  </>
                 )}
               </div>
             </div>
-            
-            {/* Recommendations */}
-            <div className="mb-8">
-              <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <AlertCircle className="h-5 w-5 text-purple-500" />
-                Key Recommendations
-              </h4>
-              <div className="space-y-3">
-                {response.recommendations.map((rec: LegalRecommendation, idx: number) => (
-                  <div key={idx} className={`p-4 rounded-xl border-l-4 ${
-                    rec.priority === 'CRITICAL' ? 'bg-red-50 border-red-500' :
-                    rec.priority === 'HIGH' ? 'bg-orange-50 border-orange-500' :
-                    rec.priority === 'MODERATE' ? 'bg-yellow-50 border-yellow-500' :
-                    'bg-blue-50 border-blue-500'
-                  }`}>
-                    <div className="flex justify-between items-start mb-2">
-                      <div className="flex items-center gap-2">
-                        <span className={`badge ${
-                          rec.priority === 'CRITICAL' ? 'risk-critical' :
-                          rec.priority === 'HIGH' ? 'risk-high' :
-                          rec.priority === 'MODERATE' ? 'risk-moderate' :
-                          'bg-blue-500 text-white'
-                        }`}>
-                          {rec.priority}
-                        </span>
-                        <p className="font-bold text-gray-800">{rec.action}</p>
-                      </div>
-                      <span className="text-sm font-medium text-gray-600 bg-white px-3 py-1 rounded-full">
-                        {rec.timeline}
-                      </span>
-                    </div>
-                    <p className="text-gray-700 mt-2">{rec.details}</p>
-                  </div>
-                ))}
+          </section>
+
+          {/* Recommendations */}
+          {response.recommendations?.length > 0 && (
+            <section className="mt-16">
+              <div className="mb-6 border-b border-rule pb-4">
+                <p className="section-mark">Recommendations</p>
+                <h2 className="mt-3 font-display text-2xl text-ink">
+                  What counsel should do
+                </h2>
               </div>
-            </div>
-            
-            {/* Next Steps */}
-            <div>
-              <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <Clock className="h-5 w-5 text-blue-500" />
-                Action Items
-              </h4>
-              <div className="space-y-3">
-                {response.nextSteps.map((step: LegalNextStep, idx: number) => (
-                  <div key={idx} className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-4 border border-blue-100">
-                    <div className="flex items-start gap-3">
-                      <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm flex-shrink-0">
-                        {idx + 1}
-                      </div>
-                      <div className="flex-1">
-                        <p className="font-bold text-gray-800 mb-2">{step.step}</p>
-                        <div className="flex flex-wrap gap-3 text-sm text-gray-600 mb-2">
-                          <span className="flex items-center gap-1">
-                            <User className="h-4 w-4" />
-                            {step.assignee}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Clock className="h-4 w-4" />
-                            {step.deadline}
-                          </span>
-                        </div>
-                        {step.actionItems && step.actionItems.length > 0 && (
-                          <div className="mt-2 space-y-1">
-                            {step.actionItems.map((item: string, itemIdx: number) => (
-                              <div key={itemIdx} className="flex items-start text-sm text-gray-700">
-                                <CheckCircle className="h-4 w-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                                <span>{item}</span>
-                              </div>
-                            ))}
+
+              <ol className="flex flex-col gap-px bg-rule">
+                {response.recommendations.map(
+                  (rec: LegalRecommendation, idx: number) => {
+                    const recTone = riskTone(rec.priority?.toLowerCase());
+                    return (
+                      <li
+                        key={idx}
+                        className={`bind ${recTone} bg-sheet px-6 py-6`}
+                      >
+                        <div className="flex flex-wrap items-baseline justify-between gap-3">
+                          <div className="flex flex-wrap items-baseline gap-3">
+                            <Mark tone={recTone}>{rec.priority}</Mark>
+                            <h3 className="font-display text-xl text-ink">
+                              {rec.action}
+                            </h3>
                           </div>
-                        )}
-                      </div>
+                          <span className="label">{rec.timeline}</span>
+                        </div>
+                        <p className="mt-3 max-w-3xl leading-relaxed text-ink-soft">
+                          {rec.details}
+                        </p>
+                      </li>
+                    );
+                  }
+                )}
+              </ol>
+            </section>
+          )}
+
+          {/* Next steps */}
+          {response.nextSteps?.length > 0 && (
+            <section className="mt-16">
+              <div className="mb-6 border-b border-rule pb-4">
+                <p className="section-mark">Directions</p>
+                <h2 className="mt-3 font-display text-2xl text-ink">
+                  Action items
+                </h2>
+              </div>
+
+              <ol className="flex flex-col">
+                {response.nextSteps.map((step: LegalNextStep, idx: number) => (
+                  <li
+                    key={idx}
+                    className="grid gap-4 border-b border-rule py-7 sm:grid-cols-[3rem_1fr] sm:gap-7"
+                  >
+                    <span className="numeral text-3xl text-rule-strong">
+                      {String(idx + 1).padStart(2, '0')}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-xl text-ink">
+                        {step.step}
+                      </h3>
+                      <p className="docket mt-2 text-ink-faint">
+                        {step.assignee} · due {step.deadline}
+                      </p>
+                      {step.actionItems && step.actionItems.length > 0 && (
+                        <ul className="mt-4 flex flex-col gap-2">
+                          {step.actionItems.map(
+                            (item: string, itemIdx: number) => (
+                              <li
+                                key={itemIdx}
+                                className="text-[0.95rem] leading-snug text-ink-soft"
+                              >
+                                <span className="mr-2 text-verdigris">✓</span>
+                                {item}
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      )}
                     </div>
-                  </div>
+                  </li>
                 ))}
+              </ol>
+            </section>
+          )}
+
+          {/* The analysis */}
+          {response.content?.trim() ? (
+            <section className="mt-16">
+              <p className="section-mark mb-6">The analysis</p>
+              <div className="legal-prose" data-dropcap="true">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {response.content}
+                </ReactMarkdown>
+              </div>
+            </section>
+          ) : (
+            <section className="mt-16">
+              <p className="section-mark mb-6">The analysis</p>
+              <p className="border-l-2 border-rule-strong py-1 pl-6 text-ink-faint italic">
+                No written analysis was recorded for this matter.
+              </p>
+            </section>
+          )}
+
+          {/* Notices */}
+          <section className="mt-16 grid gap-px border border-rule bg-rule md:grid-cols-2">
+            <div className="bg-sheet p-7">
+              <p className="label label-accent">Confidentiality notice</p>
+              <div className="legal-prose mt-4 text-[0.9rem]">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {response.confidentialityNotice}
+                </ReactMarkdown>
               </div>
             </div>
-            
-            {/* Metadata Footer */}
-            <div className="mt-6 pt-6 border-t border-gray-200 flex items-center justify-between text-sm text-gray-500">
-              <div className="flex items-center gap-4">
-                <span className="flex items-center gap-1">
-                  <Clock className="h-4 w-4" />
-                  {response.processingTime.toFixed(2)}s
-                </span>
-                <span>{response.tokenCount.toLocaleString()} tokens</span>
-              </div>
-              <span className="badge bg-purple-100 text-purple-700">{response.modelUsed}</span>
-            </div>
-          </div>
-          
-          {/* Legal Analysis - Full Content */}
-          <div className="glass rounded-2xl p-8 mb-6">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl">
-                <Briefcase className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-800">Detailed Legal Analysis</h3>
-            </div>
-            
-            <div className="prose prose-lg max-w-none">
-              {response.content.split('\n\n').map((paragraph: string, idx: number) => {
-                if (paragraph.startsWith('##')) {
-                  return (
-                    <h4 key={idx} className="text-xl font-bold text-gray-800 mt-6 mb-3 flex items-center gap-2">
-                      <span className="w-1 h-6 bg-gradient-to-b from-purple-500 to-blue-500 rounded"></span>
-                      {paragraph.replace('##', '').trim()}
-                    </h4>
-                  );
-                } else if (paragraph.startsWith('#')) {
-                  return (
-                    <h3 key={idx} className="text-2xl font-bold text-gray-800 mt-8 mb-4">
-                      {paragraph.replace('#', '').trim()}
-                    </h3>
-                  );
-                } else if (paragraph.startsWith('-')) {
-                  return (
-                    <ul key={idx} className="space-y-2 mb-4 ml-2">
-                      {paragraph.split('\n').map((item: string, i: number) => (
-                        <li key={i} className="flex items-start text-gray-700">
-                          <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                          <span>{item.replace('-', '').trim()}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  );
-                } else if (paragraph.match(/^\d\./)) {
-                  return (
-                    <ol key={idx} className="space-y-2 mb-4 ml-2 counter-reset">
-                      {paragraph.split('\n').map((item: string, i: number) => {
-                        const numMatch = item.match(/^\d\./);
-                        return numMatch ? (
-                          <li key={i} className="flex items-start text-gray-700">
-                            <span className="font-bold text-purple-600 mr-3 flex-shrink-0">{numMatch[0]}</span>
-                            <span>{item.replace(numMatch[0], '').trim()}</span>
-                          </li>
-                        ) : null;
-                      }).filter(Boolean)}
-                    </ol>
-                  );
-                } else {
-                  return <p key={idx} className="mb-4 text-gray-700 leading-relaxed">{paragraph}</p>;
-                }
-              })}
-            </div>
-          </div>
-          
-          {/* Legal Notices */}
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-xl p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <AlertTriangle className="h-5 w-5 text-yellow-600" />
-                <h4 className="font-bold text-gray-900">Confidentiality Notice</h4>
-              </div>
-              <div className="text-sm text-gray-700 leading-relaxed whitespace-pre-line">
-                {response.confidentialityNotice}
+            <div className="bg-sheet p-7">
+              <p className="label label-accent">Legal disclaimer</p>
+              <div className="legal-prose mt-4 text-[0.9rem]">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {response.legalDisclaimer}
+                </ReactMarkdown>
               </div>
             </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-200 rounded-xl p-6">
-              <div className="flex items-center gap-2 mb-3">
-                <AlertCircle className="h-5 w-5 text-blue-600" />
-                <h4 className="font-bold text-gray-900">Legal Disclaimer</h4>
-              </div>
-              <div className="text-sm text-gray-700 leading-relaxed whitespace-pre-line">
-                {response.legalDisclaimer}
-              </div>
-            </div>
+          </section>
+
+          {/* Colophon */}
+          <div className="mt-10 flex flex-wrap items-baseline justify-between gap-4 border-t border-rule pt-6">
+            <p className="docket text-ink-faint">
+              {response.processingTime.toFixed(2)}s ·{' '}
+              {response.tokenCount.toLocaleString()} tokens
+            </p>
+            <Mark>{response.modelUsed}</Mark>
           </div>
         </>
       )}
@@ -639,7 +548,15 @@ async function DetailContent({ getDetails }: { getDetails: () => Promise<{ query
   );
 }
 
-export default async function LegalQueryDetailPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function LegalQueryDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
-  return <QueryDetailView id={id} />;
+  return (
+    <Suspense fallback={<MemorandumSkeleton />}>
+      <Memorandum id={id} />
+    </Suspense>
+  );
 }

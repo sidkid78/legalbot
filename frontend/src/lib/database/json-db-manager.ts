@@ -57,18 +57,86 @@ export class JSONDatabaseManager {
     if (fs.existsSync(this.dbPath)) {
       try {
         const content = fs.readFileSync(this.dbPath, 'utf-8');
-        return JSON.parse(content);
+        const parsed = JSON.parse(content) as DatabaseSchema;
+
+        const { rows, changed } = JSONDatabaseManager.migrateLegalQueries(
+          parsed.legal_queries || []
+        );
+        parsed.legal_queries = rows;
+
+        if (changed) {
+          this.data = parsed;
+          this.saveDatabase();
+          console.log(`Migrated ${rows.length} legal queries to camelCase field names`);
+        }
+
+        return parsed;
       } catch (error) {
         console.error('Error loading database, creating new:', error);
       }
     }
-    
+
     return {
       users: [],
       sessions: [],
       legal_queries: [],
       legal_responses: []
     };
+  }
+
+  /**
+   * Queries written before the field-naming fix used snake_case keys, while
+   * every reader expects the camelCase LegalQuery shape — so `userId` was
+   * always undefined and the docket could never match a single record.
+   * Rewrite those rows on load so existing matters stay visible.
+   */
+  private static readonly LEGACY_QUERY_KEYS: Record<string, keyof LegalQuery> = {
+    user_id: 'userId',
+    requires_research: 'requiresResearch',
+    client_info: 'clientInfo',
+    related_cases: 'relatedCases',
+    task_id: 'taskId',
+    error_message: 'errorMessage'
+  };
+
+  private static migrateLegalQueries(
+    rows: LegalQuery[]
+  ): { rows: LegalQuery[]; changed: boolean } {
+    let changed = false;
+
+    const migrated = rows.map((row) => {
+      const record = { ...row } as Record<string, unknown>;
+
+      for (const [legacy, modern] of Object.entries(
+        JSONDatabaseManager.LEGACY_QUERY_KEYS
+      )) {
+        if (!(legacy in record)) continue;
+
+        if (record[modern] === undefined && record[legacy] !== null) {
+          record[modern] = record[legacy];
+        }
+        delete record[legacy];
+        changed = true;
+      }
+
+      // `timestamp` was only ever written by updateLegalQueryStatus, so rows
+      // that never changed status have none. Fall back to the creation time.
+      if (!record.timestamp) {
+        record.timestamp = record.updated_at || record.created_at || new Date().toISOString();
+        changed = true;
+      }
+
+      for (const stale of ['created_at', 'updated_at']) {
+        if (stale in record) {
+          delete record[stale];
+          changed = true;
+        }
+      }
+
+      return record as unknown as LegalQuery;
+    });
+
+    return { rows: migrated, changed };
   }
 
   private saveDatabase() {
@@ -150,30 +218,34 @@ export class JSONDatabaseManager {
   }
 
   // Legal query management
-  createLegalQuery(query: Partial<LegalQuery> & { content: string; domain: string; jurisdiction: string; urgency: string }): string {
+  createLegalQuery(query: LegalQuery): string {
     const id = query.id || crypto.randomUUID();
-    
-    const legalQuery = {
+
+    // Must match the LegalQuery interface exactly: every reader in the app
+    // (the docket, the memorandum, the API) works off these camelCase names.
+    const legalQuery: LegalQuery = {
       id,
-      user_id: query.userId || null,
+      userId: query.userId,
       content: query.content,
       domain: query.domain,
       jurisdiction: query.jurisdiction,
       urgency: query.urgency,
-      priority: query.priority || 3,
-      requires_research: query.requiresResearch || true,
-      client_info: query.clientInfo || {},
-      related_cases: query.relatedCases || [],
-      deadline: query.deadline || null,
-      billable: query.billable !== undefined ? query.billable : true,
-      task_id: query.taskId || null,
-      status: 'pending',
-      error_message: null,
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString()
+      priority: query.priority ?? 3,
+      requiresResearch: query.requiresResearch ?? true,
+      clientInfo: query.clientInfo ?? {
+        name: 'Confidential Client',
+        matterNumber: `M-${Date.now()}`
+      },
+      relatedCases: query.relatedCases,
+      documents: query.documents,
+      deadline: query.deadline,
+      billable: query.billable ?? true,
+      taskId: query.taskId,
+      status: LegalQueryStatus.PENDING,
+      timestamp: query.timestamp || new Date().toISOString()
     };
-    
-    this.data.legal_queries.push(legalQuery as unknown as LegalQuery);
+
+    this.data.legal_queries.push(legalQuery);
     this.saveDatabase();
     return id;
   }

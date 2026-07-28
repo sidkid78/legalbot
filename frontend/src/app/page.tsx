@@ -1,162 +1,48 @@
-// app/page.tsx
+// app/page.tsx — the entry register. Signed-in readers are routed to /dashboard.
 'use client';
 
 import Link from 'next/link';
-import { Clock, Stethoscope, Briefcase, Activity, BarChart3, AlertCircle } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 
-// Types for local storage data
-interface QueryStats {
+interface StoredQuery {
+  id?: string;
+  content?: string;
+  status?: string;
+  timestamp?: string;
+}
+
+interface Tally {
   total: number;
   pending: number;
   completed: number;
-  failed: number;
-}
-
-interface DashboardData {
-  medical: QueryStats;
-  legal: QueryStats;
-  recentActivity: ActivityItem[];
 }
 
 interface ActivityItem {
   id: string;
-  type: 'medical' | 'legal';
   action: string;
   timestamp: string;
-  status: 'completed' | 'pending' | 'failed';
+  status: string;
 }
 
-// Dashboard statistics card component
-function DashboardStatCard({ title, value, icon, className }: { 
-  title: string; 
-  value: string | number; 
-  icon: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
-      <div className="flex items-center justify-between">
-        <div>
-          <h3 className="text-lg font-medium text-gray-500">{title}</h3>
-          <p className="text-3xl font-bold mt-1">{value}</p>
-        </div>  
-        <div className="text-blue-500">
-          {icon}
-        </div>
-      </div>
-    </div>
-  );
-}
+const tally = (queries: StoredQuery[]): Tally => ({
+  total: queries.length,
+  pending: queries.filter((q) => q.status === 'pending').length,
+  completed: queries.filter((q) => q.status === 'completed').length,
+});
 
-// System card component
-function SystemCard({ 
-  title, 
-  description, 
-  icon, 
-  link, 
-  count,
-  pending,
-  isEnabled = true
-}: { 
-  title: string; 
-  description: string;
-  icon: React.ReactNode;
-  link: string;
-  count: number;
-  pending: number;
-  isEnabled?: boolean;
-}) {
-  return (
-    <div className={`bg-white rounded-lg shadow-md p-6 transition-shadow ${
-      isEnabled ? 'hover:shadow-lg' : 'opacity-50'
-    }`}>
-      <div className="flex justify-between items-start mb-4">
-        <div className="text-blue-600">
-          {icon}
-        </div>
-        <div className="flex">
-          <span className="px-2 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-medium">
-            {count} total
-          </span>
-          {pending > 0 && (
-            <span className="ml-2 px-2 py-1 rounded-full bg-yellow-100 text-yellow-800 text-xs font-medium">
-              {pending} pending
-            </span>
-          )}
-        </div>
-      </div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      {isEnabled ? (
-        <Link href={link} className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
-          Access System
-          <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </Link>
-      ) : (
-        <span className="text-gray-400 font-medium inline-flex items-center">
-          Coming Soon
-          <Clock className="ml-1 w-4 h-4" />
-        </span>
-      )}
-    </div>
-  );
-}
-
-// Activity item component
-function ActivityItemComponent({ item }: { item: ActivityItem }) {
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'completed': return 'text-green-600 bg-green-50';
-      case 'pending': return 'text-yellow-600 bg-yellow-50';
-      case 'failed': return 'text-red-600 bg-red-50';
-      default: return 'text-gray-600 bg-gray-50';
-    }
-  };
-
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'medical': return <Stethoscope className="w-4 h-4" />;
-      case 'legal': return <Briefcase className="w-4 h-4" />;
-      default: return <Activity className="w-4 h-4" />;
-    }
-  };
-
-  return (
-    <div className="flex items-center justify-between p-4 border-b border-gray-100 last:border-b-0">
-      <div className="flex items-center space-x-3">
-        <div className="text-blue-500">
-          {getTypeIcon(item.type)}
-        </div>
-        <div>
-          <p className="text-sm font-medium text-gray-900">{item.action}</p>
-          <p className="text-xs text-gray-500">
-            {new Date(item.timestamp).toLocaleString()}
-          </p>
-        </div>
-      </div>
-      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(item.status)}`}>
-        {item.status}
-      </span>
-    </div>
-  );
-}
-
-export default function DashboardPage() {
+export default function HomePage() {
   const router = useRouter();
-  const [dashboardData, setDashboardData] = useState<DashboardData>({
-    medical: { total: 0, pending: 0, completed: 0, failed: 0 },
-    legal: { total: 0, pending: 0, completed: 0, failed: 0 },
-    recentActivity: []
+  const [legal, setLegal] = useState<Tally>({
+    total: 0,
+    pending: 0,
+    completed: 0,
   });
+  const [activity, setActivity] = useState<ActivityItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [user, setUser] = useState<{ name: string; email: string } | null>(null);
+  const [user, setUser] = useState<{ name: string } | null>(null);
 
   useEffect(() => {
-    // Check if user is logged in (simple check)
     const userData = localStorage.getItem('user');
     if (!userData) {
       router.push('/login');
@@ -164,224 +50,159 @@ export default function DashboardPage() {
     }
 
     try {
-      const parsedUser = JSON.parse(userData);
-      setUser(parsedUser);
-      loadDashboardData();
+      setUser(JSON.parse(userData));
+
+      const legalQueries: StoredQuery[] = JSON.parse(
+        localStorage.getItem('legalQueries') || '[]'
+      );
+
+      setLegal(tally(legalQueries));
+      setActivity(
+        legalQueries
+          .filter((q) => q.timestamp)
+          .sort(
+            (a, b) =>
+              new Date(b.timestamp!).getTime() - new Date(a.timestamp!).getTime()
+          )
+          .slice(0, 5)
+          .map((q, i) => ({
+            id: q.id || String(i),
+            action: q.content?.slice(0, 90) || 'Legal matter',
+            timestamp: q.timestamp!,
+            status: q.status || 'completed',
+          }))
+      );
     } catch (error) {
-      console.error('Error parsing user data:', error);
+      console.error('Error reading local register:', error);
       router.push('/login');
-    }
-  }, [router]);
-
-  const loadDashboardData = () => {
-    try {
-      // Load medical queries from localStorage
-      const medicalQueries = JSON.parse(localStorage.getItem('medicalQueries') || '[]');
-      const medicalStats = calculateStats(medicalQueries);
-
-      // Load legal queries from localStorage
-      const legalQueries = JSON.parse(localStorage.getItem('legalQueries') || '[]');
-      const legalStats = calculateStats(legalQueries);
-
-      // Load recent activity
-      const allActivity = [
-        ...medicalQueries.map((q: QueryStats) => ({
-          id: q.total,
-          type: 'medical' as const,
-          action: `Medical query: ${q.total}...`,
-          timestamp: q.completed,
-          status: q.completed || 'completed'
-        })),
-        ...legalQueries.map((q: QueryStats) => ({
-          id: q.total,
-          type: 'legal' as const,
-          action: `Legal query: ${q.total}...`,
-          timestamp: q.completed,
-          status: q.completed || 'completed'
-        }))
-      ];
-
-      // Sort by timestamp and take the 5 most recent
-      const recentActivity = allActivity
-        .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime())
-        .slice(0, 5);
-
-      setDashboardData({
-        medical: medicalStats,
-        legal: legalStats,
-        recentActivity
-      });
-    } catch (error) {
-      console.error('Error loading dashboard data:', error);
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const calculateStats = (queries: QueryStats[]): QueryStats => {
-    return {
-      total: queries.length,
-      pending: queries.filter(q => q.pending || !q.pending).length,
-      completed: queries.filter(q => q.completed || !q.completed).length,
-      failed: queries.filter(q => q.failed || !q.failed).length
-    };
-  };
+  }, [router]);
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center min-h-screen">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+      <div className="flex min-h-[60vh] flex-col items-center justify-center gap-5">
+        <div className="spin-seal h-9 w-9 rounded-full border border-rule border-t-accent" />
+        <p className="label">Opening the register</p>
       </div>
     );
   }
 
-  const totalQueries = dashboardData.medical.total + dashboardData.legal.total;
-  const totalPending = dashboardData.medical.pending + dashboardData.legal.pending;
-  const totalCompleted = dashboardData.medical.completed + dashboardData.legal.completed;
-
   return (
-    <div>
-      <div className="mb-6">
-        <h1 className="text-2xl font-semibold">Dashboard</h1>
-        {user && (
-          <p className="text-gray-600 mt-1">Welcome back, {user.name}</p>
-        )}
-      </div>
-      
-      {/* Overview Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-        <DashboardStatCard 
-          title="Total Queries" 
-          value={totalQueries}
-          icon={<Activity className="h-8 w-8" />}
+    <div className="measure pb-4">
+      <header className="rise rise-1 pt-12 pb-10 lg:pt-16">
+        <p className="section-mark">Register</p>
+        <h1 className="mt-5 text-[clamp(2.4rem,6vw,4rem)] leading-[0.98] text-ink">
+          Good day{user ? `, ${user.name.split(' ')[0]}` : ''}.
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
+          A local view of matters held in this browser. The full docket lives in
+          chambers.
+        </p>
+        <div
+          className="rule-in mt-9 h-px w-full bg-rule-strong"
+          style={{ animationDelay: '0.35s' }}
         />
-        <DashboardStatCard 
-          title="Completed" 
-          value={totalCompleted}
-          icon={<BarChart3 className="h-8 w-8" />}
-          className="border-l-4 border-green-500"
-        />
-        <DashboardStatCard 
-          title="Pending" 
-          value={totalPending}
-          icon={<Clock className="h-8 w-8" />}
-          className="border-l-4 border-yellow-500"
-        />
-        <DashboardStatCard 
-          title="API Status" 
-          value="Online"
-          icon={<AlertCircle className="h-8 w-8" />}
-          className="border-l-4 border-blue-500"
-        />
-      </div>
-      
-      <div className="mb-10">
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold mb-4">Professional AI Workflow System</h2>
-          <p className="text-gray-700 mb-4">
-            Access specialized AI workflows tailored for professional domains. 
-            Choose from the systems below to get started with your queries.
-          </p>
-          <div className="bg-blue-50 border border-blue-200 rounded-md p-4">
-            <div className="flex items-center">
-              <AlertCircle className="w-5 h-5 text-blue-600 mr-2" />
-              <span className="text-sm text-blue-800">
-                <strong>Legal System:</strong> Fully operational with Google Gemini AI integration. 
-                <strong>Medical System:</strong> Coming soon.
-              </span>
-            </div>
+      </header>
+
+      <section className="rise rise-2 grid grid-cols-2 gap-px border-y border-rule bg-rule sm:grid-cols-3">
+        {[
+          { label: 'Matters held', value: legal.total, tone: 'text-ink' },
+          { label: 'Disposed', value: legal.completed, tone: 'text-verdigris' },
+          { label: 'Pending', value: legal.pending, tone: 'text-amber' },
+        ].map((f) => (
+          <div key={f.label} className="bg-paper px-5 py-7 sm:px-7">
+            <p className="label">{f.label}</p>
+            <p className={`numeral mt-3 text-[2.75rem] ${f.tone}`}>{f.value}</p>
           </div>
-        </div>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-        <SystemCard 
-          title="Legal Professional System" 
-          description="Domain-specific legal analysis with jurisdiction-aware recommendations and risk assessment powered by Google Gemini AI."
-          icon={<Briefcase className="h-12 w-12" />}
-          link="/legal"
-          count={dashboardData.legal.total}
-          pending={dashboardData.legal.pending}
-          isEnabled={true}
-        />
-        
-        <SystemCard 
-          title="Medical Professional System" 
-          description="AI-powered clinical decision support with evidence-based recommendations for healthcare professionals."
-          icon={<Stethoscope className="h-12 w-12" />}
-          link="/medical"
-          count={dashboardData.medical.total}
-          pending={dashboardData.medical.pending}
-          isEnabled={false}
-        />
-      </div>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Recent Activity */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg font-semibold">Recent Activity</h2>
-            <Link href="/activity" className="text-blue-600 hover:text-blue-800 text-sm">
-              View all
+        ))}
+      </section>
+
+      <div className="rise rise-3 mt-16 grid gap-12 lg:grid-cols-2 lg:gap-16">
+        {/* Recent */}
+        <section>
+          <div className="mb-5 flex items-baseline justify-between border-b border-rule pb-4">
+            <h2 className="font-display text-2xl text-ink">Recent entries</h2>
+            <Link
+              href="/dashboard/legal"
+              className="link-draw label hover:text-accent"
+            >
+              Full docket
             </Link>
           </div>
-          
-          {dashboardData.recentActivity.length > 0 ? (
-            <div className="space-y-0">
-              {dashboardData.recentActivity.map((item) => (
-                <ActivityItemComponent key={item.id} item={item} />
+
+          {activity.length > 0 ? (
+            <ol className="flex flex-col">
+              {activity.map((item) => (
+                <li
+                  key={item.id}
+                  className="flex items-baseline justify-between gap-6 border-b border-rule py-4"
+                >
+                  <div className="min-w-0">
+                    <p className="line-clamp-2 text-[0.95rem] leading-snug text-ink">
+                      {item.action}
+                    </p>
+                    <p className="docket mt-1.5 text-ink-faint">
+                      {new Date(item.timestamp).toLocaleString()}
+                    </p>
+                  </div>
+                  <span className="label shrink-0">{item.status}</span>
+                </li>
               ))}
-            </div>
+            </ol>
           ) : (
-            <div className="text-center py-8 text-gray-500">
-              <Activity className="w-12 h-12 mx-auto mb-4 opacity-50" />
-              <p>No recent activity</p>
-              <p className="text-sm">Submit your first query to get started</p>
+            <div className="py-14 text-center">
+              <p className="numeral text-5xl text-rule-strong">§</p>
+              <p className="mt-5 text-[0.95rem] text-ink-faint">
+                Nothing filed yet in this browser.
+              </p>
             </div>
           )}
-        </div>
-        
-        {/* Quick Actions */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-lg font-semibold mb-4">Quick Actions</h2>
-          <div className="space-y-3">
-            <Link 
-              href="/legal" 
-              className="block w-full p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors"
-            >
-              <div className="flex items-center">
-                <Briefcase className="w-5 h-5 text-blue-600 mr-3" />
-                <div>
-                  <h3 className="font-medium">New Legal Query</h3>
-                  <p className="text-sm text-gray-600">Get legal analysis and recommendations</p>
-                </div>
-              </div>
-            </Link>
-            
-            <div className="block w-full p-4 border border-gray-200 rounded-lg opacity-50 cursor-not-allowed">
-              <div className="flex items-center">
-                <Stethoscope className="w-5 h-5 text-gray-400 mr-3" />
-                <div>
-                  <h3 className="font-medium text-gray-500">New Medical Query</h3>
-                  <p className="text-sm text-gray-400">Coming soon</p>
-                </div>
-              </div>
-            </div>
-            
-            <Link 
-              href="/settings" 
-              className="block w-full p-4 border border-gray-200 rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-colors"
-            >
-              <div className="flex items-center">
-                <BarChart3 className="w-5 h-5 text-gray-600 mr-3" />
-                <div>
-                  <h3 className="font-medium">View Analytics</h3>
-                  <p className="text-sm text-gray-600">Detailed usage statistics</p>
-                </div>
-              </div>
-            </Link>
+        </section>
+
+        {/* Actions */}
+        <section>
+          <div className="mb-5 border-b border-rule pb-4">
+            <h2 className="font-display text-2xl text-ink">Proceed</h2>
           </div>
-        </div>
+
+          <div className="flex flex-col gap-px bg-rule">
+            {[
+              {
+                href: '/legal',
+                title: 'Put a question',
+                body: 'Describe a situation and receive a memorandum.',
+              },
+              {
+                href: '/dashboard/legal',
+                title: 'Read the docket',
+                body: 'Every matter, ordered by recency and marked by risk.',
+              },
+              {
+                href: '/dashboard/legal/new',
+                title: 'File formally',
+                body: 'The long form, in four articles.',
+              },
+            ].map((a) => (
+              <Link
+                key={a.href}
+                href={a.href}
+                className="group flex items-baseline justify-between gap-6 bg-sheet px-5 py-5 transition-colors hover:bg-inset"
+              >
+                <div>
+                  <h3 className="font-display text-lg text-ink transition-colors group-hover:text-accent">
+                    {a.title}
+                  </h3>
+                  <p className="mt-1 text-[0.9rem] text-ink-faint">{a.body}</p>
+                </div>
+                <span className="arrow-slide label shrink-0 group-hover:text-accent">
+                  &rarr;
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );

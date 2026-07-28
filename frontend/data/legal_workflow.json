@@ -4,707 +4,610 @@
   "legal_queries": [
     {
       "id": "d8a4eb04-34d9-47f8-91ea-80dd4fb43b38",
-      "user_id": "default-user",
       "content": "\"My spouse and I are getting divorced in Texas. We have two children, ages 8 and 14. We signed a prenuptial agreement that states my business, which I started before the marriage, remains my separate property.\n\nDuring our 15-year marriage, my spouse worked as the unpaid office manager for my business, allowing it to grow significantly. We also bought our house 10 years ago using money from my business's bank account.\n\nNow, my spouse wants to move to Oklahoma (where their family lives) with both children and is claiming half the value of my business, the entire house, and alimony.\n\nWhat are my rights regarding custody, the business, and the house?\"",
       "domain": "family_law",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "shaun koehne",
-        "matterNumber": "M-1761856265081"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2025-10-30T20:35:51.799Z",
-      "updated_at": "2025-10-30T20:35:51.799Z",
-      "timestamp": "2025-10-30T20:35:59.926Z"
+      "timestamp": "2025-10-30T20:35:59.926Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "shaun koehne",
+        "matterNumber": "M-1761856265081"
+      },
+      "relatedCases": []
     },
     {
       "id": "fed6f300-5cc6-49b9-accf-280ff3973491",
-      "user_id": "default-user",
       "content": "\"My spouse and I are getting divorced in Texas. We have two children, ages 8 and 14. We signed a prenuptial agreement that states my business, which I started before the marriage, remains my separate property.\n\nDuring our 15-year marriage, my spouse worked as the unpaid office manager for my business, allowing it to grow significantly. We also bought our house 10 years ago using money from my business's bank account.\n\nNow, my spouse wants to move to Oklahoma (where their family lives) with both children and is claiming half the value of my business, the entire house, and alimony.\n\nWhat are my rights regarding custody, the business, and the house?\"",
       "domain": "family_law",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "shaun koehne",
-        "matterNumber": "M-1761856265081"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2025-10-30T20:52:47.453Z",
-      "updated_at": "2025-10-30T20:52:47.453Z",
-      "timestamp": "2025-10-30T20:52:55.264Z"
+      "timestamp": "2025-10-30T20:52:55.264Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "shaun koehne",
+        "matterNumber": "M-1761856265081"
+      },
+      "relatedCases": []
     },
     {
       "id": "4b831a50-95fb-42be-aae0-c92dc370c4d1",
-      "user_id": "default-user",
       "content": "\"My spouse and I are getting divorced in Texas. We have two children, ages 8 and 14. We signed a prenuptial agreement that states my business, which I started before the marriage, remains my separate property.\n\nDuring our 15-year marriage, my spouse worked as the unpaid office manager for my business, allowing it to grow significantly. We also bought our house 10 years ago using money from my business's bank account.\n\nNow, my spouse wants to move to Oklahoma (where their family lives) with both children and is claiming half the value of my business, the entire house, and alimony.\n\nWhat are my rights regarding custody, the business, and the house?\"",
       "domain": "family_law",
       "jurisdiction": "state",
       "urgency": "medium",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "status": "completed",
+      "timestamp": "2025-10-31T00:44:48.143Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "shaun koehne",
         "matterNumber": "M-1761856265081"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "max_tokens": 2048,
-      "temperature": 0.3,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2025-10-31T00:44:26.368Z",
-      "updated_at": "2025-10-31T00:44:26.368Z",
-      "timestamp": "2025-10-31T00:44:48.143Z"
+      "relatedCases": []
     },
     {
       "id": "5ba55cb8-76cb-488b-a672-6c9bab58b180",
-      "user_id": "default-user",
       "content": "\"My spouse and I are getting divorced in Texas. We have two children, ages 8 and 14. We signed a prenuptial agreement that states my business, which I started before the marriage, remains my separate property.\n\nDuring our 15-year marriage, my spouse worked as the unpaid office manager for my business, allowing it to grow significantly. We also bought our house 10 years ago using money from my business's bank account.\n\nNow, my spouse wants to move to Oklahoma (where their family lives) with both children and is claiming half the value of my business, the entire house, and alimony.\n\nWhat are my rights regarding custody, the business, and the house?\"",
       "domain": "family_law",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "status": "completed",
+      "timestamp": "2025-10-31T01:00:52.126Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Test Client",
         "matterNumber": "M-1761872432182"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "max_tokens": 2048,
-      "temperature": 0.3,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2025-10-31T01:00:44.906Z",
-      "updated_at": "2025-10-31T01:00:44.906Z",
-      "timestamp": "2025-10-31T01:00:52.126Z"
+      "relatedCases": []
     },
     {
       "id": "92c412ff-89eb-4188-9f96-51524ce7247f",
-      "user_id": "default-user",
       "content": "\"My spouse and I are getting divorced in Texas. We have two children, ages 8 and 14. We signed a prenuptial agreement that states my business, which I started before the marriage, remains my separate property.\n\nDuring our 15-year marriage, my spouse worked as the unpaid office manager for my business, allowing it to grow significantly. We also bought our house 10 years ago using money from my business's bank account.\n\nNow, my spouse wants to move to Oklahoma (where their family lives) with both children and is claiming half the value of my business, the entire house, and alimony.\n\nWhat are my rights regarding custody, the business, and the house?\"",
       "domain": "family_law",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "status": "completed",
+      "timestamp": "2025-10-31T01:36:22.969Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Test Client",
         "matterNumber": "M-1761874551318"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "max_tokens": 2048,
-      "temperature": 0.3,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2025-10-31T01:36:19.227Z",
-      "updated_at": "2025-10-31T01:36:19.227Z",
-      "timestamp": "2025-10-31T01:36:22.969Z"
+      "relatedCases": []
     },
     {
       "id": "1b1a1ec3-69a5-4c69-8c46-fb616b2f6ff7",
-      "user_id": "default-user",
       "content": "\"My spouse and I are getting divorced in Texas. We have two children, ages 8 and 14. We signed a prenuptial agreement that states my business, which I started before the marriage, remains my separate property.\n\nDuring our 15-year marriage, my spouse worked as the unpaid office manager for my business, allowing it to grow significantly. We also bought our house 10 years ago using money from my business's bank account.\n\nNow, my spouse wants to move to Oklahoma (where their family lives) with both children and is claiming half the value of my business, the entire house, and alimony.\n\nWhat are my rights regarding custody, the business, and the house?\"",
       "domain": "family_law",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "Test Client",
-        "matterNumber": "M-1761874968532"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2025-10-31T01:42:59.762Z",
-      "updated_at": "2025-10-31T01:42:59.762Z",
-      "timestamp": "2025-10-31T01:43:12.067Z"
+      "timestamp": "2025-10-31T01:43:12.067Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "Test Client",
+        "matterNumber": "M-1761874968532"
+      },
+      "relatedCases": []
     },
     {
       "id": "fc685fd3-03d5-48c9-8ca5-522fd4339508",
-      "user_id": "default-user",
       "content": "my friend and her husband are getting a divorce and he has become a terror. hes drunk everyday and has caused harm. hes pulled a gun on her and so on. shes trying to file a restraining order and remove him from the property. the child protective service lady said shes going to file to the judge a restraining order to have him removed. well we found out today the judge denied the restraining order. this is in bell county texas. why would the judge do that, beings she feels her life is in danger and the kids?",
       "domain": "family_law",
       "jurisdiction": "state",
       "urgency": "emergency",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "Test Client",
-        "matterNumber": "M-1762321853240"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2025-11-05T05:51:08.244Z",
-      "updated_at": "2025-11-05T05:51:08.244Z",
-      "timestamp": "2025-11-05T05:51:17.142Z"
+      "timestamp": "2025-11-05T05:51:17.142Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "Test Client",
+        "matterNumber": "M-1762321853240"
+      },
+      "relatedCases": []
     },
     {
       "id": "de4ff97b-f0c4-4448-979f-1015d96df77f",
-      "user_id": "default-user",
       "content": "my friend and her husband are getting a divorce and he has become a terror. hes drunk everyday and has caused harm. hes pulled a gun on her and so on. shes trying to file a restraining order and remove him from the property. the lady from the district attorneys office said shes going to file to the judge a restraining order to have him removed. well we found out today the judge denied the restraining order. this is in bell county texas. why would the judge do that, beings she feels her life is in danger and the kids? she has police records, he even went to jail for shootiing the gun off in the back yard. she has recordings. \nthe lady from the D.A. did make him sign a paper saying he would vacate the premises by friday and had certain days alotted to get his stuff, but that still puts him currently in the house and her in fear.",
       "domain": "family_law",
       "jurisdiction": "state",
       "urgency": "emergency",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "Test Client",
-        "matterNumber": "M-1762321853240"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2025-11-05T06:34:09.828Z",
-      "updated_at": "2025-11-05T06:34:09.828Z",
-      "timestamp": "2025-11-05T06:34:18.369Z"
+      "timestamp": "2025-11-05T06:34:18.369Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "Test Client",
+        "matterNumber": "M-1762321853240"
+      },
+      "relatedCases": []
     },
     {
       "id": "0870e65d-dadd-42e5-8b2b-b278a922ac4b",
-      "user_id": "default-user",
       "content": "\"I was shopping at a grocery store in California last week. It had been raining, and as I walked into the produce section, I slipped on a puddle of water and fell hard, breaking my wrist.\n\nAn employee helped me up and told me, 'Sorry, our roof has been leaking in that spot for weeks.'\n\nI'm a freelance graphic designer and I work from home. My doctor says I can't use my mouse or keyboard for at least 6 weeks, which means I've already had to turn down two major projects, and I can't pay my medical bills.\n\nThe store's insurance adjuster called and offered me $5,000, but that barely covers my emergency room visit. They said I should have been watching where I was going. Do I have a case for more?\"",
       "domain": "litigation",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "Test Client",
-        "matterNumber": "M-1762326623276"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2025-11-05T07:14:39.356Z",
-      "updated_at": "2025-11-05T07:14:39.356Z",
-      "timestamp": "2025-11-05T07:14:49.205Z"
+      "timestamp": "2025-11-05T07:14:49.205Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "Test Client",
+        "matterNumber": "M-1762326623276"
+      },
+      "relatedCases": []
     },
     {
       "id": "aa713e37-c192-4daa-9a2c-d48661184624",
-      "user_id": "default-user",
       "content": "does PR Pylant : Dob: 02/05/1978 have an arrest warrent",
       "domain": "litigation",
       "jurisdiction": "state",
       "urgency": "medium",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "Test Client",
-        "matterNumber": "M-1762983489875"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2025-11-12T21:39:51.875Z",
-      "updated_at": "2025-11-12T21:39:51.875Z",
-      "timestamp": "2025-11-12T21:39:53.607Z"
+      "timestamp": "2025-11-12T21:39:53.607Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "Test Client",
+        "matterNumber": "M-1762983489875"
+      },
+      "relatedCases": []
     },
     {
       "id": "91274560-c792-4024-afa0-dd769f38e0b8",
-      "user_id": "default-user",
       "content": "our company name is HOMEase | AI. aka Homease solutions, inc. registered in texas LLC.\nheres more info on our company.\nHOMEase | AI is a technology-driven lead generation platform designed to connect homeowners with qualified contractors for aging-in-place (AIP) home modifications. The platform is strategically positioned to capitalize on the rapidly expanding \"AgeTech\" market by addressing a critical gap between homeowner needs and contractor access. A foundational strategic pivot from a full-service provider to a pure-play lead generation model underpins the business, prioritizing speed-to-market, capital efficiency, and immediate revenue realization.\nThe platform's core innovation is its proprietary Augmented Reality (AR) assessment tool. This technology allows homeowners to perform simple scans of their homes, which are then analyzed by Google Gemini to identify accessibility hazards and recommend modifications. A separate AI service, Fal.ai, generates \"after\" visualizations, providing users with a clear understanding of potential improvements. This process yields high-intent, pre-qualified leads with detailed project scopes, offering significantly higher value and conversion potential for contractors compared to general home service platforms.\nThe market opportunity is substantial, with the home modification market projected to reach $161 billion by 2030, fueled by powerful demographic trends, including over 10,000 Americans turning 65 daily and an overwhelming preference (75-87%) among seniors to age in their own homes. The platform's go-to-market strategy involves a phased geographic rollout, beginning with Texas and Florida, and a significant opportunity to partner with federal grant programs, most notably the U.S. Department of Housing and Urban Development's (HUD) Older Adults Home Modification Program (OAHMP).\nTechnologically, HOMEase | AI is built on a serverless, event-driven architecture hosted entirely on the Google Cloud Platform (GCP). The stack includes a Next.js 15 application deployed on Google Cloud Run, a suite of backend services using Google Cloud Functions, and a data layer managed by Firebase, ensuring scalability, security, and operational efficiency.\n\n\nnow theres a chinese company called GSNT Co. ltd with a app called homease ai home designer and room planner. what legal problems could we have or might see.",
       "domain": "ip_law",
       "jurisdiction": "federal",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "status": "completed",
+      "timestamp": "2025-12-11T03:02:31.331Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Test Client",
         "matterNumber": "M-1765421783387"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "max_tokens": 2048,
-      "temperature": 0.3,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2025-12-11T03:02:15.027Z",
-      "updated_at": "2025-12-11T03:02:15.027Z",
-      "timestamp": "2025-12-11T03:02:31.331Z"
+      "relatedCases": []
     },
     {
       "id": "7e5fb6df-e0b9-45a3-8b36-bff83814b302",
-      "user_id": "default-user",
       "content": "i was busted with methamphetamine and im looking at 8 years. only cause if i fight it the procecutor will try to get me 25 years to life if it goes to trial. all because procecutor said i was dealing the drugs. i went to classes on drug addiction and pee'd clean and it doesnt matter cause they said i was dealing the drugs even tho theres no proof of that. what can i do here in bell county texas",
       "domain": "litigation",
       "jurisdiction": "state",
       "urgency": "emergency",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "max_tokens": 2048,
+      "temperature": 0.3,
+      "status": "completed",
+      "timestamp": "2026-01-20T17:00:06.016Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "thomas",
         "matterNumber": "M-1768928195421"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "max_tokens": 2048,
-      "temperature": 0.3,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2026-01-20T16:59:52.424Z",
-      "updated_at": "2026-01-20T16:59:52.424Z",
-      "timestamp": "2026-01-20T17:00:06.016Z"
+      "relatedCases": []
     },
     {
       "id": "133f2c37-c50d-4cc3-89b7-be0d2961fa05",
-      "user_id": "default-user",
       "content": "i was busted with methamphetamine and im looking at 8 years. only cause if i fight it the procecutor will try to get me 25 years to life if it goes to trial. all because procecutor said i was dealing the drugs. i went to classes on drug addiction and pee'd clean and it doesnt matter cause they said i was dealing the drugs even tho theres no proof of that. what can i do here in bell county texas",
       "domain": "litigation",
       "jurisdiction": "state",
       "urgency": "emergency",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "thomas",
-        "matterNumber": "M-1768930191541"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2026-01-20T17:30:07.316Z",
-      "updated_at": "2026-01-20T17:30:07.316Z",
-      "timestamp": "2026-01-20T17:30:13.324Z"
+      "timestamp": "2026-01-20T17:30:13.324Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "thomas",
+        "matterNumber": "M-1768930191541"
+      },
+      "relatedCases": []
     },
     {
       "id": "53a9e657-e67b-4a48-98d1-ec1f17597e48",
-      "user_id": "default-user",
       "content": "i was busted with methamphetamine and im looking at 8 years. only cause if i fight it the procecutor will try to get me 25 years to life if it goes to trial. all because procecutor said i was dealing the drugs. i went to classes on drug addiction and pee'd clean and it doesnt matter cause they said i was dealing the drugs even tho theres no proof of that. what can i do here in bell county texas. im consulting an attorney but info i gather here could be very useful so please do  research",
       "domain": "litigation",
       "jurisdiction": "state",
       "urgency": "emergency",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "thomas",
-        "matterNumber": "M-1768930191541"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2026-01-20T17:32:11.139Z",
-      "updated_at": "2026-01-20T17:32:11.139Z",
-      "timestamp": "2026-01-20T17:32:22.818Z"
+      "timestamp": "2026-01-20T17:32:22.818Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "thomas",
+        "matterNumber": "M-1768930191541"
+      },
+      "relatedCases": []
     },
     {
       "id": "8cb40f0b-6cfc-42d0-ad95-f77ee707913e",
-      "user_id": "default-user",
       "content": "i was busted with methamphetamine and im looking at 8 years. only cause if i fight it the procecutor will try to get me 25 years to life if it goes to trial. all because procecutor said i was dealing the drugs. i went to classes on drug addiction and pee'd clean and it doesnt matter cause they said i was dealing the drugs even tho theres no proof of that. what can i do here in bell county texas. im consulting an attorney but info i gather here could be very useful so please do  research",
       "domain": "litigation",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "thomas",
-        "matterNumber": "M-1768930191541"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "error",
-      "error_message": null,
-      "created_at": "2026-01-20T17:37:17.297Z",
-      "updated_at": "2026-01-20T17:37:17.297Z",
       "errorMessage": "Processing failed",
-      "timestamp": "2026-01-20T17:37:31.268Z"
+      "timestamp": "2026-01-20T17:37:31.268Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "thomas",
+        "matterNumber": "M-1768930191541"
+      },
+      "relatedCases": []
     },
     {
       "id": "eae458f4-ea78-40e8-9de5-091152d724c9",
-      "user_id": "default-user",
       "content": "i was busted with methamphetamine and im looking at 8 years. only cause if i fight it the procecutor will try to get me 25 years to life if it goes to trial. all because procecutor said i was dealing the drugs. i went to classes on drug addiction and pee'd clean and it doesnt matter cause they said i was dealing the drugs even tho theres no proof of that. what can i do here in bell county texas. im consulting an attorney but info i gather here could be very useful so please do  research",
       "domain": "litigation",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "thomas",
-        "matterNumber": "M-1768930191541"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2026-01-20T20:24:06.379Z",
-      "updated_at": "2026-01-20T20:24:06.380Z",
-      "timestamp": "2026-01-20T20:24:28.859Z"
+      "timestamp": "2026-01-20T20:24:28.859Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "thomas",
+        "matterNumber": "M-1768930191541"
+      },
+      "relatedCases": []
     },
     {
       "id": "a9fb60ca-a84e-4d93-a027-1985472d8ce6",
-      "user_id": "default-user",
       "content": "My friend was busted with methamphetamine and hes looking at 8 years. only cause if he fights it the procecutor will try to get him 25 years to life if it goes to trial. all because procecutor said he was dealing the drugs. He went to classes on drug addiction and pee'd clean and it doesnt matter cause they said he was dealing the drugs even tho theres no proof of that. what can he do here in bell county texas. He's consulting an attorney but info i gather here could be very useful so please do  research and respond",
       "domain": "litigation",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "thomas",
-        "matterNumber": "M-1768930191541"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2026-01-20T21:17:33.800Z",
-      "updated_at": "2026-01-20T21:17:33.800Z",
-      "timestamp": "2026-01-20T21:18:01.747Z"
+      "timestamp": "2026-01-20T21:18:01.747Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "thomas",
+        "matterNumber": "M-1768930191541"
+      },
+      "relatedCases": []
     },
     {
       "id": "43b293b0-778f-4b06-b044-3dbdf764f243",
-      "user_id": "default-user",
       "content": "My friend was busted with methamphetamine and hes looking at 8 years. only cause if he fights it the procecutor will try to get him 25 years to life if it goes to trial. all because procecutor said he was dealing the drugs. He went to classes on drug addiction and pee'd clean and it doesnt matter cause they said he was dealing the drugs even tho theres no proof of that. what can he do here in bell county texas. He's consulting an attorney but info i gather here could be very useful so please do  research and respond",
       "domain": "litigation",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
-        "name": "thomas",
-        "matterNumber": "M-1768930191541"
-      },
-      "related_cases": [],
       "deadline": null,
       "billable": true,
       "max_tokens": 2048,
       "temperature": 0.3,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2026-01-20T22:49:05.168Z",
-      "updated_at": "2026-01-20T22:49:05.168Z",
-      "timestamp": "2026-01-20T22:49:43.798Z"
+      "timestamp": "2026-01-20T22:49:43.798Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "thomas",
+        "matterNumber": "M-1768930191541"
+      },
+      "relatedCases": []
     },
     {
       "id": "38b3ed2c-0094-4b33-ac3e-139213bd3517",
-      "user_id": "default-user",
       "content": "Review potential breach of contract implications for non-delivery of goods under UCC Article 2 in New York.",
       "domain": "contract_law",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 2,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "status": "completed",
+      "timestamp": "2026-07-16T04:46:14.477Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Supplier Co",
         "matterNumber": "C2024-015"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2026-07-16T04:46:07.166Z",
-      "updated_at": "2026-07-16T04:46:07.166Z",
-      "timestamp": "2026-07-16T04:46:14.477Z"
+      "relatedCases": []
     },
     {
       "id": "019f084f-e254-470a-878c-499774199005",
-      "user_id": "default-user",
       "content": "Review potential breach of contract implications for non-delivery of goods under UCC Article 2 in New York.",
       "domain": "contract_law",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 2,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "status": "completed",
+      "timestamp": "2026-07-16T04:49:17.757Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Supplier Co",
         "matterNumber": "C2024-015"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2026-07-16T04:48:24.197Z",
-      "updated_at": "2026-07-16T04:48:24.197Z",
-      "timestamp": "2026-07-16T04:49:17.757Z"
+      "relatedCases": []
     },
     {
       "id": "23776d88-5dec-4a37-9ec5-994bb8ddf1ca",
-      "user_id": "default-user",
       "content": "Emergency custody matter: spouse committed domestic violence and there is immediate danger to the children. Advise on protective orders in California.",
       "domain": "family_law",
       "jurisdiction": "state",
       "urgency": "emergency",
       "priority": 1,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "status": "completed",
+      "timestamp": "2026-07-16T04:51:58.423Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Jane Doe",
         "matterNumber": "F2024-001"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2026-07-16T04:51:20.668Z",
-      "updated_at": "2026-07-16T04:51:20.668Z",
-      "timestamp": "2026-07-16T04:51:58.423Z"
+      "relatedCases": []
     },
     {
       "id": "57ec496f-6635-477a-842c-19e86e5a7f57",
-      "user_id": "default-user",
       "content": "Review potential breach of contract implications for non-delivery of goods under UCC Article 2 in New York. Cite controlling precedent.",
       "domain": "contract_law",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 2,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "status": "completed",
+      "timestamp": "2026-07-16T05:14:21.590Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Supplier Co",
         "matterNumber": "C2024-015"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2026-07-16T05:13:26.363Z",
-      "updated_at": "2026-07-16T05:13:26.363Z",
-      "timestamp": "2026-07-16T05:14:21.590Z"
+      "relatedCases": []
     },
     {
       "id": "b4c05b1e-4004-4b30-b29e-9e3b51172820",
-      "user_id": "default-user",
       "content": "Emergency custody: spouse committed domestic violence, immediate danger to children. Protective orders in California. Cite authority.",
       "domain": "family_law",
       "jurisdiction": "state",
       "urgency": "emergency",
       "priority": 1,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "status": "completed",
+      "timestamp": "2026-07-16T05:15:33.153Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Jane Doe",
         "matterNumber": "F2024-001"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2026-07-16T05:14:38.704Z",
-      "updated_at": "2026-07-16T05:14:38.704Z",
-      "timestamp": "2026-07-16T05:15:33.153Z"
+      "relatedCases": []
     },
     {
       "id": "343b7ccf-ab52-4c7e-a605-662ac9059f1e",
-      "user_id": "default-user",
       "content": "HOMEASE SOLUTIONS, INC. — CONFIDENTIAL INVESTMENT MEMORANDUM\nHOMEase AI\nThe Intelligence Layer for Aging in Place\nPost Oak Group | Strictly Confidential\nStrictly Private & Confidential 1\n\nConfidentiality Notice\nThe information contained in this presentation is confidential and proprietary to the Company. This material has been prepared solely for informational purposes and is being\nfurnished to prospective purchasers for their confidential use. By accepting this document, the recipient agrees to maintain the confidentiality of the information contained\nherein.\nThis presentation has been prepared by the Post Oak Group solely for discussion purposes and is being furnished on a confidential basis. The information contained herein may\nnot be reproduced, distributed, or disclosed, in whole or in part, to any third party without the prior written consent of Post Oak Group.\nThis Confidential Information Memorandum contains select information pertaining to the business, operations, and assets of the Company. It has been prepared by the Company\nand its advisors from information supplied by the Company and other sources deemed to be reliable. However, no representation or warranty, expressed or implied, is made as to\nthe accuracy or completeness of the information contained herein, and nothing contained in this presentation is, or shall be relied upon as, a promise or representation as to the\nfuture performance of the Company.\nThis presentation includes certain statements, estimates, targets and projections that reflect management's assumptions and expectations concerning the Company's future\nperformance. Such statements, estimates, targets and projections are subject to significant business, economic and competitive uncertainties and contingencies, many of which\nare beyond the control of the Company. Accordingly, there can be no assurance that such statements, estimates, targets and projections will be realized. The actual results may\nvary from the anticipated results and such variations may be material.\nNo representation or warranty is made as to the achievability or reasonableness of any plans, projections or forecasts. In furnishing this presentation, neither the Company nor its\nrepresentatives undertake any obligation to provide the recipient with access to any additional information.\nThis presentation is not intended to be all-inclusive or to contain all the information that a prospective purchaser may desire in investigating the Company. Each recipient must\nrely on its own examination of the Company, including the merits and risks involved in making an acquisition decision.\nRecipients of this document are not to construe its contents, or any prior or subsequent communications from or with the Company or its representatives, as investment, legal,\nor tax advice. Recipients should consult their own counsel, accountant or business advisors as to legal, tax and related matters concerning an acquisition of the Company.\nThis material is not to be reproduced or distributed to any other persons and is intended solely for the use of the persons to whom it has been delivered. By accepting delivery of\nthis document, the recipient agrees to the foregoing and to immediately return this document and all related materials to the Company if the recipient does not wish to proceed\nwith the transaction.\nStrictly Private & Confidential 2\n\nExecutive Summary\nCompany Overview\nHOMEase Solutions, Inc. provides an AI-driven digital workflow layer that converts home-safety uncertainty into structured, executable projects for aging in place. By\ncapturing a space via smartphone, identifying safety risks, and matching families with qualified execution, the platform bridges the gap between hidden home hazards\nand local contractor fulfillment.\nInvestment Highlights\nMassive Structural Demographic\nTailwind\nThe United States aging population presents a\nnon-cyclical, long-term growth market. The\ntarget demographic includes 61.2 million older\nadults, yielding a massive addressable\npopulation.\nValidated Pain Point with\nHealthcare Adjacency\nUpwards of 75 percent to 78 percent of elderly\npatients face hospital readmission due to falls\nfollowing surgery, a leading cause of mortality in\nthis demographic.\nHigh-Intent Contractor Demand\nGeneration\nContractors actively seek qualified leads to\navoid wasting time pursuing low-information\nprospects. HOMEase pre-qualifies these\nprojects with identified scope, room\nmeasurements, and visual risk previews.\nAsset-Light Software-as-a-Service\nand Marketplace Hybrid\nThe business utilizes an asset-light framework\ndriving revenue via lead generation fees and\ndirect-to-consumer premium analytical reports.\nEarly Hospital Pilot Integration\nThe technology is currently deployed in an\nactive pilot with Seton Medical Hospital and a\nlocal cohort of contractors, establishing a vital\ninstitutional channel for capturing pre-qualified\ndemand at healthcare discharge points.\nDefensible Data Accumulation\nAs transactions scale, HOMEase compounds\nproprietary structural property risk data and\nlongitudinal home records.\nStrictly Private & Confidential 3\n\nBusiness Overview\nHOMEase operates as a dual-sided marketplace and intelligence layer. On the consumer side, families or caregivers utilize a guided digital\nspace capture tool to map residential environments. On the supply side, remodeling and accessibility contractors access detailed project\nintelligence before purchasing the lead. The company is currently focusing on Central Texas via a highly localized initial deployment sequence.\nFinancial Snapshot\nThe company monetizes primarily through a standard contractor lead-purchase reference price of $125 per qualified opportunity. Proceeds\nfrom the current capital raise will be allocated toward growth and go-to-market initiatives, product development, customer success\nenablement, contractor network density, and operational compliance.\nInvestment Thesis\nHOMEase stands at the intersection of a rapidly aging population and advanced computer vision capabilities. By establishing the intelligence\nlayer first, the company transforms a highly fragmented, inefficient renovation ecosystem into a structured pipeline. Early hospital pilot\nvalidation significantly derisks consumer acquisition constraints.\nStrictly Private & Confidential 4\n\nMarket Opportunity & Analysis\nMarket Size & Dynamics\nTotal Addressable Market (TAM)\nThe primary TAM comprises all United States\nhouseholds inhabited by older adults requiring\npotential safety or accessibility interventions.\nServiceable Addressable Market\n(SAM)\nThe initial SAM encompasses households\nthroughout Texas and Florida, structured around\nthe firm's strategic geographic planning scope.\nMarket Scale\nThe broader market for aging-in-place\nmodifications is aggressively expanding,\nforecasted to reach $6 billion by 2030.\nMarket Trends\nDemographic Surge\nIn 2024, there were 61.2 million United States residents aged 65 and older.\nAging Preference Analysis\nCalculations confirm that with 75 percent of adults over age 50 wishing to remain in their current homes, this yields an immediate captive target market of 45.9\nmillion individuals aggressively prioritizing independent living.\nHazard Prevalence\nOver 14 million older adults suffer from a fall every year. Our data analysis indicates a 22.88 percent statistical fall incidence rate among the total senior population.\nStrictly Private & Confidential 5\n\nCompetitive Landscape\n1\nDirect Search Platforms\nTraditional general-contractor search marketplaces provide generic leads and zero preliminary risk evaluation.\n2\nSiloed Medical Supply\nExisting occupational therapy and home-health providers do not facilitate immediate marketplace fulfillment and local remodeling execution.\n3\nHOMEase Differentiation\nThe platform bypasses generic search by organizing the home's scope, budget, urgency, and specific recommendations into an intelligent pipeline long\nbefore the marketplace transaction occurs.\nMarket Opportunity\nGo-To-Market Phasing\nThe strategy avoids massive, capital-inefficient\nnational marketing by initially hyper-focusing on\nBell County and Central Texas.\nInstitutional Seeding\nBy embedding the solution at the hospital\ndischarge level, HOMEase organically solves the\ndirect-to-consumer acquisition bottleneck.\nGlobal Expansion Potential\nFollowing domestic penetration in primary\nretirement corridors like Texas, Florida, and\nGeorgia, the model scales effortlessly to\ninternational geographies with parallel aging\ndemographics, including the United Kingdom,\nGermany, and Switzerland.\nStrictly Private & Confidential 6\n\nCompany Information\nCompany History & Background\nHOMEase Solutions, Inc. was formally incorporated in Texas on April 2, 2025, operating with 10,000 authorized common shares at a $0.01 par value. The\nplatform was conceptualized by Founder and CEO Cliff Franco following a preventable, catastrophic fall suffered by his grandmother.\nProducts & Services\nGuided Home Capture\nAuthenticated users utilize a streamlined smartphone interface to\ncapture media of specific living spaces.\nAutomated Risk Analysis\nThe system identifies ADA-style compliance failures, such as inadequate\nknee clearance, excessively low oven controls, and uneven flooring\nsurfaces.\nStructured Output Reports\nDetailed digital PDFs are generated mapping necessary accessibility\nupgrades to minimum and maximum estimated project values.\nContractor Marketplace UI\nLocal professionals preview blurred location data and summarized\nproject scopes before purchasing the lead execution rights.\nStrictly Private & Confidential 7\n\nBusiness Model\nLead Transactions\nRemodelers and accessibility specialists\nremit a $125 acquisition fee to access\nfully vetted, high-intent project\npackages.\nDirect-to-Consumer\nUpgrades\nThe secondary monetization engine\nfeatures premium assessment reports\npaid for by families seeking a structured\nsafety and accessibility evaluation.\nPlatform Orchestration\nPayments are secured and orchestrated\nseamlessly via Stripe Connect\nintegration.\nTraction & Validation\nFunctioning Prototype\nWorking scan applications and AI analysis platforms have been\nrigorously documented and internally audited.\nHealthcare Distribution Strategy\nAn operational pilot phase has been successfully deployed\nalongside Seton Medical Hospital and a curated subset of local\ncontractors, validating the hospital discharge pipeline model.\nStrictly Private & Confidential 8\n\nTechnology & Platform Deep Dive\nArchitecture Ecosystem\nClient Interface\nDeveloped on modern infrastructure utilizing React, Vite, TypeScript, and Tailwind CSS.\nData Integrity\nThe database layer operates on PostgreSQL managed by Prisma, heavily secured by Supabase authentication integrating row-level security protocols.\nAPI Orchestration\nApplication workflow and internal schema validations are dynamically handled via Fastify services.\nAI Implementation & Output Logic\nComputer Vision Assessment\nThe platform integrates Gemini-supported\nimage analysis to review object placement,\nscale, and accessibility metrics.\nPrecision Output Formatting\nIdentified risks are tagged by severity and\nimmediately matched to localized\nrecommendations.\nHuman-in-the-loop Guardrails\nTo entirely prevent medical liability, the AI\nseparates structural home-safety intelligence\nfrom clinical decision-making, utilizing human\nreview pathways for ambiguous outputs.\nStrictly Private & Confidential 9\n\nData Security & Governance\nAccess Protocols\nThe company deploys least-privilege\nadministrative access controls\nsegmented distinctly between\nhomeowners, contractors, and corporate\nmanagers.\nEncryption\nComprehensive data encryption is\nstandard during both transit and rest\nparameters.\nData Sharing Disclosures\nHomeowners retain full agency over data\nvisibility, explicitly opting into sharing\ngeographical zip codes and project\nphotography with marketplace\nparticipants.\nData Moat Defensibility\nThe technology is engineered to foster a compounding longitudinal property risk dataset. As transaction volumes rise, the machine learning\nalgorithms become infinitely more precise regarding contractor selection and automated cost estimating, creating a formidable barrier to\nentry against traditional directory listings.\nStrictly Private & Confidential 10\n\nFinancial Analysis & Projections\nHistorical & Unit Economics\nCore Lead Metric\nThe foundational transaction mechanism centers on a target\ncontractor purchase cost of $125 per qualified project lead.\nTransaction Mathematics\nBased on initial financial modeling analysis of the 14 million\ndocumented annual senior falls, a highly conservative 10 percent\nservice penetration (1.4 million projects) generates a baseline gross\nrevenue potential of $175 million strictly from marketplace lead\ntransaction fees.\nOperational Leverage\nInfrastructure burn rate represents a minimal overall cost structure\ndue to modern AI workflow automation and existing software\narchitecture.\nCapital Allocation Strategy\nThe strategic utilization of incoming capital proceeds has been optimized strictly for aggressive commercialization:\nGrowth & Go-to-Market\nProduct Development\nCustomer Success\nContractor Network\nOperations & Legal\nCategory\n35\n25\n15\n15\n10\nFinancial Projections (3-5 Years)\n1\nPhase 1 (Validation)\nPrioritizes transaction proof, validating willingness-to-pay dynamics\nlocally.\n2\nPhase 2 (Density)\nRegional acceleration throughout the core Texas triangle (Austin, San\nAntonio, DFW, and Houston) leveraging proven pilot acquisition\neconomics.\n3\nPhase 3 (Enterprise)\nTransitioning beyond pure D2C marketing into heavy B2B2C pipelines,\nexecuting referral workflows deeply aligned with insurance and allied\nhealthcare organizations.\nStrictly Private & Confidential 11\n\nManagement Team & Advisors\nCliff Franco — Founder and Chief Executive Officer\nExecutive Profile\nCliff Franco operates out of Central\nTexas and is a highly accomplished\nthree-time founder. He commands a\nrobust 25-year operational track\nrecord crossing technology\ninfrastructure, real estate sales, and\nresidential homebuilding.\nVenture History\nPrior to founding HOMEase, he served\nas the Co-Founder and COO of\nDwellingly, an advanced real estate\nSaaS platform, optimizing workflow\nautomation and revenue enablement.\nAdditionally, he previously launched\nProcurity.ai as Co-Founder and CMO.\nReal Estate Expertise\nFranco generated exceptional sales\nvolume throughout his tenure in\nresidential real estate, closing 23 to 30\nannual transactions while maintaining a\nreferral retention rate exceeding 85\npercent. He successfully governed 11\nsales professionals across 10 distinct\ndevelopment zones for Stylecraft\nBuilders, consistently returning 98\npercent to 125 percent of targeted\nquarterly quotas.\nEducation\nCurrently enrolled in the AI/ML\nBusiness Applications program at the\nUniversity of Texas at Austin (McCombs\nSchool of Business) and previously\nserved on the Board of Directors for the\nCentral Texas Homebuilders\nAssociation.\nSean — Chief Technology Officer\nSean spearheads the proprietary technical development of the platform, managing all primary software build phases and technical documentation.\nPost Oak Group — Advisory Partner\nTransaction Leadership\nPost Oak Group actively advises the management team, led strategically by Vice\nPresident Arben Krasniqi. The advisory team executes stringent internal compliance\naudits, guides investor targeting, and ensures optimal financial structuring.\nInstitutional Reach\nPost Oak Group has overseen more than $82 billion in total transaction volume, carrying\nan aggressive 85 percent success rate regarding major capital raises and business\nacquisitions.\nStrictly Private & Confidential 12\n\nInvestment Highlights\nEmbedded Healthcare Distribution Moat\nUnlike standard home service platforms completely reliant on expensive direct-to-consumer paid advertising, HOMEase has deliberately established a powerful B2B2C distribution channel.\nThe platform is actively engaged in a live pilot deployment with Seton Medical Hospital. This structural positioning allows the company to secure users at the point of maximum friction and\nurgency—hospital discharge—ensuring a steady flow of high-intent project demand without parallel customer acquisition costs.\nRadically Superior Contractor Value Proposition\nThe traditional home service ecosystem forces remodelers to purchase expensive, low-information leads that frequently result in wasted consultations. HOMEase completely transforms this\ndynamic. When a professional pays the $125 acquisition fee, they receive an extensively detailed digital intelligence package encompassing room photography, distinct ADA-compliant\ndeficiency measurements, and highly precise material lists including minimum and maximum pricing boundaries. This effectively functions as a pre-built initial consultation.\nImmune to Macroeconomic Discretionary Spending Cycles\nThe vast majority of proptech and home renovation startups suffer greatly during high-interest-rate environments. HOMEase operates almost entirely outside this vulnerability. Fall\nprevention, doorway widening for wheelchair access, and hazard remediation are urgent, non-discretionary capital expenditures. With 14 million older adults falling annually, the demand floor\nis cemented by physical necessity, not fluctuating consumer confidence.\nDeep Founder-Market Alignment\nFounder and CEO Cliff Franco possesses a virtually irreplicable matrix of core competencies specific to this exact market. His tenure leading regional sales for major homebuilders directly\ninforms the contractor-side supply psychology, while his background launching AI startups allows him to implement modern computer vision technology. His personal motivation following\nhis grandmother's fall ensures a missionary, resilient approach to company building.\nClear Path to National Market Dominance\nThe strategic roadmap avoids the capital destruction commonly associated with simultaneous national marketplace launches. By executing a methodical ZIP-code density model, HOMEase\nproves unit economics and local contractor saturation in Bell County first. The platform subsequently replicates this hardened operational playbook into major Texas metros—Dallas-Fort\nWorth, Houston, San Antonio, and Austin—before systematically pushing into critical demographic centers like Florida.\nStrictly Private & Confidential 13\n\nRisks & Mitigation Strategies\nRisk: Marketplace Liquidity Failure\nAs a dual-sided marketplace, there is a risk of a \"chicken-and-egg\" failure where homeowners lack local vetted contractors to execute modifications, leading to high churn, while\ncontractors abandon the platform due to an insufficient volume of paying jobs.\nHOMEase executes a strict, hyper-local rollout strategy. The company deliberately recruits dense contractor supply at the micro-county level prior to activating broad demand\ngeneration systems. Furthermore, institutional demand seeding through regional hospital partnerships systematically guarantees a base volume of lead flow to anchor early\nsupply.\nRisk: Regulatory and Medical Liability Overreach\nGiven the platform analyzes the living environments of vulnerable elderly populations, there is significant exposure to medical liability if the AI incorrectly implies guaranteed fall\nprevention or acts as a formal clinical diagnostic tool.\nPlatform algorithms are heavily restricted through explicit disclosure barriers and human-in-the-loop review thresholds for ambiguous outputs. Corporate messaging\ndefinitively positions the software strictly as structural home-safety information, aggressively prohibiting any claims of clinical medical diagnosis.\nRisk: Deterioration of Unproven Unit Economics\nThe financial viability is heavily reliant upon a large portion of capital proceeds being deployed into marketing. If consumer acquisition costs spike, the margins generated by the\ncontractor lead purchasing fees will fail to cover organizational burn.\nThe business strategically shifts away from expensive paid direct-to-consumer performance marketing and focuses on institutional referral networks. Leveraging occupational\ntherapists, discharge planners, and healthcare organizations allows the company to massively suppress structural customer acquisition costs. Additionally, AI automation\nsignificantly mitigates internal fixed personnel staffing expenses.\nRisk: Defensibility and Barrier to Entry\nWhile AI tools accelerate the product, basic image recognition models are theoretically replicable by highly capitalized incumbent directory platforms operating within the home\nrenovation space.\nThe company's true long-term moat is the proprietary aggregation of niche property risk data mapped directly to local contractor fulfillment behavior. As the data ecosystem\ncompounds, it actively transitions the software from a simple utility application into foundational, compliant healthcare infrastructure built heavily around upcoming SOC2 and\nHIPAA regulatory standards.\nStrictly Private & Confidential 14\n\nContact & Next Steps\nInvestment Opportunity Summary\nHOMEase Solutions, Inc. presents a compelling opportunity to capitalize on a deeply fragmented but rapidly expanding $6 billion structural market. By converging AI-driven home\nsafety assessments with a hyper-targeted execution marketplace, the company sits perfectly positioned to capture tremendous economic value while enabling millions of\nAmericans to independently age in place. The current institutional pilot, scalable technology architecture, and exceptional founder-market fit create a highly derisked path to\nlocalized dominance.\nNext Steps for Interested Investors\n01\nInitial Interest\nExpress preliminary interest and\nconfirm investment capacity to\nPost Oak Group.\n02\nDue Diligence Materials\nAccess full documentation,\nincluding comprehensive financial\nmodeling data, technical\narchitecture workflows, customer\nfeedback channels, and specific\npilot data metrics.\n03\nManagement\nPresentations\nEngage in deep-dive video or inperson\nconferencing alongside\nFounder and CEO Cliff Franco and\nkey members of the technical\ndevelopment team.\n04\nTerm Sheet Submission\nDraft and submit preliminary term\nsheets corresponding to strategic\nvaluation metrics.\n05\nFinal Due Diligence &\nClosing\nComplete exhaustive\nconfirmatory audits, finalize\nbinding legal documentation, and\nstructure funding fulfillment.\nContact Information\nFor all immediate questions, requests for expanded data room access, or to formally express transactional interest, please contact the advisory representation:\nEmail: info@postoakgroup.co\nConfidentiality Reminder: This presentation contains confidential and proprietary information. Please maintain strict confidentiality and do not distribute without\nexpress written permission from Post Oak Group and the Company.\nStrictly Private & Confidential 15",
       "domain": "corporate_law",
       "jurisdiction": "federal",
       "urgency": "low",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "status": "completed",
+      "timestamp": "2026-07-16T06:03:47.512Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Shaun Koehne",
         "matterNumber": "M-1784179460647"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2026-07-16T06:02:37.644Z",
-      "updated_at": "2026-07-16T06:02:37.644Z",
-      "timestamp": "2026-07-16T06:03:47.512Z"
+      "relatedCases": []
     },
     {
       "id": "b50ed44f-b10c-4237-8d62-6088209fb067",
-      "user_id": "default-user",
       "content": "Our real estate tech platform is processing a transaction in Texas, and the buyer is attempting to terminate the purchase contract for a residential property two days after the option period has expired. They are citing an undisclosed foundation defect that was found during a late inspection. The seller is threatening to retain the earnest money and sue for specific performance. The closing date is scheduled for this Friday, so we need to know our liability exposure immediately before the funds are put into escrow",
       "domain": "real_estate_law",
       "jurisdiction": "state",
       "urgency": "urgent",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "status": "completed",
+      "timestamp": "2026-07-16T07:39:06.417Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Shaun Koehne",
         "matterNumber": "M-1784187372711"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2026-07-16T07:38:08.901Z",
-      "updated_at": "2026-07-16T07:38:08.901Z",
-      "timestamp": "2026-07-16T07:39:06.417Z"
+      "relatedCases": []
     },
     {
       "id": "258b6aa8-e0fc-4fcb-86ed-771a60116e21",
-      "user_id": "default-user",
       "content": "Engagement Letter\nPost Oak Group\n\nPrepared for:\nCliff Franco\nHOMEase Ai\n\nThis document is Strictly Confidential. Unauthorized access, distribution, or disclosure is strictly prohibited.\n\nENGAGEMENT AGREEMENT\n\nThis Agreement (\"Agreement\") is entered into as of _______________________________by and between Post Oak Group US\n01 LLC (\"Post Oak Group\" or \"Post Oak\"), a LLC organized under the laws of the State of Wyoming, and\n_____________________________________________, (herein referred to as \"Client\"):\nClient is a _______________________________ (State) _______________________(Entity Type) with its principal place of\nbusiness at _____________________________________________.\n\nRECITALS\n\nPost Oak is an investment bank that provides advisory services to businesses, specializing in mergers, acquisitions, divestitures,\nbusiness valuations, capital raising transactions (including equity financings, debt financings, and structured financings), and\nother related strategic advisory services. Client desires to engage Post Oak to serve as its sole and exclusive advisor to assist in\nthe possible sale of Client or its business assets or in evaluating, structuring, and executing a potential financing or capital\ninvestment transaction, including the issuance of equity and/or debt securities, on terms acceptable to Client.\n\nAGREEMENT\n\nNow, therefore, in consideration of the premises and of the mutual covenants contained herein, the parties agree as follows:\n1. Engagement. Subject to all of the terms and conditions in this Agreement, Post Oak is hereby engaged as Client’s\nsole and exclusive advisor during the Term (as hereinafter defined) for the purpose of assisting Client in analyzing\ncertain strategic and financing options and in conducting discussions and negotiations leading to the consummation of (i)\nthe sale of all or a portion of the stock or all or a portion of the assets of Client, by sale, merger, consolidation or similar\ntransaction, and/or (ii) a capital raising or financing transaction, including the issuance and sale of equity securities, debt\nsecurities, or other financing instruments, on terms and conditions acceptable to Client. For purposes of this Agreement,\nall of the examples above and any such transaction, including the receipt of a capital investment, private placement,\npublic offering, or other investment by one or more investors, will be considered a “Transaction.”\n2. Term. The term of Post Oak’s engagement as Client’s exclusive advisor (the “Term”) shall commence on the date\nhereof and shall continue for a period of twelve (12) months from the date of acceptance of this Agreement by the\nparties. The Term may be renewed thereafter upon the mutual written consent of the parties. Notwithstanding the\nforegoing, Post Oak’s engagement hereunder may be terminated with or without cause by either the Client or Post Oak at\nany time upon ten (10) days’ prior written notice delivered to the other party.\n3. Retainer Fee and Work Fee. Upon signing of this engagement, Client shall pay to Post Oak a non-refundable Retainer\nFee of $30000. In addition, Client shall pay a monthly non-refundable work fee of $1500 (the “Work Fee”), due every\nthirty (30) days following execution of this Agreement and continuing throughout the Term. One hundred percent (100%)\nof the Retainer Fee and Work Fee will be credited towards the Success Fee at close. All dollar amounts set forth are\ndenominated in United States Dollars (“USD”). The Retainer Fee and Work Fee is fully earned upon execution of this\nAgreement by Client and payment in full to Post Oak, is non-refundable under all circumstances, and Client irrevocably\nwaives any present or future claim relating thereto. If any payment is not received within five (5) business days of the\napplicable Payment Date, Post Oak shall have the right to immediately suspend all services under this Agreement without\nnotice or liability, and Client shall remain liable for the full Retainer Fee and any accrued Work Fees and shall reimburse\nPost Oak for all costs of collection, including reasonable attorneys’ fees and court costs. Under no circumstances shall\n\nClient’s obligation to pay the Retainer Fee or Work Fee within this timeframe be waived, delayed, or excused for any\nreason whatsoever. Client should only execute this Agreement if Client is prepared to pay the Retainer Fee and Work Fee\nin full within the timeframe specified herein.\n4. Success Fee. If during the Term of this Agreement, or for a period of three (3) years following termination of\nAdvisor’s engagement, a Transaction is consummated with parties identified by Post Oak or Client, then Client will pay\nPost Oak a cash Success Fee equal to 6.75% of the total Consideration for the Transaction (the “Success Fee”). In the\ncase of a sale of all or part of the business, the Success Fee shall be based on the total Consideration paid in connection\ntherewith. In the case of a capital raising or financing Transaction, the Success Fee shall be based on the total gross\nproceeds and/or total capital raised in connection with such Transaction. All fees will be due and payable at the time of\nclosing of the Transaction, except (i) for commissions on earn-out consideration or other contingent payments based on\nfuture business performance which shall be paid within ten (10) days of receipt by Client. Any seller note issued as part\nof a sale Transaction will be considered part of the purchase price and subject to the Success Fee, which shall be paid in\nfull at closing regardless of when payments on such note are received. For purposes hereof, “Consideration” means the\ncash and all other consideration, directly or indirectly furnished by any buyer, investor(s), lender(s), purchaser(s) of\nsecurities, or other financing source(s) in connection with a Transaction and, without limitation, includes (i) the purchase\nprice of any assets, stock, rights, or property; (ii) the aggregate purchase price or subscription amounts paid for any\nequity securities; (iii) the principal amount of any debt financing, credit facility, or similar borrowing; (iv) any\ncommitment or standby facility amounts (whether funded at closing or thereafter); (v) any convertible securities,\nwarrants, options, or other equity-linked instruments (valued based on their purchase price, proceeds received, or stated\nprincipal amount, as applicable); (vi) any debt, liabilities, leases, royalty obligations, non-compete payments, or\nemployment or consulting arrangements in excess of market value entered into or assumed in connection with the\nTransaction; (vii) any rollover equity; (viii) any assets retained by Client (including, without limitation, accounts\nreceivable, inventory, and other business assets); and (ix) any working capital or purchase price adjustments that benefit\nClient, regardless of transaction structure. Consideration shall not include Client’s cash on the balance sheet. Client\nunderstands that following execution of this Agreement, Post Oak’s Success Fee is non-negotiable. The obligation to pay\nthe Success Fee may, at Post Oak’s election, be expressly included in any Purchase and Sale Agreement or definitive\ntransaction documents executed in connection with a Transaction. This obligation shall survive termination of this\nAgreement and the closing of any Transaction.\n5. Reasonableness of Fees. Client and Post Oak acknowledge that a substantial professional commitment of time and\neffort will be required of Post Oak and its professionals here and that such commitment may foreclose other\nopportunities for the firm. Given the numerous issues which may arise in engagements such as this, Post Oak’s\ncommitment to the variable level of time and effort necessary to address such issues, the expertise and capabilities of\nPost Oak that will be required in this engagement, and the market rate for Post Oak’s services of this nature, Client and\nPost Oak agree that the fee arrangement provided for herein is reasonable, fairly compensates Post Oak, and provides the\nrequisite certainty to Client. Client acknowledges and agrees that any retainer, deposit, or other fees paid to Post Oak\nunder this Agreement are earned upon receipt and are non-refundable. In the event Post Oak becomes unable to perform\nthe services contemplated hereunder due to circumstances beyond Post Oak’s control, including but not limited to\nregulatory restrictions, suspension, disqualification, loss of required licensing or eligibility, illness, incapacity,\ndissolution, or other event that materially impairs Post Oak’s ability to provide services, Client shall not be entitled to\nany refund of fees previously paid. In such event, Post Oak shall have no further obligation to perform under this\nAgreement, and either party may terminate this Agreement upon written notice.\n6. Confidentiality. Client will provide Post Oak with all financial and other information requested by Post Oak for the\npurposes of rendering its services pursuant to this Agreement. Upon request by Client, all such materials will be returned\nto Client upon termination of this Agreement. Client nor any of Client’s affiliates may not restrict or attempt to restrict\nPost Oak’s ability to publish, publicize, and market any press release. Post Oak shall have the right to market the\n\nopportunity throughout the duration of the Engagement. Client shall not disclose publicly, including in any marketing\nmaterials, press releases, investor communications, or other public statements, the existence of its relationship with Post\nOak without the prior written consent of Post Oak. Additionally, Client shall not disclose the terms of Post Oak’s\ncompensation, including any fee structures or success fees, to any third party without Post Oak’s prior written consent.\nClient shall not make any disparaging, derogatory, or negative statements regarding Post Oak, its affiliates, officers, or\nrepresentatives to any third party, including on social media or in public forums. The obligations set forth in this Section\nshall survive the termination or expiration of this Agreement.\n7. Reliance. Client hereby represents and warrants the accuracy and completeness of all data, material and other\ninformation concerning Client that has been or hereafter will be made available to Post Oak by Client or its agents (the\n\"Information\") and Client agrees that Post Oak may rely, without independent verification, on the accuracy and\ncompleteness of the Information.\n8. Valuation and Service Acknowledgement. The market ultimately determines the value and deal structure of a\nbusiness. Client acknowledges that actual offers may vary due to market conditions, buyer preferences, and other\nunforeseen factors. The decision to sell and accept any investment remains entirely at the discretion of Client. Given the\ninherent uncertainties of financial transactions and the variability of market dynamics, Post Oak expressly disclaims any\nguarantee, representation, or warranty regarding: (a) the specific number of meetings, introductions, or responses that\nwill occur; (b) whether any parties will agree to meet with Client; or (c) whether an offer will be received or that a\nspecific exit value will be achieved. Client acknowledges that investor and buyer interest is subject to numerous factors\noutside Post Oak's control, including market conditions, timing, party availability, and the parties' strategic priorities.\nSome efforts may receive no response, and the number of meetings or substantive discussions may range from zero to\nmany, depending on market reception. Client understands and agrees that in rendering its services hereunder, Post Oak is\nnot providing any accounting, legal or tax advice, and that Client will rely on other advisors on these matters.\n9. Cooperation. Client agrees that it must fully cooperate with Post Oak in order to ensure that Post Oak can abide by\nits obligations under this Agreement. This Agreement is entered into by Post Oak based on the Information that Client\nhave provided. If it later becomes known that Client withheld, omitted, concealed, or failed to disclose any Information\nthat would change Post Oak’s opinion about the potential for a Transaction to take place, Post Oak has a right to\nimmediately terminate this Agreement. Client understands and agrees that, in accordance with the requirements of the\nUSA PATRIOT Act and applicable Customer Due Diligence rules, Client is required to provide certain information to\nPost Oak, which information may include the name, address, date of birth, Social Security number, and copies of official\ngovernment-issued identification of applicable Client control persons and principal owner(s), as well as such other\ninformation as may be reasonably requested by Post Oak in order to properly identify Client and any prospective\ninvestors in connection with a Transaction.\n10. Assignment. In the event a Transaction involves the purchase, sale, exchange, or transfer of a security, the parties\nagree to assign this engagement, at no additional cost to the Client, to a broker-dealer registered with FINRA and the\nSEC in order to comply with applicable state and federal securities laws and regulations. In such case, any Success Fees\nthat become due shall be paid to the broker-dealer. The Client may be required to provide additional information\nregarding the Client’s ownership structure to the extent necessary to comply with applicable anti–money laundering\nregulations imposed by the Financial Industry Regulatory Authority (“FINRA”). Additionally, Post Oak will designate a\nbanker who is a FINRA-registered representative to address any regulatory-related questions the Client may have.\n11. Obligation to Sell. Client will have the unlimited and unrestricted right to accept or reject any and all purchasers for\nany reason whether reasonable or unreasonable, or decide not to sell its business.\n\n12. Indemnification. If Post Oak becomes involved in any action or legal proceeding in connection with any services or\nmatters that are the subject of this Agreement, the Client agrees to indemnify and hold Post Oak harmless from any\nliability or claims and to pay reasonable attorneys’ fees and other expenses incurred in preparing for or defending any\nsuch action or legal proceeding; provided, however, that the Client shall not be liable under this paragraph for any\nliability, claims, reasonable attorneys’ fees, or other expenses to the extent that a court of competent jurisdiction has\ndetermined by final judgment that such liability or claim resulted from Post Oak’s gross negligence or willful\nmisconduct. The agreements of the Client in this paragraph shall, on the same terms and conditions, extend and inure to\nthe benefit of each person who represents, is employed by, or may be deemed to control Post Oak.\n13. Collections. Client agrees that if Post Oak is forced to commence legal proceedings in order to collect any unpaid\nportion of any fee due under the terms of this Agreement, Client will be liable for all cost associated with the collection\nof those amounts, including but not limited to, actual attorney fees.\n14. Severability. The invalidity or unenforceability of any particular provision of this Agreement will not affect the\nother provisions, and this Agreement will be construed in all respects as if such invalid or unenforceable provisions had\nnot been contained herein.\n15. Entire Agreement; Written Modifications. This instrument contains the entire agreement between the parties with\nrespect to the subject matter hereof; all representations, promises and prior or contemporaneous understandings between\nthe parties with respect to the subject matter hereof are merged into and expressed in this instrument; and any and all\nprior agreements between the parties with respect to the subject matter hereof are hereby superseded by this Agreement\nand canceled. Client represents and agrees that it has relied solely upon the express written terms set forth herein and\ndisclaims reliance upon any representation, promise, assurance, or projection, whether oral or written, not expressly set\nforth in this Agreement. This Agreement will not be amended, modified, or supplemented without the written agreement\nof the parties at the time of such amendment, modification, or supplement.\n16. Governing Law. This Agreement will be governed by exclusively and subject to the laws of the State of Texas. Any\ndispute, controversy, or claim arising out of or relating to this Agreement shall be resolved exclusively by binding\narbitration administered by the American Arbitration Association under its Commercial Arbitration Rules in Houston,\nTexas. The arbitration shall be conducted by a single arbitrator by mutual agreement of the parties or, failing such\nagreement, by the AAA. The arbitrator shall have the power to grant any remedy available at law or equity, including\nmonetary damages and specific performance, but excluding punitive damages. Discovery shall be limited to documents\nand information reasonably necessary for a fair resolution of the dispute. The costs of arbitration shall be split equally\nbetween the parties, with each party bearing its own attorneys' fees unless the arbitrator determines otherwise. The\narbitration proceedings and award shall remain confidential except as required by law or for enforcement. This\nagreement to arbitrate shall survive termination of this Agreement. Notwithstanding the foregoing, either party may seek\ntemporary or preliminary injunctive relief in aid of arbitration from any court of competent jurisdiction. The parties\nhereby waive any right to a trial by jury.\nIN WITNESS WHEREOF, the parties have executed this Agreement as of the day and year first above written.\nTHE REST OF THIS PAGE INTENTIONALLY LEFT BLANK\n\nSIGNATURE PAGE\n\nClient:\n\n_____________________________________\nSignature\n_____________________________________\nCompany Name\n_____________________________________\nFull Name\n\n_____________________________________\nTitle\n\nPost Oak Group US 01 LLC:\n\n_____________________________________\nSignature\n_____________________________________\nName\n\nConfidential Payment Info - Please Check One Preference of Payment.\nBy ACH – Please provide the name / email of the person that will receive the invoice:\n\nName: / Email:\n\nPlease provide the contact information for the person our invoicing department should reach out\nto with any questions relating to billing:\n\nName: / Phone:\n\nAgreement and acknowledgement:\nThis letter correctly sets forth our understanding of the terms of the engagement.\n\nPrint Name: _____________________________\n\nSignature: _____________________________\n\nDate: ________________________________",
       "domain": "contract_law",
       "jurisdiction": "state",
       "urgency": "medium",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "status": "completed",
+      "timestamp": "2026-07-16T08:31:38.864Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Shaun Koehne",
         "matterNumber": "M-1784190572439"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2026-07-16T08:30:25.959Z",
-      "updated_at": "2026-07-16T08:30:25.959Z",
-      "timestamp": "2026-07-16T08:31:38.864Z"
+      "relatedCases": []
     },
     {
       "id": "56de5945-32a6-42f4-8579-5eb1c5628e37",
-      "user_id": "default-user",
       "content": "got this letter and ttheyre trying to take my mothers SS cause we have a joint account due to her beiing mentally incognant",
       "domain": "regulatory_compliance",
       "jurisdiction": "federal",
       "urgency": "urgent",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "status": "completed",
+      "timestamp": "2026-07-28T15:34:01.493Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Test Client",
         "matterNumber": "M-1785252382889"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2026-07-28T15:32:59.658Z",
-      "updated_at": "2026-07-28T15:32:59.658Z",
-      "timestamp": "2026-07-28T15:34:01.493Z"
+      "relatedCases": []
     },
     {
       "id": "4fc62952-f593-4702-be75-be7406abd4ba",
-      "user_id": "default-user",
       "content": "got this letter thats attatch, any advice?",
       "domain": "litigation",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "status": "completed",
+      "timestamp": "2026-07-28T16:06:35.527Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Sheena Hunsaker",
         "matterNumber": "M-1785252382889"
       },
-      "related_cases": [],
-      "deadline": null,
-      "billable": true,
-      "task_id": null,
-      "status": "completed",
-      "error_message": null,
-      "created_at": "2026-07-28T16:06:02.160Z",
-      "updated_at": "2026-07-28T16:06:02.160Z",
-      "timestamp": "2026-07-28T16:06:35.527Z"
+      "relatedCases": []
     },
     {
       "id": "b29dee26-14a5-401f-adc3-34e96c5fd309",
-      "user_id": "default-user",
       "content": "SHEENA MICHELLE HUNSAKER\n501 SILVER CREEK DR\nHARKER HTS TX 76548-6078\nJuly 15, 2026\nDear Ms. Hunsaker,\nWe’re committed to keeping you informed about changes to your account. On July 14, 2026, USAA Federal\nSavings Bank received a garnishment or lien order from TX MJA-Michael J Adams PC, 8005133588, case 318,028-\nB, to remove funds in your accounts. The amount of the garnishment or lien was for $2,362.06. We’re sending\nyou this notice to let you know what we’ve done in response to the garnishment or lien.\nWhat’s Garnishment?\nGarnishment is a legal process that allows a creditor to remove funds from your bank account to satisfy a debt\nthat you haven’t paid. In other words, if you owe money to a person or company, they can obtain an order\ndirecting your bank to take money out of your account to pay off your debt. If this happens, you can’t use that\nmoney in your account.\nSome Funds Have Been Protected\nIn most cases, federal benefit or state payments are protected from garnishment or liens. Federal benefit or state\npayments include:\n· Social Security benefits\n· Supplemental Security Income benefits\n· Veterans’ benefits\n· Railroad Retirement benefits\n· Railroad Unemployment Insurance benefits\n· Civil Service Retirement System benefits\n· Federal Employees Retirement System benefits\n· Federal Emergency Management Agency, also known as FEMA\n· State Relief benefits, such as Unemployment Insurance, also known as UI\nOn July 15, 2026, we researched your accounts and identified one or more federal or state benefit payments\ndeposited in the last 2 months. In most cases, federal or state benefit payments are protected from garnishment\nor lien. As required by federal regulations, therefore, we’ve established a “protected amount” of funds that will\nremain available to you. These funds won’t be frozen or removed from your account in response to the\ngarnishment or lien order.\nSome Funds Have Been Removed\nYour accounts contained additional money that may not be protected from garnishment or lien. As required by\nlaw and described in this letter, we’ve removed funds in the amount of $16.17. Future deposits may be subject to\nhold based on applicable laws.\n\nAccount Summary as of July 15, 2026:\nAccount\nEnding in\nAmount in\nAccount\nAmount Federal\nProtected\nAmount State\nProtected\nAmount Subject to\nGarnishment now\nFrozen or\nRemoved\nLegal Process\nFee Charged\n1852 $16.17 $0.00 $0.00 $16.17 $0.00\n0664 $0.13 $1,988.00 $0.00 $0.00 $0.00\nThe amounts listed may be affected by deposits or withdrawals after the protected amount was calculated on\nJuly 15, 2026.\nYou may use the “protected amount” of money as you normally would. There’s nothing else you need to do to\nmake sure that the “protected amount” is safe.\nWho Garnished My Account?\nThe creditor or agency who obtained a lien, levy or garnishment against you is TX MJA-Michael J Adams PC for\ncase 318,028-B. They can be reached at 8005133588.\nReleasing Funds That Should’ve Been Protected\nIf you believe that additional funds in your accounts are from federal or state benefit payments and shouldn’t\nhave been frozen or removed, there are several things you can do:\n",
       "domain": "litigation",
       "jurisdiction": "state",
       "urgency": "high",
       "priority": 3,
-      "requires_research": true,
-      "client_info": {
+      "deadline": null,
+      "billable": true,
+      "status": "completed",
+      "timestamp": "2026-07-28T16:22:10.242Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
         "name": "Sheena Hunsaker",
         "matterNumber": "M-1785252382889"
       },
-      "related_cases": [],
+      "relatedCases": []
+    },
+    {
+      "id": "a23a4418-7797-4358-a8bd-121771850f9c",
+      "content": "Our company received a cease and desist letter claiming patent infringement. This is urgent.",
+      "domain": "ip_law",
+      "jurisdiction": "federal",
+      "urgency": "urgent",
+      "priority": 3,
       "deadline": null,
       "billable": true,
-      "task_id": null,
       "status": "completed",
-      "error_message": null,
-      "created_at": "2026-07-28T16:21:11.584Z",
-      "updated_at": "2026-07-28T16:21:11.584Z",
-      "timestamp": "2026-07-28T16:22:10.242Z"
+      "timestamp": "2026-07-28T20:15:54.825Z",
+      "userId": "default-user",
+      "requiresResearch": true,
+      "clientInfo": {
+        "name": "Test Client",
+        "matterNumber": "M-1785269682483"
+      },
+      "relatedCases": []
     }
   ],
   "legal_responses": [
@@ -17773,6 +17676,1135 @@
           "dateFiled": "2014-10-02",
           "url": "https://www.courtlistener.com/opinion/2739381/paul-steven-jacobs-v-melissa-ellen-fields-jacobs/",
           "snippet": "OPINION MARC W. BROWN, Justice. In these consolidated appeals, appellant Paul Steven Jacobs (Paul) challenges the trial court’s orders granting final summary judgment to appellee Melissa Ellen Fields Jacobs (Melissa) with regard to garnishment of nonexempt funds and assets within Paul"
+        }
+      ]
+    },
+    {
+      "id": "f68ce969-e5f6-4c89-bbc5-7fc755bab692",
+      "queryId": "a23a4418-7797-4358-a8bd-121771850f9c",
+      "content": "Receiving a cease and desist (C&D) letter alleging patent infringement is a serious legal event that requires an immediate, disciplined, and systematic response. In the United States, patent litigation is highly technical, expensive, and subject to strict procedural rules. \n\nBecause of the urgency of your situation, your company should immediately adopt a structured approach to evaluate liability, mitigate risk, and prepare a defense. The following guide outlines the critical steps and strategic considerations your company must undertake.\n\n---\n\n### Step 1: Immediate Damage Control (First 24–48 Hours)\n\nBefore diving into the merits of the patent, you must protect your company from procedural and evidentiary missteps:\n\n1. **Do Not Ignore the Letter:** While a prompt response is required, do not rashly respond to meet an arbitrary deadline set by the sender. You can easily request a reasonable extension of time to evaluate their claims.\n2. **Implement a Litigation Hold:** Immediately instruct relevant departments (R&D, product engineering, sales, and marketing) to preserve all documents, source code, emails, and designs related to the accused product or technology. Failing to preserve documents once litigation is reasonably anticipated can lead to severe court sanctions for \"spoliation of evidence.\"\n3. **Restrict Internal and External Communications:** \n   * **No Direct Contact:** Under no circumstances should business executives or engineers contact the patent owner or their attorneys directly. These communications are not privileged and can be used against your company in court.\n   * **In-House Silence:** Advise employees not to discuss the allegations, the patent, or the accused products via email, Slack, or other internal channels. Uninformed internal discussions containing statements like *\"We might have a problem here\"* or *\"This looks similar to our design\"* are highly damaging during the discovery phase of litigation.\n4. **Engage Experienced Outside Patent Counsel:** Patent litigation is a highly specialized field. You will need a firm with technical expertise in your specific industry.\n\n---\n\n### Step 2: Triaging the Letter and the Sender\n\nYour outside counsel will help you analyze who sent the letter and what exactly they are alleging.\n\n1. **Identify the Sender’s Profile:**\n   * **Competitor:** If the sender is a direct competitor, the goal of the letter is often to drive you out of the market, protect their market share, or force a cross-licensing agreement. Competitors are highly likely to sue.\n   * **Non-Practicing Entity (NPE) / \"Patent Troll\":** If the sender does not make or sell products but merely licenses patents, their primary motive is monetary. NPEs are often open to early settlement or licensing for a fee that is lower than the cost of defending a lawsuit.\n2. **Review the Accusation (The Claim Chart):**\n   * Does the letter contain a detailed \"claim chart\" mapping the independent claims of the patent to your product’s specific components? \n   * If the letter only makes vague, broad assertions without identifying specific claims or your specific product features, your counsel’s initial response should request more detailed infringement contentions before providing a substantive response.\n\n---\n\n### Step 3: Mitigating \"Willful Infringement\" and Enhanced Damages\n\nUnder U.S. patent law, if a court finds that a defendant willfully infringed a patent, the judge has the discretion to award **enhanced damages up to three times (treble damages)** the actual damages found, plus attorney's fees under 35 U.S.C. §§ 284 and 285.\n\nIn the landmark case ***Halo Electronics, Inc. v. Pulse Electronics, Inc.*, 579 U.S. 93 (2016)**, the U.S. Supreme Court held that enhanced damages are designed as a \"punitive\" sanction for egregious infringement behavior (characterized by conduct that is willful, wanton, malicious, or in bad faith). \n\n* **The Importance of an \"Opinion of Counsel\":** To protect your company from a finding of willfulness, you must quickly establish a good-faith belief that the patent is invalid, unenforceable, or not infringed. Obtaining a formal written opinion from an independent patent counsel (a \"Freedom to Operate\" or \"Non-Infringement/Invalidity Opinion\") is the gold standard for defeating a willfulness claim. If you are later sued, presenting this opinion demonstrates that your continued sales were based on a reasonable, good-faith reliance on legal counsel.\n\n---\n\n### Step 4: Assessing Infringement and Validity\n\nYour legal team will conduct a dual-track technical and legal evaluation of the asserted patent(s).\n\n#### Track A: Infringement Analysis\nTo infringe a patent, your product must meet **every single limitation** of at least one patent claim, either literally or under the Doctrine of Equivalents.\n* **Literal Infringement:** Your product contains every element precisely as described in the claim. If even *one* claim limitation is missing from your product, there is no literal infringement.\n* **Doctrine of Equivalents:** If an element is missing, does your product perform substantially the same function, in substantially the same way, to achieve substantially the same result? \n\n#### Track B: Validity Analysis\nEven if your product falls within the scope of the patent claims, the patent may be legally invalid. Common grounds for invalidity include:\n* **Prior Art (35 U.S.C. §§ 102 & 103):** Did the technology exist in public domain documents, publications, or products *before* the patent’s filing date? If the invention was not \"novel\" or was \"obvious\" to a person having ordinary skill in the art (PHOSITA), the patent is invalid.\n* **Subject Matter Eligibility (35 U.S.C. § 101):** Is the patent claiming an abstract idea, a natural phenomenon, or a law of nature (a common defense in software and biotech patents)?\n* **Defective Specification (35 U.S.C. § 112):** Does the patent fail to clearly describe how to make and use the invention (lack of enablement or written description)?\n\n---\n\n### Step 5: Formulating a Response Strategy\n\nBased on your technical and legal findings, your counsel will recommend one of the following strategic paths:\n\n1. **The \"Drop-Dead\" Non-Infringement Response:** If your analysis clearly shows your product does not meet the patent's limitations, your attorney can draft a targeted response pointing out the specific claim limitations your product lacks. This is often done without revealing too much of your defense strategy.\n2. **The \"Prior Art\" Invalidity Threat:** If you uncover indisputable prior art that predates their patent, you can present this to the patent holder. Under U.S. law, you can threaten to file an **Inter Partes Review (IPR)** before the Patent Trial and Appeal Board (PTAB) to invalidate their patent. Because IPRs are highly effective and can cost the patentee their entire patent asset, this threat is a powerful settlement lever.\n3. **Design-Around/Mitigation:** If there is a high risk of infringement, your engineers should immediately look at whether the product can be modified to remove the infringing feature (a \"design-around\") without destroying the product's commercial utility. This limits your ongoing damages window.\n4. **Negotiation and Licensing:** If liability is likely and a design-around is impossible, it may be commercially prudent to negotiate a reasonable royalty or a cross-license.\n5. **Filing a Declaratory Judgment (DJ) Action (The Preemptive Strike):**\n   * If the C&D letter is highly aggressive and explicitly threatens litigation, it may create an \"actual controversy\" under the Declaratory Judgment Act. Under ***MedImmune, Inc. v. Genentech, Inc.*, 549 U.S. 118 (2007)**, a party does not need to wait to be sued; they can file a lawsuit asking a federal court to declare that the patent is invalid or not infringed.\n   * **Venue Advantage:** Filing a DJ action allows *your* company to choose the forum (the specific federal court) where the case will be heard, preventing the patent owner from dragging you into a notoriously plaintiff-friendly jurisdiction.\n   * **Venue Restrictions:** Keep in mind that under ***TC Heartland LLC v. Kraft Foods Group Brands LLC*, 581 U.S. 258 (2017)**, patent venue is restricted. A domestic corporation can only be sued for patent infringement in its state of incorporation or where it has a regular and established place of business and has committed acts of infringement.\n\n---\n\n### Summary Checklist of Next Steps:\n1. [ ] **Issue a written litigation hold** to stop automatic deletion of emails and documents related to the accused product.\n2. [ ] **Instruct your team** to implement a \"blackout\" on internal written discussions regarding the C&D letter.\n3. [ ] **Engage outside patent litigation counsel** immediately.\n4. [ ] **Work with counsel** to request a reasonable response deadline extension from the sender.\n5. [ ] **Perform a technical mapping** of your product against the patent's independent claims (Infringement Analysis).\n6. [ ] **Search for prior art** to evaluate the patent's validity (Validity Analysis).\n7. [ ] **Request a formal written opinion** of non-infringement or invalidity from counsel to safeguard against treble damages under *Halo*.",
+      "riskLevel": "low",
+      "jurisdictionAnalysis": {
+        "type": "federal",
+        "keyRequirements": [
+          "Federal court admission",
+          "ECF/PACER registration",
+          "Adherence to FRCP & Local Rules"
+        ],
+        "filingDeadlines": {
+          "answer": "21 days",
+          "appeal": "30 days (most cases)",
+          "motion_response": "14 days"
+        },
+        "specialConsiderations": [
+          "Potential MDL proceedings",
+          "Specific judge's rules",
+          "Circuit court precedent"
+        ]
+      },
+      "citations": [
+        {
+          "type": "case_law",
+          "citation": "Halo Electronics, Inc. v. Pulse Electronics, Inc., 579 U.S. 93 (2016)",
+          "components": [
+            "Halo Electronics, Inc.",
+            "Pulse Electronics, Inc., 57",
+            "9",
+            "U.S.",
+            "93",
+            "2016"
+          ]
+        },
+        {
+          "type": "case_law",
+          "citation": "Declaratory Judgment Act. Under MedImmune, Inc. v. Genentech, Inc., 549 U.S. 118 (2007)",
+          "components": [
+            "Declaratory Judgment Act. Under MedImmune, Inc.",
+            "Genentech, Inc., 54",
+            "9",
+            "U.S.",
+            "118",
+            "2007"
+          ]
+        },
+        {
+          "type": "case_law",
+          "citation": "TC Heartland LLC v. Kraft Foods Group Brands LLC, 581 U.S. 258 (2017)",
+          "components": [
+            "TC Heartland LLC",
+            "Kraft Foods Group Brands LLC, 58",
+            "1",
+            "U.S.",
+            "258",
+            "2017"
+          ]
+        },
+        {
+          "type": "statute_usc",
+          "citation": "35 U.S.C. § 101",
+          "components": [
+            "35",
+            "101"
+          ]
+        },
+        {
+          "type": "statute_usc",
+          "citation": "35 U.S.C. § 112",
+          "components": [
+            "35",
+            "112"
+          ]
+        },
+        {
+          "type": "statute_section",
+          "citation": "§§ 284",
+          "components": [
+            "284"
+          ]
+        },
+        {
+          "type": "statute_section",
+          "citation": "§§ 102",
+          "components": [
+            "102"
+          ]
+        }
+      ],
+      "recommendations": [],
+      "nextSteps": [
+        {
+          "step": "Review Federal Rules and Local Procedures",
+          "deadline": "Ongoing",
+          "assignee": "Legal Team",
+          "relatedRecommendation": "Jurisdictional Compliance",
+          "actionItems": [
+            "Confirm FRCP applicability",
+            "Check specific district/judge local rules",
+            "Verify ECF filing requirements"
+          ]
+        }
+      ],
+      "processingTime": 40.932,
+      "tokenCount": 18901,
+      "modelUsed": "gemini-3.5-flash",
+      "billingInfo": {
+        "aiProcessingHours": 0.1,
+        "hourlyRate": 525,
+        "aiTimeCharge": 52.5,
+        "tokenCount": 18901,
+        "estimatedTokenCost": 0.189,
+        "totalEstimatedCharge": 52.69,
+        "domain": "ip_law",
+        "timeTrackedSeconds": 40.93
+      },
+      "confidentialityNotice": "**CONFIDENTIAL AND PRIVILEGED LEGAL COMMUNICATION**\n\n**Attorney Work Product**\n\nThis communication is protected by the attorney-client privilege and/or work product doctrine. It is intended solely for the use of Test Client regarding matter M-1785269682483. Any unauthorized review, use, disclosure, dissemination, or distribution is strictly prohibited. If you are not the intended recipient, please notify the sender immediately and destroy all copies.",
+      "legalDisclaimer": "**LEGAL DISCLAIMER**\n\nThis analysis pertains specifically to the laws of the federal jurisdiction as understood on 2026-07-28. Laws and regulations are subject to change. This communication provides legal analysis based on the information provided and AI processing; it does not constitute definitive legal advice for any specific situation and does not create an attorney-client relationship unless one already exists via separate agreement. Consult qualified legal counsel licensed in the relevant jurisdiction(s) for advice tailored to specific circumstances.",
+      "taskId": "LT-1785269713859-1",
+      "createdAt": "2026-07-28T20:15:54.808Z",
+      "functionCalls": [
+        {
+          "name": "search_case_law",
+          "args": {
+            "jurisdiction": "federal",
+            "query": "MedImmune patent declaratory judgment jurisdiction cease and desist"
+          },
+          "result": {
+            "success": true,
+            "data": [
+              {
+                "caseName": "Association for Molecular Pathology v. United States Patent & Trademark Office",
+                "citation": "689 F.3d 1303, 103 U.S.P.Q. 2d (BNA) 1681, 2012 U.S. App. LEXIS 17679, 2012 WL 3518509",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2012-08-16",
+                "url": "https://www.courtlistener.com/opinion/806779/association-for-molecular-pathology-v-united-states-patent-trademark/",
+                "snippet": "Opinion for the court filed by Circuit Judge LOURIE. Opinion concurring in part filed by Circuit Judge MOORE. Opinion concurring in part and dissenting in part filed by Circuit Judge BRYSON. LOURIE, Circuit Judge. Myriad Genetics, Inc. and the Directors of the University of Utah Research Foundation"
+              },
+              {
+                "caseName": "Association for Molecular Pathology v. United States Patent & Trademark Office",
+                "citation": "653 F.3d 1329, 99 U.S.P.Q. 2d (BNA) 1398, 2011 U.S. App. LEXIS 15649, 2011 WL 3211513",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2011-07-29",
+                "url": "https://www.courtlistener.com/opinion/222139/association-for-molecular-pathology-v-united-states-patent-trademark/",
+                "snippet": "Opinion for the court filed by Circuit Judge LOURIE. Opinion concurring in part filed by Circuit Judge MOORE. Opinion concurring in part and dissenting in part filed by Circuit Judge BRYSON. LOURIE, Circuit Judge. Myriad Genetics, Inc. and the Directors of the University of Utah Research Foundation"
+              },
+              {
+                "caseName": "Association for Molecular Pathology v. United States Patent & Trademark Office",
+                "citation": "669 F. Supp. 2d 365, 2009 U.S. Dist. LEXIS 101809, 2009 WL 3614434",
+                "court": "District Court, S.D. New York",
+                "dateFiled": "2009-11-02",
+                "url": "https://www.courtlistener.com/opinion/2370081/association-for-molecular-pathology-v-united-states-patent-trademark/",
+                "snippet": "669 F.Supp.2d 365 (2009) ASSOCIATION FOR MOLECULAR PATHOLOGY, et al., Plaintiffs, v. UNITED STATES PATENT AND TRADEMARK OFFICE, et al., Defendants. No. 09 Civ. 4515. United States District Court, S.D. New York. November 2, 2009. *368 American Civil Liberties Union Foundation, by Christopher A. Hans"
+              },
+              {
+                "caseName": "Thunderhead of Ankeny, Inc. v. Chicken Bones of Kearney, Inc.",
+                "citation": "142 F.4th 1055",
+                "court": "Court of Appeals for the Eighth Circuit",
+                "dateFiled": "2025-07-08",
+                "url": "https://www.courtlistener.com/opinion/10624479/thunderhead-of-ankeny-inc-v-chicken-bones-of-kearney-inc/",
+                "snippet": "United States Court of Appeals For the Eighth Circuit ___________________________ No. 24-2741 ___________________________ Thunderhead of Ankeny, I"
+              },
+              {
+                "caseName": "Commc'ns Test Design, Inc. v. Contec LLC",
+                "citation": "367 F. Supp. 3d 350",
+                "court": "District Court, E.D. Pennsylvania",
+                "dateFiled": "2019-02-15",
+                "url": "https://www.courtlistener.com/opinion/7334841/commcns-test-design-inc-v-contec-llc/",
+                "snippet": "II A The Declaratory Judgment Act provides in pertinent part: In a case of actual controversy within its jurisdiction ... any court of the United States, upon the filing of an appropriate pleading, may declare the rights and other legal relations of any interested party seeking such declaration, wh"
+              },
+              {
+                "caseName": "HSK, LLC v. United States Olympic Committee",
+                "citation": "248 F. Supp. 3d 938, 97 Fed. R. Serv. 3d 662, 2017 WL 1239775, 2017 U.S. Dist. LEXIS 51453",
+                "court": "District Court, D. Minnesota",
+                "dateFiled": "2017-04-04",
+                "url": "https://www.courtlistener.com/opinion/7325282/hsk-llc-v-united-states-olympic-committee/",
+                "snippet": "ORDER GRANTING DEFENDANT’S MOTION TO DISMISS AND GRANTING PLAINTIFF’S MOTION FOR AN EXTENSION OF TIME Wilhelmina M. Wright, United States District Judge In this declaratory-judgment action against Defendant The United States Olympic Committee (USOC), Plaintiff HSK, LLC d/b/a Zerorez MN (Zerorez) se"
+              },
+              {
+                "caseName": "Beavers v. Riley Built, Inc.",
+                "citation": "168 F. Supp. 3d 948, 2016 WL 1030148, 2016 U.S. Dist. LEXIS 30621",
+                "court": "District Court, W.D. Kentucky",
+                "dateFiled": "2016-03-10",
+                "url": "https://www.courtlistener.com/opinion/7318932/beavers-v-riley-built-inc/",
+                "snippet": "MEMORANDUM OPINION AND ORDER David J. Hale, Judge, United States District Court In this action, Plaintiffs Brandon Beavers, Beavers Hoof Care Services, LLC; and Extreme Chute Company, LLC seek a declaratory judgment of non-infringement against Defendants Riley Built, Inc. and William S. Riley. (Doc"
+              },
+              {
+                "caseName": "Viña Casa Tamaya S.A. v. Oakville Hills Cellar, Inc.",
+                "citation": "784 F. Supp. 2d 391, 2011 WL 1642524",
+                "court": "District Court, S.D. New York",
+                "dateFiled": "2011-04-26",
+                "url": "https://www.courtlistener.com/opinion/8708414/vina-casa-tamaya-sa-v-oakville-hills-cellar-inc/",
+                "snippet": "Opinion SIDNEY H. STEIN, District Judge. Plaintiff Viña Casa Tamaya, S.A. brings this action pursuant to the Lanham Act, 15 U.S.C. § 1051 et seq., and the Declaratory Judgment Act, 28 U.S.C. § 2201 et seq., seeking a declaration that its TAMAYA mark for wine does not infringe the MAYA trademark f"
+              },
+              {
+                "caseName": "1-800-Flowers.Com, Inc. v. Edible Arrangements, LLC",
+                "citation": "905 F. Supp. 2d 451, 104 U.S.P.Q. 2d (BNA) 1925, 2012 U.S. Dist. LEXIS 169224, 2012 WL 5945065",
+                "court": "District Court, E.D. New York",
+                "dateFiled": "2012-11-28",
+                "url": "https://www.courtlistener.com/opinion/8720555/1-800-flowerscom-inc-v-edible-arrangements-llc/",
+                "snippet": "MEMORANDUM AND ORDER HURLEY, Senior District Judge: Plaintiff 1-800-Flowers.com, Inc. (“plaintiff’) commenced this action pursuant to the Declaratory Judgment Act, 28 U.S.C. § 2201 et seq., and seeks a declaratory judgment that plaintiffs “use of its trademarks has not infringed or interfered with”"
+              },
+              {
+                "caseName": "Xilinx, Inc. v. Papst Licensing Gmbh & Co. Kg",
+                "citation": "848 F.3d 1346, 121 U.S.P.Q. 2d (BNA) 1657, 2017 U.S. App. LEXIS 2625, 2017 WL 605307",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2017-02-15",
+                "url": "https://www.courtlistener.com/opinion/4348898/xilinx-inc-v-papst-licensing-gmbh-co-kg/",
+                "snippet": "DYK, Circuit Judge. Xilinx, Inc., (“Xilinx”) appeals from a judgment of the United States District Court for the Northern District of California dismissing Xilinx’s declaratory judgment action against Papst Licensing GmbH & Co. KG (“Papst”) for lack of personal jurisdiction. Because we hol"
+              },
+              {
+                "caseName": "3M Co. v. Avery Dennison Corp.",
+                "citation": "673 F.3d 1372, 102 U.S.P.Q. 2d (BNA) 1130, 2012 U.S. App. LEXIS 6172, 2012 WL 987835",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2012-03-26",
+                "url": "https://www.courtlistener.com/opinion/626074/3m-co-v-avery-dennison-corp/",
+                "snippet": "673 F.3d 1372 (2012) 3M COMPANY, Plaintiff-Appellant, v. AVERY DENNISON CORPORATION, Defendant-Appellee. No. 2011-1339. United States Court of Appeals, Federal Circuit. March 26, 2012. *1373 John A. Dragseth, Fish & Richardson, P.C., of Minneapolis, MN, argued for plaintiff-appellant. With him on t"
+              },
+              {
+                "caseName": "Gelmart Industries, Inc. v. Eveready Battery Co.",
+                "citation": "120 F. Supp. 3d 327, 2014 WL 1512036, 2014 U.S. Dist. LEXIS 54173",
+                "court": "District Court, S.D. New York",
+                "dateFiled": "2014-04-15",
+                "url": "https://www.courtlistener.com/opinion/7314828/gelmart-industries-inc-v-eveready-battery-co/",
+                "snippet": "MEMORANDUM AND ORDER CASTEL, District Judge. Plaintiff Gelmart Industries, Inc. (“Gel-mart”) plans to sell and market a line of flesh-colored underwear using the trademark “Skintimates.” It has presented the product line to potential retail partners and applied to the United States Patent and Tra"
+              },
+              {
+                "caseName": "Hogs & Heroes Foundation Inc. v. Heroes, Inc.",
+                "citation": "202 F. Supp. 3d 490, 120 U.S.P.Q. 2d (BNA) 1599, 2016 U.S. Dist. LEXIS 109661, 2016 WL 4395898",
+                "court": "District Court, D. Maryland",
+                "dateFiled": "2016-08-18",
+                "url": "https://www.courtlistener.com/opinion/7321638/hogs-heroes-foundation-inc-v-heroes-inc/",
+                "snippet": "MEMORANDUM OPINION Paula Xinis, United States District Judge Plaintiff, The Hogs and Heroes Foundation Inc. (“Plaintiff HHF” or “Plaintiff’), brings this declaratory judgment action against Heroes, Inc. (“Defendant Heroes” or “Defendant”) seeking a finding of non-infringement and a judgment declari"
+              },
+              {
+                "caseName": "Classic Liquor Importers, Ltd. v. Spirits International B.V.",
+                "citation": "151 F. Supp. 3d 451, 117 U.S.P.Q. 2d (BNA) 1310, 2015 WL 9487886, 2015 U.S. Dist. LEXIS 172763",
+                "court": "District Court, S.D. New York",
+                "dateFiled": "2015-12-29",
+                "url": "https://www.courtlistener.com/opinion/7317420/classic-liquor-importers-ltd-v-spirits-international-bv/",
+                "snippet": "OPINION JED S. RAKOFF, UNITED STATES DISTRICT JUDGE. By “bottom-line” order dated December 23, 2015, this Court granted in- part and denied in part defendant’s motion-to dismiss. This Opinion explains the reasons for that ruling. The declaratory judgment procedure is of critical importance to hew"
+              },
+              {
+                "caseName": "LWRC International, LLC v. Mindlab Media, LLC",
+                "citation": "838 F. Supp. 2d 330, 2011 WL 4501414, 2011 U.S. Dist. LEXIS 109964",
+                "court": "District Court, D. Maryland",
+                "dateFiled": "2011-09-26",
+                "url": "https://www.courtlistener.com/opinion/8712423/lwrc-international-llc-v-mindlab-media-llc/",
+                "snippet": "MEMORANDUM BENSON EVERETT LEGG, District Judge. Plaintiff LWRC International, LLC (“LWRCI”) brings this declaratory judg*333ment action against Defendants Mindlab Media, LLC (“Mindlab”) and Mindlab’s owner, Richard “Mack” Machowicz (“Machowicz”). Mindlab and Machowicz now move to dismiss or to tr"
+              },
+              {
+                "caseName": "Microsoft Corp. v. Phoenix Solutions, Inc.",
+                "citation": "741 F. Supp. 2d 1156, 2010 U.S. Dist. LEXIS 141476, 2010 WL 5782967",
+                "court": "District Court, C.D. California",
+                "dateFiled": "2010-08-18",
+                "url": "https://www.courtlistener.com/opinion/2477113/microsoft-corp-v-phoenix-solutions-inc/",
+                "snippet": "741 F.Supp.2d 1156 (2010) MICROSOFT CORPORATION, Plaintiffs, v. PHOENIX SOLUTIONS, INC., Defendants. Case No. 2:10-cv-03846-MRP-SSx. United States District Court, C.D. California. August 18, 2010. *1157 Grant E. Kinsel, Michael J. Song, Perkins Coie LLP, Los Angeles, CA, Stacy Quan, Microsoft Corpo"
+              },
+              {
+                "caseName": "Team Angry Filmworks, Inc. v. Geer",
+                "citation": "171 F. Supp. 3d 437, 2016 U.S. Dist. LEXIS 36286, 2016 WL 1086370",
+                "court": "District Court, W.D. Pennsylvania",
+                "dateFiled": "2016-03-21",
+                "url": "https://www.courtlistener.com/opinion/7319163/team-angry-filmworks-inc-v-geer/",
+                "snippet": "OPINION CONTI, Chief District Judge I. Introduction California film-production company Team Angry Filmworks, Inc. (“plaintiff’) calls upon the court to declare that Philip Francis Nowlan’s 1928 science-fiction novella Armageddon-2419 A.D. (‘Armageddon’’) and character “Buck Rogers” entered the publ"
+              },
+              {
+                "caseName": "Tradebay, LLC v. eBay, Inc.",
+                "citation": "278 F.R.D. 597, 2011 U.S. Dist. LEXIS 143686, 2011 WL 6182039",
+                "court": "District Court, D. Nevada",
+                "dateFiled": "2011-12-13",
+                "url": "https://www.courtlistener.com/opinion/8780328/tradebay-llc-v-ebay-inc/",
+                "snippet": "ORDER (Mot. to Stay Disc. — Dkt. # 21) PEGGY A. LEEN, United States Magistrate Judge. Before the court is Defendant’s Motion to Stay Discovery Pending Disposition of Motion to Dismiss (Dkt. # 21). The court has considered the Motion, Plaintiffs Opposition (Dkt. #22) and Defendant’s Reply (Dkt. #2"
+              },
+              {
+                "caseName": "Genetic Veterinary Sciences v. Laboklin Gmbh & Co. Kg",
+                "citation": "933 F.3d 1302",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2019-07-29",
+                "url": "https://www.courtlistener.com/opinion/4647094/genetic-veterinary-sciences-v-laboklin-gmbh-co-kg/",
+                "snippet": "Wallach, Circuit Judge. *1307 Appellee Genetic Veterinary Sciences, Inc., d/b/a Paw Prints Genetics (\"PPG\") sued Appellants LABOKLIN GmbH & Co. KG (\"LABOKLIN\") and the University of Bern (\"the University\") (together, \"Appellants\") in the U.S. District Court for the Eastern District"
+              },
+              {
+                "caseName": "Already, LLC v. Nike, Inc.",
+                "citation": "184 L. Ed. 2d 553, 133 S. Ct. 721, 568 U.S. 85, 2013 U.S. LEXIS 602, 105 U.S.P.Q. 2d (BNA) 1169, 23 Fla. L. Weekly Fed. S 549, 2013 WL 85300",
+                "court": "Supreme Court of the United States",
+                "dateFiled": "2013-01-09",
+                "url": "https://www.courtlistener.com/opinion/815037/already-llc-v-nike-inc/",
+                "snippet": "Chief Justice Roberts delivered the opinion of the Court. The question is whether a covenant not to enforce a trademark against a competitor’s existing products and any future “colorable imitations” moots the competitor’s action to have the trademark declared invalid. I Resp"
+              }
+            ],
+            "searchQuery": "MedImmune patent declaratory judgment jurisdiction cease and desist",
+            "totalResults": 46
+          }
+        },
+        {
+          "name": "search_case_law",
+          "args": {
+            "jurisdiction": "federal",
+            "query": "Halo Electronics Inc v Pulse Electronics Inc willful infringement"
+          },
+          "result": {
+            "success": true,
+            "data": [
+              {
+                "caseName": "Halo Electronics, Inc. v. Pulse Electronics, Inc.",
+                "citation": "857 F.3d 1347, 122 U.S.P.Q. 2d (BNA) 1715, 2017 U.S. App. LEXIS 9182, 2017 WL 2294186",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2017-05-26",
+                "url": "https://www.courtlistener.com/opinion/4394865/halo-electronics-inc-v-pulse-electronics-inc/",
+                "snippet": "LOURIE, Circuit Judge. Pulse Electronics, Inc. and Pulse Electronics Corporation (together, “Pulse”) appeal from the decision of the United States District Court for the District of Nevada awarding Halo Electronics, Inc. (“Halo”) prejudgment interest. See Halo Elecs., Inc. v. Pulse E"
+              },
+              {
+                "caseName": "Halo Electronics, Inc. v. Pulse Electronics, Inc.",
+                "citation": "780 F.3d 1357, 114 U.S.P.Q. 2d (BNA) 1079, 2015 U.S. App. LEXIS 4696, 2015 WL 1283767",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2015-03-23",
+                "url": "https://www.courtlistener.com/opinion/8442143/halo-electronics-inc-v-pulse-electronics-inc/",
+                "snippet": "TARANTO, Circuit Judge, with whom REYNA, Circuit Judge, joins, concurs in the denial of the petition for rehearing en banc. O’MALLEY, Circuit Judge, with whom HUGHES, Circuit Judge, joins, dissents from the denial of the petition for rehearing en banc. ORDER PER CURIAM. A petition for rehearing en"
+              },
+              {
+                "caseName": "Halo Electronics, Inc. v. Pulse Electronics, Inc.",
+                "citation": "831 F.3d 1369, 119 U.S.P.Q. 2d (BNA) 1654, 2016 U.S. App. LEXIS 14366, 2016 WL 4151239",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2016-08-05",
+                "url": "https://www.courtlistener.com/opinion/4244939/halo-electronics-inc-v-pulse-electronics-inc/",
+                "snippet": "LOURIE, Circuit Judge. This case has returned to us on remand from the Supreme Court of the United States. In its earlier appearance in this court, Halo Electronics, Inc. (“Halo”) appealed from the decisions of the United States District Court for the District of Nevada (1) granting summar"
+              },
+              {
+                "caseName": "Halo Electronics, Inc. v. Pulse Electronics, Inc.",
+                "citation": "579 U.S. 93, 195 L. Ed. 2d 278, 2016 U.S. LEXIS 3776, 136 S. Ct. 1923, 118 U.S.P.Q. 2d (BNA) 1761",
+                "court": "Supreme Court of the United States",
+                "dateFiled": "2016-06-13",
+                "url": "https://www.courtlistener.com/opinion/3212622/halo-electronics-inc-v-pulse-electronics-inc/",
+                "snippet": "Chief Justice ROBERTS delivered the opinion of the Court. Section 284 of the Patent Act provides that, in a case of infringement, courts \"may increase the damages up to three times the amount found or assessed.\" 35 U.S.C. § 284 . In In re Seagate"
+              },
+              {
+                "caseName": "Halo Electronics, Inc. v. Pulse Electronics, Inc.",
+                "citation": "769 F.3d 1371, 112 U.S.P.Q. 2d (BNA) 1739, 2014 U.S. App. LEXIS 20241, 2014 WL 5352367",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2014-10-22",
+                "url": "https://www.courtlistener.com/opinion/2744538/halo-electronics-inc-v-pulse-electronics-inc/",
+                "snippet": "Opinion for the court filed by Circuit Judge LOURIE. Concurring opinion filed by Circuit Judge O’MALLEY, with whom Circuit Judge HUGHES joins. LOURIE, Circuit Judge. Halo Electronics, Inc. (“Halo”) appeals from the decisions of the United States District Court for the District of Nevada (1) grantin"
+              },
+              {
+                "caseName": "Halo Electronics, Inc. v. Pulse Electronics Corporation",
+                "citation": "No citation available",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2015-03-23",
+                "url": "https://www.courtlistener.com/opinion/2788496/halo-electronics-inc-v-pulse-electronics-corporati/",
+                "snippet": "United States Court of Appeals for the Federal Circuit ______________________ HALO ELECTRONICS, INC., Plaintiff-Appellant v. PULSE ELECTRONICS, INC., PULSE ELECTRONICS CORPORATION, Defe"
+              },
+              {
+                "caseName": "Halo Electronics, Inc. v. Pulse Electronics, Inc.",
+                "citation": "900 F. Supp. 2d 1160, 2012 WL 5267014, 2012 U.S. Dist. LEXIS 153334",
+                "court": "District Court, D. Nevada",
+                "dateFiled": "2012-10-25",
+                "url": "https://www.courtlistener.com/opinion/8719884/halo-electronics-inc-v-pulse-electronics-inc/",
+                "snippet": "ORDER PHILIP M. PRO, District Judge. Before the Court is Defendants Pulse Electronics, Inc. and Pulse Electronics Corporation’s (collectively “Pulse”) Motion in Limine to Preclude Certain of Plaintiffs Expert Opinions (Doc. #338), filed June 22, 2012. Plaintiff Halo Electronics, Inc. (“Halo”) fil"
+              },
+              {
+                "caseName": "Halo Electronics, Inc. v. Pulse Engineering, Inc.",
+                "citation": "810 F. Supp. 2d 1173, 2011 U.S. Dist. LEXIS 100122, 2011 WL 3915669",
+                "court": "District Court, D. Nevada",
+                "dateFiled": "2011-09-06",
+                "url": "https://www.courtlistener.com/opinion/2179068/halo-electronics-inc-v-pulse-engineering-inc/",
+                "snippet": "810 F.Supp.2d 1173 (2011) HALO ELECTRONICS, INC., Plaintiff, v. PULSE ENGINEERING, INC. and Technitrol, Inc., Defendants. No. 2:07-CV-00331-PMP-PAL. United States District Court, D. Nevada. September 6, 2011. *1180 Craig E. Countryman, Juanita R. Brooks, Lara S. Garner, Fish & Richardson P.C., San"
+              },
+              {
+                "caseName": "Halo Electronics, Inc. v. Pulse Engineering, Inc.",
+                "citation": "721 F. Supp. 2d 989, 2010 U.S. Dist. LEXIS 138770, 2010 WL 2640055",
+                "court": "District Court, D. Nevada",
+                "dateFiled": "2010-06-14",
+                "url": "https://www.courtlistener.com/opinion/2539979/halo-electronics-inc-v-pulse-engineering-inc/",
+                "snippet": "721 F.Supp.2d 989 (2010) HALO ELECTRONICS, INC., Plaintiff, v. PULSE ENGINEERING, INC. and Technitrol, Inc., Defendants. No. 2:07-CV-00331-PMP-PAL. United States District Court, D. Nevada. June 14, 2010. *992 John C. Adkisson, Michael J. Kane, William R. Woodford, Fish & Richardson P.C., Minneapoli"
+              },
+              {
+                "caseName": "Apple Inc. v. Samsung Electronics Co.",
+                "citation": "258 F. Supp. 3d 1013",
+                "court": "District Court, N.D. California",
+                "dateFiled": "2017-06-23",
+                "url": "https://www.courtlistener.com/opinion/7326041/apple-inc-v-samsung-electronics-co/",
+                "snippet": "*1017ORDER RE: WILLFULNESS AND ENHANCED DAMAGES Re: Dkt. Nos, 2186, 2191 LUCY H.' KOH, United States District Judge On May 5, 2014, after a thirteen-day trial and approximately four days of deliberation, a jury in this patent case reached a verdict, which included a finding of willful infringement'"
+              },
+              {
+                "caseName": "Apple Inc. v. Samsung Electronics Co., Ltd.",
+                "citation": "839 F.3d 1034, 120 U.S.P.Q. 2d (BNA) 1400, 2016 U.S. App. LEXIS 18225, 2016 WL 5864573",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2016-10-07",
+                "url": "https://www.courtlistener.com/opinion/4303310/apple-inc-v-samsung-electronics-co-ltd/",
+                "snippet": "Concurring in the result without opinion Circuit Judge HUGHES. Dissenting Opinion filed by Chief Judge PROST. Dissenting Opinion filed by Circuit Judge DYK. Dissenting Opinion filed by Circuit Judge REYNA. MOORE, Circuit Judge. I. Introduction The current appeal results from a patent infringement s"
+              },
+              {
+                "caseName": "Texas Advanced Optoelectronic v. Renesas Electronics America",
+                "citation": "No citation available",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2018-07-09",
+                "url": "https://www.courtlistener.com/opinion/4515151/texas-advanced-optoelectronic-v-renesas-electronics-america/",
+                "snippet": "United States Court of Appeals for the Federal Circuit ______________________ TEXAS ADVANCED OPTOELECTRONIC SOLUTIONS, INC., Plaintiff-Cross-Appellant v. RENESAS ELECTRONICS AMERICA, INC., F/K/A IN"
+              },
+              {
+                "caseName": "Trustees of Boston University v. Everlight Electronics Co.",
+                "citation": "212 F. Supp. 3d 254, 2016 WL 3976617",
+                "court": "District Court, D. Massachusetts",
+                "dateFiled": "2016-07-22",
+                "url": "https://www.courtlistener.com/opinion/7322122/trustees-of-boston-university-v-everlight-electronics-co/",
+                "snippet": "MEMORANDUM AND ORDER Saris, Chief United States District Judge INTRODUCTION The plaintiff, Trustees of Boston University (BU), seeks an award of enhanced damages pursuant to 35 U.S.C.§ 284 on the ground that the defendants, Epistar and Everlight, willfully infringed the ’738 Patent. At trial, the j"
+              },
+              {
+                "caseName": "Technology Properties Ltd. v. Samsung Electronics Co.",
+                "citation": "114 F. Supp. 3d 842",
+                "court": "District Court, N.D. California",
+                "dateFiled": "2015-07-11",
+                "url": "https://www.courtlistener.com/opinion/7314353/technology-properties-ltd-v-samsung-electronics-co/",
+                "snippet": "ORDER GRANTING-IN-PART MOTIONS TO STRIKE AND DENYING MOTIONS TO COMPEL PAUL S. GREWAL, United States Magistrate Judge In each of these two related cases, Defendants move to strike Plaintiffs’ infringement contentions1 and Plaintiffs move to compel Defendants to produce discovery arising from those"
+              },
+              {
+                "caseName": "Imperium IP Holdings (Cayman), Ltd. v. Samsung Electronics Co.",
+                "citation": "259 F. Supp. 3d 530",
+                "court": "District Court, E.D. Texas",
+                "dateFiled": "2017-04-27",
+                "url": "https://www.courtlistener.com/opinion/7326090/imperium-ip-holdings-cayman-ltd-v-samsung-electronics-co/",
+                "snippet": "MEMORANDUM OPINION AND ORDER AMOS L. MAZZANT, UNITED STATES DISTRICT JUDGE Pending before the Court is Defendants’ Rule 50(b) Motion for Judgment as a Matter of Law and/or Rule 59 Motion for a New Trial (Dkt. #337). After reviewing the relevant pleadings, the Court denies Defendants’ motion. BACKGR"
+              },
+              {
+                "caseName": "Tecsec, Inc. v. Adobe Inc.",
+                "citation": "978 F.3d 1278",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2020-10-23",
+                "url": "https://www.courtlistener.com/opinion/4799734/tecsec-inc-v-adobe-inc/",
+                "snippet": "Case: 19-2192 Document: 60 Page: 1 Filed: 10/23/2020 United States Court of Appeals for the Federal Circuit ______________________ TECSEC, INC., Plaintiff-Appellant v."
+              },
+              {
+                "caseName": "Sri International, Inc. v. Cisco Systems Inc.",
+                "citation": "No citation available",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2021-09-28",
+                "url": "https://www.courtlistener.com/opinion/5173932/sri-international-inc-v-cisco-systems-inc/",
+                "snippet": "Case: 20-1685 Document: 48 Page: 1 Filed: 09/28/2021 United States Court of Appeals for the Federal Circuit ______________________ SRI INTERNATIONAL, INC., Plaintiff-Appellant v."
+              },
+              {
+                "caseName": "Canon, Inc. v. Color Imaging, Inc.",
+                "citation": "292 F. Supp. 3d 1357",
+                "court": "District Court, N.D. Georgia",
+                "dateFiled": "2018-02-22",
+                "url": "https://www.courtlistener.com/opinion/7328686/canon-inc-v-color-imaging-inc/",
+                "snippet": "Amy Totenberg, United States District Judge *1360On June 19, 2017, the jury entered a verdict on Plaintiff's infringement claims and found that Defendants had willfully violated Plaintiff's patent rights. (Doc. 632.) Following the jury's verdict, Plaintiff filed a Motion for Enhanced Damages [Doc."
+              },
+              {
+                "caseName": "Parkervision, Inc. v. Qualcomm Incorporated",
+                "citation": "116 F.4th 1345",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2024-09-06",
+                "url": "https://www.courtlistener.com/opinion/10126963/parkervision-inc-v-qualcomm-incorporated/",
+                "snippet": "Case: 22-1755 Document: 63 Page: 1 Filed: 09/06/2024 United States Court of Appeals for the Federal Circuit ______________________ PARKERVISION, INC., Plaintiff-Appellant v. QUALCOMM INCORP"
+              },
+              {
+                "caseName": "Veracode, Inc. v. Appthority, Inc.",
+                "citation": "137 F. Supp. 3d 17, 2015 U.S. Dist. LEXIS 132919, 2015 WL 5749435",
+                "court": "District Court, D. Massachusetts",
+                "dateFiled": "2015-09-30",
+                "url": "https://www.courtlistener.com/opinion/7316159/veracode-inc-v-appthority-inc/",
+                "snippet": "MEMORANDUM AND ORDER DOUGLAS P. WOODLOCK, UNITED STATES DISTRICT JUDGE I. BACKGROUND.. .32 A. Factual Background... 32 B. Procedural History.. .33 1. Initial Complaint and Pre-Trial Proceedings.. .33 2. Jury Verdict... 34 3. Post-Trial Motions... 34 C. Applicable Standards of Review.. .35"
+              }
+            ],
+            "searchQuery": "Halo Electronics Inc v Pulse Electronics Inc willful infringement",
+            "totalResults": 103
+          }
+        },
+        {
+          "name": "search_case_law",
+          "args": {
+            "jurisdiction": "federal",
+            "query": "TC Heartland LLC v Kraft Foods Group Brands LLC patent venue"
+          },
+          "result": {
+            "success": true,
+            "data": [
+              {
+                "caseName": "TC Heartland LLC v. Kraft Foods Group Brands LLC",
+                "citation": "581 U.S. 258, 197 L. Ed. 2d 816, 2017 U.S. LEXIS 3213, 137 S. Ct. 1514, 122 U.S.P.Q. 2d (BNA) 1553, 26 Fla. L. Weekly Fed. S 575, 85 U.S.L.W. 4249, 2017 WL 2216934",
+                "court": "Supreme Court of the United States",
+                "dateFiled": "2017-05-22",
+                "url": "https://www.courtlistener.com/opinion/4393431/tc-heartland-llc-v-kraft-foods-group-brands-llc/",
+                "snippet": "Justice THOMAS delivered the opinion of the Court. The question presented in this case is where proper venue lies for a patent infringement lawsuit brought against a domestic corporation. The patent venue statute, 28 U.S.C. § 1400 (b), provides that \"[a]ny"
+              },
+              {
+                "caseName": "Kraft Foods Group Brands LLC v. TC Heartland, LLC",
+                "citation": "232 F. Supp. 3d 628, 2017 WL 134702",
+                "court": "District Court, D. Delaware",
+                "dateFiled": "2017-01-12",
+                "url": "https://www.courtlistener.com/opinion/7323982/kraft-foods-group-brands-llc-v-tc-heartland-llc/",
+                "snippet": "MEMORANDUM ORDER HONORABLE LEONARD P. STARK, District Judge I am asked to stay this case, which is in an unusual procedural posture. On September 24, 2015, I adopted a Report and Recommendation (D.I. 59) (“R&R”) authored by Magistrate Judge Burke and denied Defendants TC Heartland, LLC and Heartlan"
+              },
+              {
+                "caseName": "In Re: Tc Heartland LLC",
+                "citation": "821 F.3d 1338, 118 U.S.P.Q. 2d (BNA) 1591, 2016 U.S. App. LEXIS 7753, 2016 WL 1709433",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2016-04-29",
+                "url": "https://www.courtlistener.com/opinion/3199222/in-re-tc-heartland-llc/",
+                "snippet": "ON PETITION ORDER MOORE, Circuit Judge. TC Heartland LLC (“Heartland”) petitions for a writ of mandamus to direct the United States District Court for the District of Delaware to either dismiss or transfer the patent infringement suit filed against it .by Kraft Foods Group Brands"
+              },
+              {
+                "caseName": "Focus Products Group International, LLC v. Kartri Sales Co., Inc.",
+                "citation": "No citation available",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2025-09-30",
+                "url": "https://www.courtlistener.com/opinion/10681614/focus-products-group-international-llc-v-kartri-sales-co-inc/",
+                "snippet": "Case: 23-1446 Document: 101 Page: 1 Filed: 09/30/2025 United States Court of Appeals for the Federal Circuit ______________________ FOCUS PRODUCTS GROUP INTERNATIONAL, LLC, ZAHNER DESIGN GROUP, LTD., HOOKLESS SYSTEMS OF NORTH AMERICA, INC., SURE FIT"
+              },
+              {
+                "caseName": "Andra Group, Lp v. Victoria's Secret Stores, LLC",
+                "citation": "6 F.4th 1283",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2021-08-03",
+                "url": "https://www.courtlistener.com/opinion/4904921/andra-group-lp-v-victorias-secret-stores-llc/",
+                "snippet": "Case: 20-2009 Document: 41 Page: 1 Filed: 08/03/2021 United States Court of Appeals for the Federal Circuit ______________________ ANDRA GROUP, LP, Plaintiff-Appellant v. VICTORIA'S SECRET STORES,"
+              },
+              {
+                "caseName": "Seven Networks, LLC v. Google LLC",
+                "citation": "315 F. Supp. 3d 933",
+                "court": "District Court, E.D. Texas",
+                "dateFiled": "2018-07-19",
+                "url": "https://www.courtlistener.com/opinion/7330625/seven-networks-llc-v-google-llc/",
+                "snippet": "RODNEY GILSTRAP, UNITED STATES DISTRICT JUDGE Before the Court is Google LLC's (\"Google\") Second Renewed Motion to Dismiss or, in the Alternative, Transfer under 28 U.S.C. § 1406 for Improper Venue. (Dkt. No. 125) (\"the Motion\"). Having considered the Motion, the Court is of the opinion that it sho"
+              },
+              {
+                "caseName": "Agri-Labs Holding LLC v. Taplogic, LLC",
+                "citation": "304 F. Supp. 3d 773",
+                "court": "District Court, N.D. Indiana",
+                "dateFiled": "2018-01-16",
+                "url": "https://www.courtlistener.com/opinion/7329663/agri-labs-holding-llc-v-taplogic-llc/",
+                "snippet": "THERESA L. SPRINGMANN, CHIEF JUDGE This matter comes before the Court on Motions for Summary Judgment [ECF Nos. 129, 131] filed by Defendant Taplogic, LLC, and a Motion for Summary Judgment [ECF No. 142] filed by Plaintiff Agri-Labs Holding LLC. The Defendant has moved for summary judgment on non-i"
+              },
+              {
+                "caseName": "In Re GOOGLE LLC",
+                "citation": "949 F.3d 1338",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2020-02-13",
+                "url": "https://www.courtlistener.com/opinion/4726899/in-re-google-llc/",
+                "snippet": "Case: 19-126 Document: 36 Page: 1 Filed: 02/13/2020 United States Court of Appeals for the Federal Circuit ______________________ IN RE: GOOGLE LLC, Petitioner ______________________"
+              },
+              {
+                "caseName": "Mymail, Ltd. v. Oovoo, LLC",
+                "citation": "934 F.3d 1373",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2019-08-16",
+                "url": "https://www.courtlistener.com/opinion/4648999/mymail-ltd-v-oovoo-llc/",
+                "snippet": "Opinion dissenting filed by Circuit Judge Lourie. Reyna, Circuit Judge. MyMail, Ltd. appeals the decision of the United States District Court for the Northern District of California granting ooVoo, LLC's and IAC Search & Media, Inc.'s motions for judgment on the pleadings. Because we determine that"
+              },
+              {
+                "caseName": "Factor 2 Multimedia Systems, LLC v. Tiktok, Inc.",
+                "citation": "No citation available",
+                "court": "District Court, District of Columbia",
+                "dateFiled": "2025-06-18",
+                "url": "https://www.courtlistener.com/opinion/10613212/factor-2-multimedia-systems-llc-v-tiktok-inc/",
+                "snippet": "UNITED STATES DISTRICT COURT FOR THE DISTRICT OF COLUMBIA FACTOR2 MULTIMEDIA : SYSTEMS, LLC, : : Plaintiff,"
+              },
+              {
+                "caseName": "Arp Wave, LLC v. Salpeter",
+                "citation": "364 F. Supp. 3d 990",
+                "court": "District Court, D. Maine",
+                "dateFiled": "2019-01-31",
+                "url": "https://www.courtlistener.com/opinion/7334616/arp-wave-llc-v-salpeter/",
+                "snippet": "Patrick J. Schiltz, United States District Judge Plaintiffs ARP Wave, LLC and ARP Manufacturing, LLC (collectively \"ARPwave\")1 bring this patent-infringement action against defendants Garrett Salpeter; ARPwave Austin, LLC; Neurological Fitness and Recovery Facilities, LLC; and Neurological Fitness"
+              },
+              {
+                "caseName": "Amax, Inc. v. ACCO Brands Corp.",
+                "citation": "268 F. Supp. 3d 301",
+                "court": "District Court, D. Massachusetts",
+                "dateFiled": "2017-08-08",
+                "url": "https://www.courtlistener.com/opinion/7326830/amax-inc-v-acco-brands-corp/",
+                "snippet": "MEMORANDUM & ORDER Gorton, United States District Judge Plaintiffs Amax, Inc. (“Amax”) and Worktools, Inc. (“Worktools” and, collectively with Amax, “plaintiffs”) allege that defendant ACCO Brands Corp. (“ACCO” or “defendant”) infringed their patents and trademark. Defendant’s motion for summary ju"
+              },
+              {
+                "caseName": "Gust, Inc. v. Alphacap Ventures, LLC",
+                "citation": "905 F.3d 1321",
+                "court": "Court of Appeals for the Federal Circuit",
+                "dateFiled": "2018-09-28",
+                "url": "https://www.courtlistener.com/opinion/4539262/gust-inc-v-alphacap-ventures-llc/",
+                "snippet": "LINN, Circuit Judge. Movant Gutride Safier LLP (\"Gutride\"), a law firm representing AlphaCap Ventures, LLC (\"AlphaCap\") in the district court litigation here, appeals the award of fees under 28 U.S.C. § 1927, making Gutride jointly and severally liable for all expenses incurred by Gust, Inc. in def"
+              },
+              {
+                "caseName": "Personal Audio, LLC v. Google, Inc.",
+                "citation": "280 F. Supp. 3d 922",
+                "court": "District Court, E.D. Texas",
+                "dateFiled": "2017-12-01",
+                "url": "https://www.courtlistener.com/opinion/7327660/personal-audio-llc-v-google-inc/",
+                "snippet": "ORDER RE: GOOGLE’S MOTION TO DISMISS FOR IMPROPER VENUE Ron Clark, United States District Judge This case presents two issues underlying resolution of venue disputes under 28 U.S.C. § 1400(b): (1) placement of the burden of proof; and (2) whether venue facts are analyzed as of the date of filing or"
+              },
+              {
+                "caseName": "Genuine Enabling Tech., LLC v. Nintendo Co.",
+                "citation": "369 F. Supp. 3d 590",
+                "court": "District Court, D. Delaware",
+                "dateFiled": "2019-02-25",
+                "url": "https://www.courtlistener.com/opinion/7335018/genuine-enabling-tech-llc-v-nintendo-co/",
+                "snippet": "Goldberg, District Judge. Currently before me in this patent infringement action is a motion challenging venue in this district. Plaintiff, Genuine Enabling Technology, LLC, a Delaware limited liability company, brought this action in this district, asserting patent infringement claims against two"
+              },
+              {
+                "caseName": "Symbology Innovations, LLC v. Lego Sys., Inc.",
+                "citation": "282 F. Supp. 3d 916",
+                "court": "District Court, E.D. Virginia",
+                "dateFiled": "2017-09-28",
+                "url": "https://www.courtlistener.com/opinion/7327760/symbology-innovations-llc-v-lego-sys-inc/",
+                "snippet": "Arenda L. Wright Allen, United States District Judge In this patent infringement suit, two corporations hailing from distant states find themselves litigating in the Eastern District of Virginia. This sort of forum shopping in patent litigation has proliferated over the past thirty years. See Danie"
+              },
+              {
+                "caseName": "Regenlab U.S. LLC v. Estar Techs. Ltd.",
+                "citation": "335 F. Supp. 3d 526",
+                "court": "District Court, S.D. Illinois",
+                "dateFiled": "2018-08-15",
+                "url": "https://www.courtlistener.com/opinion/7332255/regenlab-us-llc-v-estar-techs-ltd/",
+                "snippet": "ANDREW L. CARTER, JR., United States District Judge Plaintiff RegenLab USA, LLC (\"RegenLab\") brings this action alleging patent infringement arising from the unauthorized use of its patented technology. Before this Court are Defendant Estar Technologies Ltd. (\"Estar\")'s motion to dismiss for lack o"
+              },
+              {
+                "caseName": "Cobalt Boats, LLC v. Sea Ray Boats, Inc.",
+                "citation": "254 F. Supp. 3d 836, 2017 U.S. Dist. LEXIS 90728",
+                "court": "District Court, E.D. Virginia",
+                "dateFiled": "2017-06-07",
+                "url": "https://www.courtlistener.com/opinion/7325724/cobalt-boats-llc-v-sea-ray-boats-inc/",
+                "snippet": "*837OPINION & ORDER HENRY COKE MORGAN, JR., SENIOR UNITED STATES DISTRICT JUDGE This matter is before the Court on Defendants Sea Ray Boats, Inc.’s (“Sea Ray’s”) and Brunswick Corporation’s (“Brunswick’s”), (collectively, “Defendants’ ”) Motion to Transfer Venue in View of TC Heartland (“Motion”)."
+              },
+              {
+                "caseName": "Uni-Sys., LLC v. U.S. Tennis Ass'n, Inc.",
+                "citation": "350 F. Supp. 3d 143",
+                "court": "District Court, E.D. New York",
+                "dateFiled": "2018-10-04",
+                "url": "https://www.courtlistener.com/opinion/7333358/uni-sys-llc-v-us-tennis-assn-inc/",
+                "snippet": "KIYO A. MATSUMOTO, United States District Judge *153Plaintiff Uni-Systems, LLC, a Minnesota limited liability company (\"Uni-Systems\") commenced this action on January 11, 2017 against defendants United States Tennis Association, Inc., a not-for-profit incorporated in New York (\"USTA\"); Rossetti Inc"
+              },
+              {
+                "caseName": "Auto. Body Parts Ass'n v. Ford Global Techs., LLC",
+                "citation": "293 F. Supp. 3d 690",
+                "court": "District Court, E.D. Michigan",
+                "dateFiled": "2018-02-20",
+                "url": "https://www.courtlistener.com/opinion/7328742/auto-body-parts-assn-v-ford-global-techs-llc/",
+                "snippet": "LAURIE J. MICHELSON, U.S. DISTRICT JUDGE The Automotive Body Parts Association effectively asks this Court to eliminate design patents on auto-body parts. Members of the ABPA import, make, and sell auto-body parts that are used to repair cars and trucks damaged in a collision. Ford Global Technolog"
+              }
+            ],
+            "searchQuery": "TC Heartland LLC v Kraft Foods Group Brands LLC patent venue",
+            "totalResults": 55
+          }
+        }
+      ],
+      "caseLawResults": [
+        {
+          "caseName": "Association for Molecular Pathology v. United States Patent & Trademark Office",
+          "citation": "689 F.3d 1303, 103 U.S.P.Q. 2d (BNA) 1681, 2012 U.S. App. LEXIS 17679, 2012 WL 3518509",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2012-08-16",
+          "url": "https://www.courtlistener.com/opinion/806779/association-for-molecular-pathology-v-united-states-patent-trademark/",
+          "snippet": "Opinion for the court filed by Circuit Judge LOURIE. Opinion concurring in part filed by Circuit Judge MOORE. Opinion concurring in part and dissenting in part filed by Circuit Judge BRYSON. LOURIE, Circuit Judge. Myriad Genetics, Inc. and the Directors of the University of Utah Research Foundation"
+        },
+        {
+          "caseName": "Association for Molecular Pathology v. United States Patent & Trademark Office",
+          "citation": "653 F.3d 1329, 99 U.S.P.Q. 2d (BNA) 1398, 2011 U.S. App. LEXIS 15649, 2011 WL 3211513",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2011-07-29",
+          "url": "https://www.courtlistener.com/opinion/222139/association-for-molecular-pathology-v-united-states-patent-trademark/",
+          "snippet": "Opinion for the court filed by Circuit Judge LOURIE. Opinion concurring in part filed by Circuit Judge MOORE. Opinion concurring in part and dissenting in part filed by Circuit Judge BRYSON. LOURIE, Circuit Judge. Myriad Genetics, Inc. and the Directors of the University of Utah Research Foundation"
+        },
+        {
+          "caseName": "Association for Molecular Pathology v. United States Patent & Trademark Office",
+          "citation": "669 F. Supp. 2d 365, 2009 U.S. Dist. LEXIS 101809, 2009 WL 3614434",
+          "court": "District Court, S.D. New York",
+          "dateFiled": "2009-11-02",
+          "url": "https://www.courtlistener.com/opinion/2370081/association-for-molecular-pathology-v-united-states-patent-trademark/",
+          "snippet": "669 F.Supp.2d 365 (2009) ASSOCIATION FOR MOLECULAR PATHOLOGY, et al., Plaintiffs, v. UNITED STATES PATENT AND TRADEMARK OFFICE, et al., Defendants. No. 09 Civ. 4515. United States District Court, S.D. New York. November 2, 2009. *368 American Civil Liberties Union Foundation, by Christopher A. Hans"
+        },
+        {
+          "caseName": "Thunderhead of Ankeny, Inc. v. Chicken Bones of Kearney, Inc.",
+          "citation": "142 F.4th 1055",
+          "court": "Court of Appeals for the Eighth Circuit",
+          "dateFiled": "2025-07-08",
+          "url": "https://www.courtlistener.com/opinion/10624479/thunderhead-of-ankeny-inc-v-chicken-bones-of-kearney-inc/",
+          "snippet": "United States Court of Appeals For the Eighth Circuit ___________________________ No. 24-2741 ___________________________ Thunderhead of Ankeny, I"
+        },
+        {
+          "caseName": "Commc'ns Test Design, Inc. v. Contec LLC",
+          "citation": "367 F. Supp. 3d 350",
+          "court": "District Court, E.D. Pennsylvania",
+          "dateFiled": "2019-02-15",
+          "url": "https://www.courtlistener.com/opinion/7334841/commcns-test-design-inc-v-contec-llc/",
+          "snippet": "II A The Declaratory Judgment Act provides in pertinent part: In a case of actual controversy within its jurisdiction ... any court of the United States, upon the filing of an appropriate pleading, may declare the rights and other legal relations of any interested party seeking such declaration, wh"
+        },
+        {
+          "caseName": "HSK, LLC v. United States Olympic Committee",
+          "citation": "248 F. Supp. 3d 938, 97 Fed. R. Serv. 3d 662, 2017 WL 1239775, 2017 U.S. Dist. LEXIS 51453",
+          "court": "District Court, D. Minnesota",
+          "dateFiled": "2017-04-04",
+          "url": "https://www.courtlistener.com/opinion/7325282/hsk-llc-v-united-states-olympic-committee/",
+          "snippet": "ORDER GRANTING DEFENDANT’S MOTION TO DISMISS AND GRANTING PLAINTIFF’S MOTION FOR AN EXTENSION OF TIME Wilhelmina M. Wright, United States District Judge In this declaratory-judgment action against Defendant The United States Olympic Committee (USOC), Plaintiff HSK, LLC d/b/a Zerorez MN (Zerorez) se"
+        },
+        {
+          "caseName": "Beavers v. Riley Built, Inc.",
+          "citation": "168 F. Supp. 3d 948, 2016 WL 1030148, 2016 U.S. Dist. LEXIS 30621",
+          "court": "District Court, W.D. Kentucky",
+          "dateFiled": "2016-03-10",
+          "url": "https://www.courtlistener.com/opinion/7318932/beavers-v-riley-built-inc/",
+          "snippet": "MEMORANDUM OPINION AND ORDER David J. Hale, Judge, United States District Court In this action, Plaintiffs Brandon Beavers, Beavers Hoof Care Services, LLC; and Extreme Chute Company, LLC seek a declaratory judgment of non-infringement against Defendants Riley Built, Inc. and William S. Riley. (Doc"
+        },
+        {
+          "caseName": "Viña Casa Tamaya S.A. v. Oakville Hills Cellar, Inc.",
+          "citation": "784 F. Supp. 2d 391, 2011 WL 1642524",
+          "court": "District Court, S.D. New York",
+          "dateFiled": "2011-04-26",
+          "url": "https://www.courtlistener.com/opinion/8708414/vina-casa-tamaya-sa-v-oakville-hills-cellar-inc/",
+          "snippet": "Opinion SIDNEY H. STEIN, District Judge. Plaintiff Viña Casa Tamaya, S.A. brings this action pursuant to the Lanham Act, 15 U.S.C. § 1051 et seq., and the Declaratory Judgment Act, 28 U.S.C. § 2201 et seq., seeking a declaration that its TAMAYA mark for wine does not infringe the MAYA trademark f"
+        },
+        {
+          "caseName": "1-800-Flowers.Com, Inc. v. Edible Arrangements, LLC",
+          "citation": "905 F. Supp. 2d 451, 104 U.S.P.Q. 2d (BNA) 1925, 2012 U.S. Dist. LEXIS 169224, 2012 WL 5945065",
+          "court": "District Court, E.D. New York",
+          "dateFiled": "2012-11-28",
+          "url": "https://www.courtlistener.com/opinion/8720555/1-800-flowerscom-inc-v-edible-arrangements-llc/",
+          "snippet": "MEMORANDUM AND ORDER HURLEY, Senior District Judge: Plaintiff 1-800-Flowers.com, Inc. (“plaintiff’) commenced this action pursuant to the Declaratory Judgment Act, 28 U.S.C. § 2201 et seq., and seeks a declaratory judgment that plaintiffs “use of its trademarks has not infringed or interfered with”"
+        },
+        {
+          "caseName": "Xilinx, Inc. v. Papst Licensing Gmbh & Co. Kg",
+          "citation": "848 F.3d 1346, 121 U.S.P.Q. 2d (BNA) 1657, 2017 U.S. App. LEXIS 2625, 2017 WL 605307",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2017-02-15",
+          "url": "https://www.courtlistener.com/opinion/4348898/xilinx-inc-v-papst-licensing-gmbh-co-kg/",
+          "snippet": "DYK, Circuit Judge. Xilinx, Inc., (“Xilinx”) appeals from a judgment of the United States District Court for the Northern District of California dismissing Xilinx’s declaratory judgment action against Papst Licensing GmbH & Co. KG (“Papst”) for lack of personal jurisdiction. Because we hol"
+        },
+        {
+          "caseName": "3M Co. v. Avery Dennison Corp.",
+          "citation": "673 F.3d 1372, 102 U.S.P.Q. 2d (BNA) 1130, 2012 U.S. App. LEXIS 6172, 2012 WL 987835",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2012-03-26",
+          "url": "https://www.courtlistener.com/opinion/626074/3m-co-v-avery-dennison-corp/",
+          "snippet": "673 F.3d 1372 (2012) 3M COMPANY, Plaintiff-Appellant, v. AVERY DENNISON CORPORATION, Defendant-Appellee. No. 2011-1339. United States Court of Appeals, Federal Circuit. March 26, 2012. *1373 John A. Dragseth, Fish & Richardson, P.C., of Minneapolis, MN, argued for plaintiff-appellant. With him on t"
+        },
+        {
+          "caseName": "Gelmart Industries, Inc. v. Eveready Battery Co.",
+          "citation": "120 F. Supp. 3d 327, 2014 WL 1512036, 2014 U.S. Dist. LEXIS 54173",
+          "court": "District Court, S.D. New York",
+          "dateFiled": "2014-04-15",
+          "url": "https://www.courtlistener.com/opinion/7314828/gelmart-industries-inc-v-eveready-battery-co/",
+          "snippet": "MEMORANDUM AND ORDER CASTEL, District Judge. Plaintiff Gelmart Industries, Inc. (“Gel-mart”) plans to sell and market a line of flesh-colored underwear using the trademark “Skintimates.” It has presented the product line to potential retail partners and applied to the United States Patent and Tra"
+        },
+        {
+          "caseName": "Hogs & Heroes Foundation Inc. v. Heroes, Inc.",
+          "citation": "202 F. Supp. 3d 490, 120 U.S.P.Q. 2d (BNA) 1599, 2016 U.S. Dist. LEXIS 109661, 2016 WL 4395898",
+          "court": "District Court, D. Maryland",
+          "dateFiled": "2016-08-18",
+          "url": "https://www.courtlistener.com/opinion/7321638/hogs-heroes-foundation-inc-v-heroes-inc/",
+          "snippet": "MEMORANDUM OPINION Paula Xinis, United States District Judge Plaintiff, The Hogs and Heroes Foundation Inc. (“Plaintiff HHF” or “Plaintiff’), brings this declaratory judgment action against Heroes, Inc. (“Defendant Heroes” or “Defendant”) seeking a finding of non-infringement and a judgment declari"
+        },
+        {
+          "caseName": "Classic Liquor Importers, Ltd. v. Spirits International B.V.",
+          "citation": "151 F. Supp. 3d 451, 117 U.S.P.Q. 2d (BNA) 1310, 2015 WL 9487886, 2015 U.S. Dist. LEXIS 172763",
+          "court": "District Court, S.D. New York",
+          "dateFiled": "2015-12-29",
+          "url": "https://www.courtlistener.com/opinion/7317420/classic-liquor-importers-ltd-v-spirits-international-bv/",
+          "snippet": "OPINION JED S. RAKOFF, UNITED STATES DISTRICT JUDGE. By “bottom-line” order dated December 23, 2015, this Court granted in- part and denied in part defendant’s motion-to dismiss. This Opinion explains the reasons for that ruling. The declaratory judgment procedure is of critical importance to hew"
+        },
+        {
+          "caseName": "LWRC International, LLC v. Mindlab Media, LLC",
+          "citation": "838 F. Supp. 2d 330, 2011 WL 4501414, 2011 U.S. Dist. LEXIS 109964",
+          "court": "District Court, D. Maryland",
+          "dateFiled": "2011-09-26",
+          "url": "https://www.courtlistener.com/opinion/8712423/lwrc-international-llc-v-mindlab-media-llc/",
+          "snippet": "MEMORANDUM BENSON EVERETT LEGG, District Judge. Plaintiff LWRC International, LLC (“LWRCI”) brings this declaratory judg*333ment action against Defendants Mindlab Media, LLC (“Mindlab”) and Mindlab’s owner, Richard “Mack” Machowicz (“Machowicz”). Mindlab and Machowicz now move to dismiss or to tr"
+        },
+        {
+          "caseName": "Microsoft Corp. v. Phoenix Solutions, Inc.",
+          "citation": "741 F. Supp. 2d 1156, 2010 U.S. Dist. LEXIS 141476, 2010 WL 5782967",
+          "court": "District Court, C.D. California",
+          "dateFiled": "2010-08-18",
+          "url": "https://www.courtlistener.com/opinion/2477113/microsoft-corp-v-phoenix-solutions-inc/",
+          "snippet": "741 F.Supp.2d 1156 (2010) MICROSOFT CORPORATION, Plaintiffs, v. PHOENIX SOLUTIONS, INC., Defendants. Case No. 2:10-cv-03846-MRP-SSx. United States District Court, C.D. California. August 18, 2010. *1157 Grant E. Kinsel, Michael J. Song, Perkins Coie LLP, Los Angeles, CA, Stacy Quan, Microsoft Corpo"
+        },
+        {
+          "caseName": "Team Angry Filmworks, Inc. v. Geer",
+          "citation": "171 F. Supp. 3d 437, 2016 U.S. Dist. LEXIS 36286, 2016 WL 1086370",
+          "court": "District Court, W.D. Pennsylvania",
+          "dateFiled": "2016-03-21",
+          "url": "https://www.courtlistener.com/opinion/7319163/team-angry-filmworks-inc-v-geer/",
+          "snippet": "OPINION CONTI, Chief District Judge I. Introduction California film-production company Team Angry Filmworks, Inc. (“plaintiff’) calls upon the court to declare that Philip Francis Nowlan’s 1928 science-fiction novella Armageddon-2419 A.D. (‘Armageddon’’) and character “Buck Rogers” entered the publ"
+        },
+        {
+          "caseName": "Tradebay, LLC v. eBay, Inc.",
+          "citation": "278 F.R.D. 597, 2011 U.S. Dist. LEXIS 143686, 2011 WL 6182039",
+          "court": "District Court, D. Nevada",
+          "dateFiled": "2011-12-13",
+          "url": "https://www.courtlistener.com/opinion/8780328/tradebay-llc-v-ebay-inc/",
+          "snippet": "ORDER (Mot. to Stay Disc. — Dkt. # 21) PEGGY A. LEEN, United States Magistrate Judge. Before the court is Defendant’s Motion to Stay Discovery Pending Disposition of Motion to Dismiss (Dkt. # 21). The court has considered the Motion, Plaintiffs Opposition (Dkt. #22) and Defendant’s Reply (Dkt. #2"
+        },
+        {
+          "caseName": "Genetic Veterinary Sciences v. Laboklin Gmbh & Co. Kg",
+          "citation": "933 F.3d 1302",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2019-07-29",
+          "url": "https://www.courtlistener.com/opinion/4647094/genetic-veterinary-sciences-v-laboklin-gmbh-co-kg/",
+          "snippet": "Wallach, Circuit Judge. *1307 Appellee Genetic Veterinary Sciences, Inc., d/b/a Paw Prints Genetics (\"PPG\") sued Appellants LABOKLIN GmbH & Co. KG (\"LABOKLIN\") and the University of Bern (\"the University\") (together, \"Appellants\") in the U.S. District Court for the Eastern District"
+        },
+        {
+          "caseName": "Already, LLC v. Nike, Inc.",
+          "citation": "184 L. Ed. 2d 553, 133 S. Ct. 721, 568 U.S. 85, 2013 U.S. LEXIS 602, 105 U.S.P.Q. 2d (BNA) 1169, 23 Fla. L. Weekly Fed. S 549, 2013 WL 85300",
+          "court": "Supreme Court of the United States",
+          "dateFiled": "2013-01-09",
+          "url": "https://www.courtlistener.com/opinion/815037/already-llc-v-nike-inc/",
+          "snippet": "Chief Justice Roberts delivered the opinion of the Court. The question is whether a covenant not to enforce a trademark against a competitor’s existing products and any future “colorable imitations” moots the competitor’s action to have the trademark declared invalid. I Resp"
+        },
+        {
+          "caseName": "Halo Electronics, Inc. v. Pulse Electronics, Inc.",
+          "citation": "857 F.3d 1347, 122 U.S.P.Q. 2d (BNA) 1715, 2017 U.S. App. LEXIS 9182, 2017 WL 2294186",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2017-05-26",
+          "url": "https://www.courtlistener.com/opinion/4394865/halo-electronics-inc-v-pulse-electronics-inc/",
+          "snippet": "LOURIE, Circuit Judge. Pulse Electronics, Inc. and Pulse Electronics Corporation (together, “Pulse”) appeal from the decision of the United States District Court for the District of Nevada awarding Halo Electronics, Inc. (“Halo”) prejudgment interest. See Halo Elecs., Inc. v. Pulse E"
+        },
+        {
+          "caseName": "Halo Electronics, Inc. v. Pulse Electronics, Inc.",
+          "citation": "780 F.3d 1357, 114 U.S.P.Q. 2d (BNA) 1079, 2015 U.S. App. LEXIS 4696, 2015 WL 1283767",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2015-03-23",
+          "url": "https://www.courtlistener.com/opinion/8442143/halo-electronics-inc-v-pulse-electronics-inc/",
+          "snippet": "TARANTO, Circuit Judge, with whom REYNA, Circuit Judge, joins, concurs in the denial of the petition for rehearing en banc. O’MALLEY, Circuit Judge, with whom HUGHES, Circuit Judge, joins, dissents from the denial of the petition for rehearing en banc. ORDER PER CURIAM. A petition for rehearing en"
+        },
+        {
+          "caseName": "Halo Electronics, Inc. v. Pulse Electronics, Inc.",
+          "citation": "831 F.3d 1369, 119 U.S.P.Q. 2d (BNA) 1654, 2016 U.S. App. LEXIS 14366, 2016 WL 4151239",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2016-08-05",
+          "url": "https://www.courtlistener.com/opinion/4244939/halo-electronics-inc-v-pulse-electronics-inc/",
+          "snippet": "LOURIE, Circuit Judge. This case has returned to us on remand from the Supreme Court of the United States. In its earlier appearance in this court, Halo Electronics, Inc. (“Halo”) appealed from the decisions of the United States District Court for the District of Nevada (1) granting summar"
+        },
+        {
+          "caseName": "Halo Electronics, Inc. v. Pulse Electronics, Inc.",
+          "citation": "579 U.S. 93, 195 L. Ed. 2d 278, 2016 U.S. LEXIS 3776, 136 S. Ct. 1923, 118 U.S.P.Q. 2d (BNA) 1761",
+          "court": "Supreme Court of the United States",
+          "dateFiled": "2016-06-13",
+          "url": "https://www.courtlistener.com/opinion/3212622/halo-electronics-inc-v-pulse-electronics-inc/",
+          "snippet": "Chief Justice ROBERTS delivered the opinion of the Court. Section 284 of the Patent Act provides that, in a case of infringement, courts \"may increase the damages up to three times the amount found or assessed.\" 35 U.S.C. § 284 . In In re Seagate"
+        },
+        {
+          "caseName": "Halo Electronics, Inc. v. Pulse Electronics, Inc.",
+          "citation": "769 F.3d 1371, 112 U.S.P.Q. 2d (BNA) 1739, 2014 U.S. App. LEXIS 20241, 2014 WL 5352367",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2014-10-22",
+          "url": "https://www.courtlistener.com/opinion/2744538/halo-electronics-inc-v-pulse-electronics-inc/",
+          "snippet": "Opinion for the court filed by Circuit Judge LOURIE. Concurring opinion filed by Circuit Judge O’MALLEY, with whom Circuit Judge HUGHES joins. LOURIE, Circuit Judge. Halo Electronics, Inc. (“Halo”) appeals from the decisions of the United States District Court for the District of Nevada (1) grantin"
+        },
+        {
+          "caseName": "Halo Electronics, Inc. v. Pulse Electronics Corporation",
+          "citation": "No citation available",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2015-03-23",
+          "url": "https://www.courtlistener.com/opinion/2788496/halo-electronics-inc-v-pulse-electronics-corporati/",
+          "snippet": "United States Court of Appeals for the Federal Circuit ______________________ HALO ELECTRONICS, INC., Plaintiff-Appellant v. PULSE ELECTRONICS, INC., PULSE ELECTRONICS CORPORATION, Defe"
+        },
+        {
+          "caseName": "Halo Electronics, Inc. v. Pulse Electronics, Inc.",
+          "citation": "900 F. Supp. 2d 1160, 2012 WL 5267014, 2012 U.S. Dist. LEXIS 153334",
+          "court": "District Court, D. Nevada",
+          "dateFiled": "2012-10-25",
+          "url": "https://www.courtlistener.com/opinion/8719884/halo-electronics-inc-v-pulse-electronics-inc/",
+          "snippet": "ORDER PHILIP M. PRO, District Judge. Before the Court is Defendants Pulse Electronics, Inc. and Pulse Electronics Corporation’s (collectively “Pulse”) Motion in Limine to Preclude Certain of Plaintiffs Expert Opinions (Doc. #338), filed June 22, 2012. Plaintiff Halo Electronics, Inc. (“Halo”) fil"
+        },
+        {
+          "caseName": "Halo Electronics, Inc. v. Pulse Engineering, Inc.",
+          "citation": "810 F. Supp. 2d 1173, 2011 U.S. Dist. LEXIS 100122, 2011 WL 3915669",
+          "court": "District Court, D. Nevada",
+          "dateFiled": "2011-09-06",
+          "url": "https://www.courtlistener.com/opinion/2179068/halo-electronics-inc-v-pulse-engineering-inc/",
+          "snippet": "810 F.Supp.2d 1173 (2011) HALO ELECTRONICS, INC., Plaintiff, v. PULSE ENGINEERING, INC. and Technitrol, Inc., Defendants. No. 2:07-CV-00331-PMP-PAL. United States District Court, D. Nevada. September 6, 2011. *1180 Craig E. Countryman, Juanita R. Brooks, Lara S. Garner, Fish & Richardson P.C., San"
+        },
+        {
+          "caseName": "Halo Electronics, Inc. v. Pulse Engineering, Inc.",
+          "citation": "721 F. Supp. 2d 989, 2010 U.S. Dist. LEXIS 138770, 2010 WL 2640055",
+          "court": "District Court, D. Nevada",
+          "dateFiled": "2010-06-14",
+          "url": "https://www.courtlistener.com/opinion/2539979/halo-electronics-inc-v-pulse-engineering-inc/",
+          "snippet": "721 F.Supp.2d 989 (2010) HALO ELECTRONICS, INC., Plaintiff, v. PULSE ENGINEERING, INC. and Technitrol, Inc., Defendants. No. 2:07-CV-00331-PMP-PAL. United States District Court, D. Nevada. June 14, 2010. *992 John C. Adkisson, Michael J. Kane, William R. Woodford, Fish & Richardson P.C., Minneapoli"
+        },
+        {
+          "caseName": "Apple Inc. v. Samsung Electronics Co.",
+          "citation": "258 F. Supp. 3d 1013",
+          "court": "District Court, N.D. California",
+          "dateFiled": "2017-06-23",
+          "url": "https://www.courtlistener.com/opinion/7326041/apple-inc-v-samsung-electronics-co/",
+          "snippet": "*1017ORDER RE: WILLFULNESS AND ENHANCED DAMAGES Re: Dkt. Nos, 2186, 2191 LUCY H.' KOH, United States District Judge On May 5, 2014, after a thirteen-day trial and approximately four days of deliberation, a jury in this patent case reached a verdict, which included a finding of willful infringement'"
+        },
+        {
+          "caseName": "Apple Inc. v. Samsung Electronics Co., Ltd.",
+          "citation": "839 F.3d 1034, 120 U.S.P.Q. 2d (BNA) 1400, 2016 U.S. App. LEXIS 18225, 2016 WL 5864573",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2016-10-07",
+          "url": "https://www.courtlistener.com/opinion/4303310/apple-inc-v-samsung-electronics-co-ltd/",
+          "snippet": "Concurring in the result without opinion Circuit Judge HUGHES. Dissenting Opinion filed by Chief Judge PROST. Dissenting Opinion filed by Circuit Judge DYK. Dissenting Opinion filed by Circuit Judge REYNA. MOORE, Circuit Judge. I. Introduction The current appeal results from a patent infringement s"
+        },
+        {
+          "caseName": "Texas Advanced Optoelectronic v. Renesas Electronics America",
+          "citation": "No citation available",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2018-07-09",
+          "url": "https://www.courtlistener.com/opinion/4515151/texas-advanced-optoelectronic-v-renesas-electronics-america/",
+          "snippet": "United States Court of Appeals for the Federal Circuit ______________________ TEXAS ADVANCED OPTOELECTRONIC SOLUTIONS, INC., Plaintiff-Cross-Appellant v. RENESAS ELECTRONICS AMERICA, INC., F/K/A IN"
+        },
+        {
+          "caseName": "Trustees of Boston University v. Everlight Electronics Co.",
+          "citation": "212 F. Supp. 3d 254, 2016 WL 3976617",
+          "court": "District Court, D. Massachusetts",
+          "dateFiled": "2016-07-22",
+          "url": "https://www.courtlistener.com/opinion/7322122/trustees-of-boston-university-v-everlight-electronics-co/",
+          "snippet": "MEMORANDUM AND ORDER Saris, Chief United States District Judge INTRODUCTION The plaintiff, Trustees of Boston University (BU), seeks an award of enhanced damages pursuant to 35 U.S.C.§ 284 on the ground that the defendants, Epistar and Everlight, willfully infringed the ’738 Patent. At trial, the j"
+        },
+        {
+          "caseName": "Technology Properties Ltd. v. Samsung Electronics Co.",
+          "citation": "114 F. Supp. 3d 842",
+          "court": "District Court, N.D. California",
+          "dateFiled": "2015-07-11",
+          "url": "https://www.courtlistener.com/opinion/7314353/technology-properties-ltd-v-samsung-electronics-co/",
+          "snippet": "ORDER GRANTING-IN-PART MOTIONS TO STRIKE AND DENYING MOTIONS TO COMPEL PAUL S. GREWAL, United States Magistrate Judge In each of these two related cases, Defendants move to strike Plaintiffs’ infringement contentions1 and Plaintiffs move to compel Defendants to produce discovery arising from those"
+        },
+        {
+          "caseName": "Imperium IP Holdings (Cayman), Ltd. v. Samsung Electronics Co.",
+          "citation": "259 F. Supp. 3d 530",
+          "court": "District Court, E.D. Texas",
+          "dateFiled": "2017-04-27",
+          "url": "https://www.courtlistener.com/opinion/7326090/imperium-ip-holdings-cayman-ltd-v-samsung-electronics-co/",
+          "snippet": "MEMORANDUM OPINION AND ORDER AMOS L. MAZZANT, UNITED STATES DISTRICT JUDGE Pending before the Court is Defendants’ Rule 50(b) Motion for Judgment as a Matter of Law and/or Rule 59 Motion for a New Trial (Dkt. #337). After reviewing the relevant pleadings, the Court denies Defendants’ motion. BACKGR"
+        },
+        {
+          "caseName": "Tecsec, Inc. v. Adobe Inc.",
+          "citation": "978 F.3d 1278",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2020-10-23",
+          "url": "https://www.courtlistener.com/opinion/4799734/tecsec-inc-v-adobe-inc/",
+          "snippet": "Case: 19-2192 Document: 60 Page: 1 Filed: 10/23/2020 United States Court of Appeals for the Federal Circuit ______________________ TECSEC, INC., Plaintiff-Appellant v."
+        },
+        {
+          "caseName": "Sri International, Inc. v. Cisco Systems Inc.",
+          "citation": "No citation available",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2021-09-28",
+          "url": "https://www.courtlistener.com/opinion/5173932/sri-international-inc-v-cisco-systems-inc/",
+          "snippet": "Case: 20-1685 Document: 48 Page: 1 Filed: 09/28/2021 United States Court of Appeals for the Federal Circuit ______________________ SRI INTERNATIONAL, INC., Plaintiff-Appellant v."
+        },
+        {
+          "caseName": "Canon, Inc. v. Color Imaging, Inc.",
+          "citation": "292 F. Supp. 3d 1357",
+          "court": "District Court, N.D. Georgia",
+          "dateFiled": "2018-02-22",
+          "url": "https://www.courtlistener.com/opinion/7328686/canon-inc-v-color-imaging-inc/",
+          "snippet": "Amy Totenberg, United States District Judge *1360On June 19, 2017, the jury entered a verdict on Plaintiff's infringement claims and found that Defendants had willfully violated Plaintiff's patent rights. (Doc. 632.) Following the jury's verdict, Plaintiff filed a Motion for Enhanced Damages [Doc."
+        },
+        {
+          "caseName": "Parkervision, Inc. v. Qualcomm Incorporated",
+          "citation": "116 F.4th 1345",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2024-09-06",
+          "url": "https://www.courtlistener.com/opinion/10126963/parkervision-inc-v-qualcomm-incorporated/",
+          "snippet": "Case: 22-1755 Document: 63 Page: 1 Filed: 09/06/2024 United States Court of Appeals for the Federal Circuit ______________________ PARKERVISION, INC., Plaintiff-Appellant v. QUALCOMM INCORP"
+        },
+        {
+          "caseName": "Veracode, Inc. v. Appthority, Inc.",
+          "citation": "137 F. Supp. 3d 17, 2015 U.S. Dist. LEXIS 132919, 2015 WL 5749435",
+          "court": "District Court, D. Massachusetts",
+          "dateFiled": "2015-09-30",
+          "url": "https://www.courtlistener.com/opinion/7316159/veracode-inc-v-appthority-inc/",
+          "snippet": "MEMORANDUM AND ORDER DOUGLAS P. WOODLOCK, UNITED STATES DISTRICT JUDGE I. BACKGROUND.. .32 A. Factual Background... 32 B. Procedural History.. .33 1. Initial Complaint and Pre-Trial Proceedings.. .33 2. Jury Verdict... 34 3. Post-Trial Motions... 34 C. Applicable Standards of Review.. .35"
+        },
+        {
+          "caseName": "TC Heartland LLC v. Kraft Foods Group Brands LLC",
+          "citation": "581 U.S. 258, 197 L. Ed. 2d 816, 2017 U.S. LEXIS 3213, 137 S. Ct. 1514, 122 U.S.P.Q. 2d (BNA) 1553, 26 Fla. L. Weekly Fed. S 575, 85 U.S.L.W. 4249, 2017 WL 2216934",
+          "court": "Supreme Court of the United States",
+          "dateFiled": "2017-05-22",
+          "url": "https://www.courtlistener.com/opinion/4393431/tc-heartland-llc-v-kraft-foods-group-brands-llc/",
+          "snippet": "Justice THOMAS delivered the opinion of the Court. The question presented in this case is where proper venue lies for a patent infringement lawsuit brought against a domestic corporation. The patent venue statute, 28 U.S.C. § 1400 (b), provides that \"[a]ny"
+        },
+        {
+          "caseName": "Kraft Foods Group Brands LLC v. TC Heartland, LLC",
+          "citation": "232 F. Supp. 3d 628, 2017 WL 134702",
+          "court": "District Court, D. Delaware",
+          "dateFiled": "2017-01-12",
+          "url": "https://www.courtlistener.com/opinion/7323982/kraft-foods-group-brands-llc-v-tc-heartland-llc/",
+          "snippet": "MEMORANDUM ORDER HONORABLE LEONARD P. STARK, District Judge I am asked to stay this case, which is in an unusual procedural posture. On September 24, 2015, I adopted a Report and Recommendation (D.I. 59) (“R&R”) authored by Magistrate Judge Burke and denied Defendants TC Heartland, LLC and Heartlan"
+        },
+        {
+          "caseName": "In Re: Tc Heartland LLC",
+          "citation": "821 F.3d 1338, 118 U.S.P.Q. 2d (BNA) 1591, 2016 U.S. App. LEXIS 7753, 2016 WL 1709433",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2016-04-29",
+          "url": "https://www.courtlistener.com/opinion/3199222/in-re-tc-heartland-llc/",
+          "snippet": "ON PETITION ORDER MOORE, Circuit Judge. TC Heartland LLC (“Heartland”) petitions for a writ of mandamus to direct the United States District Court for the District of Delaware to either dismiss or transfer the patent infringement suit filed against it .by Kraft Foods Group Brands"
+        },
+        {
+          "caseName": "Focus Products Group International, LLC v. Kartri Sales Co., Inc.",
+          "citation": "No citation available",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2025-09-30",
+          "url": "https://www.courtlistener.com/opinion/10681614/focus-products-group-international-llc-v-kartri-sales-co-inc/",
+          "snippet": "Case: 23-1446 Document: 101 Page: 1 Filed: 09/30/2025 United States Court of Appeals for the Federal Circuit ______________________ FOCUS PRODUCTS GROUP INTERNATIONAL, LLC, ZAHNER DESIGN GROUP, LTD., HOOKLESS SYSTEMS OF NORTH AMERICA, INC., SURE FIT"
+        },
+        {
+          "caseName": "Andra Group, Lp v. Victoria's Secret Stores, LLC",
+          "citation": "6 F.4th 1283",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2021-08-03",
+          "url": "https://www.courtlistener.com/opinion/4904921/andra-group-lp-v-victorias-secret-stores-llc/",
+          "snippet": "Case: 20-2009 Document: 41 Page: 1 Filed: 08/03/2021 United States Court of Appeals for the Federal Circuit ______________________ ANDRA GROUP, LP, Plaintiff-Appellant v. VICTORIA'S SECRET STORES,"
+        },
+        {
+          "caseName": "Seven Networks, LLC v. Google LLC",
+          "citation": "315 F. Supp. 3d 933",
+          "court": "District Court, E.D. Texas",
+          "dateFiled": "2018-07-19",
+          "url": "https://www.courtlistener.com/opinion/7330625/seven-networks-llc-v-google-llc/",
+          "snippet": "RODNEY GILSTRAP, UNITED STATES DISTRICT JUDGE Before the Court is Google LLC's (\"Google\") Second Renewed Motion to Dismiss or, in the Alternative, Transfer under 28 U.S.C. § 1406 for Improper Venue. (Dkt. No. 125) (\"the Motion\"). Having considered the Motion, the Court is of the opinion that it sho"
+        },
+        {
+          "caseName": "Agri-Labs Holding LLC v. Taplogic, LLC",
+          "citation": "304 F. Supp. 3d 773",
+          "court": "District Court, N.D. Indiana",
+          "dateFiled": "2018-01-16",
+          "url": "https://www.courtlistener.com/opinion/7329663/agri-labs-holding-llc-v-taplogic-llc/",
+          "snippet": "THERESA L. SPRINGMANN, CHIEF JUDGE This matter comes before the Court on Motions for Summary Judgment [ECF Nos. 129, 131] filed by Defendant Taplogic, LLC, and a Motion for Summary Judgment [ECF No. 142] filed by Plaintiff Agri-Labs Holding LLC. The Defendant has moved for summary judgment on non-i"
+        },
+        {
+          "caseName": "In Re GOOGLE LLC",
+          "citation": "949 F.3d 1338",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2020-02-13",
+          "url": "https://www.courtlistener.com/opinion/4726899/in-re-google-llc/",
+          "snippet": "Case: 19-126 Document: 36 Page: 1 Filed: 02/13/2020 United States Court of Appeals for the Federal Circuit ______________________ IN RE: GOOGLE LLC, Petitioner ______________________"
+        },
+        {
+          "caseName": "Mymail, Ltd. v. Oovoo, LLC",
+          "citation": "934 F.3d 1373",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2019-08-16",
+          "url": "https://www.courtlistener.com/opinion/4648999/mymail-ltd-v-oovoo-llc/",
+          "snippet": "Opinion dissenting filed by Circuit Judge Lourie. Reyna, Circuit Judge. MyMail, Ltd. appeals the decision of the United States District Court for the Northern District of California granting ooVoo, LLC's and IAC Search & Media, Inc.'s motions for judgment on the pleadings. Because we determine that"
+        },
+        {
+          "caseName": "Factor 2 Multimedia Systems, LLC v. Tiktok, Inc.",
+          "citation": "No citation available",
+          "court": "District Court, District of Columbia",
+          "dateFiled": "2025-06-18",
+          "url": "https://www.courtlistener.com/opinion/10613212/factor-2-multimedia-systems-llc-v-tiktok-inc/",
+          "snippet": "UNITED STATES DISTRICT COURT FOR THE DISTRICT OF COLUMBIA FACTOR2 MULTIMEDIA : SYSTEMS, LLC, : : Plaintiff,"
+        },
+        {
+          "caseName": "Arp Wave, LLC v. Salpeter",
+          "citation": "364 F. Supp. 3d 990",
+          "court": "District Court, D. Maine",
+          "dateFiled": "2019-01-31",
+          "url": "https://www.courtlistener.com/opinion/7334616/arp-wave-llc-v-salpeter/",
+          "snippet": "Patrick J. Schiltz, United States District Judge Plaintiffs ARP Wave, LLC and ARP Manufacturing, LLC (collectively \"ARPwave\")1 bring this patent-infringement action against defendants Garrett Salpeter; ARPwave Austin, LLC; Neurological Fitness and Recovery Facilities, LLC; and Neurological Fitness"
+        },
+        {
+          "caseName": "Amax, Inc. v. ACCO Brands Corp.",
+          "citation": "268 F. Supp. 3d 301",
+          "court": "District Court, D. Massachusetts",
+          "dateFiled": "2017-08-08",
+          "url": "https://www.courtlistener.com/opinion/7326830/amax-inc-v-acco-brands-corp/",
+          "snippet": "MEMORANDUM & ORDER Gorton, United States District Judge Plaintiffs Amax, Inc. (“Amax”) and Worktools, Inc. (“Worktools” and, collectively with Amax, “plaintiffs”) allege that defendant ACCO Brands Corp. (“ACCO” or “defendant”) infringed their patents and trademark. Defendant’s motion for summary ju"
+        },
+        {
+          "caseName": "Gust, Inc. v. Alphacap Ventures, LLC",
+          "citation": "905 F.3d 1321",
+          "court": "Court of Appeals for the Federal Circuit",
+          "dateFiled": "2018-09-28",
+          "url": "https://www.courtlistener.com/opinion/4539262/gust-inc-v-alphacap-ventures-llc/",
+          "snippet": "LINN, Circuit Judge. Movant Gutride Safier LLP (\"Gutride\"), a law firm representing AlphaCap Ventures, LLC (\"AlphaCap\") in the district court litigation here, appeals the award of fees under 28 U.S.C. § 1927, making Gutride jointly and severally liable for all expenses incurred by Gust, Inc. in def"
+        },
+        {
+          "caseName": "Personal Audio, LLC v. Google, Inc.",
+          "citation": "280 F. Supp. 3d 922",
+          "court": "District Court, E.D. Texas",
+          "dateFiled": "2017-12-01",
+          "url": "https://www.courtlistener.com/opinion/7327660/personal-audio-llc-v-google-inc/",
+          "snippet": "ORDER RE: GOOGLE’S MOTION TO DISMISS FOR IMPROPER VENUE Ron Clark, United States District Judge This case presents two issues underlying resolution of venue disputes under 28 U.S.C. § 1400(b): (1) placement of the burden of proof; and (2) whether venue facts are analyzed as of the date of filing or"
+        },
+        {
+          "caseName": "Genuine Enabling Tech., LLC v. Nintendo Co.",
+          "citation": "369 F. Supp. 3d 590",
+          "court": "District Court, D. Delaware",
+          "dateFiled": "2019-02-25",
+          "url": "https://www.courtlistener.com/opinion/7335018/genuine-enabling-tech-llc-v-nintendo-co/",
+          "snippet": "Goldberg, District Judge. Currently before me in this patent infringement action is a motion challenging venue in this district. Plaintiff, Genuine Enabling Technology, LLC, a Delaware limited liability company, brought this action in this district, asserting patent infringement claims against two"
+        },
+        {
+          "caseName": "Symbology Innovations, LLC v. Lego Sys., Inc.",
+          "citation": "282 F. Supp. 3d 916",
+          "court": "District Court, E.D. Virginia",
+          "dateFiled": "2017-09-28",
+          "url": "https://www.courtlistener.com/opinion/7327760/symbology-innovations-llc-v-lego-sys-inc/",
+          "snippet": "Arenda L. Wright Allen, United States District Judge In this patent infringement suit, two corporations hailing from distant states find themselves litigating in the Eastern District of Virginia. This sort of forum shopping in patent litigation has proliferated over the past thirty years. See Danie"
+        },
+        {
+          "caseName": "Regenlab U.S. LLC v. Estar Techs. Ltd.",
+          "citation": "335 F. Supp. 3d 526",
+          "court": "District Court, S.D. Illinois",
+          "dateFiled": "2018-08-15",
+          "url": "https://www.courtlistener.com/opinion/7332255/regenlab-us-llc-v-estar-techs-ltd/",
+          "snippet": "ANDREW L. CARTER, JR., United States District Judge Plaintiff RegenLab USA, LLC (\"RegenLab\") brings this action alleging patent infringement arising from the unauthorized use of its patented technology. Before this Court are Defendant Estar Technologies Ltd. (\"Estar\")'s motion to dismiss for lack o"
+        },
+        {
+          "caseName": "Cobalt Boats, LLC v. Sea Ray Boats, Inc.",
+          "citation": "254 F. Supp. 3d 836, 2017 U.S. Dist. LEXIS 90728",
+          "court": "District Court, E.D. Virginia",
+          "dateFiled": "2017-06-07",
+          "url": "https://www.courtlistener.com/opinion/7325724/cobalt-boats-llc-v-sea-ray-boats-inc/",
+          "snippet": "*837OPINION & ORDER HENRY COKE MORGAN, JR., SENIOR UNITED STATES DISTRICT JUDGE This matter is before the Court on Defendants Sea Ray Boats, Inc.’s (“Sea Ray’s”) and Brunswick Corporation’s (“Brunswick’s”), (collectively, “Defendants’ ”) Motion to Transfer Venue in View of TC Heartland (“Motion”)."
+        },
+        {
+          "caseName": "Uni-Sys., LLC v. U.S. Tennis Ass'n, Inc.",
+          "citation": "350 F. Supp. 3d 143",
+          "court": "District Court, E.D. New York",
+          "dateFiled": "2018-10-04",
+          "url": "https://www.courtlistener.com/opinion/7333358/uni-sys-llc-v-us-tennis-assn-inc/",
+          "snippet": "KIYO A. MATSUMOTO, United States District Judge *153Plaintiff Uni-Systems, LLC, a Minnesota limited liability company (\"Uni-Systems\") commenced this action on January 11, 2017 against defendants United States Tennis Association, Inc., a not-for-profit incorporated in New York (\"USTA\"); Rossetti Inc"
+        },
+        {
+          "caseName": "Auto. Body Parts Ass'n v. Ford Global Techs., LLC",
+          "citation": "293 F. Supp. 3d 690",
+          "court": "District Court, E.D. Michigan",
+          "dateFiled": "2018-02-20",
+          "url": "https://www.courtlistener.com/opinion/7328742/auto-body-parts-assn-v-ford-global-techs-llc/",
+          "snippet": "LAURIE J. MICHELSON, U.S. DISTRICT JUDGE The Automotive Body Parts Association effectively asks this Court to eliminate design patents on auto-body parts. Members of the ABPA import, make, and sell auto-body parts that are used to repair cars and trucks damaged in a collision. Ford Global Technolog"
         }
       ]
     }

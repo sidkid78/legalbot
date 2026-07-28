@@ -1,50 +1,68 @@
-// app/layout.tsx - Updated to handle simple auth
-'use client';
-
-import { useEffect, useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+// app/layout.tsx — the document shell
+import type { Metadata } from 'next';
+import { Libre_Caslon_Display, Newsreader, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
+import AuthGate from '@/components/AuthGate';
+import Masthead from '@/components/Navbar';
+import PleadingMargin from '@/components/PleadingMargin';
+import Colophon from '@/components/Colophon';
+import Toasts from '@/components/Toasts';
 
-  useEffect(() => {
-    const userData = localStorage.getItem('user');
-    const userLoggedIn = !!userData;
-    
-    setIsAuthenticated(userLoggedIn);
-    
-    // Redirect logic
-    if (!userLoggedIn && pathname !== '/login' && pathname !== '/') {
-      router.push('/login');
-    } else if (userLoggedIn && (pathname === '/login' || pathname === '/')) {
-      router.push('/dashboard');
-    }
-  }, [pathname, router]);
+const caslon = Libre_Caslon_Display({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-caslon',
+  display: 'swap',
+});
 
-  // Show loading spinner while checking auth
-  if (isAuthenticated === null) {
-    return (
-      <html lang="en">
-        <body>
-          <div className="flex justify-center items-center min-h-screen">
-            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-          </div>
-        </body>
-      </html>
-    );
-  }
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-newsreader',
+  display: 'swap',
+});
 
+const plexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-plex-mono',
+  display: 'swap',
+});
+
+export const metadata: Metadata = {
+  title: 'LawyerBot — Counsel, Drafted',
+  description:
+    'Jurisdiction-aware legal analysis, risk assessment and case-law research, set as a proper legal instrument.',
+};
+
+/**
+ * Applies the reader's chosen stock before first paint so the page never
+ * flashes the wrong one. Falls through to the OS preference when unset.
+ */
+const themeScript = `(function(){try{var t=localStorage.getItem('lb-stock');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();`;
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${caslon.variable} ${newsreader.variable} ${plexMono.variable}`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
-        {children}
+        <PleadingMargin />
+        <div className="app-shell">
+          <Masthead />
+          <main className="flex-1">
+            <AuthGate>{children}</AuthGate>
+          </main>
+          <Colophon />
+        </div>
+        <Toasts />
       </body>
     </html>
   );
