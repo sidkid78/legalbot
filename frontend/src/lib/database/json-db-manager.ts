@@ -166,8 +166,6 @@ export class JSONDatabaseManager {
       related_cases: query.relatedCases || [],
       deadline: query.deadline || null,
       billable: query.billable !== undefined ? query.billable : true,
-      max_tokens: query.maxTokens || 2048,
-      temperature: query.temperature || 0.3,
       task_id: query.taskId || null,
       status: 'pending',
       error_message: null,

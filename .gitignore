@@ -1,0 +1,31 @@
+# dependencies
+node_modules/
+
+# python
+__pycache__/
+*.py[oc]
+.venv/
+build/
+dist/
+wheels/
+*.egg-info
+
+# env files / secrets
+.env
+.env.*
+!.env.example
+*.pem
+
+# vercel / next
+.vercel
+.next/
+
+# editor / os
+.DS_Store
+Thumbs.db
+
+# scratch notes
+advice.html
+info2.md
+test.md
+yup.md

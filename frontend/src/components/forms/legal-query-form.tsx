@@ -5,10 +5,10 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Send, Calendar } from 'lucide-react';
 import toast from 'react-hot-toast';
-import { 
-  LegalDomain, 
-  JurisdictionType, 
-  LegalUrgency 
+import {
+  LegalDomain,
+  JurisdictionType,
+  LegalUrgency
 } from '@/lib/legal/types';
 
 export default function LegalQueryForm() {
@@ -28,14 +28,14 @@ export default function LegalQueryForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!content.trim()) {
       toast.error('Please enter a legal query');
       return;
     }
-    
+
     setLoading(true);
-    
+
     try {
       const response = await fetch('/api/legal-query', {
         method: 'POST',
@@ -58,13 +58,13 @@ export default function LegalQueryForm() {
           relatedCases: relatedCases ? relatedCases.split(',').map(c => c.trim()) : undefined
         }),
       });
-      
+
       const data = await response.json();
-      
+
       if (!response.ok) {
         throw new Error(data.error || 'Failed to submit query');
       }
-      
+
       toast.success('Legal query submitted successfully');
       router.push(`/dashboard/legal/${data.queryId}`);
     } catch (error) {
@@ -91,7 +91,7 @@ export default function LegalQueryForm() {
             required
           />
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
             <label htmlFor="domain" className="block text-sm font-medium text-gray-700 mb-2">
@@ -110,7 +110,7 @@ export default function LegalQueryForm() {
               ))}
             </select>
           </div>
-          
+
           <div>
             <label htmlFor="jurisdiction" className="block text-sm font-medium text-gray-700 mb-2">
               Jurisdiction
@@ -129,7 +129,7 @@ export default function LegalQueryForm() {
             </select>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
             <label htmlFor="urgency" className="block text-sm font-medium text-gray-700 mb-2">
@@ -148,7 +148,7 @@ export default function LegalQueryForm() {
               <option value={LegalUrgency.LOW}>Low (No immediate timeline)</option>
             </select>
           </div>
-          
+
           <div>
             <label htmlFor="priority" className="block text-sm font-medium text-gray-700 mb-2">
               Priority Level
@@ -167,7 +167,7 @@ export default function LegalQueryForm() {
             </select>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
             <label htmlFor="clientName" className="block text-sm font-medium text-gray-700 mb-2">
@@ -182,7 +182,7 @@ export default function LegalQueryForm() {
               onChange={(e) => setClientName(e.target.value)}
             />
           </div>
-          
+
           <div>
             <label htmlFor="matterNumber" className="block text-sm font-medium text-gray-700 mb-2">
               Matter Number
@@ -197,7 +197,7 @@ export default function LegalQueryForm() {
             />
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
             <label htmlFor="relatedCases" className="block text-sm font-medium text-gray-700 mb-2">
@@ -212,7 +212,7 @@ export default function LegalQueryForm() {
               onChange={(e) => setRelatedCases(e.target.value)}
             />
           </div>
-          
+
           <div>
             <label htmlFor="deadline" className="block text-sm font-medium text-gray-700 mb-2">
               Deadline (if applicable)
@@ -230,7 +230,7 @@ export default function LegalQueryForm() {
             </div>
           </div>
         </div>
-        
+
         <div className="flex items-center gap-6 mb-6">
           <div className="flex items-center">
             <input
@@ -244,7 +244,7 @@ export default function LegalQueryForm() {
               Requires legal research
             </label>
           </div>
-          
+
           <div className="flex items-center">
             <input
               type="checkbox"
@@ -258,7 +258,7 @@ export default function LegalQueryForm() {
             </label>
           </div>
         </div>
-        
+
         <div className="flex justify-end">
           <button
             type="submit"

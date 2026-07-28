@@ -1,6 +1,10 @@
-import { GoogleGenAI, SafetySetting, FunctionCall, GenerateContentConfig } from '@google/genai';
+import { GoogleGenAI, SafetySetting, FunctionCall, GenerateContentConfig, Content, Part } from '@google/genai';
 import { LegalQuery } from './types';
 import { getCaseLawService, caseLawSearchFunction } from './caselaw-service';
+
+// The model may search several times before answering; this bounds the loop so a
+// model that keeps requesting searches cannot spin forever.
+const MAX_FUNCTION_CALL_ROUNDS = 5;
 
 export class LegalGoogleGenAIClient {
   private client: GoogleGenAI;
@@ -9,10 +13,10 @@ export class LegalGoogleGenAIClient {
 
   constructor(
     apiKey?: string,
-    modelName: string = 'gemini-2.5-flash'
+    modelName: string = 'gemini-3.6-flash'
   ) {
     const key = apiKey || process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
-    
+
     if (!key) {
       throw new Error('Google GenAI API key is required.');
     }
@@ -21,9 +25,21 @@ export class LegalGoogleGenAIClient {
     this.client = new GoogleGenAI({
       apiKey: key
     });
-    
+
     this.modelName = modelName;
     this.caseLawService = getCaseLawService(process.env.COURTLISTENER_API_KEY);
+  }
+
+  /**
+   * ✅ NEW: Verify citations in the analysis text
+   */
+  private verifyCitations(analysisText: string): string[] {
+    // Volume + reporter + page, e.g. 70 N.Y.2d 76 / 3 Cal.App.5th 655 / 814 F. Supp. 337.
+    // Reporters carry digits and spaces, and the model wraps citations in markdown
+    // emphasis, so both have to be accounted for or nothing matches.
+    const citationPattern = /\b\d+\s+[A-Z][A-Za-z.]*(?:\s[A-Z][A-Za-z.]*)*(?:\s?\d+(?:d|th|st|nd|rd))?\s+\d+\b/g;
+    const citations = analysisText.replace(/[*`_]+/g, '').match(citationPattern) || [];
+    return [...new Set(citations)]; // Deduplicate
   }
 
   /**
@@ -61,14 +77,15 @@ export class LegalGoogleGenAIClient {
   async generateContent(
     prompt: string,
     systemInstruction?: string,
-    temperature: number = 0.3,
-    maxOutputTokens: number = 8196,
-    enableCaseLawSearch: boolean = true  // ✅ Option to enable/disable function calling
+    enableCaseLawSearch: boolean = true,  // ✅ Option to enable/disable function calling
+    documents?: { uri: string; mimeType: string; name: string }[] // ✅ Added documents support
   ) {
     try {
+      // No temperature: Gemini 3.x is tuned for its default of 1.0, and lowering
+      // it risks looping and degraded reasoning.
+      // No maxOutputTokens: thinking is drawn from the same budget, so any cap
+      // truncates the analysis mid-sentence. Legal advice must never be cut off.
       const config: GenerateContentConfig = {
-        temperature,
-        maxOutputTokens,
         candidateCount: 1,
         safetySettings: [
           {
@@ -81,6 +98,13 @@ export class LegalGoogleGenAIClient {
           }
         ] as SafetySetting[]
       };
+
+      if (systemInstruction) {
+        config.systemInstruction = {
+          role: 'system',
+          parts: [{ text: systemInstruction }]
+        };
+      }
 
       // ✅ Add function calling if enabled
       if (enableCaseLawSearch) {
@@ -95,13 +119,28 @@ export class LegalGoogleGenAIClient {
         // };
       }
 
+      // Build initial parts with text prompt
+      const initialParts: Part[] = [{ text: prompt }];
+
+      // ✅ Add documents if any exist
+      if (documents && documents.length > 0) {
+        documents.forEach(doc => {
+          initialParts.push({
+            fileData: {
+              fileUri: doc.uri,
+              mimeType: doc.mimeType
+            }
+          });
+        });
+      }
+
       // ✅ First request to the model
       let response = await this.client.models.generateContent({
         model: this.modelName,
         contents: [{
           role: 'user',
-          parts: [{ text: prompt }]
-        }],
+          parts: initialParts
+        }] as Content[],
         config: config
       });
 
@@ -194,6 +233,7 @@ export class LegalGoogleGenAIClient {
       snippet?: string;
       relevanceScore?: number;
     }>;
+    verifiedCitations?: string[];
   }> {
     const userContent = `
 **Legal Context:**
@@ -233,12 +273,17 @@ When you need to cite specific cases, use the search_case_law function to find r
       snippet?: string;
       relevanceScore?: number;
     }> = [];
-    
+
     // ✅ Custom generate content to capture function calls
+    // No temperature: Gemini 3.x is tuned for its default of 1.0, and lowering it
+    // risks looping and degraded reasoning.
+    // No maxOutputTokens: thinking is drawn from the same budget, so any cap
+    // truncates the analysis mid-sentence. Legal advice must never be cut off.
     const config = {
-      temperature: query.temperature || 0.3,
-      maxOutputTokens: query.maxTokens || 8196,
       candidateCount: 1,
+      thinkingConfig: {
+        includeThoughts: true
+      },
       safetySettings: [
         {
           category: 'HARM_CATEGORY_HATE_SPEECH',
@@ -254,18 +299,40 @@ When you need to cite specific cases, use the search_case_law function to find r
       }] : undefined
     };
 
+    // Conversation history, accumulated across rounds. The model's own parts are
+    // passed back verbatim so Gemini 3 thought signatures survive the round trip.
+    const initialParts: Part[] = [{ text: userContent }];
+
+    if (query.documents && query.documents.length > 0) {
+      query.documents.forEach(doc => {
+        initialParts.push({
+          fileData: {
+            fileUri: doc.uri,
+            mimeType: doc.mimeType
+          }
+        });
+      });
+    }
+
+    const contents: Content[] = [{
+      role: 'user',
+      parts: initialParts
+    }];
+
     let response = await this.client.models.generateContent({
       model: this.modelName,
-      contents: [{
-        role: 'user',
-        parts: [{ text: userContent }]
-      }],
+      contents: contents,
       config: config
     });
 
-    // ✅ Handle function calls and capture metadata
-    if (response.functionCalls && response.functionCalls.length > 0) {
-      console.log('Model requested function calls:', response.functionCalls);
+    // ✅ Handle function calls and capture metadata.
+    // The model routinely searches more than once before it answers, so keep
+    // feeding results back until it stops asking. Handling only a single round
+    // leaves response.text empty whenever it wants a follow-up search.
+    let rounds = 0;
+    while (response.functionCalls && response.functionCalls.length > 0 && rounds < MAX_FUNCTION_CALL_ROUNDS) {
+      rounds++;
+      console.log(`Model requested function calls (round ${rounds}):`, response.functionCalls);
 
       // Execute all function calls and capture results
       const functionResponses = await Promise.all(
@@ -324,7 +391,7 @@ When you need to cite specific cases, use the search_case_law function to find r
             // Return formatted results for AI
             return {
               name: fc.name,
-              response: { 
+              response: {
                 result: this.caseLawService.formatResultsForAI(searchResults)
               }
             };
@@ -334,14 +401,14 @@ When you need to cite specific cases, use the search_case_law function to find r
               success: false,
               error: error instanceof Error ? error.message : 'Unknown error'
             };
-            
+
             // Filter out undefined values from args
             const cleanArgs = Object.fromEntries(
               Object.entries(fc.args || {}).filter(([, v]) => v !== undefined)
             ) as Record<string, string | number | boolean>;
-            
+
             functionCalls.push({
-              name: fc.name || 'unknown_function',  
+              name: fc.name || 'unknown_function',
               args: cleanArgs,
               result: errorResult
             });
@@ -353,46 +420,73 @@ When you need to cite specific cases, use the search_case_law function to find r
         })
       );
 
-      // ✅ Send function results back to model
-      const contents = [
-        {
-          role: 'user',
-          parts: [{ text: userContent }]
-        },
-        {
-          role: 'model',
-          parts: response.functionCalls.map(fc => ({
-            functionCall: {
-              name: fc.name,
-              args: fc.args
-            }
-          }))
-        },
-        {
-          role: 'user',
-          parts: functionResponses.map(fr => ({
-            functionResponse: fr
-          }))
-        }
-      ];
+      // ✅ Append this round to the history, then ask the model again
+      contents.push({
+        role: 'model',
+        parts: response.candidates?.[0]?.content?.parts || []
+      });
+      contents.push({
+        role: 'user',
+        parts: functionResponses.map(fr => ({
+          functionResponse: fr
+        }))
+      });
 
-      // ✅ Get final response from model
       response = await this.client.models.generateContent({
         model: this.modelName,
         contents: contents,
         config: config
       });
     }
-    
+
+    // If we ran out of rounds while the model still wanted to search, it has not
+    // written an answer yet and response.text would be empty. Ask once more with
+    // the tools withheld so it must produce the analysis from what it already has.
+    if (rounds >= MAX_FUNCTION_CALL_ROUNDS && response.functionCalls && response.functionCalls.length > 0) {
+      console.warn(
+        `Stopped after ${MAX_FUNCTION_CALL_ROUNDS} function-calling rounds while the model was ` +
+        `still requesting searches; forcing a final answer from the results gathered so far.`
+      );
+
+      contents.push({
+        role: 'model',
+        parts: response.candidates?.[0]?.content?.parts || []
+      });
+      contents.push({
+        role: 'user',
+        parts: [{ text: 'Stop searching and provide your complete legal analysis now, using the case law already retrieved.' }]
+      });
+
+      response = await this.client.models.generateContent({
+        model: this.modelName,
+        contents: contents,
+        config: { ...config, tools: undefined }
+      });
+    }
+
     const processingTime = (new Date().getTime() - startTime.getTime()) / 1000;
+    const content = response.text || '';
+    const verifiedCitations = this.verifyCitations(content);
+
+    // No token cap is sent, so this should not fire; it remains as a guard against
+    // hitting the model's own limits. Partial legal advice must never be passed
+    // off as a complete analysis.
+    if (response.candidates?.[0]?.finishReason === 'MAX_TOKENS') {
+      console.warn(
+        `[${this.modelName}] Response TRUNCATED (finishReason=MAX_TOKENS, ` +
+        `${response.usageMetadata?.thoughtsTokenCount ?? 0} tokens went to thinking). ` +
+        `The analysis is cut off and must not be treated as complete.`
+      );
+    }
 
     return {
-      content: response.text || '',
+      content,
       model: this.modelName,
       processingTime,
       tokenCount: response.usageMetadata?.totalTokenCount || 0,
       functionCalls: functionCalls.length > 0 ? functionCalls : undefined,
-      caseLawResults: allCaseLawResults.length > 0 ? allCaseLawResults : undefined
+      caseLawResults: allCaseLawResults.length > 0 ? allCaseLawResults : undefined,
+      verifiedCitations
     };
   }
 
@@ -462,10 +556,12 @@ Respond ONLY with a JSON object in this exact format:
 }`;
 
     try {
-      const response = await this.generateContent(analysisPrompt, undefined, 0.1, 1000);
-      
+      // Case law search is off: this is a pure JSON classification, and a tool
+      // call here would leave the response text empty and break the JSON parse.
+      const response = await this.generateContent(analysisPrompt, undefined, false);
+
       const analysisText = response.text;
-      
+
       if (!analysisText) {
         throw new Error('No analysis response from Gemini');
       }
@@ -477,13 +573,13 @@ Respond ONLY with a JSON object in this exact format:
           .replace(/```json\s*/g, '')
           .replace(/```\s*/g, '')
           .trim();
-        
+
         const analysis = JSON.parse(cleanedText);
-        
+
         if (!analysis.domain || !analysis.jurisdiction || !analysis.urgency) {
           throw new Error('Invalid analysis response structure');
         }
-        
+
         return {
           domain: analysis.domain,
           jurisdiction: analysis.jurisdiction,
@@ -499,15 +595,15 @@ Respond ONLY with a JSON object in this exact format:
             urgency: 'Analysis completed'
           }
         };
-        
+
       } catch (parseError) {
         console.error('Failed to parse Gemini analysis response:', parseError);
         console.error('Raw response:', analysisText);
-        
+
         const domainMatch = analysisText.match(/"domain":\s*"([^"]+)"/);
         const jurisdictionMatch = analysisText.match(/"jurisdiction":\s*"([^"]+)"/);
         const urgencyMatch = analysisText.match(/"urgency":\s*"([^"]+)"/);
-        
+
         if (domainMatch && jurisdictionMatch && urgencyMatch) {
           return {
             domain: domainMatch[1],
@@ -525,7 +621,7 @@ Respond ONLY with a JSON object in this exact format:
             }
           };
         }
-        
+
         return {
           domain: 'contract_law',
           jurisdiction: 'federal',
@@ -542,7 +638,7 @@ Respond ONLY with a JSON object in this exact format:
           }
         };
       }
-      
+
     } catch (error) {
       console.error('Error analyzing legal query with Gemini:', error);
       throw error;
@@ -550,291 +646,13 @@ Respond ONLY with a JSON object in this exact format:
   }
 }
 
-// Old commented code below - keeping for reference
-//   async analyzeLegalQuery(content: string): Promise<{
-//     domain: string;
-//     jurisdiction: string;
-//     urgency: string;
-//     confidence: {
-//       domain: number;
-//       jurisdiction: number;
-//       urgency: number;
-//     };
-//     reasoning: {
-//       domain: string;
-//       jurisdiction: string;
-//       urgency: string;
-//     };
-//   }> {
-//     const analysisPrompt = `You are a legal AI assistant. Analyze the following legal query and determine:
-
-// 1. Legal Domain (choose ONE that best fits):
-//    - contract_law
-//    - corporate_law  
-//    - litigation
-//    - ip_law (intellectual property)
-//    - employment_law
-//    - real_estate_law
-//    - tax_law
-//    - regulatory_compliance
-//    - family_law
-
-// 2. Jurisdiction (choose ONE that best fits):
-//    - federal
-//    - state
-//    - international
-//    - administrative
-
-// 3. Urgency Level (choose ONE that best fits):
-//    - emergency (immediate action required)
-//    - urgent (24-48 hours)
-//    - high (within a week)
-//    - medium (within a month)
-//    - low (no immediate timeline)
-
-// 4. Confidence scores (0.0 to 1.0) for each classification.
-
-// Query to analyze: "${content}"
-
-// Respond ONLY with a JSON object in this exact format:
-// {
-//   "domain": "contract_law",
-//   "jurisdiction": "federal", 
-//   "urgency": "medium",
-//   "confidence": {
-//     "domain": 0.85,
-//     "jurisdiction": 0.70,
-//     "urgency": 0.90
-//   },
-//   "reasoning": {
-//     "domain": "Brief explanation why this domain was chosen",
-//     "jurisdiction": "Brief explanation why this jurisdiction was chosen", 
-//     "urgency": "Brief explanation why this urgency level was chosen"
-//   }
-// }`;
-
-//     try {
-//       const response = await this.generateContent(analysisPrompt, undefined, 0.1, 1000);
-      
-//       // Extract text from response using the official SDK
-//       const analysisText = response.text;
-      
-//       if (!analysisText) {
-//         throw new Error('No analysis response from Google GenAI');
-//       }
-
-//       console.log('Raw Google GenAI analysis response:', analysisText);
-
-//       // Parse the JSON response
-//       try {
-//         // Clean the response text (remove markdown formatting if present)
-//         const cleanedText = analysisText
-//           .replace(/```json\s*/g, '')
-//           .replace(/```\s*/g, '')
-//           .trim();
-        
-//         const analysis = JSON.parse(cleanedText);
-        
-//         // Validate the response structure
-//         if (!analysis.domain || !analysis.jurisdiction || !analysis.urgency) {
-//           throw new Error('Invalid analysis response structure');
-//         }
-        
-//         return {
-//           domain: analysis.domain,
-//           jurisdiction: analysis.jurisdiction,
-//           urgency: analysis.urgency,
-//           confidence: analysis.confidence || {
-//             domain: 0.8,
-//             jurisdiction: 0.7,
-//             urgency: 0.8
-//           },
-//           reasoning: analysis.reasoning || {
-//             domain: 'Analysis completed',
-//             jurisdiction: 'Analysis completed',
-//             urgency: 'Analysis completed'
-//           }
-//         };
-        
-//       } catch (parseError) {
-//         console.error('Failed to parse Google GenAI analysis response:', parseError);
-//         console.error('Raw response:', analysisText);
-        
-//         // Fallback: try to extract values using regex
-//         const domainMatch = analysisText.match(/"domain":\s*"([^"]+)"/);
-//         const jurisdictionMatch = analysisText.match(/"jurisdiction":\s*"([^"]+)"/);
-//         const urgencyMatch = analysisText.match(/"urgency":\s*"([^"]+)"/);
-        
-//         if (domainMatch && jurisdictionMatch && urgencyMatch) {
-//           return {
-//             domain: domainMatch[1],
-//             jurisdiction: jurisdictionMatch[1],
-//             urgency: urgencyMatch[1],
-//             confidence: {
-//               domain: 0.7,
-//               jurisdiction: 0.6,
-//               urgency: 0.7
-//             },
-//             reasoning: {
-//               domain: 'Extracted from response',
-//               jurisdiction: 'Extracted from response',
-//               urgency: 'Extracted from response'
-//             }
-//           };
-//         }
-        
-//         // Ultimate fallback
-//         return {
-//           domain: 'contract_law',
-//           jurisdiction: 'federal',
-//           urgency: 'medium',
-//           confidence: {
-//             domain: 0.5,
-//             jurisdiction: 0.5,
-//             urgency: 0.5
-//           },
-//           reasoning: {
-//             domain: 'Default fallback',
-//             jurisdiction: 'Default fallback',
-//             urgency: 'Default fallback'
-//           }
-//         };
-//       }
-      
-//     } catch (error) {
-//       console.error('Error analyzing legal query with Google GenAI:', error);
-//       throw error;
-//     }
-//   }
-
-//   /**
-//    * Process legal query with comprehensive analysis
-//    */
-//   async processLegalQuery(query: LegalQuery): Promise<{
-//     content: string;
-//     model: string;
-//     processingTime: number;
-//     tokenCount: number;
-//   }> {
-//     console.log(`Processing legal query (Task ID: ${query.taskId || 'N/A'})`);
-
-//     try {
-//       const systemInstruction = `You are an expert legal AI assistant. Analyze the provided query within its context (domain, jurisdiction, urgency). 
-
-// Format your response using clear markdown with proper headers, lists, and emphasis. Provide a comprehensive response covering:
-
-// # Legal Analysis
-
-// ## 1. Jurisdictional Analysis
-// Key requirements, deadlines, and considerations for the specified jurisdiction.
-
-// ## 2. Applicable Law
-// Identify relevant statutes, regulations, and common law principles with proper citations.
-
-// ## 3. Precedent Review
-// Mention significant relevant case law (if applicable and research is enabled).
-
-// ## 4. Risk Assessment
-// Evaluate potential legal risks and their severity levels.
-
-// ## 5. Legal Recommendations
-// Offer actionable advice based on the analysis with specific steps.
-
-// ## 6. Next Steps
-// Outline concrete steps for the legal team or client with timelines.
-
-// ## 7. Timeline Considerations
-// Consider urgency and deadlines based on the specified urgency level.
-
-// Use proper markdown formatting:
-// - **Bold** for important terms and concepts
-// - *Italics* for case names and legal terms
-// - Numbered lists for sequential steps
-// - Bullet points for key considerations
-// - > Blockquotes for important legal principles
-
-// Include specific citations (e.g., case names, statute numbers). Maintain confidentiality.`;
-
-//       const userContent = `
-// **Legal Context:**
-// - Task ID: ${query.taskId || 'N/A'}
-// - Domain: ${query.domain}
-// - Jurisdiction: ${query.jurisdiction}
-// - Urgency: ${query.urgency} (${query.priority}/5 priority)
-// - Client: ${query.clientInfo.name} (Matter: ${query.clientInfo.matterNumber})
-// - Related Cases: ${query.relatedCases ? query.relatedCases.join(', ') : 'None'}
-// - Deadline: ${query.deadline || 'N/A'}
-// - Research Required: ${query.requiresResearch}
-
-// **Legal Query:**
-// ${query.content}
-
-// **Instructions:** Provide a detailed legal analysis based on the context and query above. Structure the response clearly according to the sections outlined in the system prompt. Ensure all recommendations are practical and legally sound for the specified jurisdiction.
-// `;
-
-//       const startTime = new Date();
-//       const response = await this.generateContent(
-//         userContent,
-//         systemInstruction,
-//         query.temperature || 0.3,
-//         query.maxTokens || 2048
-//       );
-//       const processingTime = (new Date().getTime() - startTime.getTime()) / 1000;
-
-//       // Extract content and usage metadata using the official SDK
-//       const content = response.text;
-//       const usageMetadata = response.usageMetadata;
-
-//       if (!content) {
-//         throw new Error('No content generated by Google GenAI');
-//       }
-
-//       return {
-//         content,
-//         model: this.modelName,
-//         processingTime,
-//         tokenCount: usageMetadata?.totalTokenCount || 0
-//       };
-      
-//     } catch (error) {
-//       console.error('Error processing legal query with Google GenAI:', error);
-      
-//       // Fallback response for testing purposes
-//       return {
-//         content: `# Fallback Legal Response
-
-// This is a fallback response due to an issue with the Google GenAI API. The API key may be invalid, or there might be a network issue.
-
-// ## Applicable Law
-// N/A - Unable to access legal database due to technical issues.
-
-// ## Risk Assessment
-// MODERATE - Technical issues prevent full risk assessment.
-
-// ## Recommendations
-// 1. Please check your GEMINI_API_KEY environment variable.
-// 2. Verify that your API key is valid and has access to the Google GenAI API.
-// 3. If you've just created the API key, wait a few minutes and try again.
-
-// ## Technical Details
-// - Error: ${error instanceof Error ? error.message : 'Unknown error'}
-// - Query content: ${query.content.substring(0, 100)}...
-// `,
-//         model: "fallback-model",
-//         processingTime: 0.1,
-//         tokenCount: 150
-//       };
-//     }
-//   }
-// }
-
 // Singleton instance
 let legalGoogleGenAIClient: LegalGoogleGenAIClient | null = null;
 
 export function getLegalGoogleGenAIClient(): LegalGoogleGenAIClient {
   if (!legalGoogleGenAIClient) {
     const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
-    const modelName = process.env.GEMINI_MODEL_NAME || 'gemini-2.5-flash';
+    const modelName = process.env.GEMINI_MODEL_NAME || 'gemini-3.5-flash';
 
     console.log(`Creating Legal Google GenAI client with model: ${modelName}`);
 

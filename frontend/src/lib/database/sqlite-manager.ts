@@ -194,10 +194,10 @@ export class SQLiteManager {
       INSERT INTO legal_queries (
         id, user_id, content, domain, jurisdiction, urgency, priority,
         requires_research, client_info, related_cases, deadline, billable,
-        max_tokens, temperature, task_id, status
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        task_id, status
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
-    
+
     stmt.run(
       id,
       query.userId || null,
@@ -211,8 +211,6 @@ export class SQLiteManager {
       JSON.stringify(query.relatedCases || []),
       query.deadline || null,
       query.billable ? 1 : 0,
-      query.maxTokens || 2048,
-      query.temperature || 0.3,
       query.taskId || null,
       'pending'
     );

@@ -40,9 +40,9 @@ function StatCard({ title, value, icon, gradient, trend }: {
 function QueryListItem({ 
   query, 
   response 
-}: { 
-  query: unknown; 
-  response?: unknown;
+}: {
+  query: LegalQuery;
+  response?: LegalResponse | null;
 }) {
   // Format date
   const formattedDate = (dateStr: string) => {
@@ -57,7 +57,7 @@ function QueryListItem({
   let statusIcon;
   if (!response) {
     statusIcon = <Clock className="h-5 w-5 text-blue-500" />;
-  } else if ((response as LegalResponse).riskLevel === RiskLevel.CRITICAL || (response as LegalResponse).riskLevel === RiskLevel.HIGH) {
+  } else if (response.riskLevel === RiskLevel.CRITICAL || response.riskLevel === RiskLevel.HIGH) {
     statusIcon = <AlertTriangle className="h-5 w-5 text-orange-500" />;
   } else {
     statusIcon = <CheckCircle className="h-5 w-5 text-green-500" />;
@@ -96,7 +96,7 @@ function QueryListItem({
   
   const getRiskBorder = () => {
     if (!response) return 'border-blue-400';
-    const riskLevel = (response as LegalResponse).riskLevel;
+    const riskLevel = response.riskLevel;
     if (riskLevel === RiskLevel.CRITICAL) return 'border-red-500';
     if (riskLevel === RiskLevel.HIGH) return 'border-orange-500';
     if (riskLevel === RiskLevel.MODERATE) return 'border-yellow-500';
@@ -108,30 +108,30 @@ function QueryListItem({
       <div className="flex justify-between items-start gap-4">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-3">
-            <span className={`badge ${getUrgencyClassModern((query as LegalQuery).urgency)}`}>
-              {(query as LegalQuery).urgency.toUpperCase()}
+            <span className={`badge ${getUrgencyClassModern(query.urgency)}`}>
+              {query.urgency.toUpperCase()}
             </span>
             <span className="badge bg-purple-100 text-purple-700 capitalize">
-              {(query as LegalQuery).domain.replace(/_/g, ' ')}
+              {query.domain.replace(/_/g, ' ')}
             </span>
           </div>
           <p className="font-semibold text-gray-800 mb-2 line-clamp-2">
-            {(query as LegalQuery).content.length > 120 
-              ? `${(query as LegalQuery).content.substring(0, 120)}...` 
-              : (query as LegalQuery).content}
+            {query.content.length > 120 
+              ? `${query.content.substring(0, 120)}...` 
+              : query.content}
           </p>
           <div className="flex items-center gap-3 text-sm text-gray-500">
             <span className="flex items-center gap-1">
               <Clock className="h-3 w-3" />
-              {formattedDate((query as LegalQuery).timestamp)}
+              {formattedDate(query.timestamp)}
             </span>
-            {response && (response as LegalResponse).riskLevel && (
+            {response && response.riskLevel && (
               <span className={`badge text-xs ${
-                (response as LegalResponse).riskLevel === RiskLevel.CRITICAL || 
-                (response as LegalResponse).riskLevel === RiskLevel.HIGH
+                response.riskLevel === RiskLevel.CRITICAL || 
+                response.riskLevel === RiskLevel.HIGH
                   ? 'risk-high' : 'risk-low'
               }`}>
-                {((response as LegalResponse).riskLevel as string).toUpperCase()}
+                {(response.riskLevel as string).toUpperCase()}
               </span>
             )}
           </div>

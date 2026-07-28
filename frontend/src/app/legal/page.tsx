@@ -15,8 +15,6 @@ interface LegalQuery {
     name: string;
     matterNumber: string;
   };
-  temperature: number;
-  maxTokens: number;
 }
 
 interface CaseLawResult {
@@ -66,14 +64,14 @@ export default function SimpleLegalPage() {
     clientInfo: {
       name: 'Test Client',
       matterNumber: 'M-' + Date.now()
-    },
-    temperature: 0.3,
-    maxTokens: 2048
+    }
   });
 
+  const [files, setFiles] = useState<File[]>([]);
   const [response, setResponse] = useState<AnalysisResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [analyzing, setAnalyzing] = useState(false);
+  const [uploading, setUploading] = useState(false);
   const [error, setError] = useState<string>('');
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -107,12 +105,35 @@ export default function SimpleLegalPage() {
       
       setAnalyzing(false);
       
-      // Update query with detected parameters
+      // Upload documents if any
+      const uploadedDocs = [];
+      if (files.length > 0) {
+        setUploading(true);
+        for (const file of files) {
+          const formData = new FormData();
+          formData.append('file', file);
+          
+          const uploadRes = await fetch('/api/upload-doc', {
+            method: 'POST',
+            body: formData,
+          });
+          
+          const uploadData = await uploadRes.json();
+          if (!uploadRes.ok) {
+            throw new Error(uploadData.error || `Failed to upload ${file.name}`);
+          }
+          uploadedDocs.push(uploadData.document);
+        }
+        setUploading(false);
+      }
+      
+      // Update query with detected parameters and documents
       const enhancedQuery = {
         ...query,
         domain: analysisData.domain,
         jurisdiction: analysisData.jurisdiction,
-        urgency: analysisData.urgency
+        urgency: analysisData.urgency,
+        documents: uploadedDocs.length > 0 ? uploadedDocs : undefined
       };
       
       // Now process the full legal query with the detected parameters
@@ -151,6 +172,7 @@ export default function SimpleLegalPage() {
     } finally {
       setLoading(false);
       setAnalyzing(false);
+      setUploading(false);
     }
   };
 
@@ -194,6 +216,26 @@ Try more examples:
               <p className="text-xs text-gray-500 mt-2">
                 💡 Include details like: what type of legal issue, location/jurisdiction, timeline, and any specific concerns
               </p>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Attach Documents (Optional)
+              </label>
+              <input
+                type="file"
+                multiple
+                accept=".pdf,.txt,.docx"
+                onChange={(e) => setFiles(Array.from(e.target.files || []))}
+                className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
+              />
+              {files.length > 0 && (
+                <ul className="mt-2 text-sm text-gray-600">
+                  {files.map((file, i) => (
+                    <li key={i}>📄 {file.name} ({(file.size / 1024).toFixed(1)} KB)</li>
+                  ))}
+                </ul>
+              )}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -240,20 +282,23 @@ Try more examples:
 
             <button
               type="submit"
-              disabled={loading || analyzing}
+              disabled={loading || analyzing || uploading}
               className="btn-primary w-full py-4 px-6 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {analyzing ? '🧠 Analyzing Query...' : 
+              {uploading ? '📤 Uploading Documents...' :
+               analyzing ? '🧠 Analyzing Query...' : 
                loading ? '⚖️ Generating Legal Analysis...' : 
                '🚀 Get Smart Legal Analysis'}
             </button>
             
-            {(analyzing || loading) && (
+            {(analyzing || loading || uploading) && (
               <div className="bg-blue-50 border border-blue-200 rounded-md p-4">
                 <div className="flex items-center space-x-3">
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
                   <p className="text-blue-800 text-sm">
-                    {analyzing ? 
+                    {uploading ?
+                      '📤 Uploading your documents to Gemini...' :
+                     analyzing ? 
                       '🔍 Gemini is analyzing your query to detect legal domain, jurisdiction, and urgency...' :
                       '📝 Generating comprehensive legal analysis with recommendations...'
                     }
