@@ -152,7 +152,18 @@ export function formatDate(dateStr?: string) {
     .toUpperCase();
 }
 
+/** Words that should stay fully capitalised — "ip_law" is IP Law, not Ip Law. */
+const ACRONYMS = new Set(['ip', 'sec', 'llc', 'irs', 'nda', 'eu', 'us']);
+
 export function titleCase(value?: string) {
   if (!value) return 'Unspecified';
-  return value.replace(/_/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
+  return value
+    .replace(/_/g, ' ')
+    .split(' ')
+    .map((word) =>
+      ACRONYMS.has(word.toLowerCase())
+        ? word.toUpperCase()
+        : word.replace(/^\w/, (l) => l.toUpperCase())
+    )
+    .join(' ');
 }
