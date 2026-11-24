@@ -1,4 +1,4 @@
-import { GoogleGenAI, SafetySetting, FunctionCall, GenerateContentConfig, Content, Part } from '@google/genai';
+import { GoogleGenAI, ApiError, SafetySetting, FunctionCall, GenerateContentConfig, GenerateContentParameters, GenerateContentResponse, Content, Part } from '@google/genai';
 import { LegalQuery } from './types';
 import { getCaseLawService, caseLawSearchFunction } from './caselaw-service';
 
@@ -6,14 +6,35 @@ import { getCaseLawService, caseLawSearchFunction } from './caselaw-service';
 // model that keeps requesting searches cannot spin forever.
 const MAX_FUNCTION_CALL_ROUNDS = 5;
 
+// Transient upstream failures ("model is experiencing high demand" is a 503).
+// These are retried with backoff, then the request falls back to another model.
+const RETRYABLE_STATUSES = new Set([429, 500, 503, 504]);
+const RETRY_DELAYS_MS = [1000, 3000];
+// A different model has separate capacity, so it is usually up when the primary is overloaded.
+const DEFAULT_FALLBACK_MODEL = 'gemini-3.8-flash';
+
+// The model serving one request. Set by its first successful call and then held
+// for the rest of that request: thought signatures and model turns in the
+// history belong to that model and must not be replayed to a different one.
+type ModelPin = { model?: string };
+
+function isRetryable(error: unknown): boolean {
+  if (error instanceof ApiError) return RETRYABLE_STATUSES.has(error.status);
+  const message = error instanceof Error ? error.message : String(error);
+  return /(429|500|503|504)|UNAVAILABLE|RESOURCE_EXHAUSTED|high demand|overloaded/i.test(message);
+}
+
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
 export class LegalGoogleGenAIClient {
   private client: GoogleGenAI;
   private modelName: string;
+  private fallbackModelName: string;
   private caseLawService;
 
   constructor(
     apiKey?: string,
-    modelName: string = 'gemini-3.8-flash'
+    modelName: string = 'gemini-4-hydrogen'
   ) {
     const key = apiKey || process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
 
@@ -27,7 +48,44 @@ export class LegalGoogleGenAIClient {
     });
 
     this.modelName = modelName;
+    this.fallbackModelName = process.env.GEMINI_FALLBACK_MODEL || DEFAULT_FALLBACK_MODEL;
     this.caseLawService = getCaseLawService(process.env.COURTLISTENER_API_KEY);
+  }
+
+  /**
+   * Call the model, retrying transient failures (overload, rate limit) with
+   * backoff, then trying the fallback model once the primary keeps failing.
+   * Only the first call of a request may fall back; later calls stay on the
+   * pinned model. Non-transient errors (bad request, auth) are thrown immediately.
+   */
+  private async callModel(
+    pin: ModelPin,
+    params: Omit<GenerateContentParameters, 'model'>
+  ): Promise<GenerateContentResponse> {
+    const models = pin.model ? [pin.model] : [this.modelName];
+    if (!pin.model && this.fallbackModelName && this.fallbackModelName !== this.modelName) {
+      models.push(this.fallbackModelName);
+    }
+
+    let lastError: unknown;
+    for (const model of models) {
+      for (let attempt = 0; attempt <= RETRY_DELAYS_MS.length; attempt++) {
+        try {
+          const response = await this.client.models.generateContent({ ...params, model });
+          pin.model = model;
+          return response;
+        } catch (error) {
+          lastError = error;
+          if (!isRetryable(error)) throw error;
+          if (attempt < RETRY_DELAYS_MS.length) {
+            console.warn(`[${model}] transient error, retrying in ${RETRY_DELAYS_MS[attempt]}ms:`, error instanceof Error ? error.message : error);
+            await sleep(RETRY_DELAYS_MS[attempt]);
+          }
+        }
+      }
+      console.warn(`[${model}] still unavailable after retries; trying next model.`);
+    }
+    throw lastError;
   }
 
   /**
@@ -80,6 +138,7 @@ export class LegalGoogleGenAIClient {
     enableCaseLawSearch: boolean = true,  // ✅ Option to enable/disable function calling
     documents?: { uri: string; mimeType: string; name: string }[] // ✅ Added documents support
   ) {
+    const pin: ModelPin = {};
     try {
       // No temperature: Gemini 3.x is tuned for its default of 1.0, and lowering
       // it risks looping and degraded reasoning.
@@ -135,8 +194,7 @@ export class LegalGoogleGenAIClient {
       }
 
       // ✅ First request to the model
-      let response = await this.client.models.generateContent({
-        model: this.modelName,
+      let response = await this.callModel(pin, {
         contents: [{
           role: 'user',
           parts: initialParts
@@ -166,13 +224,9 @@ export class LegalGoogleGenAIClient {
             parts: [{ text: prompt }]
           },
           {
+            // Echo the model turn unchanged so its thought signatures survive.
             role: 'model',
-            parts: response.functionCalls.map(fc => ({
-              functionCall: {
-                name: fc.name,
-                args: fc.args
-              }
-            }))
+            parts: response.candidates?.[0]?.content?.parts || []
           },
           {
             role: 'user',
@@ -183,8 +237,7 @@ export class LegalGoogleGenAIClient {
         ];
 
         // ✅ Get final response from model
-        response = await this.client.models.generateContent({
-          model: this.modelName,
+        response = await this.callModel(pin, {
           contents: contents,
           config: config
         });
@@ -245,6 +298,7 @@ When you need to cite specific cases, use the search_case_law function to find r
 `;
 
     const startTime = new Date();
+    const pin: ModelPin = {};
     const functionCalls: Array<{
       name: string;
       args: Record<string, string | number | boolean>;
@@ -319,8 +373,7 @@ When you need to cite specific cases, use the search_case_law function to find r
       parts: initialParts
     }];
 
-    let response = await this.client.models.generateContent({
-      model: this.modelName,
+    let response = await this.callModel(pin, {
       contents: contents,
       config: config
     });
@@ -432,8 +485,7 @@ When you need to cite specific cases, use the search_case_law function to find r
         }))
       });
 
-      response = await this.client.models.generateContent({
-        model: this.modelName,
+      response = await this.callModel(pin, {
         contents: contents,
         config: config
       });
@@ -457,8 +509,7 @@ When you need to cite specific cases, use the search_case_law function to find r
         parts: [{ text: 'Stop searching and provide your complete legal analysis now, using the case law already retrieved.' }]
       });
 
-      response = await this.client.models.generateContent({
-        model: this.modelName,
+      response = await this.callModel(pin, {
         contents: contents,
         config: { ...config, tools: undefined }
       });
@@ -481,7 +532,7 @@ When you need to cite specific cases, use the search_case_law function to find r
 
     return {
       content,
-      model: this.modelName,
+      model: pin.model ?? this.modelName,
       processingTime,
       tokenCount: response.usageMetadata?.totalTokenCount || 0,
       functionCalls: functionCalls.length > 0 ? functionCalls : undefined,
@@ -652,7 +703,7 @@ let legalGoogleGenAIClient: LegalGoogleGenAIClient | null = null;
 export function getLegalGoogleGenAIClient(): LegalGoogleGenAIClient {
   if (!legalGoogleGenAIClient) {
     const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
-    const modelName = process.env.GEMINI_MODEL_NAME || 'gemini-3.8-flash';
+    const modelName = process.env.GEMINI_MODEL_NAME || 'gemini-4-hydrogen';
 
     console.log(`Creating Legal Google GenAI client with model: ${modelName}`);
 

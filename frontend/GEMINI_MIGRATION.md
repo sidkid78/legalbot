@@ -38,7 +38,8 @@ Create a `.env.local` file in your frontend directory:
 ```bash
 # Google Gemini API Configuration
 GEMINI_API_KEY=your_gemini_api_key_here
-GEMINI_MODEL_NAME=gemini-3.8-flash
+GEMINI_MODEL_NAME=gemini-4-hydrogen
+GEMINI_FALLBACK_MODEL=gemini-3.8-flash   # used when the primary returns 429/5xx after retries
 GEMINI_API_VERSION=v1beta
 
 # Supabase Configuration (existing)
@@ -150,7 +151,7 @@ Verify that responses include:
 
 #### "Model not found"
 - ✅ Check that `GEMINI_MODEL_NAME` is set correctly
-- ✅ Verify the model name exists (default: `gemini-3.8-flash`)
+- ✅ Verify the model name exists (default: `gemini-4-hydrogen`, falls back to `gemini-3.8-flash` on overload)
 - ✅ Ensure your API key has access to the specified model
 
 #### Slow responses
