@@ -194,7 +194,7 @@ export default function SimpleLegalPage() {
 
       setResponse({
         content: responseContent,
-        model: data.response?.modelUsed || 'gemini-2.5-flash',
+        model: data.response?.modelUsed || 'gemini-3.8-flash',
         processingTime: data.response?.processingTime || 0,
         tokenCount: data.response?.tokenCount || 0,
         detectedDomain: analysisData.domain,

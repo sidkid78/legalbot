@@ -13,7 +13,7 @@ export class LegalGoogleGenAIClient {
 
   constructor(
     apiKey?: string,
-    modelName: string = 'gemini-3.6-flash'
+    modelName: string = 'gemini-3.8-flash'
   ) {
     const key = apiKey || process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
 
@@ -652,7 +652,7 @@ let legalGoogleGenAIClient: LegalGoogleGenAIClient | null = null;
 export function getLegalGoogleGenAIClient(): LegalGoogleGenAIClient {
   if (!legalGoogleGenAIClient) {
     const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
-    const modelName = process.env.GEMINI_MODEL_NAME || 'gemini-3.5-flash';
+    const modelName = process.env.GEMINI_MODEL_NAME || 'gemini-3.8-flash';
 
     console.log(`Creating Legal Google GenAI client with model: ${modelName}`);
 
