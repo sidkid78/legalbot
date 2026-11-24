@@ -8,6 +8,9 @@ import {
   LegalUrgency
 } from '@/lib/legal/types';
 
+// Research queries run several model + case-law search rounds in one request.
+export const maxDuration = 300;
+
 export async function POST(req: NextRequest) {
   try {
     const data = await req.json();

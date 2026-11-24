@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@google/genai": "^1.37.0",
+    "@google/genai": "^3.6.1",
     "drizzle-orm": "^0.38.0",
     "lucide-react": "^0.519.0",
     "next": "^16.1.4",
