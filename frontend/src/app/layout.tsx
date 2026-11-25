@@ -2,6 +2,7 @@
 import type { Metadata } from 'next';
 import { Libre_Caslon_Display, Newsreader, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/next';
 
 import AuthGate from '@/components/AuthGate';
 import Masthead from '@/components/Navbar';
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Colophon />
         </div>
         <Toasts />
+        <Analytics />
       </body>
     </html>
   );
